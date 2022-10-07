@@ -1781,6 +1781,10 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid bbcf205a-bbdc-4582-bd10-83946ed4c087)
   )
+  (wire (pts (xy 245.11 85.09) (xy 252.73 85.09))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid bc678a96-6683-4539-a0de-558f21e603de)
+  )
   (wire (pts (xy 241.3 38.1) (xy 251.46 38.1))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid c270a18f-2404-43ad-8bd3-674221e057b8)
@@ -1805,10 +1809,6 @@
   (wire (pts (xy 231.775 134.62) (xy 240.665 134.62))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid cb1407a8-03bb-4906-8f7b-f73bd087379c)
-  )
-  (wire (pts (xy 220.98 85.09) (xy 252.73 85.09))
-    (stroke (width 0) (type default) (color 0 0 0 0))
-    (uuid ccd72d23-c767-4418-9952-298f586b8ded)
   )
   (wire (pts (xy 64.135 50.8) (xy 64.135 54.61))
     (stroke (width 0) (type default) (color 0 0 0 0))
@@ -1930,10 +1930,6 @@
     (uuid ffadb477-9fb0-4146-936d-761c350f894f)
   )
 
-  (text "~50Hz" (at 222.25 85.09 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 134646f4-0f3a-46c5-aeec-ae8944ea8658)
-  )
   (text "Output" (at 24.13 111.125 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 2843e9a2-7bfd-4093-bf4a-2bacb007ffc0)
@@ -1946,10 +1942,6 @@
     (at 93.98 149.86 0)
     (effects (font (size 2 2)) (justify left bottom))
     (uuid 76c66fe1-8746-4f80-bd7f-a76d1bc1c279)
-  )
-  (text "0 - 3.3V" (at 184.15 82.55 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 936289f9-e412-4101-b20b-713a0cae7af7)
   )
   (text "check resistor values for LEDs" (at 92.71 154.94 0)
     (effects (font (size 2 2)) (justify left bottom))
@@ -2033,10 +2025,6 @@
   (label "CAN_S_H" (at 213.36 48.26 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 572dced7-718b-47a5-b99e-71ad33783a31)
-  )
-  (label "DRS_PWM" (at 184.15 85.09 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 58d98482-2358-4453-8a02-a4ab466387dd)
   )
   (label "CAN_S_L" (at 213.36 52.07 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -3258,26 +3246,6 @@
     )
   )
 
-  (sheet (at 198.755 81.915) (size 22.225 6.35) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
-    (fill (color 0 0 0 0.0000))
-    (uuid 5527c8a5-964a-442c-91d8-8f92107636a5)
-    (property "Sheet name" "DRS Driver" (id 0) (at 198.755 81.2034 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheet file" "drs-driver.kicad_sch" (id 1) (at 198.755 88.8496 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (pin "IN" input (at 198.755 85.09 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 3b69b0ed-6b98-47c4-b7fc-6394fcbb526b)
-    )
-    (pin "OUT" input (at 220.98 85.09 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 30ae7f2a-2e32-433b-bd23-491df64c8d98)
-    )
-  )
-
   (sheet (at 186.69 28.575) (size 25.4 8.255) (fields_autoplaced)
     (stroke (width 0.1524) (type solid) (color 0 0 0 0))
     (fill (color 0 0 0 0.0000))
@@ -3372,7 +3340,6 @@
     (path "/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9" (page "3"))
     (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9" (page "5"))
     (path "/b7d12d3a-f9ac-4555-ba71-8dba49820627" (page "6"))
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5" (page "6"))
   )
 
   (symbol_instances
@@ -3520,24 +3487,6 @@
     (path "/b7d12d3a-f9ac-4555-ba71-8dba49820627/7505e6c2-77ad-45d1-9796-8a633b0d2a32"
       (reference "#PWR045") (unit 1) (value "GND") (footprint "")
     )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/a0f7ac6b-b04f-4e15-b613-1c3f5aed1c54"
-      (reference "#PWR046") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/a676a1ea-80b0-41cd-84a9-86bc851fa8b4"
-      (reference "#PWR047") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/09c0c34b-8632-449e-b324-11ec9e1c898c"
-      (reference "#PWR048") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/6a7830bb-36fd-4b49-9705-b6aaafffc94c"
-      (reference "#PWR049") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/1a946787-1aab-4d44-b5d1-0a3cf619940d"
-      (reference "#PWR050") (unit 1) (value "+5V") (footprint "")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/e02e055a-224a-4a0b-bcf8-57e2c12597f7"
-      (reference "#PWR051") (unit 1) (value "GND") (footprint "")
-    )
     (path "/a721983c-0032-44b5-9140-961bf6138d61"
       (reference "#SP1") (unit 1) (value "Ready-To-Drive Speaker") (footprint "")
     )
@@ -3558,9 +3507,6 @@
     )
     (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/cbb66ad9-35f6-4360-9ce2-de47c70df2af"
       (reference "C6") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/8bb250b5-3212-4c1d-9434-c12f15d5e175"
-      (reference "C7") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
     (path "/76037be3-9f36-4990-9887-699248668823"
       (reference "D1") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric")
@@ -3646,21 +3592,6 @@
     (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/1d5137fa-4b95-49da-8532-f61d44b309fc"
       (reference "R7") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/5ef393bd-2aee-4221-95d7-6518546d3b25"
-      (reference "R8") (unit 1) (value "24k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/50bf5c5c-ad9a-4832-ae9e-ab17b22b5f01"
-      (reference "R9") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/6b93d3b1-0397-4b6b-b3ce-458b15c6ec6e"
-      (reference "R10") (unit 1) (value "240k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/7d937dfc-4eac-4606-8004-e10c72806134"
-      (reference "R11") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/f6de8ab8-c49f-4e7a-a5d0-7ffcd3e2b085"
-      (reference "R12") (unit 1) (value "681") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
-    )
     (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/6d9db635-24d7-4080-b231-f122bb684b2b"
       (reference "RV1") (unit 1) (value "10k") (footprint "Potentiometer_THT:Potentiometer_Vishay_T73XW_Horizontal")
     )
@@ -3712,9 +3643,6 @@
     (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/dcefd392-40e7-4705-86f1-c891aabbfe7f"
       (reference "TP14") (unit 1) (value "APPS_B") (footprint "TestPoint:TestPoint_Pad_D1.5mm")
     )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/9c9c664c-b38d-4812-827c-7decef295084"
-      (reference "TP15") (unit 1) (value "DRS") (footprint "TestPoint:TestPoint_Pad_D1.5mm")
-    )
     (path "/64626804-3f6e-4a69-a88c-ca951ec604c9"
       (reference "U1") (unit 1) (value "L7805") (footprint "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown")
     )
@@ -3729,9 +3657,6 @@
     )
     (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/6f1b2cc3-2ea2-4c8e-afdd-5031c602d031"
       (reference "U5") (unit 1) (value "HCF4010") (footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
-    )
-    (path "/5527c8a5-964a-442c-91d8-8f92107636a5/c29ae3e4-54ab-481e-a2fd-13898a6082be"
-      (reference "U6") (unit 1) (value "LTC6992-2") (footprint "Package_TO_SOT_SMD:SOT-23-6")
     )
   )
 )
