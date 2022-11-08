@@ -1,6 +1,15 @@
 # PCBs
 
-Central repository of all PCB design files.
+Central repository of all PCB design files. Includes:
+
+| Folder    | Project Name                     |
+|-----------|----------------------------------|
+| bspd      | Brake System Plausibility Device |
+| hv-sense  | High Voltage Sense               |
+| latching  | Latch Circuit                    |
+| precharge | Precharge Circuit                |
+| tsal      | Tractive System Active Light     |
+| vcu       | Vehicle Control Unit             |
 
 ## How To Use This Repo
 
