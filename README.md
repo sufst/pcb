@@ -52,6 +52,14 @@ The `common` folder is used for resources which can be shared across multiple pr
 
 > Note: Since projects were previously in their own individual repos, many designs still have their own libraries, step files, etc. These will gradually be migrated to the SUFST library.
 
+### Library Paths
+When you configure the library paths for a project (`sym-lib-table` and `fp-lib-table` data), make sure to always use a path relative to the project with the `${KIPRJMOD}` substitution.
+
+- Correct: `${KIPRJMOD}/../common/sufst-lib.kicad_sym`
+- Incorrect: `/Users/<your name>/Documents/sufst/pcb/common/sufst-lib.kicad_sym`
+
+If an absolute path is used, when someone else opens the project that path will not exist and the library paths will not be valid. `-lib-table` files should never contain an absolute path.
+
 ### Git Limitations
 It is not possible to resolve merge conflicts within individual design files, which is an unfortunate limitation of using `git` with KiCad. While KiCad files are in a text format, they aren't really designed to be edited manually. It is therefore *essential* that only one person is editing a particular file in a project at a time (including the shared library). Once someone starts working on a file, until it is merged into the `main` branch nobody else can edit that file. A good way to get round this is to use the "hierarchical sheets" feature to divide schematics into multiple files (if it can be done in a logical way).
 
