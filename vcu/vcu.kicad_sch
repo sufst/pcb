@@ -940,9 +940,9 @@
     )
   )
 
-  (bus_alias "ANALOG_INPUTS" (members "APPS_1" "APPS_2" "BPS"))
   (bus_alias "DIGITAL_OUTPUTS" (members "DRS"))
   (bus_alias "SPEAKER" (members "RTDS+" "RTDS-"))
+  (bus_alias "ANALOG_INPUTS" (members "APPS_1" "APPS_2" "BPS"))
   (bus_alias "CAN" (members "CAN_C_H" "CAN_C_L" "CAN_S_H" "CAN_S_L"))
   (bus_alias "EEPROM_I2C" (members "EEPROM_WC" "EEPROM_SCL" "EEPROM_SDA"))
   (bus_alias "CAN_INTERNAL" (members "CAN_C_TX" "CAN_C_RX" "CAN_S_TX" "CAN_S_RX"))
@@ -1898,10 +1898,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 2b304392-4171-4b42-b883-35f0b55faeaf)
   )
-  (text "decoupling\n" (at 176.53 193.04 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 2c0fd61f-cb7a-443e-ab10-929ecf233f9f)
-  )
   (text "SPEAKER\n" (at 330.835 66.04 270)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 6b835955-9efd-43cd-979d-c012aa3bd819)
@@ -1921,10 +1917,6 @@
   (text "EEPROM (Config Memory)\n" (at 166.37 171.45 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid afbb6d17-9075-4c77-95fa-62736b57d3a6)
-  )
-  (text "add\ndecoupling?\n" (at 246.38 121.92 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid ba9ddd31-a56d-46d4-ab5b-10240c115f80)
   )
   (text "to ..." (at 279.4 198.12 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -2779,7 +2771,7 @@
     (property "Reference" "C1" (id 0) (at 176.53 186.6899 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "0.1u" (id 1) (at 176.53 189.2299 0)
+    (property "Value" "100n" (id 1) (at 176.53 189.2299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (id 2) (at 173.6852 191.77 0)
@@ -3301,11 +3293,23 @@
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/935468cb-d046-4951-8f9e-a2f93b4ef8a6"
       (reference "#PWR049") (unit 1) (value "GND") (footprint "")
     )
+    (path "/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9/9db1607a-9770-4d4e-8039-f383b582547f"
+      (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/7285d321-62f2-4f5f-9ad9-4b63044720b5/9db1607a-9770-4d4e-8039-f383b582547f"
+      (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9/e9834bcf-8cf5-4021-9b7b-e651def6d57b"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/7285d321-62f2-4f5f-9ad9-4b63044720b5/e9834bcf-8cf5-4021-9b7b-e651def6d57b"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
     (path "/a721983c-0032-44b5-9140-961bf6138d61"
       (reference "#SP1") (unit 1) (value "KP1600") (footprint "")
     )
     (path "/ae1cc368-9d32-49b9-8441-7ce398b5f16e"
-      (reference "C1") (unit 1) (value "0.1u") (footprint "")
+      (reference "C1") (unit 1) (value "100n") (footprint "")
     )
     (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/923b9ccb-77b7-459b-9a79-f0ac17696856"
       (reference "C2") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
@@ -3321,6 +3325,12 @@
     )
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/6e3c745e-342c-4211-bd89-340eb01977d4"
       (reference "C6") (unit 1) (value "10u") (footprint "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm")
+    )
+    (path "/7285d321-62f2-4f5f-9ad9-4b63044720b5/a4a954e1-945b-4f17-a0d5-cb8a18a5f94a"
+      (reference "C?") (unit 1) (value "100n") (footprint "")
+    )
+    (path "/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9/a4a954e1-945b-4f17-a0d5-cb8a18a5f94a"
+      (reference "C?") (unit 1) (value "100n") (footprint "")
     )
     (path "/76037be3-9f36-4990-9887-699248668823"
       (reference "D1") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric")
@@ -3463,10 +3473,10 @@
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/b4e9d432-e3fe-4a06-8540-80a8b4773416"
       (reference "U6") (unit 1) (value "SN74LV1T126") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
-    (path "/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9/489b5468-9913-401d-b655-368d174fe890"
+    (path "/7285d321-62f2-4f5f-9ad9-4b63044720b5/489b5468-9913-401d-b655-368d174fe890"
       (reference "U?") (unit 1) (value "MAX3051EASA+") (footprint "")
     )
-    (path "/7285d321-62f2-4f5f-9ad9-4b63044720b5/489b5468-9913-401d-b655-368d174fe890"
+    (path "/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9/489b5468-9913-401d-b655-368d174fe890"
       (reference "U?") (unit 1) (value "MAX3051EASA+") (footprint "")
     )
   )
