@@ -49,6 +49,7 @@ The `common` folder is used for resources which can be shared across multiple pr
 - 3D models (`step` subdirectory).
 - Custom symbols (`sufst-lib.kicad_sym`).
 - Custom footprints (`sufst-lib.pretty`).
+- SUFST standard sheet layout (`sheet-layout.kicad_wks`).
 
 > Note: Since projects were previously in their own individual repos, many designs still have their own libraries, step files, etc. These will gradually be migrated to the SUFST library.
 
