@@ -9,6 +9,7 @@ Central repository of all PCB design files. Includes:
 | hv-sense  | High Voltage Sense               |
 | latching  | Latch Circuit                    |
 | precharge | Precharge Circuit                |
+| segment   | Segment to BMS Connector         |
 | tsal      | Tractive System Active Light     |
 | vcu       | Vehicle Control Unit             |
 
