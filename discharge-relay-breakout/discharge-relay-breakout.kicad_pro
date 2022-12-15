@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.4,
-          "width": 1.025
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -85,8 +85,8 @@
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_over_copper": "ignore",
-        "silk_overlap": "ignore",
+        "silk_over_copper": "warning",
+        "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -103,16 +103,16 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.19999999999999998,
-        "min_copper_edge_clearance": 0.3,
-        "min_hole_clearance": 0.3,
-        "min_hole_to_hole": 0.3,
+        "min_clearance": 0.0,
+        "min_copper_edge_clearance": 0.0,
+        "min_hole_clearance": 0.25,
+        "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.19999999999999998,
         "min_microvia_drill": 0.09999999999999999,
         "min_silk_clearance": 0.0,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.19999999999999998,
-        "min_via_annular_width": 0.25,
+        "min_via_annular_width": 0.049999999999999996,
         "min_via_diameter": 0.39999999999999997,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
@@ -120,24 +120,18 @@
       },
       "track_widths": [
         0.0,
-        0.4,
-        0.6
+        0.8
       ],
       "via_dimensions": [
         {
           "diameter": 0.0,
           "drill": 0.0
-        },
-        {
-          "diameter": 1.0,
-          "drill": 0.6
         }
       ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
-    "layer_presets": [],
-    "viewports": []
+    "layer_presets": []
   },
   "boards": [],
   "cvpcb": {
@@ -353,7 +347,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "precharge.kicad_pro",
+    "filename": "discharge-relay-breakout.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -372,7 +366,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "via_diameter": 0.8,
-        "via_drill": 0.3,
+        "via_drill": 0.4,
         "wire_width": 6.0
       }
     ],
@@ -387,7 +381,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "../../../../../tmp/precharge.step",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": "${KIPRJMOD}/../common/sheet-layout.kicad_wks"
@@ -395,12 +389,8 @@
   "schematic": {
     "annotate_start_num": 0,
     "drawing": {
-      "dashed_lines_dash_length_ratio": 12.0,
-      "dashed_lines_gap_length_ratio": 3.0,
-      "default_bus_thickness": 12.0,
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
-      "default_wire_thickness": 6.0,
       "field_names": [],
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
@@ -408,9 +398,9 @@
       "intersheets_ref_show": false,
       "intersheets_ref_suffix": "",
       "junction_size_choice": 3,
-      "label_size_ratio": 0.25,
+      "label_size_ratio": 0.375,
       "pin_symbol_size": 25.0,
-      "text_offset_ratio": 0.08
+      "text_offset_ratio": 0.15
     },
     "legacy_lib_dir": "",
     "legacy_lib_list": [],
@@ -428,7 +418,7 @@
       "workbook_filename": ""
     },
     "page_layout_descr_file": "${KIPRJMOD}/../common/sheet-layout.kicad_wks",
-    "plot_directory": "../../../../../comp-diagrams-pdf/",
+    "plot_directory": "",
     "spice_adjust_passive_values": false,
     "spice_external_command": "spice \"%I\"",
     "subpart_first_id": 65,
@@ -436,20 +426,8 @@
   },
   "sheets": [
     [
-      "c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24",
+      "7329827b-f41e-40e6-ba12-04f26e0e4c96",
       ""
-    ],
-    [
-      "86ebb052-21e6-4e49-945d-049a70338ab6",
-      "HV side"
-    ],
-    [
-      "a25b3faf-d95a-49ad-9b40-7c3f8d869233",
-      "LV side"
-    ],
-    [
-      "9efa549b-079b-4747-bbda-5d5b1defcab0",
-      "Indicator Light"
     ]
   ],
   "text_variables": {}
