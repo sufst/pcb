@@ -73,10 +73,11 @@ created and stored within this repo in the `releases/<PROJECT NAME>` folder.
 This folder should contain the latest version (and ONLY the latest version) of
 the following files:
 
-1. Exported gerbers and drill files.
-2. Schematic sheets as a PDF.
-3. Layout as a PDF (colour, with border and title block).
-4. A HTML iBom created using the ["Interactive HTML BOM Plugin"](https://github.com/openscopeproject/InteractiveHtmlBom).
+1. Exported gerbers and drill files in a ZIP archive called `fabrication.zip`.
+2. Schematic sheets as a PDF (`Schematic.pdf`).
+3. Layout as a PDF in colour, with border and title block (`Layout.pdf`).
+4. HTML iBOM created using the ["Interactive HTML BOM Plugin"](https://github.com/openscopeproject/InteractiveHtmlBom) (`ibom.html`).
+5. 3D model in STEP format (`<PROJECT NAME>.step`).
 
 Additionally, a file called `info` (no extension) should be created (if it 
 doesn't already exist) containing release information in the following format:
@@ -97,14 +98,16 @@ fabrication: JLCPCB
 ```
 
 The release folder for a project should then have the following structure and 
-files:
+file names:
 
 ```txt
 <PROJECT NAME>
 ├── Layout.pdf
 ├── Schematic.pdf
+├── fabrication.zip
 ├── ibom.html
-└── info
+├── info
+└── <PROJECT NAME>.step
 ```
 
 ### Release Tag
