@@ -108,6 +108,9 @@ file names:
 └── info
 ```
 
+When creating a new release, make sure to overwrite/replace all the existing 
+files.
+
 ### Release Tag
 
 The release commit should then be tagged with the following command:
