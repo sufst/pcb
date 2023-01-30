@@ -77,7 +77,6 @@ the following files:
 2. Schematic sheets as a PDF (`Schematic.pdf`).
 3. Layout as a PDF in colour, with border and title block (`Layout.pdf`).
 4. HTML iBOM created using the ["Interactive HTML BOM Plugin"](https://github.com/openscopeproject/InteractiveHtmlBom) (`ibom.html`).
-5. 3D model in STEP format (`<PROJECT NAME>.step`).
 
 Additionally, a file called `info` (no extension) should be created (if it 
 doesn't already exist) containing release information in the following format:
@@ -106,8 +105,7 @@ file names:
 ├── Schematic.pdf
 ├── fabrication.zip
 ├── ibom.html
-├── info
-└── <PROJECT NAME>.step
+└── info
 ```
 
 ### Release Tag
