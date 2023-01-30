@@ -65,3 +65,68 @@ If an absolute path is used, when someone else opens the project that path will 
 ### Git Limitations
 It is not possible to resolve merge conflicts within individual design files, which is an unfortunate limitation of using `git` with KiCad. While KiCad files are in a text format, they aren't really designed to be edited manually. It is therefore *essential* that only one person is editing a particular file in a project at a time (including the shared library). Once someone starts working on a file, until it is merged into the `main` branch nobody else can edit that file. A good way to get round this is to use the "hierarchical sheets" feature to divide schematics into multiple files (if it can be done in a logical way).
 
+## Releases
+
+### Release Files
+When a PCB is fabricated, a new 'release' for the given project should be 
+created and stored within this repo in the `releases/<PROJECT NAME>` folder. 
+This folder should contain the latest version (and ONLY the latest version) of
+the following files:
+
+1. Exported gerbers and drill files in a ZIP archive called `fabrication.zip`.
+2. Schematic sheets as a PDF (`Schematic.pdf`).
+3. Layout as a PDF in colour, with border and title block (`Layout.pdf`).
+4. HTML iBOM created using the ["Interactive HTML BOM Plugin"](https://github.com/openscopeproject/InteractiveHtmlBom) (`ibom.html`).
+
+Additionally, a file called `info` (no extension) should be created (if it 
+doesn't already exist) containing release information in the following format:
+
+```txt
+version: <VERSION NUMBER>
+date: <RELEASE DATE>
+fabrication: <COMPANY>
+```
+
+Version numbers should be in the format `v1.0.1` and dates should be in the
+format `YYYY-MM-DD`. For example:
+
+```txt
+version: v1.0.1
+date: 2023-01-23
+fabrication: JLCPCB
+```
+
+The release folder for a project should then have the following structure and 
+file names:
+
+```txt
+<PROJECT NAME>
+├── Layout.pdf
+├── Schematic.pdf
+├── fabrication.zip
+├── ibom.html
+└── info
+```
+
+When creating a new release, make sure to overwrite/replace all the existing 
+files.
+
+### Release Tag
+
+The release commit should then be tagged with the following command:
+
+```sh
+git tag <PROJECT NAME>-<VERSION_NUMBER>
+```
+
+For example:
+
+```sh
+git tag segment-v1.0.1
+```
+
+To push tags to GitHub:
+
+```sh
+git push --tags
+```
