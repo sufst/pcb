@@ -119,7 +119,7 @@ The release commit should then be tagged with the following command:
 git tag <PROJECT NAME>-<VERSION_NUMBER>
 ```
 
-For example:
+Tagging should be done **after** merging to `main`! Example command:
 
 ```sh
 git tag segment-v1.0.1
