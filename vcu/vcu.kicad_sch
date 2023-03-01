@@ -6,8 +6,8 @@
 
   (title_block
     (title "VCU")
-    (date "2022-11-20")
-    (rev "1.0")
+    (date "2023-03-01")
+    (rev "1.2.0")
     (company "SUFST")
     (comment 1 "STAG 9")
     (comment 2 "Tim Brewis")
@@ -981,10 +981,10 @@
   (bus_alias "ANALOG_INPUTS" (members "APPS_1" "APPS_2" "BPS"))
   (bus_alias "CAN_INTERNAL" (members "CAN_C_TX" "CAN_C_RX" "CAN_S_TX" "CAN_S_RX"))
   (bus_alias "CAN" (members "CAN_C+" "CAN_C-" "CAN_S+" "CAN_S-"))
+  (bus_alias "EEPROM_I2C" (members "EEPROM_WC" "EEPROM_SCL" "EEPROM_SDA"))
   (bus_alias "DIGITAL_INPUTS" (members "RTDI" "SD" "GPIO_IN_1" "GPIO_IN_2" "GPIO_IN_3"))
   (bus_alias "SPEAKER" (members "RTDS+" "RTDS-"))
   (bus_alias "DIGITAL_OUTPUTS" (members "DRS" "STATUS" "GPIO_OUT_1" "GPIO_OUT_2" "GPIO_OUT_3"))
-  (bus_alias "EEPROM_I2C" (members "EEPROM_WC" "EEPROM_SCL" "EEPROM_SDA"))
   (junction (at 223.52 49.53) (diameter 0) (color 0 0 0 0)
     (uuid 174167d3-83ac-403e-8c21-df8a794e2492)
   )
@@ -3609,9 +3609,6 @@
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/6643fbfc-2083-4c14-9274-918c72f0f3e5"
       (reference "#PWR036") (unit 1) (value "GND") (footprint "")
     )
-    (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/4f1b49f9-d8b4-4c17-a584-aaa0b157744d"
-      (reference "#PWR037") (unit 1) (value "+3V3") (footprint "")
-    )
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/ff97b8d3-e259-4e49-89b4-9575e0866542"
       (reference "#PWR038") (unit 1) (value "GND") (footprint "")
     )
@@ -3644,6 +3641,9 @@
     )
     (path "/c9ad79bb-0efe-417d-8d3e-3f927c6aa1f7"
       (reference "#PWR048") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/ff2473b3-f8b3-4e7f-9de1-5a1461b50bbe"
+      (reference "#PWR0101") (unit 1) (value "+12V") (footprint "")
     )
     (path "/92856b1f-a619-4be2-926d-0b29e5a1e648"
       (reference "#PWR0102") (unit 1) (value "+3V3") (footprint "")
