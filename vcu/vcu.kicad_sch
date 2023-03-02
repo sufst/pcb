@@ -927,11 +927,11 @@
   )
 
   (bus_alias "ANALOG_INPUTS" (members "APPS_1" "APPS_2" "BPS"))
-  (bus_alias "CAN" (members "CAN_C+" "CAN_C-" "CAN_S+" "CAN_S-"))
   (bus_alias "DIGITAL_OUTPUTS" (members "DRS" "STATUS" "GPIO_OUT_1" "GPIO_OUT_2"))
+  (bus_alias "DIGITAL_INPUTS" (members "RTDI" "SD" "GPIO_IN_1" "GPIO_IN_2" "GPIO_IN_3"))
   (bus_alias "CAN_INTERNAL" (members "CAN_C_TX" "CAN_C_RX" "CAN_S_TX" "CAN_S_RX"))
   (bus_alias "SPEAKER" (members "RTDS+" "RTDS-"))
-  (bus_alias "DIGITAL_INPUTS" (members "RTDI" "SD" "GPIO_IN_1" "GPIO_IN_2" "GPIO_IN_3"))
+  (bus_alias "CAN" (members "CAN_C+" "CAN_C-" "CAN_S+" "CAN_S-"))
   (bus_alias "EEPROM_I2C" (members "EEPROM_WC" "EEPROM_SCL" "EEPROM_SDA"))
   (junction (at 254 48.895) (diameter 0) (color 0 0 0 0)
     (uuid 14a46f0d-96e6-41b9-bd9d-2c041936ff7b)
@@ -3452,6 +3452,9 @@
     (path "/b7d12d3a-f9ac-4555-ba71-8dba49820627/46f2e6c8-d0e5-4f10-a32d-f4eb4db57ed2"
       (reference "#PWR012") (unit 1) (value "GND") (footprint "")
     )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/265c6609-f516-4a6f-905e-5ce9e7922b1a"
+      (reference "#PWR013") (unit 1) (value "+12V") (footprint "")
+    )
     (path "/510a2d50-2047-4425-bf3a-82369c7643f9"
       (reference "#PWR014") (unit 1) (value "+12V") (footprint "")
     )
@@ -3521,6 +3524,9 @@
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/6643fbfc-2083-4c14-9274-918c72f0f3e5"
       (reference "#PWR036") (unit 1) (value "GND") (footprint "")
     )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/5d77eaac-3c54-4712-ad64-efca2eabb3db"
+      (reference "#PWR037") (unit 1) (value "GND") (footprint "")
+    )
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/ff97b8d3-e259-4e49-89b4-9575e0866542"
       (reference "#PWR038") (unit 1) (value "GND") (footprint "")
     )
@@ -3529,6 +3535,12 @@
     )
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/f48e4900-c8f3-4139-8461-9b2697bf739a"
       (reference "#PWR040") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/23080e65-7b0c-49a9-9835-91a2c80d1137"
+      (reference "#PWR041") (unit 1) (value "+12V") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/44827891-8a67-459c-93d5-5b66d8e9c8dc"
+      (reference "#PWR042") (unit 1) (value "GND") (footprint "")
     )
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/56a954b4-d593-46da-b332-e3000939f202"
       (reference "#PWR043") (unit 1) (value "GND") (footprint "")
@@ -3749,6 +3761,12 @@
     (path "/d5202d09-e7b1-4d1b-9d18-114b7ecbf902"
       (reference "R32") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/347c7a36-8ad7-4a39-a4d2-23f54de3d0d9"
+      (reference "R33") (unit 1) (value "10k") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/b34b67eb-ce5b-47be-8ee3-15e8da8fffe9"
+      (reference "R34") (unit 1) (value "10k") (footprint "")
+    )
     (path "/431f4bb6-80bb-4db6-851f-398f8ac9695a"
       (reference "RV1") (unit 1) (value "1k") (footprint "Potentiometer_SMD:Potentiometer_Bourns_3214W_Vertical")
     )
@@ -3778,6 +3796,21 @@
     )
     (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/c10719c8-d26c-478e-a106-b03bb9db105a"
       (reference "U4") (unit 1) (value "ILQ615-4X009T") (footprint "SUFST:SOIC254P1005X380-16N")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/bb68f945-374b-4d26-a043-b7679568c7b9"
+      (reference "U5") (unit 1) (value "TLC274") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/21d818e2-2c8c-4433-9d52-8206147f94cd"
+      (reference "U5") (unit 2) (value "TLC274") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/95d8ed5b-d5cb-4650-83cc-10af37b17c64"
+      (reference "U5") (unit 3) (value "TLC274") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/445a12cf-0361-4152-a01b-0e39d521f935"
+      (reference "U5") (unit 4) (value "TLC274") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/7e870a3d-91bb-4b4a-a739-37487b721489"
+      (reference "U5") (unit 5) (value "TLC274") (footprint "")
     )
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/32a793b7-1d92-48dc-a042-c473fcc179b6"
       (reference "U7") (unit 1) (value "ILQ615-4X009T") (footprint "SUFST:SOIC254P1005X380-16N")
