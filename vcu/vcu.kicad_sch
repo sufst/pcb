@@ -927,11 +927,11 @@
   )
 
   (bus_alias "ANALOG_INPUTS" (members "APPS_1" "APPS_2" "BPS"))
-  (bus_alias "DIGITAL_OUTPUTS" (members "DRS" "STATUS" "GPIO_OUT_1" "GPIO_OUT_2"))
   (bus_alias "DIGITAL_INPUTS" (members "RTDI" "SD" "GPIO_IN_1" "GPIO_IN_2" "GPIO_IN_3"))
   (bus_alias "CAN_INTERNAL" (members "CAN_C_TX" "CAN_C_RX" "CAN_S_TX" "CAN_S_RX"))
-  (bus_alias "SPEAKER" (members "RTDS+" "RTDS-"))
   (bus_alias "CAN" (members "CAN_C+" "CAN_C-" "CAN_S+" "CAN_S-"))
+  (bus_alias "DIGITAL_OUTPUTS" (members "DRS" "STATUS" "GPIO_OUT_1" "GPIO_OUT_2"))
+  (bus_alias "SPEAKER" (members "RTDS+" "RTDS-"))
   (bus_alias "EEPROM_I2C" (members "EEPROM_WC" "EEPROM_SCL" "EEPROM_SDA"))
   (junction (at 254 48.895) (diameter 0) (color 0 0 0 0)
     (uuid 14a46f0d-96e6-41b9-bd9d-2c041936ff7b)
@@ -3545,8 +3545,32 @@
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/56a954b4-d593-46da-b332-e3000939f202"
       (reference "#PWR043") (unit 1) (value "GND") (footprint "")
     )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/b945f2f4-5382-41c3-8efa-faf172be744c"
+      (reference "#PWR044") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/777620d4-fda7-4254-9c25-cddff208ac51"
+      (reference "#PWR045") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/0884d287-8390-460e-b746-cba72fb2dea1"
+      (reference "#PWR046") (unit 1) (value "+12V") (footprint "")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/142f3993-9a27-49d5-8586-c552445208a5"
+      (reference "#PWR047") (unit 1) (value "GND") (footprint "")
+    )
     (path "/c9ad79bb-0efe-417d-8d3e-3f927c6aa1f7"
       (reference "#PWR048") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/0619adfb-3d17-4e4d-b934-09dff48b2dc8"
+      (reference "#PWR049") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/81c92951-bcc7-4fc2-a919-5773b946cd22"
+      (reference "#PWR050") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/e778f816-8610-4a77-922c-15f36380a2a5"
+      (reference "#PWR051") (unit 1) (value "+12V") (footprint "")
+    )
+    (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/6275d58a-2312-4807-ae8c-296a9b214fc1"
+      (reference "#PWR052") (unit 1) (value "GND") (footprint "")
     )
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/ff2473b3-f8b3-4e7f-9de1-5a1461b50bbe"
       (reference "#PWR0101") (unit 1) (value "+12V") (footprint "")
@@ -3583,6 +3607,12 @@
     )
     (path "/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9/8c1997c4-3bcf-43a2-9a66-64fda2670810"
       (reference "C3") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+    )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/11773246-f66e-41b7-96ea-808fc749887a"
+      (reference "C4") (unit 1) (value "100n") (footprint "")
+    )
+    (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/4e539eb4-21f4-4ddb-ad32-bcc199a2bdef"
+      (reference "C5") (unit 1) (value "100n") (footprint "")
     )
     (path "/7285d321-62f2-4f5f-9ad9-4b63044720b5/5f834ad5-0cbe-4a52-aba6-53968922e1b6"
       (reference "C9") (unit 1) (value "4.7n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
@@ -3812,8 +3842,14 @@
     (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/7e870a3d-91bb-4b4a-a739-37487b721489"
       (reference "U5") (unit 5) (value "TLC274") (footprint "")
     )
+    (path "/3960c2c0-ac65-4ef4-8a32-782a1687f5b9/67a10853-7053-48a2-b20f-dd0b12fe1821"
+      (reference "U6") (unit 1) (value "HCF4010") (footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+    )
     (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/32a793b7-1d92-48dc-a042-c473fcc179b6"
       (reference "U7") (unit 1) (value "ILQ615-4X009T") (footprint "SUFST:SOIC254P1005X380-16N")
+    )
+    (path "/98c6c4f4-e225-4c83-8079-036539c4a2b2/6df44258-e6c5-4c26-8cc2-e82a1280b7e5"
+      (reference "U8") (unit 1) (value "HCF4010") (footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
     )
   )
 )
