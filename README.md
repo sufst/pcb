@@ -10,6 +10,7 @@ Central repository of all PCB design files. Includes:
 | latching  | Latch Circuit                    |
 | precharge | Precharge Circuit                |
 | segment   | Segment to BMS Connector         |
+| telemetry | On-Car Telemetry                 |
 | tsal      | Tractive System Active Light     |
 | vcu       | Vehicle Control Unit             |
 
