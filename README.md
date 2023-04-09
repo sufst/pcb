@@ -14,6 +14,8 @@ Central repository of all PCB design files. Includes:
 | tsal      | Tractive System Active Light     |
 | vcu       | Vehicle Control Unit             |
 
+We design our PCBs in KiCad (verison 7+).
+
 ## Version Control for KiCad Projects
 
 ### Why?
