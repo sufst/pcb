@@ -45,11 +45,17 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.75
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "unconnected_items|39878000|85064000|0082f060-8943-4b7c-a5a5-b2b0bf839c76|163e458b-6648-42cc-9131-23f4fe6e3893",
+        "unconnected_items|39878000|85064000|7ed9a1f3-af15-49be-93ca-734670386ef1|163e458b-6648-42cc-9131-23f4fe6e3893",
+        "unconnected_items|54076000|93472000|78b6af2b-c79f-4504-b381-789a6b58e6c8|437c25ed-734b-42e5-b319-544d36deb5e3",
+        "unconnected_items|62484000|76200000|bfc2e117-db7e-488d-b460-f20718eeda3f|2fcd4763-9dd3-4c05-8864-53c3f9a8a84e",
+        "unconnected_items|62484000|76200000|bfc2e117-db7e-488d-b460-f20718eeda3f|d7510c1f-3753-4ff8-a082-d0b275d67720"
+      ],
       "meta": {
         "version": 2
       },
@@ -85,7 +91,7 @@
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
+        "silk_edge_clearance": "ignore",
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
@@ -377,7 +383,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "error",
@@ -426,12 +432,12 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "",
+      "netlist": "./",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
     },
-    "page_layout_descr_file": ""
+    "page_layout_descr_file": "${KIPRJMOD}/../common/sheet-layout.kicad_wks"
   },
   "schematic": {
     "annotate_start_num": 0,
@@ -457,7 +463,7 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "",
+    "page_layout_descr_file": "${KIPRJMOD}/../common/sheet-layout.kicad_wks",
     "plot_directory": "",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
