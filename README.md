@@ -5,6 +5,7 @@ Central repository of all PCB design files. Includes:
 
 | Folder    | Project Name                     |
 |-----------|----------------------------------|
+| ail       | Accumulator Indicator Light      |
 | bspd      | Brake System Plausibility Device |
 | hv-sense  | High Voltage Sense               |
 | latching  | Latch Circuit                    |
