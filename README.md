@@ -1,21 +1,25 @@
 # PCBs
 
 ## About
-Central repository of all PCB design files. Includes:
+Central repository of all schematics and PCB design files.
 
-| Folder    | Project Name                     |
-|-----------|----------------------------------|
-| ail       | Accumulator Indicator Light      |
-| bspd      | Brake System Plausibility Device |
-| hv-sense  | High Voltage Sense               |
-| latching  | Latch Circuit                    |
-| precharge | Precharge Circuit                |
-| segment   | Segment to BMS Connector         |
-| telemetry | On-Car Telemetry                 |
-| tsal      | Tractive System Active Light     |
-| vcu       | Vehicle Control Unit             |
+| Folder     | Project                          |
+|------------|----------------------------------|
+| ail        | Accumulator Indicator Light      |
+| bspd       | Brake System Plausibility Device |
+| hv-sense   | High Voltage Sense               |
+| latching   | Latch Circuit                    |
+| loom*      | Loom Design                      |
+| precharge  | Precharge Circuit                |
+| segment    | Segment                          |
+| telemetry  | On-Car Telemetry                 |
+| top-level* | Full Car Schematic               |
+| tsal       | Tractive System Active Light     |
+| vcu        | Vehicle Control Unit             |
 
 We design our PCBs in KiCad (version 7+).
+
+>*Schematic only.
 
 ## Version Control for KiCad Projects
 
