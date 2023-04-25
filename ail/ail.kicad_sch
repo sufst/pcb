@@ -396,6 +396,68 @@
         )
       )
     )
+    (symbol "Diode:BZV55B6V2" (pin_numbers hide) (pin_names hide) (in_bom yes) (on_board yes)
+      (property "Reference" "D" (at 0 2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "BZV55B6V2" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "Diode_SMD:D_MiniMELF" (at 0 -4.445 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "zener diode" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "6.2V, 500mW, 2%, Zener diode, MiniMELF" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "D*MiniMELF*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "BZV55B6V2_0_1"
+        (polyline
+          (pts
+            (xy 1.27 0)
+            (xy -1.27 0)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+            (xy -0.762 1.27)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "BZV55B6V2_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 3.81 0 180) (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Mechanical:MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "H" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)))
@@ -861,10 +923,6 @@
     (stroke (width 0) (type default))
     (uuid 673afeee-0441-4be1-89b1-2d41930461b9)
   )
-  (wire (pts (xy 93.98 125.73) (xy 93.98 127))
-    (stroke (width 0) (type default))
-    (uuid 676ee734-d9b6-4358-8eaa-82cbde24e3fb)
-  )
   (wire (pts (xy 93.98 97.79) (xy 93.98 101.6))
     (stroke (width 0) (type default))
     (uuid 6c150920-7a92-43bc-a0f4-9f027abbee37)
@@ -913,7 +971,7 @@
     (stroke (width 0) (type default))
     (uuid 85377ef0-47b4-42fe-a02f-14152d6a5a98)
   )
-  (wire (pts (xy 93.98 109.22) (xy 93.98 118.11))
+  (wire (pts (xy 93.98 109.22) (xy 93.98 127))
     (stroke (width 0) (type default))
     (uuid 85e12a37-86b7-45a2-8a46-7eba86d6f103)
   )
@@ -1040,16 +1098,16 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 76ecbc1b-b56d-4c23-b29d-eed0d20aee2b)
   )
-  (text "Board designed to be printed on copper MCPCB" (at 138.43 64.77 0)
+  (text "Board designed to be printed on MCPCB" (at 138.43 64.77 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9d8a9afc-2ae8-4b93-bab1-45f20f2189be)
   )
-  (text "Q3 is optional\nQ4 is also optional\nR2 only needed if Q4 is required"
+  (text "Q3 is optional\nQ4 is also optional\nR6 only needed if Q3 is required\nR7 only needed if Q4 is required"
     (at 138.43 60.96 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c36af2c9-1340-45b9-a0de-5c37c64c834c)
   )
-  (text "For reference, some Farnell codes:\nFET: 2453434\n12V Zener: 1651593\n6.2V Zener: 2463561"
+  (text "For reference, some Farnell codes:\nFET: 2453434\n12V Zener: 1651593\n6.2V Zener: 2463561 (no longer availible,\nreplaced with RS 484-3261)"
     (at 138.43 52.07 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c8e34a98-b5ef-4b97-9d2f-fb98da016113)
@@ -1063,7 +1121,7 @@
   (symbol (lib_id "SUFST:FQD1N80TM") (at 72.39 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 059407b4-d6d7-4fc7-9507-f3c04f0c3461)
-    (property "Reference" "Q8" (at 78.105 44.4499 0)
+    (property "Reference" "Q?" (at 78.105 44.4499 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "FQD1N80TM" (at 78.105 46.9899 0)
@@ -1081,7 +1139,7 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "Q8") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
       (project "ail"
@@ -1095,7 +1153,7 @@
   (symbol (lib_id "SUFST:FQD1N80TM") (at 87.63 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 06ffff19-b2e9-437c-8798-4c1611ebf124)
-    (property "Reference" "Q8" (at 93.345 53.3399 0)
+    (property "Reference" "Q?" (at 93.345 53.3399 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "FQD1N80TM" (at 93.345 55.8799 0)
@@ -1113,7 +1171,7 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "Q8") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
       (project "ail"
@@ -1127,7 +1185,7 @@
   (symbol (lib_id "Device:R") (at 62.23 33.02 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 11fb6d09-2699-4777-bce1-b8838bdaf2ad)
-    (property "Reference" "R65" (at 69.215 33.02 90)
+    (property "Reference" "R?" (at 69.215 33.02 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "200k" (at 54.61 33.02 90)
@@ -1144,12 +1202,12 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "R65") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R5") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -1158,7 +1216,7 @@
   (symbol (lib_id "Device:R") (at 62.23 27.94 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1d130206-fb67-4505-b87f-dfda40d69615)
-    (property "Reference" "R25" (at 69.215 27.94 90)
+    (property "Reference" "R?" (at 69.215 27.94 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "200k" (at 54.61 27.94 90)
@@ -1175,12 +1233,12 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "R25") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R3") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -1189,7 +1247,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 20.32 25.4 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 279df201-6b5d-43c5-b392-652c4cc44386)
-    (property "Reference" "J2" (at 20.32 19.05 0)
+    (property "Reference" "J1" (at 20.32 19.05 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TS HV+" (at 16.51 24.13 90)
@@ -1206,38 +1264,12 @@
     (instances
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "J2") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
       (project "hv_sense"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "J1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 93.98 121.92 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 37330c3a-abbc-4f13-a541-370d40b489a8)
-    (property "Reference" "R1" (at 96.52 121.285 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "0" (at 96.52 123.825 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (at 92.202 121.92 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 93.98 121.92 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 96640907-1904-47ea-b45d-1e8b9b2b6b0f))
-    (pin "2" (uuid deea60cc-ef85-4ba5-8925-174b86dcec68))
-    (instances
-      (project "ail"
-        (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R1") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
     )
@@ -1246,7 +1278,7 @@
   (symbol (lib_id "Device:R") (at 62.23 38.1 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3d6ab355-3d02-430b-b2b6-e58d00926d2f)
-    (property "Reference" "R67" (at 69.215 38.1 90)
+    (property "Reference" "R?" (at 69.215 38.1 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "200k" (at 54.61 38.1 90)
@@ -1263,12 +1295,12 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "R67") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R7") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -1277,7 +1309,7 @@
   (symbol (lib_id "Device:R") (at 123.825 45.72 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3e660952-99a4-48c3-8e2f-10d679ff1bc0)
-    (property "Reference" "R69" (at 127 44.45 0)
+    (property "Reference" "R?" (at 127 44.45 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "900k" (at 128.27 46.99 0)
@@ -1294,12 +1326,12 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "R69") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R9") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -1308,7 +1340,7 @@
   (symbol (lib_id "Device:R") (at 106.68 91.44 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 401c3464-2a3e-424e-94a5-ca10683c4be4)
-    (property "Reference" "R71" (at 109.855 90.17 0)
+    (property "Reference" "R?" (at 109.855 90.17 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7k" (at 111.125 92.71 0)
@@ -1325,12 +1357,12 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "R71") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R11") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -1339,7 +1371,7 @@
   (symbol (lib_id "Device:Q_NMOS_GSD") (at 77.47 116.84 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 48b45afb-f5ed-4d24-915a-8ddf19efcdd9)
-    (property "Reference" "Q9" (at 80.01 121.285 0)
+    (property "Reference" "Q?" (at 80.01 121.285 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "XP262N7002TR-G" (at 71.12 125.095 90)
@@ -1357,7 +1389,7 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "Q9") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
       (project "ail"
@@ -1396,7 +1428,7 @@
   (symbol (lib_id "Diode:1N630xA") (at 58.42 104.14 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 526994cc-ead3-4694-92e3-c2836d908a7c)
-    (property "Reference" "D17" (at 52.705 102.87 90)
+    (property "Reference" "D?" (at 52.705 102.87 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "MMSZ4699T1G" (at 42.545 105.41 90)
@@ -1413,7 +1445,7 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "D17") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
       (project "ail"
@@ -1427,7 +1459,7 @@
   (symbol (lib_id "Device:R") (at 62.23 30.48 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 54c4122d-ab64-4d77-b021-330bb7f30ed9)
-    (property "Reference" "R64" (at 69.215 30.48 90)
+    (property "Reference" "R?" (at 69.215 30.48 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "200k" (at 54.61 30.48 90)
@@ -1444,12 +1476,12 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "R64") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R4") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -1527,10 +1559,36 @@
     )
   )
 
+  (symbol (lib_id "Diode:BZV55B6V2") (at 106.68 109.22 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 8051ae8c-695d-4f80-b360-d0f0c9b034e8)
+    (property "Reference" "D2" (at 109.22 108.585 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "BZV55B6V2" (at 109.22 111.125 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Diode_SMD:D_MiniMELF" (at 102.235 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf" (at 106.68 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e5e995af-0fa2-41fe-85a9-95320f09480a))
+    (pin "2" (uuid 45b0660c-c54c-4ba5-98d4-d68f2be15cd7))
+    (instances
+      (project "ail"
+        (path "/db6c17fc-6072-4138-918a-66af94710d5a"
+          (reference "D2") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "SUFST:FQD1N80TM") (at 104.14 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 967a349f-fcec-4b14-b977-fa57c620b568)
-    (property "Reference" "Q8" (at 109.855 62.2299 0)
+    (property "Reference" "Q?" (at 109.855 62.2299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "FQD1N80TM" (at 109.855 64.7699 0)
@@ -1548,7 +1606,7 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "Q8") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
       (project "ail"
@@ -1562,7 +1620,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 20.32 35.56 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9b095070-f3c4-4871-a160-d43c8b9bd0ec)
-    (property "Reference" "J1" (at 20.32 29.21 0)
+    (property "Reference" "J2" (at 20.32 29.21 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TS HV-" (at 16.51 34.29 90)
@@ -1579,12 +1637,12 @@
     (instances
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "J1") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
       (project "hv_sense"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "J1") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
     )
@@ -1621,7 +1679,7 @@
       )
       (project "hv_sense"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "F1") (unit 1)
+          (reference "F?") (unit 1)
         )
       )
     )
@@ -1630,7 +1688,7 @@
   (symbol (lib_id "Device:R") (at 68.58 63.5 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b3796b17-c271-4abf-afce-9da1fdabfd1c)
-    (property "Reference" "R2" (at 68.58 66.04 90)
+    (property "Reference" "R7" (at 68.58 66.04 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 68.58 60.96 90)
@@ -1647,7 +1705,7 @@
     (instances
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R2") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -1656,7 +1714,7 @@
   (symbol (lib_id "Device:R") (at 68.58 54.61 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b476b782-2eec-499d-af20-9a71fd0d7f06)
-    (property "Reference" "R12" (at 68.58 57.15 90)
+    (property "Reference" "R6" (at 68.58 57.15 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 68.58 52.07 90)
@@ -1673,7 +1731,7 @@
     (instances
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R12") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -1682,7 +1740,7 @@
   (symbol (lib_id "SUFST:OP777") (at 136.525 99.695 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bc59867a-09ce-4bc4-b055-e62e1cd3806b)
-    (property "Reference" "U6" (at 139.7 93.98 0)
+    (property "Reference" "U?" (at 139.7 93.98 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "OP777" (at 141.605 96.52 0)
@@ -1705,43 +1763,12 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "U6") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "U3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Diode:1N630xA") (at 106.68 109.22 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid c61ab912-5249-4e5a-b4cf-9db24c719bc4)
-    (property "Reference" "D18" (at 109.22 107.9499 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MMSZ4691T1G" (at 117.475 110.4899 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 101.6 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 106.68 107.95 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 99839ff2-2f99-475b-8bd4-8d5282c882ec))
-    (pin "2" (uuid 4a1563ce-9d42-490c-8a54-07ead3665801))
-    (instances
-      (project "precharge"
-        (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "D18") (unit 1)
-        )
-      )
-      (project "ail"
-        (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "D2") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -1750,7 +1777,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 81.28 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c650baeb-8d4e-43d6-b57f-8bb31758cc11)
-    (property "Reference" "J8" (at 83.82 92.71 0)
+    (property "Reference" "J?" (at 83.82 92.71 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "LED" (at 83.82 95.25 0)
@@ -1767,7 +1794,7 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "J8") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
       (project "ail"
@@ -1807,7 +1834,7 @@
   (symbol (lib_id "Device:R") (at 74.93 105.41 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dbdd9ed0-76fb-42cd-900f-4964bdf094b3)
-    (property "Reference" "R68" (at 78.105 104.14 0)
+    (property "Reference" "R?" (at 78.105 104.14 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470" (at 78.74 106.68 0)
@@ -1824,7 +1851,7 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "R68") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ail"
@@ -1838,7 +1865,7 @@
   (symbol (lib_id "Device:R") (at 62.23 35.56 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dd661a0f-b124-4677-b4de-d9665712d16f)
-    (property "Reference" "R66" (at 69.215 35.56 90)
+    (property "Reference" "R?" (at 69.215 35.56 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "200k" (at 54.61 35.56 90)
@@ -1855,12 +1882,12 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "R66") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R6") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -1869,7 +1896,7 @@
   (symbol (lib_id "Device:R") (at 93.98 105.41 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e3ccb49b-5a0a-4739-be3a-2aa6d46f6c5f)
-    (property "Reference" "R70" (at 97.155 104.14 0)
+    (property "Reference" "R?" (at 97.155 104.14 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "110k" (at 98.425 106.68 0)
@@ -1886,12 +1913,12 @@
     (instances
       (project "precharge"
         (path "/c338d9d7-bd26-41c6-bf7b-7bcaecdc6d24/9efa549b-079b-4747-bbda-5d5b1defcab0"
-          (reference "R70") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ail"
         (path "/db6c17fc-6072-4138-918a-66af94710d5a"
-          (reference "R10") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
