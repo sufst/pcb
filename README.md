@@ -13,6 +13,7 @@ Central repository of all schematics and PCB design files.
 | precharge  | Precharge Circuit                |
 | segment    | Segment                          |
 | telemetry  | On-Car Telemetry                 |
+| test-rig   | PCB Test / Demo Rig              |
 | top-level* | Full Car Schematic               |
 | tsal       | Tractive System Active Light     |
 | vcu        | Vehicle Control Unit             |
