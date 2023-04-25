@@ -3,20 +3,20 @@
 ## About
 Central repository of all schematics and PCB design files.
 
-| Folder     | Project                          |
-|------------|----------------------------------|
-| ail        | Accumulator Indicator Light      |
-| bspd       | Brake System Plausibility Device |
-| hv-sense   | High Voltage Sense               |
-| latching   | Latch Circuit                    |
-| loom*      | Loom Design                      |
-| precharge  | Precharge Circuit                |
-| segment    | Segment                          |
-| telemetry  | On-Car Telemetry                 |
-| test-rig   | PCB Test / Demo Rig              |
-| top-level* | Full Car Schematic               |
-| tsal       | Tractive System Active Light     |
-| vcu        | Vehicle Control Unit             |
+| Folder     | Project                          | Project Code |
+|------------|----------------------------------|--------------|
+| ail        | Accumulator Indicator Light      | `ail`        |
+| bspd       | Brake System Plausibility Device | `bspd`       |
+| hv-sense   | High Voltage Sense               | `hvs`        |
+| latching   | Latch Circuit                    | `latching`   |
+| loom*      | Loom Design                      | `loom`       |
+| precharge  | Precharge Circuit                | `precharge`  |
+| segment    | Segment                          | `segment`    |
+| telemetry  | On-Car Telemetry                 | `telemetry`  |
+| test-rig   | PCB Test / Demo Rig              | `test`       |
+| top-level* | Full Car Schematic               |              |
+| tsal       | Tractive System Active Light     | `tsal`       |
+| vcu        | Vehicle Control Unit             | `vcu`        |
 
 We design our PCBs in KiCad (version 7+).
 
@@ -125,7 +125,7 @@ files.
 The release commit should then be tagged with the following command:
 
 ```sh
-git tag <PROJECT NAME>-<VERSION_NUMBER>
+git tag <PROJECT CODE>-<VERSION_NUMBER>
 ```
 
 Tagging should be done **after** merging to `main`! Example command:
