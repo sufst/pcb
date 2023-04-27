@@ -7,14 +7,15 @@ Central repository of all schematics and PCB design files.
 |------------|----------------------------------|--------------|
 | ail        | Accumulator Indicator Light      | `ail`        |
 | bspd       | Brake System Plausibility Device | `bspd`       |
+| dash       | Dashboard                        | `dash`       |
 | hv-sense   | High Voltage Sense               | `hvs`        |
 | latching   | Latch Circuit                    | `latching`   |
 | loom*      | Loom Design                      | `loom`       |
-| precharge  | Precharge Circuit                | `precharge`  |
 | segment    | Segment                          | `segment`    |
 | telemetry  | On-Car Telemetry                 | `telemetry`  |
 | test-rig   | PCB Test / Demo Rig              | `test`       |
 | top-level* | Full Car Schematic               |              |
+| trc        | TSAC Relay Controller            | `trc`        |
 | tsal       | Tractive System Active Light     | `tsal`       |
 | vcu        | Vehicle Control Unit             | `vcu`        |
 
