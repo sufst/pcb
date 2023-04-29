@@ -8,6 +8,7 @@ Central repository of all schematics and PCB design files.
 | ail        | Accumulator Indicator Light      | `ail`        |
 | bspd       | Brake System Plausibility Device | `bspd`       |
 | dash       | Dashboard                        | `dash`       |
+| discharge  | Discharge Relay Breakout         | `discharge`  |
 | hv-sense   | High Voltage Sense               | `hvs`        |
 | latching   | Latch Circuit                    | `latching`   |
 | loom*      | Loom Design                      | `loom`       |
