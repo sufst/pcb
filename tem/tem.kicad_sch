@@ -1717,6 +1717,11 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 3f167428-a75c-43cf-aab6-9b4c4c9e6459)
   )
+  (text "TODO:\n- Fuses on input, 3V3, VDD of CAN chip, MCU (and thermistor-VCC?)\n  (should be very low current, 20mA range). Fuses should be before\n  the decoupling caps.\n- Replace 100u capacitor with a lower profile one (or many ceramics\n  in parallel).\n- Decide on footprints for all connectors.\n\nAlso before we manufacture this:\n- Triple check MCU pins, CAN capabilities, ADC capabilities, SAH time,\n  SAH charge (sampling too often could discharge the 100n capacitor on\n  each thermistor input), debugging method (current plan: PicKit3).\n- Check that we can emulate the thermistor expansion module. We would\n  need a second USB-CAN device to plug into the TEM connectors on the\n  BMS.\n- Check thermistor resistance curve (I assumed 10k at room temp)."
+    (at 28.575 168.275 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 7e6aeb59-6cd8-40cd-a060-df26acb6a5e1)
+  )
   (text "CAN bus operating at 1MHz\n\n1.1MHz corner frequency\n\n  R = 60 || 60 = 30 ohms\n  T = RC = 141 ns\n  f = 1/(2*pi*T) = 1.13 MHz\n"
     (at 221.615 83.185 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
