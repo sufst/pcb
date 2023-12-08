@@ -168,11 +168,11 @@
         )
       )
     )
-    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:+3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "+3V3" (at 0 3.556 0)
+      (property "Value" "+3.3V" (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -184,10 +184,10 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+3.3V\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "+3V3_0_1"
+      (symbol "+3.3V_0_1"
         (polyline
           (pts
             (xy -0.762 1.27)
@@ -213,9 +213,9 @@
           (fill (type none))
         )
       )
-      (symbol "+3V3_1_1"
+      (symbol "+3.3V_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+3V3" (effects (font (size 1.27 1.27))))
+          (name "+3.3V" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -414,7 +414,7 @@
   (symbol (lib_id "Device:R_Small") (at 134.62 82.55 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00ebf8ce-76f7-4dee-b455-7eda5194ad94)
-    (property "Reference" "R16" (at 135.89 81.915 0)
+    (property "Reference" "R12" (at 135.89 81.915 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "60R" (at 135.89 83.82 0)
@@ -440,10 +440,10 @@
     (instances
       (project "vcu"
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/7285d321-62f2-4f5f-9ad9-4b63044720b5"
-          (reference "R16") (unit 1)
+          (reference "R12") (unit 1)
         )
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9"
-          (reference "R18") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
     )
@@ -452,7 +452,7 @@
   (symbol (lib_id "power:GND") (at 96.52 93.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 25a71ec5-5ce6-4a2f-a8b2-0f4ad71e04c3)
-    (property "Reference" "#PWR028" (at 96.52 100.33 0)
+    (property "Reference" "#PWR027" (at 96.52 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 96.52 99.06 0)
@@ -468,10 +468,41 @@
     (instances
       (project "vcu"
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/7285d321-62f2-4f5f-9ad9-4b63044720b5"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR032") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 111.76 60.96 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2bd02810-32c9-406e-9519-678d05b520f1)
+    (property "Reference" "#PWR?" (at 111.76 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 111.76 56.642 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 111.76 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 111.76 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid cde3c969-45c1-4bcb-b2fc-b272cdc7ca9c))
+    (instances
+      (project "vcu"
+        (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/b7d12d3a-f9ac-4555-ba71-8dba49820627"
+          (reference "#PWR?") (unit 1)
+        )
+        (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/7285d321-62f2-4f5f-9ad9-4b63044720b5"
+          (reference "#PWR029") (unit 1)
+        )
+        (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9"
+          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -562,7 +593,7 @@
   (symbol (lib_id "power:GND") (at 111.76 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 71a34f22-e2ac-4b87-a5be-97a94c482394)
-    (property "Reference" "#PWR031" (at 111.76 105.41 0)
+    (property "Reference" "#PWR030" (at 111.76 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 111.76 104.14 0)
@@ -578,10 +609,10 @@
     (instances
       (project "vcu"
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/7285d321-62f2-4f5f-9ad9-4b63044720b5"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -590,7 +621,7 @@
   (symbol (lib_id "power:GND") (at 142.24 93.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 85fc5534-daf2-49fc-8d8d-c5a8c75a7a22)
-    (property "Reference" "#PWR032" (at 142.24 100.33 0)
+    (property "Reference" "#PWR031" (at 142.24 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.24 97.79 0)
@@ -606,10 +637,10 @@
     (instances
       (project "vcu"
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/7285d321-62f2-4f5f-9ad9-4b63044720b5"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -656,7 +687,7 @@
   (symbol (lib_id "Device:R_Small") (at 134.62 90.17 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a1b87751-d7d7-4616-8149-db39211e1a87)
-    (property "Reference" "R17" (at 135.89 89.535 0)
+    (property "Reference" "R13" (at 135.89 89.535 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "60R" (at 135.89 91.44 0)
@@ -682,38 +713,10 @@
     (instances
       (project "vcu"
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/7285d321-62f2-4f5f-9ad9-4b63044720b5"
-          (reference "R17") (unit 1)
+          (reference "R13") (unit 1)
         )
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9"
-          (reference "R19") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 111.76 60.96 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid e4559271-5a8e-4b84-8ad8-924e6c7ea753)
-    (property "Reference" "#PWR030" (at 111.76 64.77 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 111.76 57.15 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 111.76 60.96 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 111.76 60.96 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid cf53c060-548c-40a2-9356-796e495c0ee1))
-    (instances
-      (project "vcu"
-        (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/7285d321-62f2-4f5f-9ad9-4b63044720b5"
-          (reference "#PWR030") (unit 1)
-        )
-        (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9"
-          (reference "#PWR035") (unit 1)
+          (reference "R15") (unit 1)
         )
       )
     )
@@ -722,7 +725,7 @@
   (symbol (lib_id "power:GND") (at 106.68 71.12 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e9834bcf-8cf5-4021-9b7b-e651def6d57b)
-    (property "Reference" "#PWR029" (at 106.68 77.47 0)
+    (property "Reference" "#PWR028" (at 106.68 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 106.68 75.565 0)
@@ -738,10 +741,10 @@
     (instances
       (project "vcu"
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/7285d321-62f2-4f5f-9ad9-4b63044720b5"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
         (path "/d2151cc9-0acc-4d18-a050-63c63ade8261/0a463a03-a21c-4ab4-b35a-61b3e0bc2af9"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
