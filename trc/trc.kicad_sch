@@ -6,12 +6,11 @@
 
   (title_block
     (title "TSAC Relay Controller")
-    (date "2023-04-27")
-    (rev "2.0.0")
+    (date "2024-01-10")
+    (rev "2.1.0")
     (company "SUFST - Southampton University Formula Student Team")
-    (comment 1 "STAG 9")
-    (comment 2 "Tim Brewis")
-    (comment 3 "Max O'Brien, Marek Frodyma")
+    (comment 1 "STAG X")
+    (comment 2 "Tim Brewis, Joe Pater")
   )
 
   (lib_symbols
@@ -905,13 +904,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 96050de2-86aa-4e75-8e6a-6c25f382d190)
   )
-  (text "The fault indicator blinks \na fault code by providing \na ground connection\n\nThe signal is latched low\nby the control logic to\nhandle blinking, opening\nthe AIRs and pre-charge\nrelay\n\nThe inverter will also command\nthe +AIR and pre-charge relay\nopen in a fault condition, so \nthis is more a redundancy\n"
-    (at 43.18 160.02 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid a92e986f-bb01-40de-94b1-0ae1361c0694)
-  )
   (text "The pre-charge and main contactor \nrelay drivers of the inverter\ncannot be used to drive the relays\ndirectly as the AIRs must be powered \nby the shutdown loop\n\nThe driver outputs are high-side \ndrivers where:\n- Active: 12V\n- Inactive: floating"
-    (at 20.955 62.23 0)
+    (at 24.765 142.24 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid aaffe780-d50e-48bf-9a2c-12e2dd8754ea)
   )
@@ -929,18 +923,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e9b6582d-76db-4436-ba1a-b6dd3335bacd)
   )
-  (text "The EXT fault input is an active\nhigh external fault source, in case\nwe ever need it. When used, the jumper\n(switch) should be set to pull up so \nthat if the input is disconnected, it \nfaults. When unused, the jumper should\nbe set to pull down (\"always OK\")."
-    (at 144.145 140.97 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid ebd89d5d-910c-478b-ad47-b222f9aa2f49)
-  )
-  (text "TRC TODO:\n- Filters\n- Test stability of 12V\n- Ground return path for whole shutdown loop?\n- Remove TS_ENABLED output\n- TS_READY on control connector?\n- Get rid of INV_FAULT completely?"
-    (at 269.875 61.595 0)
-    (effects (font (size 1.27 1.27) (color 255 0 0 1)) (justify left bottom))
-    (uuid f85a339c-47a8-4e5e-8a78-939447c76dcc)
-  )
-  (text "Pins 2 connects to a \"charging interlock\" which \nmay only be installed when the TSAC is outside the car.\nThe goal here is to make it impossible for the\nAIRs to accidentally be closed by the charge enable\nsignal when the TSAC is inside the car. Under no\ncircumstances should ~{CHG_EN_INTERLOCKED} be connected\nat the same time as the inverter!"
-    (at 136.525 68.58 0)
+  (text "Pin 1 connects to a \"charging interlock\" which \nmay only be installed when the TSAC is outside the car.\nThe goal here is to make it impossible for the\nAIRs to accidentally be closed by the charge enable\nsignal when the TSAC is inside the car. Under no\ncircumstances should ~{CHG_EN_INTERLOCKED} be connected\nat the same time as the inverter!"
+    (at 89.535 87.63 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid fabea2a0-4348-404e-bb22-b0bf95fe7755)
   )
