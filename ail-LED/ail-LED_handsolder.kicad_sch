@@ -5,11 +5,11 @@
   (paper "A4")
 
   (lib_symbols
-    (symbol "Connector_Generic:Conn_01x02" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "J" (at 0 2.54 0)
+    (symbol "Connector_Generic:Conn_01x04" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "Conn_01x02" (at 0 -5.08 0)
+      (property "Value" "Conn_01x04" (at 0 -7.62 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -21,13 +21,17 @@
       (property "ki_keywords" "connector" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
+      (property "ki_description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "Conn_01x02_1_1"
+      (symbol "Conn_01x04_1_1"
+        (rectangle (start -1.27 -4.953) (end 0 -5.207)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
         (rectangle (start -1.27 -2.413) (end 0 -2.667)
           (stroke (width 0.1524) (type default))
           (fill (type none))
@@ -36,17 +40,29 @@
           (stroke (width 0.1524) (type default))
           (fill (type none))
         )
-        (rectangle (start -1.27 1.27) (end 1.27 -3.81)
+        (rectangle (start -1.27 2.667) (end 0 2.413)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 3.81) (end 1.27 -6.35)
           (stroke (width 0.254) (type default))
           (fill (type background))
         )
-        (pin passive line (at -5.08 0 0) (length 3.81)
+        (pin passive line (at -5.08 2.54 0) (length 3.81)
           (name "Pin_1" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+        (pin passive line (at -5.08 0 0) (length 3.81)
           (name "Pin_2" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+          (name "Pin_3" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -5.08 0) (length 3.81)
+          (name "Pin_4" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -411,7 +427,10 @@
   )
 
   (junction (at 58.42 31.115) (diameter 0) (color 0 0 0 0)
-    (uuid 0955f56e-660a-412e-8328-b354f9674a49)
+    (uuid 1d5e60ad-ff29-4fd9-a791-877a96ee452d)
+  )
+  (junction (at 40.005 27.305) (diameter 0) (color 0 0 0 0)
+    (uuid 475ba999-3edd-4d8f-bde2-ebea1ce6a6b1)
   )
   (junction (at 58.42 83.185) (diameter 0) (color 0 0 0 0)
     (uuid 4c82539a-2c70-4d25-b5e0-841fd20d341e)
@@ -436,6 +455,10 @@
     (stroke (width 0) (type default))
     (uuid 09e49c63-fcdd-488d-9141-14e8dd655bb7)
   )
+  (wire (pts (xy 36.83 33.655) (xy 40.005 33.655))
+    (stroke (width 0) (type default))
+    (uuid 0e8063bb-206c-4d48-a9c9-67cfadd4203d)
+  )
   (wire (pts (xy 125.095 31.115) (xy 123.825 31.115))
     (stroke (width 0) (type default))
     (uuid 14da9637-1378-4ded-94e3-8f275ce9a0f8)
@@ -447,6 +470,10 @@
   (wire (pts (xy 133.985 42.545) (xy 132.715 42.545))
     (stroke (width 0) (type default))
     (uuid 1bf6420f-20c9-4d18-bfd8-5158d0ebcc4a)
+  )
+  (wire (pts (xy 40.005 28.575) (xy 40.005 27.305))
+    (stroke (width 0) (type default))
+    (uuid 29a8ff0d-479e-43ea-ab1e-609aeba0ada1)
   )
   (wire (pts (xy 74.93 42.545) (xy 74.93 54.61))
     (stroke (width 0) (type default))
@@ -472,6 +499,14 @@
     (stroke (width 0) (type default))
     (uuid 5a59598e-a2dc-4a27-9d31-c284968102d2)
   )
+  (wire (pts (xy 40.005 27.305) (xy 44.45 27.305))
+    (stroke (width 0) (type default))
+    (uuid 5c866b42-5970-4d5c-9031-e6f6bb8285aa)
+  )
+  (wire (pts (xy 40.005 33.655) (xy 40.005 83.185))
+    (stroke (width 0) (type default))
+    (uuid 5d65b8c0-1047-40b2-9704-dc427d4ff3e4)
+  )
   (wire (pts (xy 98.425 31.115) (xy 97.155 31.115))
     (stroke (width 0) (type default))
     (uuid 60239fa6-82c6-4b65-aeb3-c08c48760575)
@@ -496,6 +531,10 @@
     (stroke (width 0) (type default))
     (uuid 75ec5f82-b294-4f7f-9268-8d52cd02857d)
   )
+  (wire (pts (xy 36.83 26.035) (xy 40.005 26.035))
+    (stroke (width 0) (type default))
+    (uuid 7757b644-ad52-49d2-9a87-11aa0e82e76d)
+  )
   (wire (pts (xy 58.42 31.115) (xy 58.42 43.815))
     (stroke (width 0) (type default))
     (uuid 8b4360f7-ad01-4ab0-bb49-2af6cc0dcbf0)
@@ -508,13 +547,17 @@
     (stroke (width 0) (type default))
     (uuid 8ca2782a-335b-44bc-a6bc-028a8d1e54e8)
   )
-  (wire (pts (xy 80.645 31.115) (xy 58.42 31.115))
+  (wire (pts (xy 36.83 31.115) (xy 58.42 31.115))
     (stroke (width 0) (type default))
     (uuid 923a9269-2839-4878-8282-528c0d975528)
   )
-  (wire (pts (xy 45.085 83.185) (xy 58.42 83.185))
+  (wire (pts (xy 40.005 83.185) (xy 58.42 83.185))
     (stroke (width 0) (type default))
     (uuid 97f2adc4-850f-4294-b90b-6b5f8da1ad85)
+  )
+  (wire (pts (xy 40.005 26.035) (xy 40.005 27.305))
+    (stroke (width 0) (type default))
+    (uuid 99013e30-6c9a-444f-9fd3-ebf97c9e9248)
   )
   (wire (pts (xy 74.93 78.105) (xy 74.93 83.185))
     (stroke (width 0) (type default))
@@ -528,9 +571,9 @@
     (stroke (width 0) (type default))
     (uuid a968bfbe-439d-425d-a6c5-b01f3f5e86b1)
   )
-  (wire (pts (xy 58.42 31.115) (xy 45.085 31.115))
+  (wire (pts (xy 36.83 28.575) (xy 40.005 28.575))
     (stroke (width 0) (type default))
-    (uuid aa92e896-12e7-42f4-9b84-0476e27512cd)
+    (uuid ae6f62b7-c49e-4fe9-9890-b46c7a9a6a4d)
   )
   (wire (pts (xy 106.045 42.545) (xy 107.315 42.545))
     (stroke (width 0) (type default))
@@ -543,10 +586,6 @@
   (wire (pts (xy 88.265 42.545) (xy 89.535 42.545))
     (stroke (width 0) (type default))
     (uuid c3b43017-cc5f-451b-91a7-810ea6c454a9)
-  )
-  (wire (pts (xy 45.085 33.655) (xy 45.085 83.185))
-    (stroke (width 0) (type default))
-    (uuid d7126628-7bbb-473d-a8f8-47e80165e2b3)
   )
   (wire (pts (xy 74.93 64.77) (xy 74.93 67.31))
     (stroke (width 0) (type default))
@@ -564,6 +603,10 @@
     (stroke (width 0) (type default))
     (uuid fa65cfe0-475c-4217-8c08-2b8117b0f4b3)
   )
+  (wire (pts (xy 58.42 31.115) (xy 80.645 31.115))
+    (stroke (width 0) (type default))
+    (uuid fb8543f2-37c4-4e1e-b0b9-e124a0d7d2ec)
+  )
 
   (text "Use 3V3 zener, adjust pot accordingly." (at 86.36 50.8 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -579,6 +622,31 @@
     (uuid 9ceb7b7a-aac0-4737-9972-63c09d7ddb03)
   )
 
+  (label "TRIM" (at 78.74 67.31 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 2c842aba-e590-4816-8bdc-8ab8b8cea8bc)
+  )
+  (label "LED-" (at 74.93 42.545 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 30db6136-75dd-4749-a02d-31c9f08d19a6)
+  )
+  (label "MOUNT" (at 44.45 27.305 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 72f2df1f-c112-4bdb-b84d-6b442456dc1d)
+  )
+  (label "GND" (at 40.005 38.1 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 888c3ad6-85dd-42af-993a-bc5798f5b8ee)
+  )
+  (label "REG" (at 61.595 59.69 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 896f3de1-b11d-448b-acfd-5a4fef6e16d6)
+  )
+  (label "Input" (at 44.45 31.115 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid ec2f3170-f017-4ff5-bd5d-be2caabb25ab)
+  )
+
   (symbol (lib_id "LED:IR204A") (at 127.635 31.115 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0fe21d88-e181-49c7-85e6-b6df955e2eae)
@@ -588,7 +656,7 @@
     (property "Value" "KR-SITQA1.23" (at 128.778 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 127.635 35.56 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 127.635 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 128.905 31.115 0)
@@ -597,7 +665,7 @@
     (pin "1" (uuid c8dea7a5-570f-45e0-9b13-530c43c90f0c))
     (pin "2" (uuid 16896176-96a4-4262-a238-7f4e132e85de))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D6") (unit 1)
         )
@@ -621,7 +689,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "H2") (unit 1)
         )
@@ -638,7 +706,7 @@
     (property "Value" "KR-SITQA1.23" (at 84.582 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 85.725 38.1 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 85.725 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 84.455 42.545 0)
@@ -647,7 +715,7 @@
     (pin "1" (uuid bf205a71-b5cc-490f-9985-fded96136484))
     (pin "2" (uuid 4501e8a2-0423-4178-8936-6cf4093c3417))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D12") (unit 1)
         )
@@ -664,7 +732,7 @@
     (property "Value" "KR-SITQA1.23" (at 102.362 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 103.505 38.1 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 103.505 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 102.235 42.545 0)
@@ -673,7 +741,7 @@
     (pin "1" (uuid d0b90011-47ea-4ce1-9d96-a8c845be3ed6))
     (pin "2" (uuid 3532ee08-8ed5-4ed1-a8e6-322a70854df8))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D10") (unit 1)
         )
@@ -699,7 +767,7 @@
     (pin "1" (uuid 18cd148e-4f19-4777-9056-04e457bf0d56))
     (pin "2" (uuid dccbdaac-97f4-4fdb-a928-2b9d18b3eb52))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "R1") (unit 1)
         )
@@ -707,25 +775,27 @@
     )
   )
 
-  (symbol (lib_id "Connector_Generic:Conn_01x02") (at 40.005 33.655 180) (unit 1)
+  (symbol (lib_id "Connector_Generic:Conn_01x04") (at 31.75 31.115 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4b76bd7b-5ca0-4484-9823-31a9ecee9ba8)
-    (property "Reference" "J1" (at 40.005 25.4 0)
+    (property "Reference" "J1" (at 31.75 22.86 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "LED" (at 40.005 27.94 0)
+    (property "Value" "LED" (at 31.75 25.4 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "SUFST:Molex_Micro-Fit_3.0_43650-0214_1x02_P3.00mm_Horizontal" (at 40.005 33.655 0)
+    (property "Footprint" "SUFST:Molex_Micro-Fit_3.0_43650-0214_1x02_P3.00mm_Horizontal" (at 31.75 31.115 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 40.005 33.655 0)
+    (property "Datasheet" "~" (at 31.75 31.115 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid fc7f6a6d-12c0-4dbc-817d-f2a3d15fe8d0))
     (pin "2" (uuid dd7e56e1-8b8c-4d06-bbf3-ae426423436d))
+    (pin "3" (uuid ef5b2468-2b1b-467b-bee1-3e60ccc7aa45))
+    (pin "4" (uuid f258ea33-9ec4-4837-9eed-c7e17c72d890))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "J1") (unit 1)
         )
@@ -742,7 +812,7 @@
     (property "Value" "KR-SITQA1.23" (at 93.218 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 92.075 35.56 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 92.075 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 93.345 31.115 0)
@@ -751,7 +821,7 @@
     (pin "1" (uuid a193b250-5233-4017-add3-70aeb20ab0c6))
     (pin "2" (uuid e80161f4-7245-4910-8210-85ac5bea38c6))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D2") (unit 1)
         )
@@ -777,7 +847,7 @@
     (pin "1" (uuid 97d90b4b-d70d-44e5-b8c7-0d26af74f590))
     (pin "2" (uuid 59f197e3-5e41-4e9f-b526-4786e580a433))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "R2") (unit 1)
         )
@@ -794,7 +864,7 @@
     (property "Value" "KR-SITQA1.23" (at 102.108 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 100.965 35.56 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 100.965 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 102.235 31.115 0)
@@ -803,7 +873,7 @@
     (pin "1" (uuid 90ee3498-f565-4a2b-b0f5-28a64e1eb39e))
     (pin "2" (uuid 6c73f277-75c8-448f-8514-c3c29968967d))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D3") (unit 1)
         )
@@ -820,7 +890,7 @@
     (property "Value" "KR-SITQA1.23" (at 84.328 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 83.185 35.56 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 83.185 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 84.455 31.115 0)
@@ -829,7 +899,7 @@
     (pin "1" (uuid c5dea91c-5fff-4b0c-bb10-a4957f106964))
     (pin "2" (uuid c6c83e53-b04d-4b66-a454-604c82aafc16))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D1") (unit 1)
         )
@@ -846,7 +916,7 @@
     (property "Value" "KR-SITQA1.23" (at 120.142 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 121.285 38.1 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 121.285 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 120.015 42.545 0)
@@ -855,7 +925,7 @@
     (pin "1" (uuid 0e09bc5f-3854-41c9-9464-5aa22550d59f))
     (pin "2" (uuid d42d6e2c-7fbc-4d5b-8412-2e105c6dbec2))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D8") (unit 1)
         )
@@ -872,7 +942,7 @@
     (property "Value" "KR-SITQA1.23" (at 110.998 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 109.855 35.56 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 109.855 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 111.125 31.115 0)
@@ -881,7 +951,7 @@
     (pin "1" (uuid ffcb9c8a-3ec8-4bd4-a7aa-e6d06a3d81f4))
     (pin "2" (uuid 2886ce1a-b517-490b-9875-a64362bf69b3))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D4") (unit 1)
         )
@@ -908,7 +978,7 @@
     (pin "2" (uuid 3b63f580-8568-4faf-a36b-7cda5be844b4))
     (pin "3" (uuid ea5b4fed-9617-47de-a5ae-d06d8368ae7f))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "RV1") (unit 1)
         )
@@ -925,7 +995,7 @@
     (property "Value" "KR-SITQA1.23" (at 93.472 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 94.615 38.1 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 94.615 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 93.345 42.545 0)
@@ -934,7 +1004,7 @@
     (pin "1" (uuid 2da266e5-5ab6-4301-a5ed-7bcd1ee6fa49))
     (pin "2" (uuid aa14398b-2cf2-4e15-84f4-8508acaed606))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D11") (unit 1)
         )
@@ -960,7 +1030,7 @@
     (pin "1" (uuid 9b0f788c-679d-4e59-8bbd-fe2629126c8d))
     (pin "2" (uuid 3417c49b-0399-4dec-859c-a8b874da37b5))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D13") (unit 1)
         )
@@ -977,7 +1047,7 @@
     (property "Value" "KR-SITQA1.23" (at 129.032 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 130.175 38.1 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 130.175 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 128.905 42.545 0)
@@ -986,7 +1056,7 @@
     (pin "1" (uuid ec5e04aa-1337-46bc-aae3-4748b718c32a))
     (pin "2" (uuid 583937d8-4bca-405c-960c-06200f4a4f45))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D7") (unit 1)
         )
@@ -1010,7 +1080,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "H1") (unit 1)
         )
@@ -1037,7 +1107,7 @@
     (pin "2" (uuid 37f484eb-ae7d-4daf-933d-48d25f574bb4))
     (pin "3" (uuid b42f74d1-715f-4414-9c60-b146ac29b6ab))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "Q1") (unit 1)
         )
@@ -1054,7 +1124,7 @@
     (property "Value" "KR-SITQA1.23" (at 119.888 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 118.745 35.56 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 118.745 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 120.015 31.115 0)
@@ -1063,7 +1133,7 @@
     (pin "1" (uuid 8b7d2c60-87ad-4fdb-9b39-60c7a5720d57))
     (pin "2" (uuid fa0d7112-c16b-472a-9f27-af3f5423c54b))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D5") (unit 1)
         )
@@ -1080,7 +1150,7 @@
     (property "Value" "KR-SITQA1.23" (at 111.252 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "SUFST:KR-SITQA1.23_reflow" (at 112.395 38.1 0)
+    (property "Footprint" "SUFST:KR-SITQA1.23_handsolder" (at 112.395 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.everlight.com/file/ProductFile/IR204-A.pdf" (at 111.125 42.545 0)
@@ -1089,7 +1159,7 @@
     (pin "1" (uuid a519cab1-442a-45ae-b692-42afcae102dd))
     (pin "2" (uuid 365dcfec-d86c-4018-b6c1-44b4b88c998a))
     (instances
-      (project "ail-LED"
+      (project "ail-LED_handsolder"
         (path "/b6eb3bad-fe1d-47ef-b5d4-ac6f571f2cec"
           (reference "D9") (unit 1)
         )
