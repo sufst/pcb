@@ -4,6 +4,14 @@
 	(generator_version "8.0")
 	(uuid "552dda40-dad4-4f67-b96a-5b7edeb83cb9")
 	(paper "A3")
+	(title_block
+		(title "LV BMS")
+		(date "2024-06-02")
+		(rev "1.0.0")
+		(company "SUFST - Southampton University Formula Student Team")
+		(comment 1 "STAG X")
+		(comment 2 "Tudor Nita, Oliver Clark, Yutong He, Borhan Abdali")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint_Small"
 			(pin_numbers hide)
@@ -2797,8 +2805,8 @@
 			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
+			(exclude_from_sim yes)
+			(in_bom no)
 			(on_board yes)
 			(property "Reference" "H"
 				(at 0 6.35 0)
@@ -3178,9 +3186,9 @@
 		)
 		(symbol "power:+12V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3278,8 +3286,8 @@
 			(symbol "+12V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+12V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3298,9 +3306,9 @@
 		)
 		(symbol "power:+3.3V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3398,8 +3406,8 @@
 			(symbol "+3.3V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+3.3V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3418,9 +3426,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3494,8 +3502,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3577,7 +3585,7 @@
 				(pin power_out line
 					(at 0 0 90)
 					(length 0)
-					(name "pwr"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5033,6 +5041,12 @@
 		(uuid "acbcb9d5-e62e-4558-8c60-078643784c27")
 	)
 	(junction
+		(at 250.19 168.275)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b0735199-dab9-45ef-a205-26f1eae15d85")
+	)
+	(junction
 		(at 130.81 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5073,12 +5087,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bf046388-cc76-46c5-b27f-15735ea5eb61")
-	)
-	(junction
-		(at 243.84 165.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bf6b1a54-aef0-466a-b0bf-355858c533ed")
 	)
 	(junction
 		(at 217.805 30.48)
@@ -5850,7 +5858,7 @@
 	)
 	(wire
 		(pts
-			(xy 235.585 165.1) (xy 243.84 165.1)
+			(xy 240.03 168.275) (xy 250.19 168.275)
 		)
 		(stroke
 			(width 0)
@@ -5957,6 +5965,16 @@
 			(type default)
 		)
 		(uuid "22bee53c-096a-422d-bbad-cc9de5448405")
+	)
+	(wire
+		(pts
+			(xy 240.03 165.1) (xy 235.585 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "239a3c4b-9dc1-48e4-ad1d-3aedfe0d876e")
 	)
 	(wire
 		(pts
@@ -6830,6 +6848,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 168.275) (xy 250.19 235.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63444cff-c2d0-408c-91b2-74c1e88d45d8")
+	)
+	(wire
+		(pts
 			(xy 59.055 238.76) (xy 59.055 240.665)
 		)
 		(stroke
@@ -6857,16 +6885,6 @@
 			(type default)
 		)
 		(uuid "64355e08-4b56-4e1a-b90e-17ae7d4cf0d5")
-	)
-	(wire
-		(pts
-			(xy 243.84 165.1) (xy 243.84 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64955caf-e0fd-4ae1-b6d7-10c1ee10f005")
 	)
 	(bus
 		(pts
@@ -6927,16 +6945,6 @@
 			(type default)
 		)
 		(uuid "65d36419-e308-4d50-8a2b-f052159689b1")
-	)
-	(wire
-		(pts
-			(xy 243.84 165.1) (xy 250.19 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65f1da6c-3f56-4512-97b5-07bd140ce527")
 	)
 	(wire
 		(pts
@@ -7427,6 +7435,16 @@
 			(type default)
 		)
 		(uuid "91adb482-5365-4e65-a2db-946888b697f5")
+	)
+	(wire
+		(pts
+			(xy 250.19 168.275) (xy 250.19 167.005)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91c27ba3-1eed-4bed-8939-92e1e5f0c259")
 	)
 	(wire
 		(pts
@@ -8040,16 +8058,6 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 174.625) (xy 243.84 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b855081e-f8c7-4b69-a508-e754a4bf67f0")
-	)
-	(wire
-		(pts
 			(xy 56.515 109.22) (xy 71.755 109.22)
 		)
 		(stroke
@@ -8107,6 +8115,16 @@
 			(type default)
 		)
 		(uuid "bbd0b3ef-9dab-4c12-8777-ccff00b2e8f3")
+	)
+	(wire
+		(pts
+			(xy 240.03 168.275) (xy 240.03 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc3cc739-21c9-4d23-b0e5-e98a550b8afb")
 	)
 	(wire
 		(pts
@@ -8778,16 +8796,6 @@
 		)
 		(uuid "eeed3f85-8f07-4ad9-a5bf-75501ad32fdb")
 	)
-	(wire
-		(pts
-			(xy 250.19 235.585) (xy 250.19 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef05db82-d6b4-4d49-9771-73aea519a522")
-	)
 	(bus
 		(pts
 			(xy 151.765 119.38) (xy 180.34 119.38)
@@ -9324,6 +9332,17 @@
 		)
 		(uuid "33ed979a-785d-46a1-9246-5d120e59004a")
 	)
+	(label "{LED1 SOC1 SOC2 SOC3 SOC4 SOC5}"
+		(at 187.96 193.675 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "398d6564-9c92-4db6-a10a-53ff7b7e2e4a")
+	)
 	(label "BatCur"
 		(at 187.325 143.51 0)
 		(fields_autoplaced yes)
@@ -9831,7 +9850,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 91.44 154.94 0)
 			(effects
 				(font
@@ -9898,7 +9917,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 146.685 80.01 0)
 			(effects
 				(font
@@ -9965,7 +9984,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 340.995 66.04 0)
 			(effects
 				(font
@@ -10023,7 +10042,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/435441019830.pdf"
+		(property "Datasheet" "~"
 			(at 189.23 60.325 0)
 			(effects
 				(font
@@ -10032,7 +10051,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Push button switch, generic, two pins"
 			(at 194.31 60.325 0)
 			(effects
 				(font
@@ -10118,7 +10137,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 367.665 33.02 0)
 			(effects
 				(font
@@ -10184,7 +10203,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 71.12 154.94 0)
 			(effects
 				(font
@@ -10249,7 +10268,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 112.395 144.78 0)
 			(effects
 				(font
@@ -10319,7 +10338,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 382.905 157.48 0)
 			(effects
 				(font
@@ -10405,7 +10424,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 238.125 132.08 0)
 			(effects
 				(font
@@ -10471,7 +10490,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
 			(at 277.495 85.09 0)
 			(effects
 				(font
@@ -10562,7 +10581,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 71.12 158.75 0)
 			(effects
 				(font
@@ -10630,7 +10649,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 53.975 238.76 0)
 			(effects
 				(font
@@ -10685,7 +10704,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/1/KEM_C1076_X7R_HV_AUTO_SMD-1093301.pdf"
+		(property "Datasheet" "~"
 			(at 355.6 159.385 0)
 			(effects
 				(font
@@ -10694,7 +10713,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 355.6 159.385 0)
 			(effects
 				(font
@@ -10806,7 +10825,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 315.595 76.835 0)
 			(effects
 				(font
@@ -10873,7 +10892,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "High-Speed CAN Transceiver, 1Mbps, 3.3V supply"
 			(at 325.755 159.385 0)
 			(effects
 				(font
@@ -11004,7 +11023,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 295.275 158.75 0)
 			(effects
 				(font
@@ -11069,7 +11088,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 53.975 99.06 0)
 			(effects
 				(font
@@ -11135,7 +11154,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 332.105 62.865 0)
 			(effects
 				(font
@@ -11202,7 +11221,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 346.075 67.31 0)
 			(effects
 				(font
@@ -11270,7 +11289,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 76.2 217.17 0)
 			(effects
 				(font
@@ -11343,7 +11362,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 59.055 240.665 0)
 			(effects
 				(font
@@ -11409,7 +11428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 81.28 185.42 0)
 			(effects
 				(font
@@ -11476,7 +11495,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Net tie, 2 pins"
 			(at 88.265 221.615 0)
 			(effects
 				(font
@@ -11546,7 +11565,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 75.565 107.315 0)
 			(effects
 				(font
@@ -11611,7 +11630,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 271.145 102.235 0)
 			(effects
 				(font
@@ -11679,7 +11698,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"
 			(at 315.595 64.135 0)
 			(effects
 				(font
@@ -11771,7 +11790,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 107.95 144.78 0)
 			(effects
 				(font
@@ -11838,7 +11857,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 370.205 171.45 0)
 			(effects
 				(font
@@ -11905,7 +11924,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 269.875 41.275 0)
 			(effects
 				(font
@@ -11973,7 +11992,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 102.235 33.655 0)
 			(effects
 				(font
@@ -12043,7 +12062,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 146.685 83.82 0)
 			(effects
 				(font
@@ -12110,7 +12129,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 146.685 76.2 0)
 			(effects
 				(font
@@ -12177,7 +12196,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 104.14 173.355 0)
 			(effects
 				(font
@@ -12243,7 +12262,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 254 33.02 0)
 			(effects
 				(font
@@ -12308,7 +12327,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 53.975 109.22 0)
 			(effects
 				(font
@@ -12373,7 +12392,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 58.42 171.45 0)
 			(effects
 				(font
@@ -12464,7 +12483,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/435441019830.pdf"
+		(property "Datasheet" "~"
 			(at 172.085 220.345 0)
 			(effects
 				(font
@@ -12473,7 +12492,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Push button switch, generic, two pins"
 			(at 167.005 220.345 0)
 			(effects
 				(font
@@ -12560,7 +12579,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 238.125 120.65 0)
 			(effects
 				(font
@@ -12627,7 +12646,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 75.565 100.965 0)
 			(effects
 				(font
@@ -12692,7 +12711,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 361.315 160.655 0)
 			(effects
 				(font
@@ -12774,7 +12793,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 81.28 154.94 0)
 			(effects
 				(font
@@ -12833,7 +12852,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf"
+		(property "Datasheet" "~"
 			(at 320.675 140.335 0)
 			(effects
 				(font
@@ -12842,7 +12861,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 320.675 140.335 0)
 			(effects
 				(font
@@ -12952,7 +12971,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Schottky barrier diode, SOT-323"
 			(at 230.505 53.34 0)
 			(effects
 				(font
@@ -13053,7 +13072,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 269.875 51.435 0)
 			(effects
 				(font
@@ -13110,7 +13129,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
+		(property "Datasheet" "~"
 			(at 348.615 155.575 0)
 			(effects
 				(font
@@ -13119,7 +13138,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 348.615 155.575 0)
 			(effects
 				(font
@@ -13232,7 +13251,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 194.31 76.2 0)
 			(effects
 				(font
@@ -13302,7 +13321,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 81.28 181.61 0)
 			(effects
 				(font
@@ -13372,7 +13391,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 144.145 107.95 0)
 			(effects
 				(font
@@ -13437,7 +13456,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 94.615 238.76 0)
 			(effects
 				(font
@@ -13505,7 +13524,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 250.825 102.235 0)
 			(effects
 				(font
@@ -13581,7 +13600,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 144.145 100.33 0)
 			(effects
 				(font
@@ -13646,7 +13665,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 53.975 30.48 0)
 			(effects
 				(font
@@ -13713,7 +13732,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 167.005 206.375 0)
 			(effects
 				(font
@@ -13782,7 +13801,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 73.66 238.76 0)
 			(effects
 				(font
@@ -13849,7 +13868,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode, small symbol"
 			(at 269.875 47.625 0)
 			(effects
 				(font
@@ -13917,7 +13936,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 346.075 77.47 0)
 			(effects
 				(font
@@ -13984,7 +14003,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 144.145 104.14 0)
 			(effects
 				(font
@@ -14007,7 +14026,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 243.84 170.18 180)
+		(at 250.19 163.195 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14016,25 +14035,25 @@
 		(fields_autoplaced yes)
 		(uuid "7306e4d2-8498-4970-b816-41a00ab8715d")
 		(property "Reference" "R60"
-			(at 245.745 168.91 0)
+			(at 252.095 161.9249 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "10k"
-			(at 245.745 171.45 0)
+			(at 252.095 164.4649 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 245.618 170.18 90)
+			(at 248.412 163.195 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14043,7 +14062,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 243.84 170.18 0)
+			(at 250.19 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14051,8 +14070,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 243.84 170.18 0)
+		(property "Description" "Resistor"
+			(at 250.19 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14119,7 +14138,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 200.025 76.2 0)
 			(effects
 				(font
@@ -14399,7 +14418,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 241.935 127 0)
 			(effects
 				(font
@@ -14425,7 +14444,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 243.84 174.625 180)
+		(at 250.19 159.385 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14433,7 +14452,7 @@
 		(dnp no)
 		(uuid "796c33e0-8a08-4c25-aed8-acd217c1f4da")
 		(property "Reference" "#PWR059"
-			(at 243.84 170.815 0)
+			(at 250.19 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14442,7 +14461,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 243.84 178.435 90)
+			(at 243.205 158.115 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14451,7 +14470,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 243.84 174.625 0)
+			(at 250.19 159.385 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14460,7 +14479,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 243.84 174.625 0)
+			(at 250.19 159.385 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14468,8 +14487,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 243.84 174.625 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 250.19 159.385 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14535,7 +14554,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 332.105 70.485 0)
 			(effects
 				(font
@@ -14605,7 +14624,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 81.28 158.75 0)
 			(effects
 				(font
@@ -14673,7 +14692,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 367.665 238.76 0)
 			(effects
 				(font
@@ -14740,7 +14759,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode, small symbol"
 			(at 346.075 73.66 0)
 			(effects
 				(font
@@ -14808,7 +14827,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Four pin crystal, GND on pins 2 and 4"
 			(at 126.365 138.43 0)
 			(effects
 				(font
@@ -14902,7 +14921,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 258.445 149.86 0)
 			(effects
 				(font
@@ -14978,7 +14997,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 295.275 152.4 0)
 			(effects
 				(font
@@ -15044,7 +15063,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 91.44 185.42 0)
 			(effects
 				(font
@@ -15111,7 +15130,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 104.14 178.435 0)
 			(effects
 				(font
@@ -15178,7 +15197,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 118.745 32.385 0)
 			(effects
 				(font
@@ -15244,7 +15263,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 71.12 185.42 0)
 			(effects
 				(font
@@ -15310,7 +15329,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
 			(at 257.175 93.98 0)
 			(effects
 				(font
@@ -15413,7 +15432,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 370.205 147.955 0)
 			(effects
 				(font
@@ -15480,7 +15499,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 61.595 240.665 0)
 			(effects
 				(font
@@ -15546,7 +15565,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 325.755 133.985 0)
 			(effects
 				(font
@@ -15611,7 +15630,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 92.71 33.655 0)
 			(effects
 				(font
@@ -15681,7 +15700,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 300.355 70.485 0)
 			(effects
 				(font
@@ -15750,7 +15769,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 248.285 127 0)
 			(effects
 				(font
@@ -15820,7 +15839,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 104.14 168.275 0)
 			(effects
 				(font
@@ -15886,7 +15905,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 320.675 144.145 0)
 			(effects
 				(font
@@ -15969,7 +15988,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 274.955 34.925 0)
 			(effects
 				(font
@@ -16036,7 +16055,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 71.755 241.3 0)
 			(effects
 				(font
@@ -16103,7 +16122,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 71.12 181.61 0)
 			(effects
 				(font
@@ -16172,7 +16191,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 167.005 201.295 0)
 			(effects
 				(font
@@ -16237,7 +16256,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 112.395 132.08 0)
 			(effects
 				(font
@@ -16307,7 +16326,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 211.455 58.42 0)
 			(effects
 				(font
@@ -16396,7 +16415,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 133.985 138.43 0)
 			(effects
 				(font
@@ -16464,7 +16483,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 107.95 132.08 0)
 			(effects
 				(font
@@ -16530,7 +16549,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 325.755 172.085 0)
 			(effects
 				(font
@@ -16610,7 +16629,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 102.235 27.305 0)
 			(effects
 				(font
@@ -16678,7 +16697,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 76.2 30.48 0)
 			(effects
 				(font
@@ -16765,7 +16784,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
 			(at 100.965 74.93 0)
 			(effects
 				(font
@@ -16832,7 +16851,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 118.745 138.43 0)
 			(effects
 				(font
@@ -16899,7 +16918,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 227.33 95.885 0)
 			(effects
 				(font
@@ -16966,7 +16985,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 91.44 158.75 0)
 			(effects
 				(font
@@ -17035,7 +17054,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 310.515 167.005 0)
 			(effects
 				(font
@@ -17117,7 +17136,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 280.035 111.125 0)
 			(effects
 				(font
@@ -17174,7 +17193,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
+		(property "Datasheet" "~"
 			(at 348.615 163.195 0)
 			(effects
 				(font
@@ -17183,7 +17202,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 348.615 163.195 0)
 			(effects
 				(font
@@ -17391,7 +17410,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 92.71 27.305 0)
 			(effects
 				(font
@@ -17460,7 +17479,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 64.77 182.88 0)
 			(effects
 				(font
@@ -17526,7 +17545,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 76.2 203.2 0)
 			(effects
 				(font
@@ -17590,7 +17609,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 239.395 93.98 0)
 			(effects
 				(font
@@ -17663,7 +17682,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 239.395 85.09 0)
 			(effects
 				(font
@@ -17731,7 +17750,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 58.42 208.915 0)
 			(effects
 				(font
@@ -17833,7 +17852,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 259.715 111.125 0)
 			(effects
 				(font
@@ -17906,7 +17925,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 145.415 207.01 0)
 			(effects
 				(font
@@ -17972,7 +17991,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
 			(at 252.095 33.02 0)
 			(effects
 				(font
@@ -18039,7 +18058,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 91.44 181.61 0)
 			(effects
 				(font
@@ -18108,7 +18127,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 167.005 226.695 0)
 			(effects
 				(font
@@ -18175,7 +18194,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 64.135 240.665 0)
 			(effects
 				(font
