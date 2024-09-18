@@ -694,6 +694,108 @@
 				)
 			)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -1480,6 +1582,175 @@
 					(at 0 -3.81 90)
 					(length 1.27)
 					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:LED"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3859,7 +4130,7 @@
 		(uuid "3c8252b9-3ca0-4702-b4e0-9f2921a89cd7")
 	)
 	(junction
-		(at 52.07 109.22)
+		(at 30.48 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4301942a-187b-4848-9a0c-9781179ca9e9")
@@ -4015,7 +4286,7 @@
 		(uuid "a2093983-6a16-4219-9720-0ff5ce505472")
 	)
 	(junction
-		(at 52.07 114.3)
+		(at 30.48 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a549c4e9-30a6-457f-8232-2d1b9afb4944")
@@ -4069,7 +4340,7 @@
 		(uuid "d667262b-e7f8-49f3-a834-2638b8ba8521")
 	)
 	(junction
-		(at 52.07 111.76)
+		(at 30.48 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e3ded9ad-d6aa-4ba0-9b21-466a7bbf1341")
@@ -4149,20 +4420,16 @@
 		(uuid "5a3a17ba-2375-44ae-9626-5f3d46076b26")
 	)
 	(no_connect
-		(at 167.64 111.76)
-		(uuid "5f26b86f-ec8c-4593-b871-88fe87899b67")
-	)
-	(no_connect
-		(at 134.62 140.97)
-		(uuid "85d79ae3-bf46-4993-a3c8-a31ede3df2a1")
-	)
-	(no_connect
 		(at 115.57 128.27)
 		(uuid "870e5b68-14f6-40ec-bccb-da4476f6fc49")
 	)
 	(no_connect
 		(at 77.47 119.38)
 		(uuid "8e2a21d7-9321-4ff2-9999-ccaec928c84d")
+	)
+	(no_connect
+		(at 167.64 111.76)
+		(uuid "9a23edd2-5a3c-4276-9ef2-e590536a8cda")
 	)
 	(no_connect
 		(at 77.47 146.05)
@@ -4177,16 +4444,12 @@
 		(uuid "b47a7b17-c99b-4504-8912-0ba83f3beac0")
 	)
 	(no_connect
-		(at 134.62 138.43)
-		(uuid "be6dadc9-afc7-4514-8ef7-881ba8263763")
-	)
-	(no_connect
 		(at 77.47 124.46)
 		(uuid "c34750b0-2911-4c29-adad-9bef11091dee")
 	)
 	(no_connect
-		(at 167.64 124.46)
-		(uuid "c5a0eb9a-7b0f-4911-9c0e-353701ef4445")
+		(at 77.47 109.22)
+		(uuid "d81e762b-f67b-4bd7-b1c1-21998c2d0cde")
 	)
 	(wire
 		(pts
@@ -4297,6 +4560,26 @@
 			(type default)
 		)
 		(uuid "0859a1c3-20c5-4323-9376-655bcbfbe48b")
+	)
+	(wire
+		(pts
+			(xy 240.03 110.49) (xy 240.03 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "086e3278-9922-480e-947f-fca1db7133e8")
+	)
+	(wire
+		(pts
+			(xy 30.48 116.84) (xy 36.83 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0959900d-9da3-4e42-801e-38ec19ea21ec")
 	)
 	(wire
 		(pts
@@ -4440,16 +4723,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 106.68) (xy 77.47 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "145e6a39-236c-47a4-b339-0e44fa86f4ac")
-	)
-	(wire
-		(pts
 			(xy 113.03 187.96) (xy 113.03 189.23)
 		)
 		(stroke
@@ -4560,7 +4833,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 111.76) (xy 59.69 111.76)
+			(xy 30.48 111.76) (xy 38.1 111.76)
 		)
 		(stroke
 			(width 0)
@@ -4587,6 +4860,16 @@
 			(type default)
 		)
 		(uuid "1dd50d5f-08bc-49ee-ae84-c61aa95c8145")
+	)
+	(wire
+		(pts
+			(xy 73.66 110.49) (xy 62.23 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f758ac1-6f13-44f0-8f16-943e068e844d")
 	)
 	(wire
 		(pts
@@ -5080,6 +5363,16 @@
 	)
 	(wire
 		(pts
+			(xy 254 100.33) (xy 254 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47b10910-787a-4cab-bf3b-08440f492362")
+	)
+	(wire
+		(pts
 			(xy 370.84 88.9) (xy 370.84 90.17)
 		)
 		(stroke
@@ -5520,16 +5813,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 109.22) (xy 77.47 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f7a1354-d455-442f-a94d-962b04d321ce")
-	)
-	(wire
-		(pts
 			(xy 76.2 90.17) (xy 76.2 87.63)
 		)
 		(stroke
@@ -5587,6 +5870,26 @@
 			(type default)
 		)
 		(uuid "73a2c0cf-4869-4e35-8b8a-df4f43be0a7d")
+	)
+	(wire
+		(pts
+			(xy 254 120.65) (xy 254 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74c8de8f-f72c-4c08-a780-d2d5000790bb")
+	)
+	(wire
+		(pts
+			(xy 73.66 106.68) (xy 77.47 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74cb9a4e-f6b6-41e4-97ba-0e1858225ae2")
 	)
 	(wire
 		(pts
@@ -5820,7 +6123,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 111.76) (xy 77.47 111.76)
+			(xy 43.18 111.76) (xy 77.47 111.76)
 		)
 		(stroke
 			(width 0)
@@ -5877,6 +6180,16 @@
 			(type default)
 		)
 		(uuid "87ef5aa3-0447-4032-bf4d-8093100d2cab")
+	)
+	(wire
+		(pts
+			(xy 240.03 120.65) (xy 240.03 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8863dad5-e22b-47fb-a81e-83e3b4dc6691")
 	)
 	(wire
 		(pts
@@ -6010,7 +6323,17 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 114.3) (xy 77.47 114.3)
+			(xy 43.18 106.68) (xy 45.72 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9349f3aa-52da-486a-9a27-804666decec6")
+	)
+	(wire
+		(pts
+			(xy 43.18 114.3) (xy 77.47 114.3)
 		)
 		(stroke
 			(width 0)
@@ -6047,6 +6370,16 @@
 			(type default)
 		)
 		(uuid "9722737b-223c-4d16-92d8-9c645abeeef1")
+	)
+	(wire
+		(pts
+			(xy 73.66 110.49) (xy 73.66 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "972c7715-89b9-48f6-b5dd-bf4d0a617d40")
 	)
 	(wire
 		(pts
@@ -6100,7 +6433,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 114.3) (xy 52.07 114.3)
+			(xy 38.1 114.3) (xy 30.48 114.3)
 		)
 		(stroke
 			(width 0)
@@ -6110,7 +6443,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 109.22) (xy 52.07 111.76)
+			(xy 30.48 109.22) (xy 30.48 111.76)
 		)
 		(stroke
 			(width 0)
@@ -6290,7 +6623,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 114.3) (xy 52.07 116.84)
+			(xy 30.48 114.3) (xy 30.48 116.84)
 		)
 		(stroke
 			(width 0)
@@ -6410,7 +6743,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 106.68) (xy 52.07 106.68)
+			(xy 38.1 106.68) (xy 30.48 106.68)
 		)
 		(stroke
 			(width 0)
@@ -6560,7 +6893,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 109.22) (xy 59.69 109.22)
+			(xy 30.48 109.22) (xy 38.1 109.22)
 		)
 		(stroke
 			(width 0)
@@ -6730,6 +7063,16 @@
 	)
 	(wire
 		(pts
+			(xy 240.03 100.33) (xy 240.03 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d00a2acf-78b2-4cb5-bb9b-79f836fbe51f")
+	)
+	(wire
+		(pts
 			(xy 95.25 179.07) (xy 95.25 185.42)
 		)
 		(stroke
@@ -6780,7 +7123,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 111.76) (xy 52.07 114.3)
+			(xy 30.48 111.76) (xy 30.48 114.3)
 		)
 		(stroke
 			(width 0)
@@ -7070,6 +7413,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 109.22) (xy 45.72 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebc84a45-7cb4-422b-9a97-f308c832b32f")
+	)
+	(wire
+		(pts
 			(xy 76.2 87.63) (xy 77.47 87.63)
 		)
 		(stroke
@@ -7180,7 +7533,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 106.68) (xy 52.07 109.22)
+			(xy 30.48 106.68) (xy 30.48 109.22)
 		)
 		(stroke
 			(width 0)
@@ -7440,7 +7793,7 @@
 		)
 		(uuid "11fb6cd7-3032-46eb-9365-3965fd08c8b9")
 	)
-	(text "Potential divider could be replaced with a RM2012A-103/503-PBVW10 \n(MAX5490TC05000-T obsolete)\nIt would be a 5:1 divider but still in middle of ADC range (2V)\nOR 4:1 with RM2012A-103/403-PBVW10"
+	(text "Potential divider could be replaced with a RM2012A-103/503-PBVW10 \n(MAX5490TC05000-T obsolete)\nIt would be a 5:1 divider but still in middle of ADC range (2V)\nOR 4:1 with RM2012A-103/403-PBVW10\nScrapped, precision not needed"
 		(exclude_from_sim no)
 		(at 264.16 72.39 0)
 		(effects
@@ -7544,9 +7897,9 @@
 		)
 		(uuid "91549852-c74c-4d70-9299-cb044fb892b1")
 	)
-	(text "0 ohm resistors to\nGND for misc configuration"
+	(text "0 ohm resistors to\nGND for misc configuration\n(Number Identifier)"
 		(exclude_from_sim no)
-		(at 24.13 111.76 0)
+		(at 30.988 102.362 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7660,6 +8013,17 @@
 		)
 		(uuid "0366a461-d6e8-456d-8c25-acc2e1efb4c7")
 	)
+	(label "Config value 1"
+		(at 45.72 109.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "04fe3aef-9180-4aff-a415-e2543737bf5f")
+	)
 	(label "4:1 P{slash}D 5"
 		(at 167.64 88.9 0)
 		(fields_autoplaced yes)
@@ -7670,6 +8034,17 @@
 			(justify left bottom)
 		)
 		(uuid "066ff549-b53a-4270-bc47-1aadd3a176c0")
+	)
+	(label "Config value 0"
+		(at 134.62 138.43 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "075c990d-140d-4020-b3ca-5cfa116ba571")
 	)
 	(label "Therm 1"
 		(at 241.3 212.09 0)
@@ -7682,6 +8057,17 @@
 		)
 		(uuid "0f53f4d8-f732-41c8-83ba-c6b628ee7e58")
 	)
+	(label "Config value 0"
+		(at 45.72 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "14f6b394-b31f-4404-8f1d-f9ba03f1b6b1")
+	)
 	(label "Therm 2"
 		(at 134.62 146.05 0)
 		(fields_autoplaced yes)
@@ -7692,6 +8078,17 @@
 			(justify left bottom)
 		)
 		(uuid "1632e272-4aaf-4341-982a-d677e502179b")
+	)
+	(label "Power ON LED"
+		(at 167.64 124.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "17cb4e53-3288-4473-ac06-2f83f6a51d29")
 	)
 	(label "CAN_RX"
 		(at 69.85 101.6 180)
@@ -7825,6 +8222,17 @@
 		)
 		(uuid "56cf35bc-8ef0-4005-898a-dc82b5fa5ad7")
 	)
+	(label "Config value 2"
+		(at 45.72 111.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b51619a-c8eb-467b-9f1f-76ba4ba08d0d")
+	)
 	(label "ICSPCLK"
 		(at 125.73 123.19 180)
 		(fields_autoplaced yes)
@@ -7913,6 +8321,17 @@
 		)
 		(uuid "8694c592-bee2-4c81-8101-c14a87dca5e7")
 	)
+	(label "Config value 1"
+		(at 134.62 140.97 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b0c4486-ef04-4fd1-88db-3cf8be3d991d")
+	)
 	(label "4:1 P{slash}D 4"
 		(at 300.99 135.89 0)
 		(fields_autoplaced yes)
@@ -7989,6 +8408,17 @@
 			(justify left bottom)
 		)
 		(uuid "a7c0f838-3f76-426a-b63a-cc7beb44396d")
+	)
+	(label "Power ON LED"
+		(at 254 100.33 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0f14b3a-cd33-4686-9d9c-5306eeb5199e")
 	)
 	(label "CLK-"
 		(at 128.27 107.95 0)
@@ -8077,6 +8507,17 @@
 			(justify left bottom)
 		)
 		(uuid "d8c81a8e-cf2e-49ea-a4f0-2d2e0b5581ab")
+	)
+	(label "Config value 3"
+		(at 45.72 114.3 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dab57a93-7401-4371-8c1b-837f53d67e56")
 	)
 	(label "CAN+"
 		(at 129.54 186.69 0)
@@ -8203,6 +8644,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 367.03 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
+			(at 367.03 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "05c221e6-79bc-4d26-9d3c-df5a55e6a432")
 		)
@@ -8291,6 +8750,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 317.5 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 317.5 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
 			(at 317.5 143.51 0)
 			(effects
 				(font
@@ -8435,6 +8912,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 382.27 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
+			(at 382.27 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9ae2752e-92bc-4eb9-9f30-693fed8af44a")
 		)
@@ -8517,6 +9012,94 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 240.03 116.84 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0a78e0f3-b8f0-49ec-a156-b4cd78ac2b2b")
+		(property "Reference" "D11"
+			(at 243.84 117.1574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 243.84 119.6974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 240.03 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/588/ams_OSRAM_08_29_2024_4386966-3499010.pdf"
+			(at 240.03 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 240.03 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "720-P412P1R258A8J802"
+			(at 240.03 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "KS EELP41.22-P1R2-58-A8J8-020-R18"
+			(at 240.03 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "310d72d8-77a8-4cf9-9e32-168e25d95626")
+		)
+		(pin "2"
+			(uuid "76ed2a60-f0aa-44f1-a6bf-b9d89bae027a")
+		)
+		(instances
+			(project ""
+				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 58.42 125.73 180)
 		(unit 1)
@@ -8589,6 +9172,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 58.42 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 58.42 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
 			(at 58.42 125.73 0)
 			(effects
 				(font
@@ -8683,6 +9284,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 107.95 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "KAM21BR71H472KM"
+			(at 107.95 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "581-KAM21BR71H472KM"
 			(at 107.95 187.96 0)
 			(effects
 				(font
@@ -8787,6 +9406,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 317.5 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
+			(at 317.5 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cd967bcc-bce2-4592-8d1d-8b7f494abca5")
 		)
@@ -8849,6 +9486,24 @@
 			)
 		)
 		(property "Description" "ESR < 10R"
+			(at 121.92 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "GRT21BC71E106KE13L"
+			(at 121.92 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRT21BC71E106KE13"
 			(at 121.92 48.26 0)
 			(effects
 				(font
@@ -8953,6 +9608,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 248.92 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
+			(at 248.92 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bfe04d0a-4e43-4f2a-a938-4992cb3602f4")
 		)
@@ -9015,6 +9688,24 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 382.27 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 382.27 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
 			(at 382.27 39.37 0)
 			(effects
 				(font
@@ -9092,6 +9783,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "KAM21BR71H104JM"
+			(at 63.5 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "581-KAM21BR71H104JM"
+			(at 63.5 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6f63faaa-51c7-41f7-b314-1ad18481ac75")
 		)
@@ -9109,7 +9818,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 62.23 111.76 270)
+		(at 40.64 111.76 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9117,7 +9826,7 @@
 		(dnp no)
 		(uuid "1d5ee20d-4f5a-4eda-8362-ed0e28b6608d")
 		(property "Reference" "R5"
-			(at 59.69 110.49 90)
+			(at 38.1 110.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9126,7 +9835,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 65.405 110.49 90)
+			(at 43.815 110.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9135,7 +9844,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 62.23 111.76 0)
+			(at 40.64 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9144,7 +9853,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 111.76 0)
+			(at 40.64 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9153,7 +9862,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 62.23 111.76 0)
+			(at 40.64 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9162,7 +9871,7 @@
 			)
 		)
 		(property "Optional" "True"
-			(at 62.23 111.76 0)
+			(at 40.64 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9171,7 +9880,7 @@
 			)
 		)
 		(property "Order Code" ""
-			(at 62.23 111.76 0)
+			(at 40.64 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9180,7 +9889,25 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 62.23 111.76 0)
+			(at 40.64 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CR0805AJ/-000EAS"
+			(at 40.64 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR0805AJ/-000EAS"
+			(at 40.64 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9248,6 +9975,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 96.52 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "PIC18F47Q84-I/PT"
+			(at 96.52 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "579-PIC18F47Q84-I/PT"
 			(at 96.52 116.84 0)
 			(effects
 				(font
@@ -9574,6 +10319,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 332.74 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
+			(at 332.74 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b4b6111f-f4d6-40c9-b4c9-f8cb4d467b2b")
 		)
@@ -9717,6 +10480,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 382.27 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
+			(at 382.27 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a94f2010-7cd8-4be5-925a-0122f4975570")
 		)
@@ -9779,6 +10560,24 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 382.27 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 382.27 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
 			(at 382.27 69.85 0)
 			(effects
 				(font
@@ -10137,6 +10936,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 367.03 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
+			(at 367.03 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f0375936-43ef-447a-b7a6-419d1a327c78")
 		)
@@ -10234,7 +11051,7 @@
 				)
 			)
 		)
-		(property "Value" "40MHz"
+		(property "Value" "20MHz"
 			(at 136.525 99.06 90)
 			(effects
 				(font
@@ -10251,7 +11068,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/137/FA_128_en-931416.pdf"
 			(at 137.16 104.14 0)
 			(effects
 				(font
@@ -10261,6 +11078,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 137.16 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "FA-128 20.00M-A0AAYYG80RE0"
+			(at 137.16 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "732-FA12820A0AAYYG80"
 			(at 137.16 104.14 0)
 			(effects
 				(font
@@ -10570,6 +11405,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 367.03 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
+			(at 367.03 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e285e39e-db76-48a2-b024-102f8eec4a98")
 		)
@@ -10666,6 +11519,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 367.03 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
+			(at 367.03 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0d6738db-0b01-419f-8ee4-29ef6bd9fd0a")
 		)
@@ -10676,6 +11547,73 @@
 			(project "12V measurer"
 				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
 					(reference "R28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_3")
+		(lib_id "power:GND")
+		(at 240.03 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e64494f-ce8d-4f63-9704-1351903f673f")
+		(property "Reference" "#PWR046"
+			(at 240.03 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 240.03 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 240.03 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f10edc04-8e35-4923-bbf3-3286d5a28647")
+		)
+		(instances
+			(project "12V measurer"
+				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -11332,6 +12270,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 256.54 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
+			(at 256.54 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5f480bb0-c039-49ba-92d5-1e46993df826")
 		)
@@ -11495,6 +12451,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 248.92 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
+			(at 248.92 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8a54fc9c-ebd9-4a5d-9d58-699cf43a3e7c")
 		)
@@ -11624,6 +12598,24 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 332.74 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 332.74 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
 			(at 332.74 69.85 0)
 			(effects
 				(font
@@ -11787,6 +12779,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 317.5 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 317.5 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
 			(at 317.5 132.08 0)
 			(effects
 				(font
@@ -12054,6 +13064,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 256.54 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
+			(at 256.54 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5dc6f69d-cf3d-4eb5-b422-bd4f8b4af78d")
 		)
@@ -12257,6 +13285,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "GRT21BC71E106KE13L"
+			(at 92.71 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRT21BC71E106KE13"
+			(at 92.71 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e2f7548b-1efe-4167-8b52-f579644ee977")
 		)
@@ -12406,6 +13452,139 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_3")
+		(lib_id "power:GND")
+		(at 254 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f0b693d-4847-46b7-afd7-0166125b0e0f")
+		(property "Reference" "#PWR047"
+			(at 254 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 254 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 254 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 254 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4882f30b-e7d2-4ae0-a72b-1829a6a43b73")
+		)
+		(instances
+			(project "12V measurer"
+				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 240.03 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71637222-9796-4850-ba13-40e936994321")
+		(property "Reference" "#PWR048"
+			(at 240.03 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 240.03 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4e9029f0-31b9-477e-9a43-fcff5243e91d")
+		)
+		(instances
+			(project "12V measurer"
+				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
+					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Regulator_Linear:AZ1117-3.3")
 		(at 106.68 43.18 0)
 		(unit 1)
@@ -12451,6 +13630,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 106.68 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "AZ1117CH-3.3TRG1"
+			(at 106.68 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "621-AZ1117CH-3.3TRG1"
 			(at 106.68 43.18 0)
 			(effects
 				(font
@@ -12558,6 +13755,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 317.5 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
+			(at 317.5 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "01ae8bf7-16b3-4d27-a192-d607ce5be3f4")
 		)
@@ -12646,6 +13861,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 317.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 317.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
 			(at 317.5 82.55 0)
 			(effects
 				(font
@@ -12815,6 +14048,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 317.5 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 317.5 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
 			(at 317.5 71.12 0)
 			(effects
 				(font
@@ -13086,6 +14337,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRCW080512R0FKEAHP"
+			(at 60.96 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080512R0FKEAH"
+			(at 60.96 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "995191c9-5553-468a-b4c6-4e43801bd2dd")
 		)
@@ -13156,6 +14425,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 332.74 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
+			(at 332.74 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ff783ae6-1511-4632-8927-f4cd28007114")
 		)
@@ -13215,6 +14502,24 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 25.4 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" " 43650-0400"
+			(at 25.4 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43650-0400"
 			(at 25.4 45.72 0)
 			(effects
 				(font
@@ -13432,6 +14737,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "GRT21BC71E106KE13L"
+			(at 55.88 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRT21BC71E106KE13"
+			(at 55.88 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0e81a6bf-6c23-412b-bb34-747a3abdacaa")
 		)
@@ -13593,6 +14916,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 367.03 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
+			(at 367.03 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "44e59768-7665-4801-8e2a-457888e05e0d")
 		)
@@ -13681,6 +15022,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 317.5 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 317.5 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
 			(at 317.5 113.03 0)
 			(effects
 				(font
@@ -13861,7 +15220,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 			(at 34.29 237.49 0)
 			(effects
 				(font
@@ -13880,6 +15239,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 34.29 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "5-146282-5"
+			(at 34.29 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "571-5-146282-5"
 			(at 34.29 237.49 0)
 			(effects
 				(font
@@ -14101,6 +15478,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 332.74 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
+			(at 332.74 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a3850067-1561-4a13-a96d-8644854bcbdd")
 		)
@@ -14264,6 +15659,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 317.5 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
+			(at 317.5 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e27f705d-7f1e-4d02-a8c4-f34acc369e43")
 		)
@@ -14333,6 +15746,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "KAM21BR71H104JM"
+			(at 68.58 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "581-KAM21BR71H104JM"
+			(at 68.58 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d16194bc-f1bb-4435-92bd-e59294d407b5")
 		)
@@ -14392,6 +15823,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 147.32 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "C0805C100J1RACAUTO"
+			(at 147.32 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-C0805C100J1RAUTO "
 			(at 147.32 100.33 0)
 			(effects
 				(font
@@ -14538,6 +15987,94 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 254 116.84 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a9a21174-cd1a-4c5e-a17c-0fd95015365e")
+		(property "Reference" "D12"
+			(at 257.81 117.1574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 257.81 119.6974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 254 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060GS55040.pdf"
+			(at 254 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 254 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "710-150060GS55040"
+			(at 254 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "150060GS55040"
+			(at 254 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b6093214-f440-477b-a2ec-bbe0dcc31642")
+		)
+		(pin "2"
+			(uuid "e9318b1d-24c7-4e2c-8a00-a2da58e02d8d")
+		)
+		(instances
+			(project ""
+				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 100.33 191.77 180)
 		(unit 1)
@@ -14610,6 +16147,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 100.33 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ERJ-P06D60R4V"
+			(at 100.33 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "667-ERJ-P06D60R4V"
 			(at 100.33 191.77 0)
 			(effects
 				(font
@@ -14784,7 +16339,7 @@
 				)
 			)
 		)
-		(property "Value" "T0603FF0250TM"
+		(property "Value" "F0603E0R25FSTR\\INT"
 			(at 144.78 40.64 90)
 			(effects
 				(font
@@ -14801,7 +16356,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/40/AccuGuard2-2907777.pdf"
 			(at 144.78 43.18 0)
 			(effects
 				(font
@@ -14811,6 +16366,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 144.78 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "F0603E0R25FSTR\\INT"
+			(at 144.78 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "581-F0603E0R25FSTRIN"
 			(at 144.78 43.18 0)
 			(effects
 				(font
@@ -14958,7 +16531,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 62.23 109.22 270)
+		(at 40.64 109.22 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14966,7 +16539,7 @@
 		(dnp no)
 		(uuid "b625cb42-708e-412a-96ce-27b95376ec1a")
 		(property "Reference" "R4"
-			(at 59.69 107.95 90)
+			(at 38.1 107.95 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14975,7 +16548,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 65.405 107.95 90)
+			(at 43.815 107.95 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14984,7 +16557,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 62.23 109.22 0)
+			(at 40.64 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14993,7 +16566,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 109.22 0)
+			(at 40.64 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15002,7 +16575,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 62.23 109.22 0)
+			(at 40.64 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15011,7 +16584,7 @@
 			)
 		)
 		(property "Optional" "True"
-			(at 62.23 109.22 0)
+			(at 40.64 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15020,7 +16593,7 @@
 			)
 		)
 		(property "Order Code" ""
-			(at 62.23 109.22 0)
+			(at 40.64 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15029,7 +16602,25 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 62.23 109.22 0)
+			(at 40.64 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CR0805AJ/-000EAS"
+			(at 40.64 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR0805AJ/-000EAS"
+			(at 40.64 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15387,6 +16978,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 367.03 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
+			(at 367.03 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7452ccd0-046f-4bd4-86b7-392e78face30")
 		)
@@ -15404,7 +17013,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 62.23 106.68 270)
+		(at 40.64 106.68 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15412,7 +17021,7 @@
 		(dnp no)
 		(uuid "bb841f1b-0ecf-454d-94ea-50f986c77852")
 		(property "Reference" "R3"
-			(at 59.69 105.41 90)
+			(at 38.1 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15421,7 +17030,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 65.405 105.41 90)
+			(at 43.815 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15430,7 +17039,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 62.23 106.68 0)
+			(at 40.64 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15439,7 +17048,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 106.68 0)
+			(at 40.64 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15448,7 +17057,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 62.23 106.68 0)
+			(at 40.64 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15457,7 +17066,7 @@
 			)
 		)
 		(property "Optional" "True"
-			(at 62.23 106.68 0)
+			(at 40.64 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15466,7 +17075,7 @@
 			)
 		)
 		(property "Order Code" ""
-			(at 62.23 106.68 0)
+			(at 40.64 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15475,7 +17084,25 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 62.23 106.68 0)
+			(at 40.64 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CR0805AJ/-000EAS"
+			(at 40.64 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR0805AJ/-000EAS"
+			(at 40.64 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15784,6 +17411,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 317.5 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
+			(at 317.5 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "64fffc05-e1df-4ad4-aeea-eb9fe11ce173")
 		)
@@ -15872,6 +17517,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 317.5 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 317.5 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
 			(at 317.5 173.99 0)
 			(effects
 				(font
@@ -16231,6 +17894,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 367.03 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
+			(at 367.03 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c099b885-43ab-4ed1-9f3b-bf63596880c8")
 		)
@@ -16356,6 +18037,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 147.32 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "C0805C100J1RACAUTO"
+			(at 147.32 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-C0805C100J1RAUTO "
 			(at 147.32 107.95 0)
 			(effects
 				(font
@@ -16636,7 +18335,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 62.23 114.3 270)
+		(at 40.64 114.3 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16644,7 +18343,7 @@
 		(dnp no)
 		(uuid "d95b05f3-faeb-4ebe-98d4-24fa60e61f24")
 		(property "Reference" "R6"
-			(at 59.69 113.03 90)
+			(at 38.1 113.03 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16653,7 +18352,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 65.405 113.03 90)
+			(at 43.815 113.03 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16662,7 +18361,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 62.23 114.3 0)
+			(at 40.64 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16671,7 +18370,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 114.3 0)
+			(at 40.64 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16680,7 +18379,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 62.23 114.3 0)
+			(at 40.64 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16689,7 +18388,7 @@
 			)
 		)
 		(property "Optional" "True"
-			(at 62.23 114.3 0)
+			(at 40.64 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16698,7 +18397,7 @@
 			)
 		)
 		(property "Order Code" ""
-			(at 62.23 114.3 0)
+			(at 40.64 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16707,7 +18406,25 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 62.23 114.3 0)
+			(at 40.64 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CR0805AJ/-000EAS"
+			(at 40.64 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR0805AJ/-000EAS"
+			(at 40.64 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16811,6 +18528,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRCW080540K0FKEA"
+			(at 367.03 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080540K0FKEA"
+			(at 367.03 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "216337d8-f991-4dd6-9df6-589b6b400702")
 		)
@@ -16821,6 +18556,120 @@
 			(project "12V measurer"
 				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
 					(reference "R29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 240.03 107.95 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "da0321c3-1dfe-49f0-8d91-9fff5284f4d0")
+		(property "Reference" "R31"
+			(at 241.3 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "68"
+			(at 241.3 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 240.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
+			(at 240.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Optional" "True"
+			(at 240.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 240.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 240.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRCW080568R0FKEAHP"
+			(at 240.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "71-CRCW080568R0FKEAH"
+			(at 240.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a2749658-bc41-42eb-8815-022928b9182a")
+		)
+		(pin "2"
+			(uuid "5cce9e97-63e3-4b9b-a246-f9d50a349f6c")
+		)
+		(instances
+			(project "12V measurer"
+				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -16966,6 +18815,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 367.03 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 367.03 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
 			(at 367.03 82.55 0)
 			(effects
 				(font
@@ -17231,6 +19098,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 382.27 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
+			(at 382.27 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a9d416f5-f034-493e-9a3d-0a6c7cae1c67")
 		)
@@ -17394,6 +19279,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "MAX3051ESA+"
+			(at 77.47 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "700-MAX3051ESA"
+			(at 77.47 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1e55f143-23ad-4858-a691-72820f261618")
 		)
@@ -17474,6 +19377,24 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 332.74 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "43045-0200"
+			(at 332.74 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-43045-0200"
 			(at 332.74 161.29 0)
 			(effects
 				(font
@@ -17580,6 +19501,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "KAM21BR71H104JM"
+			(at 72.39 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "581-KAM21BR71H104JM"
+			(at 72.39 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "58caf4b7-a6dd-4867-bcf2-92f9a6502475")
 		)
@@ -17668,6 +19607,24 @@
 			)
 		)
 		(property "Supplier" "Mouser"
+			(at 100.33 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ERJ-P06D60R4V"
+			(at 100.33 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "667-ERJ-P06D60R4V"
 			(at 100.33 184.15 0)
 			(effects
 				(font
@@ -17826,7 +19783,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 52.07 116.84 0)
+		(at 36.83 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17834,7 +19791,7 @@
 		(dnp no)
 		(uuid "f82dca1d-9e8a-4dba-a736-7e153e68a149")
 		(property "Reference" "#PWR02"
-			(at 52.07 123.19 0)
+			(at 36.83 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17843,7 +19800,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 49.53 116.84 0)
+			(at 27.94 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17851,7 +19808,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 52.07 116.84 0)
+			(at 36.83 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17860,7 +19817,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 52.07 116.84 0)
+			(at 36.83 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17869,7 +19826,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 52.07 116.84 0)
+			(at 36.83 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17970,6 +19927,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer_Part_Number" "CRGH0805F12R"
+			(at 367.03 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "279-CRGH0805F12R"
+			(at 367.03 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d94f8639-59d9-449e-8a74-2d5633dcbcf2")
 		)
@@ -18002,7 +19977,7 @@
 				)
 			)
 		)
-		(property "Value" "T0603FF0250TM"
+		(property "Value" "F0603E0R25FSTR\\INT"
 			(at 45.72 40.64 90)
 			(effects
 				(font
@@ -18019,7 +19994,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/40/AccuGuard2-2907777.pdf"
 			(at 45.72 43.18 0)
 			(effects
 				(font
@@ -18029,6 +20004,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 45.72 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "F0603E0R25FSTR\\INT"
+			(at 45.72 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "581-F0603E0R25FSTRIN"
 			(at 45.72 43.18 0)
 			(effects
 				(font
@@ -18047,6 +20040,73 @@
 			(project "12V measurer"
 				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
 					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 62.23 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd4cbd5b-a441-4aab-861c-88f6db2614d1")
+		(property "Reference" "TP1"
+			(at 64.77 105.9179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 64.77 108.4579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose"
+			(at 67.31 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 62.23 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c4d7ad0-7027-435b-b2bf-98b87188c0fd")
+		)
+		(instances
+			(project ""
+				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
