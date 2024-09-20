@@ -2308,8 +2308,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at -10.16 8.89 0)
+			(property "Reference" "U1"
+				(at 1.905 12.7 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2317,8 +2317,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MAX3051"
-				(at 2.54 8.89 0)
+			(property "Value" "ISL3179EIBZ"
+				(at 1.905 10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2326,7 +2326,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2336,7 +2336,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://datasheets.maximintegrated.com/en/ds/MAX3051.pdf"
+			(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/698/REN_isl3179e_80e_DST_20231002-1997869.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2345,7 +2345,52 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "High-Speed CAN Transceiver, 1Mbps, 3.3V supply"
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supplier" "Mouser"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Order Code" "968-ISL3179EIBZ"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Optional" "False"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "ISL3179EIBZ"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "700-MAX3051ESA"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2461,7 +2506,7 @@
 				(pin input line
 					(at -12.7 -2.54 0)
 					(length 2.54)
-					(name "SHDN"
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2515,7 +2560,7 @@
 				(pin input line
 					(at -12.7 -5.08 0)
 					(length 2.54)
-					(name "RS"
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4423,6 +4468,10 @@
 		(uuid "5a3a17ba-2375-44ae-9626-5f3d46076b26")
 	)
 	(no_connect
+		(at 64.77 193.04)
+		(uuid "69ee94b7-6344-47fc-9bce-91d6f50e3fdd")
+	)
+	(no_connect
 		(at 115.57 128.27)
 		(uuid "870e5b68-14f6-40ec-bccb-da4476f6fc49")
 	)
@@ -4503,16 +4552,6 @@
 			(type default)
 		)
 		(uuid "026b3a16-e389-4d58-9743-ed324e2bcc9d")
-	)
-	(wire
-		(pts
-			(xy 62.23 195.58) (xy 62.23 193.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "041af31d-1f1f-4351-bbc2-d16a0953027f")
 	)
 	(wire
 		(pts
@@ -6193,16 +6232,6 @@
 			(type default)
 		)
 		(uuid "8863dad5-e22b-47fb-a81e-83e3b4dc6691")
-	)
-	(wire
-		(pts
-			(xy 62.23 193.04) (xy 64.77 193.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a1dab14-e925-44e0-a789-52538c701650")
 	)
 	(wire
 		(pts
@@ -14283,72 +14312,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 62.23 195.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7bf3661f-0e9c-4457-bfd7-f5aa8f89cf27")
-		(property "Reference" "#PWR06"
-			(at 62.23 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 62.23 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 62.23 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 62.23 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 62.23 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cd3716a2-05eb-4f4c-98ea-e7ca69b30d58")
-		)
-		(instances
-			(project "12V measurer"
-				(path "/e2a4fa5d-633c-4ea8-b4b7-1f32c04cf203"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 52.07 245.11 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19341,7 +19304,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MAX3051ESA+"
+		(property "Value" "TCAN332DR"
 			(at 79.375 177.8 0)
 			(effects
 				(font
@@ -19360,7 +19323,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://datasheets.maximintegrated.com/en/ds/MAX3051.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tcan332.pdf?ts=1726756812393&ref_url=https%253A%252F%252Fwww.mouser.co.uk%252F"
 			(at 77.47 187.96 0)
 			(effects
 				(font
@@ -19387,7 +19350,7 @@
 				(hide yes)
 			)
 		)
-		(property "Order Code" "700-MAX3051ESA"
+		(property "Order Code" "595-TCAN332DR"
 			(at 77.47 187.96 0)
 			(effects
 				(font
@@ -19405,7 +19368,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Part_Number" "MAX3051ESA+"
+		(property "Manufacturer_Part_Number" "TCAN332DR"
 			(at 77.47 187.96 0)
 			(effects
 				(font
