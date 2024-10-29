@@ -1,0 +1,104 @@
+* MAX4460 MACROMODEL
+* ------------------------------
+* Revision 0, 12/2003
+* ------------------------------
+* MAX4460 instrumentation amplifier has rail-to-rail outputs with 
+* precision specifications, low-power consumption, and excellent 
+* gain-bandwidth product. MAX4460 has an adjustable gain. 
+* These amplifiers operate with a single-supply  voltage from 
+* 2.85V to 5.25V, quiescent current of only 700uA and have
+* a gain-bandwidth product of 2.5MHz.
+* ------------------------------
+* Connections
+*      1  = OUT
+*      2  = GND
+*      3  = IN+
+*      4  = IN- 
+*      5  = VDD
+*      6  = FB
+*****************
+.SUBCKT MAX4460 1 2 3 4 5 6
+*INPUT STAGE
+****************
+RQ 5 2 6.667K
+****************
+VOS 99 3 100U
+****************
+*INPUT BIAS CURRENT
+RBIAS1 7 4 2E12
+RBIAS2 7 99 2E12
+****************
+*ICMR
+VOFF 7 47 2
+DCMRH 47 45 DX
+VCMRH 5 45 1.7
+DCMRL 46 47 DX
+VCMRL 2 46 0.1
+****************
+ISS 5 7 50U
+RS1 7 40 19.859K
+RS2 7 50 19.859K
+M1 20 4 40 40 PMOS W=100U L=100U
+M2 30 99 50 50 PMOS W=100U L=100U
+RD1 20 2 20K
+RD2 30 2 20K
+****************
+*DIFFERENTIAL INPUT RESISTANCE
+RIND 4 99 2E9
+****************
+*INTERMEDIATE STAGE
+*DOUBLE ENDED TO SINGLE ENDED CONVERSION
+GIN 2 77 20 30 1U
+RIN 77 2 1MEG
+*POWER SUPPLY REJECTION ZERO AND POLE
+GPS 21 22 5 2 0.3M
+RPS1 22 23 33.34M
+RPS2 23 21 1K
+LPS 23 21 53.05U
+
+*COMMON MODE REJECTION ZERO AND POLE
+GCM 21 24 7 2 1.499U
+RCM1 24 25 0.667
+RCM2 25 21 1K
+LCM 25 21 53.05U
+
+*GAIN STAGES
+GPSA 21 31 22 21 1.571M
+GCMA 21 31 24 21 1.571M
+GA 31 21 77 6 1.571M
+R2 31 21 636.54
+C2 31 33 100P
+EZ 33 21 32 21 1
+GB 32 21 31 21 3.142K
+RO2 32 21 1K
+****************
+*REFERENCE STAGE
+VREF 21 2 0
+****************
+*OUTPUT CLAMPING
+EOHO 66 0 5 0 1
+VOHO 66 11 3M
+D9 32 11 DX
+D10 12 32 DX
+VOLO 12 2 0
+****************
+EBUFF 88 2 32 2 1
+****************
+*CURRENT LIMITING STAGE
+D5 88 9 DX
+D6 1 9 DX
+D7 10 88 DX
+D8 10 1 DX 
+ILIMIT 9 10 150M
+****************
+*MODELS USED
+.MODEL PMOS PMOS(KP=1 VTO=-1.5)
+.MODEL DX D(N=0.002 CJO=1E-18)
+****************
+.ENDS  
+****************
+
+
+
+
+* Copyright (c) 2003-2012 Maxim Integrated Products.  All Rights Reserved.
