@@ -798,6 +798,88 @@
 				)
 			)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 		(symbol "Reference_Voltage:REF2033"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1907,7 +1989,7 @@
 			(uuid "7a05ce37-017c-488b-a7c4-7648e60c3c45")
 		)
 		(instances
-			(project ""
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "U4")
 					(unit 1)
@@ -1972,7 +2054,7 @@
 			(uuid "0aa0eff3-fead-478e-9e13-dc715ef7f91d")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "#PWR09")
 					(unit 1)
@@ -2040,7 +2122,7 @@
 			(uuid "c777affe-e94c-4cdf-a70e-101b44319f76")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "R4")
 					(unit 1)
@@ -2105,7 +2187,7 @@
 			(uuid "d832f485-d7e8-4c78-abd7-337946dd264a")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "#PWR08")
 					(unit 1)
@@ -2170,7 +2252,7 @@
 			(uuid "1689d7c9-0913-494f-94dc-68b00e4dc0e8")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "#PWR07")
 					(unit 1)
@@ -2238,9 +2320,73 @@
 			(uuid "52de99ef-fd20-4455-9ec4-b8e39772868a")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 163.83 35.56 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "668cabf8-41de-4b27-9049-02a6e53c6a82")
+		(property "Reference" "H3"
+			(at 166.37 34.2899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 166.37 36.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 163.83 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 163.83 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "strain-gauge-amp-breakout"
+				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -2335,9 +2481,73 @@
 			(uuid "75765284-9f1b-4aa1-88c0-610e0a34e7c1")
 		)
 		(instances
-			(project ""
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 163.83 25.4 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b0c449c-3356-49e2-9c57-1bf75e5ef3b3")
+		(property "Reference" "H1"
+			(at 166.37 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 166.37 26.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 163.83 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 163.83 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "strain-gauge-amp-breakout"
+				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -2403,6 +2613,70 @@
 			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 163.83 30.48 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "813f110e-9256-480a-85e0-b35976a80532")
+		(property "Reference" "H2"
+			(at 166.37 29.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 166.37 31.7499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 163.83 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 163.83 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "strain-gauge-amp-breakout"
+				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -2530,7 +2804,7 @@
 			(uuid "2772a4d6-8df6-4011-a259-1275312ae67e")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "#PWR01")
 					(unit 1)
@@ -2563,7 +2837,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8-1EP_3x3mm_P0.65mm_EP1.5x1.8mm"
+		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
 			(at 62.23 69.85 0)
 			(effects
 				(font
@@ -2651,7 +2925,7 @@
 			(uuid "56b8a76e-37e6-4da6-908a-c8354cad22c2")
 		)
 		(instances
-			(project ""
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "U2")
 					(unit 1)
@@ -2716,7 +2990,7 @@
 			(uuid "70e47f3d-11d9-49a3-924a-1a8a7c60099c")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "#PWR05")
 					(unit 1)
@@ -2784,7 +3058,7 @@
 			(uuid "bb135b5c-8028-41fe-932f-9d8537f87d22")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "R2")
 					(unit 1)
@@ -3014,7 +3288,7 @@
 			(uuid "dc67baf4-7154-44d2-a713-8aeb193726d3")
 		)
 		(instances
-			(project ""
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "J3")
 					(unit 1)
@@ -3147,7 +3421,7 @@
 			(uuid "a28e4c68-c657-4835-8bd8-0ec72797d840")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "R1")
 					(unit 1)
@@ -3217,7 +3491,7 @@
 			(uuid "e62ea311-9933-4c2e-8c7b-abe024f60b11")
 		)
 		(instances
-			(project ""
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "C1")
 					(unit 1)
@@ -3282,7 +3556,7 @@
 			(uuid "ca8b6dc8-4c19-49c9-919e-1bc657fabcda")
 		)
 		(instances
-			(project "simulator-test"
+			(project "strain-gauge-amp-breakout"
 				(path "/9c1af9d4-6ec7-46a5-a2c9-c98b5ad799e3"
 					(reference "#PWR06")
 					(unit 1)
