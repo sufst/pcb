@@ -7,7 +7,7 @@
 	(title_block
 		(title "Discharge Circuit")
 		(date "2024-02-15")
-		(rev "2.1.0")
+		(rev "2.2.0")
 		(company "SUFST")
 		(comment 1 "STAG X")
 		(comment 2 "Joe Pater")
@@ -1017,23 +1017,23 @@
 				)
 			)
 		)
-		(symbol "Mechanical:Heatsink"
+		(symbol "Mechanical:Heatsink_Pad"
 			(pin_names
-				(offset 1.016)
+				(offset 0)
 			)
-			(exclude_from_sim no)
+			(exclude_from_sim yes)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "HS"
-				(at 0 5.08 0)
+				(at 0 5.715 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Heatsink"
-				(at 0 -1.27 0)
+			(property "Value" "Heatsink_Pad"
+				(at 0 3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1041,7 +1041,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0.3048 0 0)
+				(at 0.3048 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1050,7 +1050,7 @@
 				)
 			)
 			(property "Datasheet" "~"
-				(at 0.3048 0 0)
+				(at 0.3048 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1058,7 +1058,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Heatsink"
+			(property "Description" "Heatsink with electrical connection, 1 pin"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1085,11 +1085,11 @@
 					(hide yes)
 				)
 			)
-			(symbol "Heatsink_0_1"
+			(symbol "Heatsink_Pad_0_1"
 				(polyline
 					(pts
-						(xy -0.3302 1.27) (xy -0.9652 1.27) (xy -0.9652 3.81) (xy -1.6002 3.81) (xy -1.6002 1.27) (xy -2.2352 1.27)
-						(xy -2.2352 3.81) (xy -2.8702 3.81) (xy -2.8702 0) (xy -0.9652 0)
+						(xy -0.3302 0) (xy -0.9652 0) (xy -0.9652 2.54) (xy -1.6002 2.54) (xy -1.6002 0) (xy -2.2352 0)
+						(xy -2.2352 2.54) (xy -2.8702 2.54) (xy -2.8702 -1.27) (xy -0.9652 -1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -1101,9 +1101,9 @@
 				)
 				(polyline
 					(pts
-						(xy -0.3302 1.27) (xy -0.3302 3.81) (xy 0.3048 3.81) (xy 0.3048 1.27) (xy 0.9398 1.27) (xy 0.9398 3.81)
-						(xy 1.5748 3.81) (xy 1.5748 1.27) (xy 2.2098 1.27) (xy 2.2098 3.81) (xy 2.8448 3.81) (xy 2.8448 0)
-						(xy -0.9652 0)
+						(xy -0.3302 0) (xy -0.3302 2.54) (xy 0.3048 2.54) (xy 0.3048 0) (xy 0.9398 0) (xy 0.9398 2.54)
+						(xy 1.5748 2.54) (xy 1.5748 0) (xy 2.2098 0) (xy 2.2098 2.54) (xy 2.8448 2.54) (xy 2.8448 -1.27)
+						(xy -0.9652 -1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -1111,6 +1111,26 @@
 					)
 					(fill
 						(type background)
+					)
+				)
+			)
+			(symbol "Heatsink_Pad_1_1"
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -2586,6 +2606,16 @@
 	)
 	(wire
 		(pts
+			(xy 71.12 63.5) (xy 73.66 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f6519c2-6efc-4c2d-8205-75219a823f2d")
+	)
+	(wire
+		(pts
 			(xy 109.22 81.915) (xy 109.22 85.725)
 		)
 		(stroke
@@ -2637,6 +2667,16 @@
 	)
 	(wire
 		(pts
+			(xy 73.66 63.5) (xy 73.66 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33db2537-a5e7-473d-af9a-f6edda00c91a")
+	)
+	(wire
+		(pts
 			(xy 73.66 147.32) (xy 73.66 128.905)
 		)
 		(stroke
@@ -2644,6 +2684,16 @@
 			(type default)
 		)
 		(uuid "33e7f2f3-830a-426d-ba41-7e575f3ca270")
+	)
+	(wire
+		(pts
+			(xy 180.34 63.5) (xy 181.61 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3562361a-3bc8-4c95-a1ac-279b6b9e433d")
 	)
 	(wire
 		(pts
@@ -3082,6 +3132,26 @@
 	)
 	(wire
 		(pts
+			(xy 171.45 71.12) (xy 181.61 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b49d553f-da2f-4b62-8461-09a707dd5955")
+	)
+	(wire
+		(pts
+			(xy 63.5 71.12) (xy 73.66 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb680552-e4a5-4b75-80c7-846c6a93532b")
+	)
+	(wire
+		(pts
 			(xy 117.475 123.19) (xy 117.475 127.635)
 		)
 		(stroke
@@ -3129,6 +3199,16 @@
 			(type default)
 		)
 		(uuid "c81f42a6-bf00-477d-b622-5f4ae5f718aa")
+	)
+	(wire
+		(pts
+			(xy 181.61 63.5) (xy 181.61 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb9bfad2-aba3-44d3-91fe-17125821b82e")
 	)
 	(wire
 		(pts
@@ -3578,6 +3658,17 @@
 		)
 		(uuid "1f512f8d-89ea-4dd2-bde8-3e2a24df80db")
 	)
+	(label "HEATSINK"
+		(at 63.5 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3944d3d0-48bb-4e1b-886c-7ea3445cc8a9")
+	)
 	(label "HV-"
 		(at 63.5 147.32 0)
 		(fields_autoplaced yes)
@@ -3610,6 +3701,17 @@
 			(justify left bottom)
 		)
 		(uuid "9320742f-d6ad-48f7-a630-84fe51afe33c")
+	)
+	(label "HEATSINK"
+		(at 171.45 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ae3f334d-690a-4250-bc85-4dc2012d3f6a")
 	)
 	(label "RLY_H"
 		(at 76.2 107.95 0)
@@ -3702,16 +3804,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:Heatsink")
-		(at 181.61 63.5 90)
+		(lib_id "Mechanical:Heatsink_Pad")
+		(at 177.8 63.5 90)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(uuid "0154d4a0-cd98-43a2-90c7-ad7cfa137f72")
 		(property "Reference" "HS2"
-			(at 177.165 59.055 90)
+			(at 173.355 59.055 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3720,7 +3822,7 @@
 			)
 		)
 		(property "Value" "Heatsink"
-			(at 175.895 67.945 90)
+			(at 172.085 67.945 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3728,8 +3830,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 181.61 63.1952 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 179.07 63.1952 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3738,7 +3840,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 181.61 63.1952 0)
+			(at 179.07 63.1952 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3746,14 +3848,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 181.61 63.5 0)
+		(property "Description" "Heatsink with electrical connection, 1 pin"
+			(at 177.8 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "4f6302e4-5c32-40b6-9f2a-edab0e520ea7")
 		)
 		(instances
 			(project "Discharge"
@@ -5303,16 +5408,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:Heatsink")
-		(at 73.025 63.5 90)
+		(lib_id "Mechanical:Heatsink_Pad")
+		(at 68.58 63.5 90)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(uuid "a39f1c5c-b760-47a8-88ee-c613ecc4528e")
 		(property "Reference" "HS1"
-			(at 69.215 59.055 90)
+			(at 64.77 59.055 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5321,7 +5426,7 @@
 			)
 		)
 		(property "Value" "Heatsink"
-			(at 65.405 67.945 90)
+			(at 60.96 67.945 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5329,8 +5434,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 73.025 63.1952 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 69.85 63.1952 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5339,7 +5444,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 73.025 63.1952 0)
+			(at 69.85 63.1952 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5347,14 +5452,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 73.025 63.5 0)
+		(property "Description" "Heatsink with electrical connection, 1 pin"
+			(at 68.58 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "ba60f38a-e784-4e9d-a411-1373bef13398")
 		)
 		(instances
 			(project "Discharge"
