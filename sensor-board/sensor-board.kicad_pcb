@@ -104,6 +104,7 @@
 		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
+		(aux_axis_origin 243.586 93.6244)
 		(pcbplotparams
 			(layerselection 0x00010fc_ffffffff)
 			(plot_on_all_layers_selection 0x0000000_00000000)
@@ -118,7 +119,7 @@
 			(plotframeref no)
 			(viasonmask no)
 			(mode 1)
-			(useauxorigin no)
+			(useauxorigin yes)
 			(hpglpennumber 1)
 			(hpglpenspeed 20)
 			(hpglpendiameter 15.000000)
@@ -137,9 +138,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "out")
 		)
 	)
 	(net 0 "")
@@ -31315,6 +31316,19 @@
 				(thickness 0.1)
 			)
 			(justify left bottom mirror)
+		)
+	)
+	(gr_text "Strain Gauge\nSensor Board\nv1.0 - Feb 2025"
+		(at 214.5538 67.0814 0)
+		(layer "B.SilkS")
+		(uuid "73e1cd31-6c5a-4868-8a38-4b369ec5d472")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1875)
+				(bold yes)
+			)
+			(justify bottom mirror)
 		)
 	)
 	(gr_text "GND GND\n\n1C  3C\n\n1B  3B\n\nGND GND\n\n2B  4B\n\n2C  4C"
