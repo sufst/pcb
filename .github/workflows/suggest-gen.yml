@@ -1,0 +1,45 @@
+name: Suggest building production files when PR approved
+
+on:
+  pull_request_review:
+    types: submitted
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  send_message:
+    name: Locate ".kicad_pro" ".kicad_sch" ".kicad_pcb" then send message
+    runs-on: ubuntu-24.04
+
+    if: github.event.review.author_association == 'COLLABORATOR' || github.event.review.author_association == 'OWNER'
+
+    steps:
+      - name: Checkout to latest commit
+        uses: actions/checkout@v4
+
+      - name: Locate project and construct message
+        env:
+          USER: ${{ github.triggering_actor }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.url }}
+        run: |
+          pr_number="$(echo "$PR" | sed 's/.*\/pulls\///')"
+          base="$(gh pr view "$pr_number" --jq '.["baseRefName"]' --json "baseRefName")"
+          echo "Comparing to base '$base'"
+
+          git fetch origin "$base"
+
+          set +e # Allow capturing stderr
+          body="$(./bin/gen/pr-message.sh "origin/$base" "$USER")"
+          exit_code="$?"
+          set -e
+
+          if [ "$exit_code" != "0" ]; then
+            echo "Non-zero exit code, error was:"
+            echo "$body"
+            exit "$exit_code"
+          fi
+
+          gh pr comment "$pr_number" --body "$body"

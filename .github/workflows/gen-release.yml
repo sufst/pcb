@@ -1,0 +1,136 @@
+name: Generate release files using config in PR comment
+
+on:
+  issue_comment:
+    types: created
+
+permissions:
+  contents: read
+
+jobs:
+  parse_message:
+    name: Parse message body and check referenced files exist
+    runs-on: ubuntu-24.04
+
+    if: github.event.issue.pull_request && (github.event.comment.author_association == 'COLLABORATOR' || github.event.comment.author_association == 'OWNER') && contains(github.event.comment.body, '@github-actions generate')
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Checkout to latest commit
+        env:
+          PR: ${{ github.event.issue.pull_request.url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global --add safe.directory "$(pwd)"
+          gh pr checkout "$(echo "$PR" | sed 's/.*\/pulls\///')"
+
+      - name: Extract message variables
+        id: format
+        env:
+          BODY: ${{ github.event.comment.body }}
+        # This uses the fact that the input message uses the same syntax as GITHUB_OUTPUT
+        # so we can just rely on GitHub to do the parsing for us
+        run: echo "$BODY" | sed '/^$/d; /^@/d' | tr -d '\r' >> "$GITHUB_OUTPUT"
+
+      - name: Check schematic exists
+        env:
+          SCH_LOCATION: ${{ steps.format.outputs.sch_location }}
+        run: test -f "$SCH_LOCATION"
+
+      - name: Check PCB exists
+        env:
+          PCB_LOCATION: ${{ steps.format.outputs.pcb_location }}
+        run: test -f "$PCB_LOCATION"
+
+      - name: Check for existing release directory
+        if: steps.format.outputs.overwrite != '1'
+        env:
+          RELEASE_DIR: ${{ steps.format.outputs.release_dir }}
+        run: test ! -e "$RELEASE_DIR"
+
+    outputs:
+      project: ${{ steps.format.outputs.project }}
+      version: ${{ steps.format.outputs.new_version }}
+      release_dir: ${{ steps.format.outputs.release_dir }}
+      sch_location: ${{ steps.format.outputs.sch_location }}
+      pcb_location: ${{ steps.format.outputs.pcb_location }}
+      n_layers: ${{ steps.format.outputs.n_layers }}
+      create_tag: ${{ steps.format.outputs.create_tag }}
+
+  gen_files:
+    name: Generate gerbers, schematic PDF and interactive BOM
+    runs-on: ubuntu-24.04
+    needs: parse_message
+
+    permissions:
+      contents: write
+
+    container:
+      image: maartin0/kicadutils
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Checkout to latest commit
+        env:
+          PR: ${{ github.event.issue.pull_request.url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global --add safe.directory "$(pwd)"
+          gh pr checkout "$(echo "$PR" | sed 's/.*\/pulls\///')"
+
+      - name: Initialise release dir
+        env:
+          RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
+        run: |
+          rm -rf "$RELEASE_DIR"
+          mkdir -p "$RELEASE_DIR"
+
+      - name: Add version to info
+        if: needs.parse_message.outputs.version != ''
+        env:
+          RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
+          VERSION: ${{ needs.parse_message.outputs.version }}
+        run: echo "version=${VERSION}" >> "${RELEASE_DIR}/info"
+
+      - name: Add layers to info
+        if: needs.parse_message.outputs.n_layers != ''
+        env:
+          RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
+          LAYERS: ${{ needs.parse_message.outputs.n_layers }}
+        run: echo "layers=${LAYERS}" >> "${RELEASE_DIR}/info"
+
+      - name: Generate Fabrication.zip
+        env:
+          RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
+          PCB_LOCATION: ${{ needs.parse_message.outputs.pcb_location }}
+        run: ./bin/gen/fab.sh "$PCB_LOCATION" "$RELEASE_DIR"
+
+      - name: Generate iBOM
+        env:
+          RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
+          PCB_LOCATION: ${{ needs.parse_message.outputs.pcb_location }}
+        run: ./bin/gen/ibom.sh "$PCB_LOCATION" "$RELEASE_DIR"
+
+      - name: Generate Schematic.pdf
+        env:
+          RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
+          SCH_LOCATION: ${{ needs.parse_message.outputs.sch_location }}
+        run: ./bin/gen/schem.sh "$SCH_LOCATION" "$RELEASE_DIR"
+
+      - name: Commit changes
+        env:
+          NAME: ${{ needs.parse_message.outputs.project }}
+          CREATE_TAG: ${{ needs.parse_message.outputs.create_tag }}
+          VERSION: ${{ needs.parse_message.outputs.version }}
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global --add safe.directory "$(pwd)"
+          git add release/
+          git commit -m "Generate $NAME production files"
+          [ "$CREATE_TAG" = "1" ] && git tag "${NAME}-${VERSION}"
+          git push
