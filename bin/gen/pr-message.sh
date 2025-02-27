@@ -7,12 +7,11 @@ die() {
     exit 1
 }
 
-if [ "$#" -ne 2 ]; then
-    die "Usage: $0 <changes base ref> <user>"
+if [ "$#" -ne 1 ]; then
+    die "Usage: $0 <changes base ref>"
 fi
 
 base="$1"
-user="$2"
 
 file=""
 
@@ -59,7 +58,7 @@ set +e # Carry on even if grep finds zero layers
 n_layers="$(grep ".Cu\" signal" "$pcb" -c)"
 set -e
 
-echo "@$user Can automatically generate release files for this pull request."
+echo "Can automatically generate release files for this pull request."
 echo ""
 if [ "$already_exists" = "1" ]; then
     if [ -n "$old_version" ]; then

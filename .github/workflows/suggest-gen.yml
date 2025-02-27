@@ -1,8 +1,8 @@
 name: Suggest building production files when PR approved
 
 on:
-  pull_request_review:
-    types: submitted
+  pull_request:
+    types: opened
 
 permissions:
   contents: read
@@ -13,15 +13,12 @@ jobs:
     name: Locate ".kicad_pro" ".kicad_sch" ".kicad_pcb" then send message
     runs-on: ubuntu-24.04
 
-    if: github.event.review.author_association == 'COLLABORATOR' || github.event.review.author_association == 'OWNER'
-
     steps:
       - name: Checkout to latest commit
         uses: actions/checkout@v4
 
       - name: Locate project and construct message
         env:
-          USER: ${{ github.triggering_actor }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.url }}
         run: |
@@ -32,7 +29,7 @@ jobs:
           git fetch origin "$base"
 
           set +e # Allow capturing stderr
-          body="$(./bin/gen/pr-message.sh "origin/$base" "$USER")"
+          body="$(./bin/gen/pr-message.sh "origin/$base")"
           exit_code="$?"
           set -e
 
