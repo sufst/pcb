@@ -134,3 +134,4 @@ jobs:
           git commit -m "Generate $NAME production files"
           [ "$CREATE_TAG" = "1" ] && git tag "${NAME}-${VERSION}"
           git push
+          git push --tags
