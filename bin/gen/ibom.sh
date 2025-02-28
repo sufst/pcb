@@ -9,7 +9,7 @@ die() {
     exit 1
 }
 
-if [ $# -lt 2 ]; then
+if [ $# -ne 2 ]; then
     die "Usage: $0 <pcb> <release dir>"
 fi
 

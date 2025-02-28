@@ -2,19 +2,12 @@
 
 set -e
 
-tmp_dir="$(date +"tmp-%Y.%m.%d-%H.%M.%S")"
-
-cleanup() {
-    rm -rf "$tmp_dir"
-}
-
 die() {
     echo "$*"
-    cleanup
     exit 1
 }
 
-if [ $# -lt 2 ]; then
+if [ $# -ne 2 ]; then
     die "Usage: $0 <sch> <release dir>"
 fi
 
