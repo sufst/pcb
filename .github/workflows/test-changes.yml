@@ -38,7 +38,7 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ needs.changes.outputs.all_changed_files }}
         run: |
-          for file in "${ALL_CHANGED_FILES}"; do
+          for file in ${ALL_CHANGED_FILES}; do
             if echo "$file" | grep ".kicad_sch$" >/dev/null; then
               ./bin/test/erc.sh "$file"
             fi
@@ -60,7 +60,7 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ needs.changes.outputs.all_changed_files }}
         run: |
-          for file in "${ALL_CHANGED_FILES}"; do
+          for file in ${ALL_CHANGED_FILES}; do
             if echo "$file" | grep ".kicad_pcb$" >/dev/null; then
               ./bin/test/drc.sh "$file"
             fi
@@ -77,7 +77,7 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ needs.changes.outputs.all_changed_files }}
         run: |
-          for file in "${ALL_CHANGED_FILES}"; do
+          for file in ${ALL_CHANGED_FILES}; do
             if echo "$file" | grep "\-lib-table$" >/dev/null; then
               ./bin/test/relative.sh "$file"
             fi
