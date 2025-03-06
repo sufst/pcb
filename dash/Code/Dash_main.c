@@ -1,4 +1,5 @@
 #include <xc.h> //PIC Compiler
+#include <pic18f47q84.h> // MCU
 #include <stdio.h> // For sprintf
 #include <stdint.h>
 
@@ -29,6 +30,9 @@ void main(void) {
     uint8_t seg_buffer[4]; //Buffer for 7-segment display
 
     while(1) {
+        CANMessage msg;
+
+        if ()
     }
 }
 
@@ -45,5 +49,5 @@ uint8_t CAN_Recieve(CANMessage *msg) {
 }
 
 void I2C_Init() {
-    
+
 }
