@@ -5966,6 +5966,16 @@
 	)
 	(wire
 		(pts
+			(xy 373.38 48.26) (xy 377.19 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d7ed246-e6e0-4b3e-8d42-5da485032c03")
+	)
+	(wire
+		(pts
 			(xy 370.84 148.59) (xy 370.84 149.86)
 		)
 		(stroke
@@ -6343,6 +6353,16 @@
 			(type default)
 		)
 		(uuid "7dd08488-7272-4762-a157-86575369567f")
+	)
+	(wire
+		(pts
+			(xy 370.84 50.8) (xy 377.19 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fb14557-41c2-454c-8d3b-a5603128ae0c")
 	)
 	(wire
 		(pts
@@ -7263,6 +7283,16 @@
 			(type default)
 		)
 		(uuid "cfd49e8b-6e58-4b9d-bddd-a7e062d4b48c")
+	)
+	(wire
+		(pts
+			(xy 373.38 48.26) (xy 373.38 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cff8f59a-beb0-4d0e-bd20-bddb093c8882")
 	)
 	(bus
 		(pts
@@ -8363,6 +8393,17 @@
 		)
 		(uuid "e8a4c248-c3a6-4674-991e-8a9254f2ccc2")
 	)
+	(label "OUT-"
+		(at 370.84 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee9f977c-3fa8-4b70-981a-c9bf8f9e814e")
+	)
 	(label "LED1"
 		(at 194.31 213.36 0)
 		(fields_autoplaced yes)
@@ -8776,6 +8817,76 @@
 			(project "WholeBMS1"
 				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
 					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 382.27 50.8 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "16a2468d-2095-4baa-9d73-7d3743c4c399")
+		(property "Reference" "J7"
+			(at 384.81 50.8001 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 384.81 48.2601 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
+			(at 382.27 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 382.27 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 382.27 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "568c2e35-d957-41bf-ae49-a89a77435d09")
+		)
+		(pin "1"
+			(uuid "158b7a30-06b3-4f52-b8ac-91002c57ce92")
+		)
+		(instances
+			(project "WholeBMS1"
+				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -14371,6 +14482,72 @@
 			(project "WholeBMS1"
 				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
 					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 373.38 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d01c25fd-4aa3-4d92-a703-117abf5c0959")
+		(property "Reference" "#PWR053"
+			(at 373.38 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 373.38 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 373.38 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 373.38 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 373.38 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4728bb75-b21c-4ea1-82ea-4c575c4dadc9")
+		)
+		(instances
+			(project "WholeBMS1"
+				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
