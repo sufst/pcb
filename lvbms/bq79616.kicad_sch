@@ -4131,6 +4131,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 93.98) (xy 120.65 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64f13317-9d4e-4e34-9082-65bcf9d497c1")
+	)
+	(wire
+		(pts
 			(xy 250.19 82.55) (xy 255.27 82.55)
 		)
 		(stroke
@@ -6269,6 +6279,28 @@
 		(uuid "928a5a3a-3f41-4871-94fb-9df41e3da93e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 59.8933 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TSREF"
+		(shape input)
+		(at 120.65 91.44 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c39d3af-3a4c-4abf-9c9a-d598476998a9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 120.65 82.7701 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8742,6 +8774,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 120.65 97.79 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "81ba3d5c-2813-401a-a64a-2f549b2f5a19")
+		(property "Reference" "C34"
+			(at 116.84 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 116.84 99.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 119.6848 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 120.65 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0c903d70-b8d5-4fa1-9723-90c0b556461e")
+		)
+		(pin "1"
+			(uuid "a871ef13-5c02-43c5-9855-c6c3e46441b7")
+		)
+		(instances
+			(project "WholeBMS1"
+				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9/4d2b476e-fd83-43b4-94a1-a0780a62a8e6"
+					(reference "C34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 138.43 140.97 180)
 		(unit 1)
@@ -10362,6 +10465,73 @@
 			(project "WholeBMS1"
 				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9/4d2b476e-fd83-43b4-94a1-a0780a62a8e6"
 					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 120.65 101.6 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc2ea03d-6c8a-4c23-9556-6879f76374f3")
+		(property "Reference" "#PWR054"
+			(at 120.65 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 120.396 105.156 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 120.65 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "597c3968-972c-4b3a-accc-ba5035707768")
+		)
+		(instances
+			(project "WholeBMS1"
+				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9/4d2b476e-fd83-43b4-94a1-a0780a62a8e6"
+					(reference "#PWR054")
 					(unit 1)
 				)
 			)
