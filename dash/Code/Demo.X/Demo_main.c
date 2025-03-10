@@ -3,11 +3,6 @@
 #include "lcd.h"
 #include "seg.h"
 
-#include <pic18f47q84.h>
-
-#define _XTAL_FREQ 4000000
-
-
 // Function to delay for a specified number of seconds
 void delay_seconds(uint16_t seconds) {
     while (seconds--) {
@@ -18,7 +13,7 @@ void delay_seconds(uint16_t seconds) {
 int main(void) {
     // Configure the oscillator (HFINTOSC at 4 MHz as per OSCFRQ = 0x02)
     OSCCON1 = 0x60;  // Use HFINTOSC with divider
-    OSCFRQ = 0x02;   // HFINTOSC frequency = 64 MHz
+    OSCFRQ = 0x02;   // HFINTOSC frequency = 4 MHz
     
     // Initialize I2C, LCD, and 7-segment display
     i2c_init();
