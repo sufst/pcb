@@ -4175,6 +4175,12 @@
 		(uuid "5cc7acaf-e429-4bbc-9b99-f3a7eafc7f75")
 	)
 	(junction
+		(at 81.28 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6c61fc82-8a91-4c37-b206-c20483333fb3")
+	)
+	(junction
 		(at 133.35 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5310,6 +5316,16 @@
 	)
 	(wire
 		(pts
+			(xy 83.82 38.1) (xy 81.28 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4614b661-f876-4c38-8cff-c5dbf38ff902")
+	)
+	(wire
+		(pts
 			(xy 309.88 78.105) (xy 309.88 86.36)
 		)
 		(stroke
@@ -5670,6 +5686,16 @@
 	)
 	(wire
 		(pts
+			(xy 77.47 38.1) (xy 81.28 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f9b4ee4-cb72-48da-b405-39e9052a01bf")
+	)
+	(wire
+		(pts
 			(xy 284.48 66.04) (xy 288.925 66.04)
 		)
 		(stroke
@@ -5727,6 +5753,16 @@
 			(type default)
 		)
 		(uuid "63e04be2-3ffe-4473-bf5c-5c01a2afc624")
+	)
+	(wire
+		(pts
+			(xy 83.82 36.83) (xy 83.82 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65dc4bcf-b5bf-4632-b3f2-825b39f2fadc")
 	)
 	(wire
 		(pts
@@ -6737,16 +6773,6 @@
 			(type default)
 		)
 		(uuid "ae49b62e-190a-4822-b887-41adf841b542")
-	)
-	(wire
-		(pts
-			(xy 81.28 38.1) (xy 77.47 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b11b04c0-8dca-4f9c-88ba-9bc2787a1e00")
 	)
 	(wire
 		(pts
@@ -13473,6 +13499,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 81.28 38.1 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "829632ac-64eb-40da-b6ea-02765ffe5ccd")
+		(property "Reference" "#FLG02"
+			(at 81.28 40.005 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 81.28 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 81.28 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e8eddfbf-e206-478a-9345-824da32d6313")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 313.69 86.36 90)
 		(unit 1)
@@ -15351,7 +15443,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 81.28 38.1 270)
+		(at 83.82 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15359,7 +15451,7 @@
 		(dnp no)
 		(uuid "acb60312-aa24-4160-b357-bac07fd942e4")
 		(property "Reference" "#PWR036"
-			(at 77.47 38.1 0)
+			(at 83.82 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15368,7 +15460,7 @@
 			)
 		)
 		(property "Value" "+12A V"
-			(at 82.804 35.56 90)
+			(at 83.566 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15376,7 +15468,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 81.28 38.1 0)
+			(at 83.82 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15385,7 +15477,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 38.1 0)
+			(at 83.82 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15394,7 +15486,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 81.28 38.1 0)
+			(at 83.82 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
