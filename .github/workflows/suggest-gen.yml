@@ -34,9 +34,9 @@ jobs:
           set -e
 
           if [ "$exit_code" != "0" ]; then
-            echo "Non-zero exit code, error was:"
+            echo "Non-zero exit code ($exit_code), error was:"
             echo "$body"
-            exit "$exit_code"
+            exit 0 # Don't error - there may be no KiCad project in this pull request
           fi
 
           gh pr comment "$pr_number" --body "$body"

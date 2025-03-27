@@ -6,13 +6,46 @@ on:
 
 permissions:
   contents: read
+  issues: write
+  pull-requests: write
 
 jobs:
+  check_for_permissions_error:
+    name: Send error if something is invalid
+    runs-on: ubuntu-24.04
+
+    if: contains(github.event.comment.body, '@github-actions generate') && !github.event.issue.pull_request || (github.event.comment.author_association != 'COLLABORATOR' && github.event.comment.author_association != 'OWNER' && github.event.comment.author_association != 'MEMBER')
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Not a pull request
+        if: github.event.issue.pull_request == ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.issue.url }}
+          USER: ${{ github.event.comment.user.login }}
+        run: |
+          pr_number="$(echo "$PR" | sed 's/.*\/issues\///')"
+          gh issue comment "$pr_number" --body "@$USER This command only works in a pull request"
+      
+      - name: No permission
+        if: github.event.issue.pull_request && github.event.comment.author_association != 'COLLABORATOR' && github.event.comment.author_association != 'OWNER' && github.event.comment.author_association != 'MEMBER'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.issue.pull_request.url }}
+          USER: ${{ github.event.comment.user.login }}
+          ASSOCIATION: ${{ github.event.comment.author_association }}
+        run: |
+          pr_number="$(echo "$PR" | sed 's/.*\/pulls\///')"
+          gh pr comment "$pr_number" --body "@$USER You don't have permission to run this command. You must be either a \`COLLABORATOR\`, \`MEMBER\` or \`OWNER\`. Your association: \`$ASSOCIATION\`."
+
   parse_message:
     name: Parse message body and check referenced files exist
     runs-on: ubuntu-24.04
 
-    if: github.event.issue.pull_request && (github.event.comment.author_association == 'COLLABORATOR' || github.event.comment.author_association == 'OWNER') && contains(github.event.comment.body, '@github-actions generate')
+    if: github.event.issue.pull_request && contains(github.event.comment.body, '@github-actions generate') && (github.event.comment.author_association == 'COLLABORATOR' || github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER')
 
     steps:
       - name: Checkout repo
@@ -135,3 +168,25 @@ jobs:
           [ "$CREATE_TAG" = "1" ] && git tag "${NAME}-${VERSION}"
           git push
           git push --tags
+
+  alert_on_error:
+    name: Send a message if this workflow fails
+    runs-on: ubuntu-24.04
+    needs: gen_files
+
+    if: always() && contains(needs.*.result, 'failure')
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Send message
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.issue.pull_request.url }}
+          USER: ${{ github.event.comment.user.login }}
+        run: |
+          pr_number="$(echo "$PR" | sed 's/.*\/pulls\///')"
+          gh pr comment "$pr_number" --body "@$USER This command failed. Check the error logs in the actions tab for more details."
+
+    
