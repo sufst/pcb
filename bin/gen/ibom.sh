@@ -18,4 +18,4 @@ pcb="$1"
 release_dir="$2"
 [ -d "$release_dir" ] || die "Release dir '$release_dir' doesn't exist or isn't a directory"
 
-INTERACTIVE_HTML_BOM_NO_DISPLAY=1 generate_interactive_bom "$pcb" --dest-dir "$start_dir/$release_dir" --no-browser
+INTERACTIVE_HTML_BOM_NO_DISPLAY=1 generate_interactive_bom --include-nets "$pcb" --dest-dir "$start_dir/$release_dir" --no-browser
