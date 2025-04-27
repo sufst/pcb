@@ -165,7 +165,7 @@ jobs:
           git config --global --add safe.directory "$(pwd)"
           git add release/
           git commit -m "Generate $NAME production files"
-          [ "$CREATE_TAG" = "1" ] && git tag "${NAME}-${VERSION}"
+          [ "$CREATE_TAG" = "1" ] && git tag -f "${NAME}-${VERSION}"
           git push
           git push --tags
 
