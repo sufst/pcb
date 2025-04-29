@@ -1,0 +1,101 @@
+name: Test changed files
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  changes:
+    name: Get changed files
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout to latest commit
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v45
+
+    outputs:
+      changed: ${{ steps.changed-files.outputs.any_changed }}
+      all_changed_files: ${{ steps.changed-files.outputs.all_changed_files }}
+
+  test_erc:
+    name: Run KiCad ERC(s)
+    runs-on: ubuntu-24.04
+    needs: changes
+    if: needs.changes.outputs.changed == 'true' && contains(needs.changes.outputs.all_changed_files, 'kicad_sch')
+    container:
+      image: maartin0/kicadutils
+
+    steps:
+      - name: Checkout to latest commit
+        uses: actions/checkout@v4
+
+      - name: Copy default KiCad lib tables
+        run: ./bin/util/copy-lib-tables.sh
+
+      - name: Run ERC(s)
+        env:
+          ALL_CHANGED_FILES: ${{ needs.changes.outputs.all_changed_files }}
+        run: |
+          checked=""
+          for schematic in ${ALL_CHANGED_FILES}; do
+            if echo "$schematic" | grep ".kicad_sch$" >/dev/null; then
+              echo "Found related schematic $schematic"
+              for root_schem in $(./bin/util/find-root-schem.sh "$schematic"); do
+                echo "Found root schematic $root_schem"
+                if echo "$checked" | grep "$root_schem" >/dev/null; then
+                  echo "$root_schem already checked, skipping..."
+                  continue
+                fi
+                checked="$checked $root_schem"
+                echo "Running ERC on $root_schem"
+                ./bin/test/erc.sh "$root_schem"
+              done
+            fi
+          done
+
+  test_drc:
+    name: Run KiCad DRC(s)
+    runs-on: ubuntu-24.04
+    needs: changes
+    if: needs.changes.outputs.changed == 'true' && contains(needs.changes.outputs.all_changed_files, 'kicad_pcb')
+    container:
+      image: maartin0/kicadutils
+
+    steps:
+      - name: Checkout to latest commit
+        uses: actions/checkout@v4
+
+      - name: Copy default KiCad lib tables
+        run: ./bin/util/copy-lib-tables.sh
+
+      - name: Run DRC(s)
+        env:
+          ALL_CHANGED_FILES: ${{ needs.changes.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            if echo "$file" | grep ".kicad_pcb$" >/dev/null; then
+              ./bin/test/drc.sh "$file"
+            fi
+          done
+
+  test_relative:
+    name: Check for non-relative paths
+    runs-on: ubuntu-24.04
+    needs: changes
+    if: needs.changes.outputs.changed == 'true' && contains(needs.changes.outputs.all_changed_files, '-lib-table')
+
+    steps:
+      - name: Check for non-relative paths
+        env:
+          ALL_CHANGED_FILES: ${{ needs.changes.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            if echo "$file" | grep "\-lib-table$" >/dev/null; then
+              ./bin/test/relative.sh "$file"
+            fi
+          done
