@@ -17,6 +17,9 @@ jobs:
       - name: Checkout to latest commit
         uses: actions/checkout@v4
 
+      - name: Download utility scripts
+        run: git clone https://github.com/sufst/SUFST-scripts.git scripts
+
       - name: Locate project and construct message
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -29,7 +32,7 @@ jobs:
           git fetch origin "$base"
 
           set +e # Allow capturing stderr
-          body="$(./bin/gen/pr-message.sh "origin/$base")"
+          body="$(./scripts/gen/pr-message.sh "origin/$base")"
           exit_code="$?"
           set -e
 

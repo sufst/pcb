@@ -34,8 +34,11 @@ jobs:
       - name: Checkout to latest commit
         uses: actions/checkout@v4
 
+      - name: Download utility scripts
+        run: git clone https://github.com/sufst/SUFST-scripts.git scripts
+
       - name: Copy default KiCad lib tables
-        run: ./bin/util/copy-lib-tables.sh
+        run: ./scripts/util/copy-lib-tables.sh
 
       - name: Run ERC(s)
         env:
@@ -45,7 +48,7 @@ jobs:
           for schematic in ${ALL_CHANGED_FILES}; do
             if echo "$schematic" | grep ".kicad_sch$" >/dev/null; then
               echo "Found related schematic $schematic"
-              for root_schem in $(./bin/util/find-root-schem.sh "$schematic"); do
+              for root_schem in $(./scripts/util/find-root-schem.sh "$schematic"); do
                 echo "Found root schematic $root_schem"
                 if echo "$checked" | grep "$root_schem" >/dev/null; then
                   echo "$root_schem already checked, skipping..."
@@ -53,7 +56,7 @@ jobs:
                 fi
                 checked="$checked $root_schem"
                 echo "Running ERC on $root_schem"
-                ./bin/test/erc.sh "$root_schem"
+                ./scripts/test/erc.sh "$root_schem"
               done
             fi
           done
@@ -70,8 +73,11 @@ jobs:
       - name: Checkout to latest commit
         uses: actions/checkout@v4
 
+      - name: Download utility scripts
+        run: git clone https://github.com/sufst/SUFST-scripts.git scripts
+
       - name: Copy default KiCad lib tables
-        run: ./bin/util/copy-lib-tables.sh
+        run: ./scripts/util/copy-lib-tables.sh
 
       - name: Run DRC(s)
         env:
@@ -79,7 +85,7 @@ jobs:
         run: |
           for file in ${ALL_CHANGED_FILES}; do
             if echo "$file" | grep ".kicad_pcb$" >/dev/null; then
-              ./bin/test/drc.sh "$file"
+              ./scripts/test/drc.sh "$file"
             fi
           done
 
@@ -90,12 +96,18 @@ jobs:
     if: needs.changes.outputs.changed == 'true' && contains(needs.changes.outputs.all_changed_files, '-lib-table')
 
     steps:
+      - name: Checkout to latest commit
+        uses: actions/checkout@v4
+
+      - name: Download utility scripts
+        run: git clone https://github.com/sufst/SUFST-scripts.git scripts
+
       - name: Check for non-relative paths
         env:
           ALL_CHANGED_FILES: ${{ needs.changes.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
             if echo "$file" | grep "\-lib-table$" >/dev/null; then
-              ./bin/test/relative.sh "$file"
+              ./scripts/test/relative.sh "$file"
             fi
           done

@@ -29,7 +29,7 @@ jobs:
         run: |
           pr_number="$(echo "$PR" | sed 's/.*\/issues\///')"
           gh issue comment "$pr_number" --body "@$USER This command only works in a pull request"
-      
+
       - name: No permission
         if: github.event.issue.pull_request && github.event.comment.author_association != 'COLLABORATOR' && github.event.comment.author_association != 'OWNER' && github.event.comment.author_association != 'MEMBER'
         env:
@@ -115,6 +115,9 @@ jobs:
           git config --global --add safe.directory "$(pwd)"
           gh pr checkout "$(echo "$PR" | sed 's/.*\/pulls\///')"
 
+      - name: Download utility scripts
+        run: git clone https://github.com/sufst/SUFST-scripts.git scripts
+
       - name: Initialise release dir
         env:
           RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
@@ -140,19 +143,19 @@ jobs:
         env:
           RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
           PCB_LOCATION: ${{ needs.parse_message.outputs.pcb_location }}
-        run: ./bin/gen/fab.sh "$PCB_LOCATION" "$RELEASE_DIR"
+        run: ./scripts/gen/fab.sh "$PCB_LOCATION" "$RELEASE_DIR"
 
       - name: Generate iBOM
         env:
           RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
           PCB_LOCATION: ${{ needs.parse_message.outputs.pcb_location }}
-        run: ./bin/gen/ibom.sh "$PCB_LOCATION" "$RELEASE_DIR"
+        run: ./scripts/gen/ibom.sh "$PCB_LOCATION" "$RELEASE_DIR"
 
       - name: Generate Schematic.pdf
         env:
           RELEASE_DIR: ${{ needs.parse_message.outputs.release_dir }}
           SCH_LOCATION: ${{ needs.parse_message.outputs.sch_location }}
-        run: ./bin/gen/schem.sh "$SCH_LOCATION" "$RELEASE_DIR"
+        run: ./scripts/gen/schem.sh "$SCH_LOCATION" "$RELEASE_DIR"
 
       - name: Commit changes
         env:
@@ -188,5 +191,3 @@ jobs:
         run: |
           pr_number="$(echo "$PR" | sed 's/.*\/pulls\///')"
           gh pr comment "$pr_number" --body "@$USER This command failed. Check the error logs in the actions tab for more details."
-
-    

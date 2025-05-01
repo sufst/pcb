@@ -20,8 +20,11 @@ jobs:
       - name: Checkout to latest commit
         uses: actions/checkout@v4
 
+      - name: Download utility scripts
+        run: git clone https://github.com/sufst/SUFST-scripts.git scripts
+
       - name: Run DRC(s)
-        run: find . -name "*.kicad_pcb" -print0 | xargs -0 -n1 sh -c './bin/test/drc.sh "$0" || exit 255'
+        run: find . -name "*.kicad_pcb" -print0 | xargs -0 -n1 sh -c './scripts/test/drc.sh "$0" || exit 255'
 
   test_drc:
     name: Run KiCad DRC(s)
@@ -33,13 +36,22 @@ jobs:
       - name: Checkout to latest commit
         uses: actions/checkout@v4
 
+      - name: Download utility scripts
+        run: git clone https://github.com/sufst/SUFST-scripts.git scripts
+
       - name: Run DRC(s)
-        run: find . -name "*.kicad_pcb" -print0 | xargs -0 -n1 sh -c './bin/test/drc.sh "$0" || exit 255'
+        run: find . -name "*.kicad_pcb" -print0 | xargs -0 -n1 sh -c './scripts/test/drc.sh "$0" || exit 255'
 
   test_relative:
     name: Check for non-relative paths
     runs-on: ubuntu-24.04
 
     steps:
+      - name: Checkout to latest commit
+        uses: actions/checkout@v4
+
+      - name: Download utility scripts
+        run: git clone https://github.com/sufst/SUFST-scripts.git scripts
+
       - name: Check for non-relative paths
-        run: find . -name "*-lib-table" -print0 | xargs -0 -n1 sh -c './bin/test/relative.sh "$0" || exit 255'
+        run: find . -name "*-lib-table" -print0 | xargs -0 -n1 sh -c './scripts/test/relative.sh "$0" || exit 255'
