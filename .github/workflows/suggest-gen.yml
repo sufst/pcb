@@ -1,8 +1,10 @@
-name: Suggest building production files when PR approved
+name: Suggest building release files when PR opened
 
 on:
   pull_request:
     types: opened
+    paths:
+      - "**.kicad*"
 
 permissions:
   contents: read
@@ -10,15 +12,20 @@ permissions:
 
 jobs:
   send_message:
-    name: Locate ".kicad_pro" ".kicad_sch" ".kicad_pcb" then send message
-    runs-on: ubuntu-24.04
+    name: Locate files and send message
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout to latest commit
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Download utility scripts
-        run: git clone https://github.com/sufst/SUFST-scripts.git scripts
+      - name: Checkout to latest PR commit
+        env:
+          PR: ${{ github.event.pull_request.url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global --add safe.directory "$(pwd)"
+          gh pr checkout "$(echo "$PR" | sed 's/.*\/pulls\///')"
 
       - name: Locate project and construct message
         env:
@@ -26,20 +33,107 @@ jobs:
           PR: ${{ github.event.pull_request.url }}
         run: |
           pr_number="$(echo "$PR" | sed 's/.*\/pulls\///')"
+
           base="$(gh pr view "$pr_number" --jq '.["baseRefName"]' --json "baseRefName")"
           echo "Comparing to base '$base'"
-
           git fetch origin "$base"
 
-          set +e # Allow capturing stderr
-          body="$(./scripts/gen/pr-message.sh "origin/$base")"
-          exit_code="$?"
-          set -e
+          # Find related KiCad project
+          pro=""
+          for changed_file in $(git diff "origin/$base" --name-only); do
+            # Find any changed kicad-related files
+            if echo "$changed_file" | grep "kicad" >/dev/null; then
+              file="$changed_file"
+              echo "Found KiCad related file '$changed_file'"
+              # Look for .kicad_pro in same directory
+              dir="$(dirname "$file")"
+              if pro="$(ls "$dir" | grep .kicad_pro)"; then
+                echo "Using project '$pro'"
+                pro="$dir/$pro"
+                break
+              fi
+            fi
+          done
 
-          if [ "$exit_code" != "0" ]; then
-            echo "Non-zero exit code ($exit_code), error was:"
-            echo "$body"
-            exit 0 # Don't error - there may be no KiCad project in this pull request
+          if [ -z "$pro" ]; then
+            echo "Couldn't find KiCad project"
+            exit 1
           fi
 
+          pcb="$(echo "$pro" | sed 's/.kicad_pro/.kicad_pcb/')"
+          sch="$(echo "$pro" | sed 's/.kicad_pro/.kicad_sch/')"
+
+          pro_name="$(basename "$pro" | sed 's/.kicad_pro//')"
+          dir_name="$(basename "$(dirname "$pro")")"
+
+          release_dir_name=""
+
+          if [ -z "$dir_name" ] || [ "$dir_name" = "." ]; then
+            release_dir_name="$pro_name"
+          else
+            release_dir_name="$dir_name"
+          fi
+
+          release_dir="release/$release_dir_name"
+          echo "Using release dir '$release_dir'"
+
+          # If release files already exist with an annotated info file, try and extract the version number
+          old_version=""
+          if [ -e "$release_dir" ] && [ -f "$release_dir/info" ]; then
+            old_version="$(grep "version: " "$release_dir/info" | sed 's/.*version: \([A-z0-9\.]\+\).*/\1/' | head -n 1)"
+          fi
+
+          # Otherwise, see if any tags exist with the project name and version
+          if [ -z "$old_version" ] && options="$(git tag | grep "$release_dir_name")"; then
+            possible_version="$(echo "$options" | tail -n 1 | sed "s/$release_dir_name//;s/-//g")"
+            if echo "$possible_version" | grep "^v"; then
+              old_version="$possible_version"
+            fi
+          fi
+
+          # Increment the version number or use v1.0.0
+          new_version="v1.0.0"
+          if [ -n "$old_version" ]; then
+            old_version_comment="Found existing release files with version '$old_version'"
+            new_version="$(echo "$old_version" | awk -F. -v OFS=. '{$NF=$NF+1;print}')"
+          fi
+          echo "Suggesting version: '$new_version'"
+
+          # Find number of layers
+          set +e # Carry on even if grep finds zero layers
+          n_layers="$(grep ".Cu\" signal" "$pcb" -c)"
+          set -e
+          echo "Found PCB with $n_layers layers"
+
+          # Construct message
+          old_version_comment=""
+          if [ -n "$old_version" ]; then
+            old_version_comment="Found existing release files with version \`$old_version\`"
+          fi
+
+          overwrite_warning_comment=""
+          if [ -e "$release_dir" ]; then
+            overwrite_warning_comment="**Running this will overwrite the existing release files at \`$release_dir\`**"
+          fi
+
+          body="Can automatically generate release files for this pull request.
+
+          $old_version_comment
+
+          $overwrite_warning_comment
+
+          To continue, copy and paste (adjusting if necessary, you can remove any line to skip that action) the following into a new message:
+
+          \`\`\`md
+          @github-actions generate 
+          - schematic \`$sch\` \`$release_dir/Schematic.pdf\`
+          - fabrication \`$pcb\` \`$release_dir/Fabrication.zip\`
+          - ibom \`$pcb\` \`$release_dir/ibom.html\`
+          - info \`$release_dir/info\` version=\`$new_version\` date=\`$(date '+%Y-%m-%d')\` fabrication=\`N/A\` layers=\`$n_layers\`
+          - tag \`$release_dir_name-$new_version\`
+          \`\`\`
+
+          See [the README](https://github.com/sufst/pcb/?tab=readme-ov-file#releases) for more information."
+
+          # Send message
           gh pr comment "$pr_number" --body "$body"

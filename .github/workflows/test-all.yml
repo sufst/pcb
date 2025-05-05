@@ -1,0 +1,81 @@
+name: Run KiCad DRC and ERC on all files in repository
+
+on:
+  workflow_dispatch:
+  # push:
+
+jobs:
+  locate-files:
+    name: Locate file(s) to test
+    runs-on: ubuntu-latest
+
+    outputs:
+      projects: ${{ steps.projects.outputs.arr }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Locate projects
+        id: projects
+        run: |
+          result="["
+          IFS=$'\n' # Required to avoid splitting on spaces in filenames
+          for file in $(find . -type f -name "*.kicad_pro"); do
+            result="$result\"$file\", "
+          done
+          result="$(echo "$result" | sed 's/..$//')]"
+          echo "arr=$result" >> "$GITHUB_OUTPUT"
+          echo "found project files: $result"
+
+  drc:
+    name: Run DRC(s)
+    runs-on: ubuntu-latest
+
+    needs: locate-files
+
+    strategy:
+      matrix:
+        project: ${{ fromJSON(needs.locate-files.outputs.projects) }}
+      fail-fast: false
+
+    steps:
+      - name: Checkout to latest commit
+        uses: actions/checkout@v4
+
+      - name: Parse PCB name
+        id: parse
+        env:
+          PRO: ${{ matrix.project }}
+        run: echo "pcb=$(echo "$PRO" | sed 's/\.kicad_pro/\.kicad_pcb/')" >> "$GITHUB_OUTPUT"
+
+      - name: Run DRC
+        uses: maartin0/kicad-drc-action@v1
+        with:
+          pcb: ${{ steps.parse.outputs.pcb }}
+
+  sch:
+    name: Run ERC(s)
+    runs-on: ubuntu-latest
+
+    needs: locate-files
+
+    strategy:
+      matrix:
+        project: ${{ fromJSON(needs.locate-files.outputs.projects) }}
+      fail-fast: false
+
+    steps:
+      - name: Checkout to latest commit
+        uses: actions/checkout@v4
+
+      - name: Parse schematic name
+        id: parse
+        env:
+          PRO: ${{ matrix.project }}
+        run: echo "sch=$(echo "$PRO" | sed 's/\.kicad_pro/\.kicad_sch/')" >> "$GITHUB_OUTPUT"
+
+      - name: Run ERC
+        uses: maartin0/kicad-erc-action@v1
+        with:
+          sch: ${{ steps.parse.outputs.sch }}
