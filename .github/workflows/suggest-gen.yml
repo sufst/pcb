@@ -2,7 +2,7 @@ name: Suggest building release files when PR opened
 
 on:
   pull_request:
-    types: opened
+    types: [opened, edited, synchronize, reopened, ready_for_review]
     paths:
       - "**.kicad*"
 
