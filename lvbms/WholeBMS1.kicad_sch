@@ -1259,6 +1259,151 @@
 				)
 			)
 		)
+		(symbol "Device:D_Zener"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Zener diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Zener_0_1"
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:Fuse"
 			(pin_numbers hide)
 			(pin_names
@@ -2730,7 +2875,7 @@
 				)
 			)
 		)
-		(symbol "Regulator_Linear:TLV1117-33"
+		(symbol "Regulator_Linear:AZ1117-3.3"
 			(pin_names
 				(offset 0.254)
 			)
@@ -2745,7 +2890,7 @@
 					)
 				)
 			)
-			(property "Value" "TLV1117-33"
+			(property "Value" "AZ1117-3.3"
 				(at 0 3.175 0)
 				(effects
 					(font
@@ -2755,6 +2900,16 @@
 				)
 			)
 			(property "Footprint" ""
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AZ1117.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2763,7 +2918,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv1117.pdf"
+			(property "Description" "1A 20V Fixed LDO Linear Regulator, 3.3V, SOT-89/SOT-223/TO-220/TO-252/TO-263"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2772,7 +2927,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, TO-220/TO-252/TO-263/SOT-223"
+			(property "ki_keywords" "Fixed Voltage Regulator 1A Positive LDO"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2781,7 +2936,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "linear regulator ldo fixed positive"
+			(property "ki_fp_filters" "SOT?223* SOT?89* TO?220* TO?252* TO?263*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2790,19 +2945,10 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?223* TO?263* TO?252* TO?220*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TLV1117-33_0_1"
+			(symbol "AZ1117-3.3_0_1"
 				(rectangle
-					(start -5.08 -5.08)
-					(end 5.08 1.905)
+					(start -5.08 1.905)
+					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2812,7 +2958,7 @@
 					)
 				)
 			)
-			(symbol "TLV1117-33_1_1"
+			(symbol "AZ1117-3.3_1_1"
 				(pin power_in line
 					(at 0 -7.62 90)
 					(length 2.54)
@@ -4628,12 +4774,6 @@
 		(uuid "67d1808b-bd1e-4f8b-adcd-641f882a7331")
 	)
 	(junction
-		(at 290.83 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6eb5ca4c-a632-470c-b9c3-914028c690f6")
-	)
-	(junction
 		(at 260.35 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4676,6 +4816,12 @@
 		(uuid "8558abd9-c758-476e-a608-dd08859adec0")
 	)
 	(junction
+		(at 298.45 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "85d2cd7a-196d-48a7-a67e-91c2bc643994")
+	)
+	(junction
 		(at 370.84 170.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4712,10 +4858,10 @@
 		(uuid "a756aad3-a403-496a-9601-a02f634173d9")
 	)
 	(junction
-		(at 300.99 64.77)
+		(at 303.53 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a772a27f-81d0-447d-b79a-a3fbb9c2001a")
+		(uuid "ac11fc70-07de-432e-b15c-6625a64adc8d")
 	)
 	(junction
 		(at 349.25 160.02)
@@ -4812,6 +4958,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f00c221a-46cf-4771-a3ce-54cc10a173ab")
+	)
+	(junction
+		(at 303.53 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4500d4a-9444-432a-a7b8-04c1d174219d")
 	)
 	(junction
 		(at 194.31 30.48)
@@ -5151,7 +5303,7 @@
 	)
 	(wire
 		(pts
-			(xy 300.99 74.93) (xy 316.23 74.93)
+			(xy 303.53 74.93) (xy 316.23 74.93)
 		)
 		(stroke
 			(width 0)
@@ -5508,16 +5660,6 @@
 			(type default)
 		)
 		(uuid "339bf367-d3f4-4f8a-89bd-6578f5520f38")
-	)
-	(wire
-		(pts
-			(xy 290.83 33.02) (xy 365.76 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33abf274-7cf4-4e31-bc76-12133e96b3a9")
 	)
 	(bus
 		(pts
@@ -6111,6 +6253,16 @@
 	)
 	(wire
 		(pts
+			(xy 298.45 74.93) (xy 303.53 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68d114ef-7ead-4177-bd76-df587d0fea3c")
+	)
+	(wire
+		(pts
 			(xy 236.22 128.27) (xy 238.76 128.27)
 		)
 		(stroke
@@ -6131,7 +6283,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.61 64.77) (xy 300.99 64.77)
+			(xy 308.61 64.77) (xy 303.53 64.77)
 		)
 		(stroke
 			(width 0)
@@ -6301,7 +6453,7 @@
 	)
 	(wire
 		(pts
-			(xy 290.83 33.02) (xy 290.83 64.77)
+			(xy 287.02 33.02) (xy 287.02 64.77)
 		)
 		(stroke
 			(width 0)
@@ -6771,7 +6923,7 @@
 	)
 	(wire
 		(pts
-			(xy 300.99 64.77) (xy 300.99 67.31)
+			(xy 303.53 64.77) (xy 303.53 67.31)
 		)
 		(stroke
 			(width 0)
@@ -7239,6 +7391,16 @@
 		)
 		(uuid "d1d890f9-4ab9-4cdd-b38a-52bd2ca1eb5b")
 	)
+	(wire
+		(pts
+			(xy 298.45 64.77) (xy 303.53 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1f37bb1-9ba1-47a4-8b73-7a4cf4f5ba95")
+	)
 	(bus
 		(pts
 			(xy 187.96 176.53) (xy 187.96 179.07)
@@ -7331,7 +7493,7 @@
 	)
 	(wire
 		(pts
-			(xy 290.83 64.77) (xy 292.1 64.77)
+			(xy 287.02 64.77) (xy 289.56 64.77)
 		)
 		(stroke
 			(width 0)
@@ -7561,7 +7723,7 @@
 	)
 	(wire
 		(pts
-			(xy 275.59 33.02) (xy 290.83 33.02)
+			(xy 275.59 33.02) (xy 287.02 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7588,6 +7750,16 @@
 			(type default)
 		)
 		(uuid "eeee4212-f585-4428-a12e-47bed9b1c272")
+	)
+	(wire
+		(pts
+			(xy 294.64 64.77) (xy 298.45 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef006d5e-eb0e-4102-ba55-3a7479b2da6d")
 	)
 	(wire
 		(pts
@@ -7628,16 +7800,6 @@
 			(type default)
 		)
 		(uuid "f4095058-e4ee-4fc9-9a82-10ad4ccfd520")
-	)
-	(wire
-		(pts
-			(xy 299.72 64.77) (xy 300.99 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4316862-372f-49be-883a-a55dbe11cf27")
 	)
 	(wire
 		(pts
@@ -7738,6 +7900,16 @@
 			(type default)
 		)
 		(uuid "f96920ab-17c8-4d27-90b9-3807db9a22aa")
+	)
+	(wire
+		(pts
+			(xy 298.45 64.77) (xy 298.45 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f969b231-ae57-43b2-92d7-e1576bb58005")
 	)
 	(wire
 		(pts
@@ -7854,9 +8026,9 @@
 		)
 		(uuid "7e6e6055-0cdd-41af-8e58-795e51747839")
 	)
-	(text "Inrush when relay closes is causing a \ncurrent spike that kills the simple AMS1117,\nTLV11117 has soft start that should prevent that -AM"
+	(text "Inrush to charge capacitors when relay closes is causing a \ncurrent spike that kills the regulator,\n20 ohm resistor prevents that; it's fine as the 3.3v \nonly uses 20ma on average  -AM"
 		(exclude_from_sim no)
-		(at 327.914 51.816 0)
+		(at 321.818 52.832 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7927,16 +8099,6 @@
 			)
 		)
 		(uuid "d659d33e-3455-4a26-a89d-ab57f675f1b9")
-	)
-	(text "should probably add back these\n decoupling caps, just removed \nto test what was causing the \nfuse to fail -AM"
-		(exclude_from_sim no)
-		(at 311.15 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "e25a2bc6-bfc2-49c1-bb92-48f9fe08bd46")
 	)
 	(text "was 68 ohms, but relay struggles to stay \nlatched when whole pack voltage is low \n(less than about 9V), so shorted (more\n power consumption, but can now use full \nrange of the cells) -AM"
 		(exclude_from_sim no)
@@ -9343,77 +9505,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:TLV1117-33")
-		(at 316.23 64.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2096c0bd-0692-442e-832d-027c7fbabae2")
-		(property "Reference" "U6"
-			(at 316.23 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TLV1117-33"
-			(at 316.23 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 316.23 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv1117.pdf"
-			(at 316.23 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, TO-220/TO-252/TO-263/SOT-223"
-			(at 316.23 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "82370b4d-8163-4023-bb5a-a7ee96891483")
-		)
-		(pin "2"
-			(uuid "06b04462-6693-40ae-9e42-f978496a195a")
-		)
-		(pin "3"
-			(uuid "7478200e-ba38-4296-b32d-d6b4f5fb6500")
-		)
-		(instances
-			(project ""
-				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
-					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 316.23 77.47 0)
 		(unit 1)
@@ -10220,6 +10311,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 292.1 64.77 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "37f6b5e5-d726-4191-940c-f245d202c244")
+		(property "Reference" "R3"
+			(at 292.1 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20"
+			(at 292.1 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 292.1 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 292.1 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 292.1 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2a56c323-b512-4df5-805e-07b3b011898f")
+		)
+		(pin "2"
+			(uuid "bf0c2d09-7f45-4129-ae7f-d0bb091183c5")
+		)
+		(instances
+			(project "WholeBMS1"
+				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint_Small")
 		(at 370.84 172.72 0)
 		(unit 1)
@@ -10705,6 +10864,75 @@
 			(project "WholeBMS1"
 				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 298.45 71.12 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4f8c412b-7358-4013-aa21-1d4c187248ff")
+		(property "Reference" "D13"
+			(at 295.91 69.8499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D_Zener"
+			(at 295.91 72.3899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 298.45 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/115/DIOD_S_A0003550771_1-2542306.pdf"
+			(at 298.45 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode 15V 500mW MMSZ5245B-7-F"
+			(at 298.45 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d421f037-5815-4b91-865e-77a188f4b7ad")
+		)
+		(pin "1"
+			(uuid "9521fa1a-1cd9-404d-8626-f97f6d7b8f04")
+		)
+		(instances
+			(project ""
+				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -12401,7 +12629,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7a7c3306-b9cd-4cd9-b6dc-d836366722e5")
 		(property "Reference" "C8"
@@ -13082,6 +13310,78 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Linear:AZ1117-3.3")
+		(at 316.23 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9c5a6437-4458-4e17-9984-b22c909f67f7")
+		(property "Reference" "U3"
+			(at 316.23 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AZ1117-3.3"
+			(at 316.23 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 316.23 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AZ1117.pdf"
+			(at 316.23 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1A 20V Fixed LDO Linear Regulator, 3.3V, SOT-89/SOT-223/TO-220/TO-252/TO-263"
+			(at 316.23 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c1af7235-5eca-4d3b-967d-0f0e1e27b2d2")
+		)
+		(pin "1"
+			(uuid "a973f8aa-e038-4997-b9e7-6732d0439a00")
+		)
+		(pin "3"
+			(uuid "0bd9db63-e013-45e9-bf36-ac42ba9382dd")
+		)
+		(instances
+			(project ""
+				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x06")
 		(at 180.34 128.27 0)
 		(mirror y)
@@ -13434,16 +13734,16 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 300.99 71.12 0)
+		(at 303.53 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af97b012-aa3e-4178-99d3-92af83ebc31d")
 		(property "Reference" "C6"
-			(at 304.8 69.85 0)
+			(at 307.34 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13452,7 +13752,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 304.8 72.39 0)
+			(at 307.34 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13461,7 +13761,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 301.9552 74.93 0)
+			(at 304.4952 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13470,7 +13770,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 300.99 71.12 0)
+			(at 303.53 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13479,7 +13779,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 300.99 71.12 0)
+			(at 303.53 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13488,7 +13788,7 @@
 			)
 		)
 		(property "Order Code" "KGM21AR50J106KU "
-			(at 300.99 71.12 0)
+			(at 303.53 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14781,74 +15081,6 @@
 				)
 				(path "/d2151cc9-0acc-4d18-a050-63c63ade8261/7285d321-62f2-4f5f-9ad9-4b63044720b5"
 					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Fuse")
-		(at 295.91 64.77 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "de59f3d6-85df-4238-bde4-fee8421357e8")
-		(property "Reference" "F2"
-			(at 295.91 58.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Fuse 0.25A"
-			(at 295.91 60.96 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Fuse:Fuse_0603_1608Metric"
-			(at 295.91 66.548 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/40/AccuGuard2-2907777.pdf"
-			(at 295.91 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Kyocera AVX 32v .25A accuguard fuse"
-			(at 295.91 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dbb76fc2-db04-4e5e-b708-f90011f75cc7")
-		)
-		(pin "2"
-			(uuid "cf8db40d-473c-4b75-9f91-7939b362b2b2")
-		)
-		(instances
-			(project ""
-				(path "/552dda40-dad4-4f67-b96a-5b7edeb83cb9"
-					(reference "F2")
 					(unit 1)
 				)
 			)
