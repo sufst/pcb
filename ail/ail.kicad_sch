@@ -1138,7 +1138,7 @@
 				)
 			)
 		)
-		(symbol "PCM_Diode_TVS_AKL:1.5SMC350A"
+		(symbol "PCM_Diode_TVS_AKL:1.5SMC300CA"
 			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
@@ -1153,7 +1153,7 @@
 					)
 				)
 			)
-			(property "Value" "1.5SMC350A"
+			(property "Value" "1.5SMC300CA"
 				(at 0 2.54 0)
 				(effects
 					(font
@@ -1161,7 +1161,7 @@
 					)
 				)
 			)
-			(property "Footprint" "PCM_Diode_SMD_AKL:D_SMC"
+			(property "Footprint" "PCM_Diode_SMD_AKL:D_SMC_TVS"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1179,7 +1179,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "SMC Unidirectional TVS diode, 350V, 1500W, Alternate KiCAD Library"
+			(property "Description" "SMC Bidirectional TVS Diode, 300V, 1500W, Alternate KiCAD Library"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1188,7 +1188,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "diode unidirectional TVS 1.5SMC-A"
+			(property "ki_keywords" "diode TVS bidirectional 1.5SMC-CA"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1206,10 +1206,46 @@
 					(hide yes)
 				)
 			)
-			(symbol "1.5SMC350A_0_1"
+			(symbol "1.5SMC300CA_0_1"
 				(polyline
 					(pts
-						(xy -1.27 0) (xy 1.27 0)
+						(xy 0 -1.27) (xy -0.508 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0.508 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
 						(width 0)
@@ -1221,31 +1257,19 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27)
+						(xy 0 0) (xy -2.54 1.27) (xy -2.54 -1.27) (xy 0 0)
 					)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
 					)
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27) (xy 1.27 0) (xy -1.27 1.27)
+						(xy 2.54 1.27) (xy 2.54 -1.27) (xy 0 0) (xy 2.54 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -1256,10 +1280,10 @@
 					)
 				)
 			)
-			(symbol "1.5SMC350A_0_2"
+			(symbol "1.5SMC300CA_0_2"
 				(polyline
 					(pts
-						(xy -2.54 -2.54) (xy 2.54 2.54)
+						(xy -3.81 -3.81) (xy 3.81 3.81)
 					)
 					(stroke
 						(width 0)
@@ -1271,7 +1295,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 1.778) (xy -0.381 1.397)
+						(xy -0.889 0.889) (xy -1.27 0.508)
 					)
 					(stroke
 						(width 0.254)
@@ -1283,7 +1307,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 1.778) (xy 1.778 0)
+						(xy -0.889 0.889) (xy 0.889 -0.889)
 					)
 					(stroke
 						(width 0.254)
@@ -1295,7 +1319,31 @@
 				)
 				(polyline
 					(pts
-						(xy -0.889 -0.889) (xy -1.778 0) (xy 0.889 0.889) (xy 0 -1.778) (xy -0.889 -0.889)
+						(xy 0.889 -0.889) (xy 1.27 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -1.778) (xy -2.667 -0.889) (xy 0 0) (xy -0.889 -2.667) (xy -1.778 -1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.778 1.778) (xy 2.667 0.889) (xy 0 0) (xy 0.889 2.667) (xy 1.778 1.778)
 					)
 					(stroke
 						(width 0.254)
@@ -1306,9 +1354,9 @@
 					)
 				)
 			)
-			(symbol "1.5SMC350A_1_1"
+			(symbol "1.5SMC300CA_1_1"
 				(pin passive line
-					(at 3.81 0 180)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "K"
 						(effects
@@ -1326,7 +1374,7 @@
 					)
 				)
 				(pin passive line
-					(at -3.81 0 0)
+					(at 5.08 0 180)
 					(length 2.54)
 					(name "A"
 						(effects
@@ -1344,9 +1392,9 @@
 					)
 				)
 			)
-			(symbol "1.5SMC350A_1_2"
+			(symbol "1.5SMC300CA_1_2"
 				(pin passive line
-					(at 2.54 2.54 180)
+					(at 3.81 3.81 180)
 					(length 0)
 					(name "K"
 						(effects
@@ -1364,7 +1412,7 @@
 					)
 				)
 				(pin passive line
-					(at -2.54 -2.54 0)
+					(at -3.81 -3.81 0)
 					(length 0)
 					(name "A"
 						(effects
@@ -2437,6 +2485,16 @@
 	)
 	(wire
 		(pts
+			(xy 232.41 88.265) (xy 232.41 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "054794f5-122d-4d19-a25b-1639e3b5dba1")
+	)
+	(wire
+		(pts
 			(xy 98.425 114.3) (xy 98.425 118.11)
 		)
 		(stroke
@@ -2837,16 +2895,6 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 101.6) (xy 232.41 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83272de9-f994-4ea2-928d-4d90051ef5a9")
-	)
-	(wire
-		(pts
 			(xy 25.4 43.18) (xy 35.56 43.18)
 		)
 		(stroke
@@ -3007,6 +3055,16 @@
 	)
 	(wire
 		(pts
+			(xy 232.41 102.87) (xy 232.41 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7e0d6d9-6faf-462c-9be5-a8ba4a99d7ad")
+	)
+	(wire
+		(pts
 			(xy 96.52 50.8) (xy 96.52 64.77)
 		)
 		(stroke
@@ -3067,17 +3125,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 93.98) (xy 232.41 86.995)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be290743-6cf8-4496-a1b7-4234f6bd8df6")
-	)
-	(wire
-		(pts
-			(xy 232.41 76.2) (xy 232.41 79.375)
+			(xy 232.41 76.2) (xy 232.41 78.105)
 		)
 		(stroke
 			(width 0)
@@ -3363,7 +3411,7 @@
 		)
 		(uuid "508f1d10-d7a5-44d9-8e73-8c4126d8b24a")
 	)
-	(text "Output of regulator = 10V"
+	(text "Output of regulator = ~30V"
 		(exclude_from_sim no)
 		(at 67.056 85.852 0)
 		(effects
@@ -3451,13 +3499,14 @@
 		)
 		(uuid "c36af2c9-1340-45b9-a0de-5c37c64c834c")
 	)
-	(text "2x 300V working/ 332V breakdown"
+	(text "2x 300V working/ 332V breakdown for 600V\n2x 256V working/ 285V breakdown for 400V (414V clamp, fuse blows before failure)"
 		(exclude_from_sim no)
-		(at 256.54 92.075 0)
+		(at 189.23 112.395 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left top)
 		)
 		(uuid "d3962802-19c6-428b-8a25-e6930edf0c00")
 	)
@@ -3533,8 +3582,8 @@
 		)
 		(uuid "1c9d53e5-2c44-4b75-8afe-83bb2bf8ed3e")
 	)
-	(label "PWR_FLAG"
-		(at 96.52 93.98 0)
+	(label "REG_30V"
+		(at 96.52 95.25 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4784,7 +4833,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Diode_TVS_AKL:1.5SMC350A")
+		(lib_id "PCM_Diode_TVS_AKL:1.5SMC300CA")
 		(at 232.41 83.185 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4802,7 +4851,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1.5SMC350A"
+		(property "Value" "1.5SMC300CA"
 			(at 234.95 84.4549 90)
 			(effects
 				(font
@@ -4811,7 +4860,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "PCM_Diode_SMD_AKL:D_SMC"
+		(property "Footprint" "PCM_Diode_SMD_AKL:D_SMC_TVS"
 			(at 232.41 83.185 0)
 			(effects
 				(font
@@ -4829,7 +4878,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMC Unidirectional TVS diode, 350V, 1500W, Alternate KiCAD Library"
+		(property "Description" "SMC Bidirectional TVS Diode, 300V, 1500W, Alternate KiCAD Library"
 			(at 232.41 83.185 0)
 			(effects
 				(font
@@ -5334,7 +5383,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Diode_TVS_AKL:1.5SMC350A")
+		(lib_id "PCM_Diode_TVS_AKL:1.5SMC300CA")
 		(at 232.41 97.79 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5352,7 +5401,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1.5SMC350A"
+		(property "Value" "1.5SMC300CA"
 			(at 234.95 99.0599 90)
 			(effects
 				(font
@@ -5361,7 +5410,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "PCM_Diode_SMD_AKL:D_SMC"
+		(property "Footprint" "PCM_Diode_SMD_AKL:D_SMC_TVS"
 			(at 232.41 97.79 0)
 			(effects
 				(font
@@ -5379,7 +5428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMC Unidirectional TVS diode, 350V, 1500W, Alternate KiCAD Library"
+		(property "Description" "SMC Bidirectional TVS Diode, 300V, 1500W, Alternate KiCAD Library"
 			(at 232.41 97.79 0)
 			(effects
 				(font
