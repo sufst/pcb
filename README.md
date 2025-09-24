@@ -1,17 +1,35 @@
 # PCBs
 
 ## About
-Central repository of all PCB design files. Includes:
+Central repository of all schematics and PCB design files.
 
-| Folder    | Project Name                     |
-|-----------|----------------------------------|
-| bspd      | Brake System Plausibility Device |
-| hv-sense  | High Voltage Sense               |
-| latching  | Latch Circuit                    |
-| precharge | Precharge Circuit                |
-| segment   | Segment to BMS Connector         |
-| tsal      | Tractive System Active Light     |
-| vcu       | Vehicle Control Unit             |
+| Folder     | Project                          | Project Code |
+|------------|----------------------------------|--------------|
+| ail        | Accumulator Indicator Light Logic| `ail`        |
+| ail-led    | Accumulator Indicator Light Led  | `ail-led`    |
+| batak      | Batak Game (non-car)             | `batak`      |
+| break-light| Rear Break Light                 | `break-light`|
+| bspd       | Brake System Plausibility Device | `bspd`       |
+| can-node   | Voltage Reader and Broadcaster   | `can-node`   |
+| curr-amp   | Current Sensor Amplifier         | `curr-amp`   |
+| dash       | Dashboard                        | `dash`       |
+| discharge  | Discharge Relay Breakout         | `discharge`  |
+| hv-sense   | High Voltage Sense               | `hvs`        |
+| latching   | Latch Circuit                    | `latching`   |
+| loom*      | Loom Design                      | `loom`       |
+| lvbms      | Low Voltage Battery Management System | `lvbms` |
+| precharge  | Precharge Controller             | `precharge`  |
+| segment    | Segment                          | `segment`    |
+| telemetry  | On-Car Telemetry                 | `telemetry`  |
+| test-rig   | PCB Test / Demo Rig              | `test`       |
+| top-level* | Full Car Schematic               |              |
+| trc        | TSAC Relay Controller            | `trc`        |
+| tsal       | Tractive System Active Light     | `tsal`       |
+| vcu        | Vehicle Control Unit             | `vcu`        |
+
+We design our PCBs in KiCad (version 8+).
+
+>*Moved to https://github.com/sufst/loom
 
 ## Version Control for KiCad Projects
 
@@ -116,7 +134,7 @@ files.
 The release commit should then be tagged with the following command:
 
 ```sh
-git tag <PROJECT NAME>-<VERSION_NUMBER>
+git tag <PROJECT CODE>-<VERSION_NUMBER>
 ```
 
 Tagging should be done **after** merging to `main`! Example command:
