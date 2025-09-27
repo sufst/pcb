@@ -1,7 +1,7 @@
 (kicad_symbol_lib
-	(version 20231120)
+	(version 20241209)
 	(generator "kicad_symbol_editor")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(symbol "0.5S7B_1212S3UP"
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -70,6 +70,42 @@
 			)
 		)
 		(symbol "0.5S7B_1212S3UP_0_0"
+			(pin power_out line
+				(at -10.16 2.54 0)
+				(length 2.54)
+				(name "+Vout"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "-Vout"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin power_in line
 				(at 10.16 2.54 180)
 				(length 2.54)
@@ -106,42 +142,6 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at -10.16 -2.54 0)
-				(length 2.54)
-				(name "-Vout"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -10.16 2.54 0)
-				(length 2.54)
-				(name "+Vout"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
 		(symbol "0.5S7B_1212S3UP_0_1"
 			(rectangle
@@ -157,19 +157,7 @@
 			)
 			(polyline
 				(pts
-					(xy 0 -2.54) (xy 0 -3.81)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 0) (xy 0 -1.27)
+					(xy 0 5.08) (xy 0 3.81)
 				)
 				(stroke
 					(width 0)
@@ -193,7 +181,19 @@
 			)
 			(polyline
 				(pts
-					(xy 0 5.08) (xy 0 3.81)
+					(xy 0 0) (xy 0 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -2.54) (xy 0 -3.81)
 				)
 				(stroke
 					(width 0)
@@ -204,6 +204,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "16x2 LCD"
 		(exclude_from_sim no)
@@ -316,168 +317,6 @@
 				)
 				(fill
 					(type background)
-				)
-			)
-			(pin passive line
-				(at 15.24 -40.64 90)
-				(length 5.08)
-				(name "VSS"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -22.86 0)
-				(length 5.08)
-				(name "DB3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -25.4 0)
-				(length 5.08)
-				(name "DB4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -27.94 0)
-				(length 5.08)
-				(name "DB5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -30.48 0)
-				(length 5.08)
-				(name "DB6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "13"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -33.02 0)
-				(length 5.08)
-				(name "DB7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "14"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 30.48 -5.08 180)
-				(length 5.08)
-				(name "A"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "15"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 30.48 -7.62 180)
-				(length 5.08)
-				(name "K"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "16"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 15.24 2.54 270)
-				(length 5.08)
-				(name "VDD"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
 				)
 			)
 			(pin passive line
@@ -606,11 +445,546 @@
 					)
 				)
 			)
+			(pin passive line
+				(at 0 -22.86 0)
+				(length 5.08)
+				(name "DB3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -25.4 0)
+				(length 5.08)
+				(name "DB4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -27.94 0)
+				(length 5.08)
+				(name "DB5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -30.48 0)
+				(length 5.08)
+				(name "DB6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -33.02 0)
+				(length 5.08)
+				(name "DB7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 2.54 270)
+				(length 5.08)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 -40.64 90)
+				(length 5.08)
+				(name "VSS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 30.48 -5.08 180)
+				(length 5.08)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 30.48 -7.62 180)
+				(length 5.08)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
+	)
+	(symbol "ADXL343BCCZ-RL"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "IC"
+			(at 46.99 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Value" "ADXL343BCCZ-RL"
+			(at 46.99 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Footprint" "ADXL343BCCZRL"
+			(at 46.99 -82.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf"
+			(at 46.99 -182.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Accelerometer X, Y, Z Axis +/-2g, 4g, 8g, 16g 0.05Hz ~ 1.6kHz 14-LGA (3x5)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "1"
+			(at 46.99 -382.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "584-ADXL343BCCZ-R"
+			(at 46.99 -482.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Analog-Devices/ADXL343BCCZ-RL?qs=WIvQP4zGaniHpowyrbt1Aw%3D%3D"
+			(at 46.99 -582.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Analog Devices"
+			(at 46.99 -682.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ADXL343BCCZ-RL"
+			(at 46.99 -782.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(symbol "ADXL343BCCZ-RL_1_1"
+			(rectangle
+				(start 5.08 15.24)
+				(end 45.72 -22.86)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin passive line
+				(at 0 0 0)
+				(length 5.08)
+				(name "VDD_I/O"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 0)
+				(length 5.08)
+				(name "GND_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -5.08 0)
+				(length 5.08)
+				(name "RESERVED_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -7.62 0)
+				(length 5.08)
+				(name "GND_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -10.16 0)
+				(length 5.08)
+				(name "GND_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -12.7 0)
+				(length 5.08)
+				(name "VS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 25.4 20.32 270)
+				(length 5.08)
+				(name "SCL/SCLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 25.4 -27.94 90)
+				(length 5.08)
+				(name "~{CS}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 50.8 0 180)
+				(length 5.08)
+				(name "SDA/SDI/SDIO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 50.8 -2.54 180)
+				(length 5.08)
+				(name "SDO/ALT_ADDRESS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 50.8 -5.08 180)
+				(length 5.08)
+				(name "RESERVED_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 50.8 -7.62 180)
+				(length 5.08)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 50.8 -10.16 180)
+				(length 5.08)
+				(name "INT2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 50.8 -12.7 180)
+				(length 5.08)
+				(name "INT1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
 	)
 	(symbol "AZ431LBNTR-G1"
-		(pin_numbers hide)
-		(pin_names hide)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(hide yes)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -729,6 +1103,24 @@
 				)
 			)
 			(pin passive line
+				(at -2.54 0 0)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
 				(at 0 2.54 270)
 				(length 2.54)
 				(name "REF"
@@ -764,28 +1156,13 @@
 					)
 				)
 			)
-			(pin passive line
-				(at -2.54 0 0)
-				(length 2.54)
-				(name "A"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "DMP3056LDM"
-		(pin_names hide)
+		(pin_names
+			(hide yes)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -858,6 +1235,18 @@
 		(symbol "DMP3056LDM_0_1"
 			(polyline
 				(pts
+					(xy 0.254 1.905) (xy 0.254 -1.905)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
 					(xy 0.254 0) (xy -2.54 0)
 				)
 				(stroke
@@ -870,7 +1259,31 @@
 			)
 			(polyline
 				(pts
-					(xy 0.254 1.905) (xy 0.254 -1.905)
+					(xy 0.762 2.286) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 0.508) (xy 0.762 -0.508)
 				)
 				(stroke
 					(width 0.254)
@@ -892,60 +1305,11 @@
 					(type none)
 				)
 			)
-			(polyline
-				(pts
-					(xy 0.762 0.508) (xy 0.762 -0.508)
-				)
+			(circle
+				(center 1.651 0)
+				(radius 2.794)
 				(stroke
 					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0.762 2.286) (xy 0.762 1.27)
-				)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.54 2.54) (xy 2.54 1.778)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
-				)
-				(stroke
-					(width 0)
 					(type default)
 				)
 				(fill
@@ -962,6 +1326,52 @@
 				)
 				(fill
 					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 2.54) (xy 2.54 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.54 1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 2.54 -1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
 				)
 			)
 			(polyline
@@ -988,41 +1398,26 @@
 					(type none)
 				)
 			)
-			(circle
-				(center 1.651 0)
-				(radius 2.794)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(circle
-				(center 2.54 -1.778)
-				(radius 0.254)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(circle
-				(center 2.54 1.778)
-				(radius 0.254)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
 		)
 		(symbol "DMP3056LDM_1_1"
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "G"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
@@ -1043,7 +1438,8 @@
 			)
 			(pin passive line
 				(at 2.54 5.08 270)
-				(length 2.54) hide
+				(length 2.54)
+				(hide yes)
 				(name "D"
 					(effects
 						(font
@@ -1060,16 +1456,36 @@
 				)
 			)
 			(pin passive line
-				(at -5.08 0 0)
+				(at 2.54 5.08 270)
 				(length 2.54)
-				(name "G"
+				(hide yes)
+				(name "D"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "3"
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 5.08 270)
+				(length 2.54)
+				(hide yes)
+				(name "D"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1095,43 +1511,8 @@
 					)
 				)
 			)
-			(pin passive line
-				(at 2.54 5.08 270)
-				(length 2.54) hide
-				(name "D"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 2.54 5.08 270)
-				(length 2.54) hide
-				(name "D"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "FDN359BN"
 		(exclude_from_sim no)
@@ -1181,26 +1562,16 @@
 			)
 		)
 		(symbol "FDN359BN_0_1"
-			(circle
-				(center -0.889 0)
-				(radius 2.794)
+			(polyline
+				(pts
+					(xy -2.286 1.905) (xy -2.286 -1.905)
+				)
 				(stroke
 					(width 0.254)
 					(type default)
 				)
 				(fill
 					(type none)
-				)
-			)
-			(circle
-				(center 0 -1.778)
-				(radius 0.254)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
 				)
 			)
 			(polyline
@@ -1217,7 +1588,31 @@
 			)
 			(polyline
 				(pts
-					(xy -2.286 1.905) (xy -2.286 -1.905)
+					(xy -1.778 2.286) (xy -1.778 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 1.778) (xy 0.762 1.778) (xy 0.762 -1.778) (xy -1.778 -1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 0.508) (xy -1.778 -0.508)
 				)
 				(stroke
 					(width 0.254)
@@ -1239,60 +1634,11 @@
 					(type none)
 				)
 			)
-			(polyline
-				(pts
-					(xy -1.778 0.508) (xy -1.778 -0.508)
-				)
+			(circle
+				(center -0.889 0)
+				(radius 2.794)
 				(stroke
 					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -1.778 2.286) (xy -1.778 1.27)
-				)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 2.54) (xy 0 1.778)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 -2.54) (xy 0 0) (xy -1.778 0)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -1.778 1.778) (xy 0.762 1.778) (xy 0.762 -1.778) (xy -1.778 -1.778)
-				)
-				(stroke
-					(width 0)
 					(type default)
 				)
 				(fill
@@ -1309,6 +1655,52 @@
 				)
 				(fill
 					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 0 -1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -2.54) (xy 0 0) (xy -1.778 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
 				)
 			)
 			(polyline
@@ -1335,17 +1727,6 @@
 					(type none)
 				)
 			)
-			(circle
-				(center 0 1.778)
-				(radius 0.254)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
 		)
 		(symbol "FDN359BN_1_1"
 			(pin input line
@@ -1359,24 +1740,6 @@
 					)
 				)
 				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -5.08 90)
-				(length 2.54)
-				(name "S"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1402,10 +1765,31 @@
 					)
 				)
 			)
+			(pin passive line
+				(at 0 -5.08 90)
+				(length 2.54)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "FQD1N80TM"
-		(pin_names hide)
+		(pin_names
+			(hide yes)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1478,18 +1862,6 @@
 		(symbol "FQD1N80TM_0_1"
 			(polyline
 				(pts
-					(xy 0.254 0) (xy -2.54 0)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
 					(xy 0.254 1.905) (xy 0.254 -1.905)
 				)
 				(stroke
@@ -1502,7 +1874,19 @@
 			)
 			(polyline
 				(pts
-					(xy 0.762 -1.27) (xy 0.762 -2.286)
+					(xy 0.254 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 2.286) (xy 0.762 1.27)
 				)
 				(stroke
 					(width 0.254)
@@ -1526,34 +1910,10 @@
 			)
 			(polyline
 				(pts
-					(xy 0.762 2.286) (xy 0.762 1.27)
+					(xy 0.762 -1.27) (xy 0.762 -2.286)
 				)
 				(stroke
 					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.54 2.54) (xy 2.54 1.778)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-				)
-				(stroke
-					(width 0)
 					(type default)
 				)
 				(fill
@@ -1584,6 +1944,63 @@
 					(type outline)
 				)
 			)
+			(circle
+				(center 1.651 0)
+				(radius 2.794)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 2.54) (xy 2.54 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.54 1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 2.54 -1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
 			(polyline
 				(pts
 					(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
@@ -1606,39 +2023,6 @@
 				)
 				(fill
 					(type none)
-				)
-			)
-			(circle
-				(center 1.651 0)
-				(radius 2.794)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(circle
-				(center 2.54 -1.778)
-				(radius 0.254)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(circle
-				(center 2.54 1.778)
-				(radius 0.254)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
 				)
 			)
 		)
@@ -1698,6 +2082,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "Generic_7_segment"
 		(exclude_from_sim no)
@@ -1747,46 +2132,6 @@
 			)
 		)
 		(symbol "Generic_7_segment_0_0"
-			(text "A"
-				(at 0.254 9.398 0)
-				(effects
-					(font
-						(size 0.508 0.508)
-					)
-				)
-			)
-			(text "B"
-				(at 2.54 8.636 0)
-				(effects
-					(font
-						(size 0.508 0.508)
-					)
-				)
-			)
-			(text "C"
-				(at 2.286 5.588 0)
-				(effects
-					(font
-						(size 0.508 0.508)
-					)
-				)
-			)
-			(text "D"
-				(at -0.254 4.826 0)
-				(effects
-					(font
-						(size 0.508 0.508)
-					)
-				)
-			)
-			(text "DP"
-				(at 3.556 4.064 0)
-				(effects
-					(font
-						(size 0.508 0.508)
-					)
-				)
-			)
 			(text "E"
 				(at -2.54 5.588 0)
 				(effects
@@ -1803,8 +2148,48 @@
 					)
 				)
 			)
+			(text "D"
+				(at -0.254 4.826 0)
+				(effects
+					(font
+						(size 0.508 0.508)
+					)
+				)
+			)
 			(text "G"
 				(at 0 7.874 0)
+				(effects
+					(font
+						(size 0.508 0.508)
+					)
+				)
+			)
+			(text "A"
+				(at 0.254 9.398 0)
+				(effects
+					(font
+						(size 0.508 0.508)
+					)
+				)
+			)
+			(text "C"
+				(at 2.286 5.588 0)
+				(effects
+					(font
+						(size 0.508 0.508)
+					)
+				)
+			)
+			(text "B"
+				(at 2.54 8.636 0)
+				(effects
+					(font
+						(size 0.508 0.508)
+					)
+				)
+			)
+			(text "DP"
+				(at 3.556 4.064 0)
 				(effects
 					(font
 						(size 0.508 0.508)
@@ -1838,7 +2223,7 @@
 			)
 			(polyline
 				(pts
-					(xy -1.27 4.064) (xy 0.762 4.064)
+					(xy -1.27 9.652) (xy -1.524 7.62)
 				)
 				(stroke
 					(width 0.508)
@@ -1850,7 +2235,7 @@
 			)
 			(polyline
 				(pts
-					(xy -1.27 9.652) (xy -1.524 7.62)
+					(xy -1.27 4.064) (xy 0.762 4.064)
 				)
 				(stroke
 					(width 0.508)
@@ -1923,106 +2308,16 @@
 		)
 		(symbol "Generic_7_segment_1_1"
 			(pin input line
-				(at -7.62 1.27 0)
+				(at -7.62 11.43 0)
 				(length 2.54)
-				(name "E"
+				(name "A"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -7.62 -3.81 0)
-				(length 2.54)
-				(name "G"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -7.62 3.81 0)
-				(length 2.54)
-				(name "D"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 7.62 -3.81 180)
-				(length 2.54)
-				(name "CC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -7.62 6.35 0)
-				(length 2.54)
-				(name "C"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -7.62 -6.35 0)
-				(length 2.54)
-				(name "DP"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
+				(number "7"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2049,16 +2344,16 @@
 				)
 			)
 			(pin input line
-				(at -7.62 11.43 0)
+				(at -7.62 6.35 0)
 				(length 2.54)
-				(name "A"
+				(name "C"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "7"
+				(number "4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2067,16 +2362,34 @@
 				)
 			)
 			(pin input line
-				(at 7.62 -6.35 180)
+				(at -7.62 3.81 0)
 				(length 2.54)
-				(name "CC"
+				(name "D"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "8"
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 1.27 0)
+				(length 2.54)
+				(name "E"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2102,7 +2415,80 @@
 					)
 				)
 			)
+			(pin input line
+				(at -7.62 -3.81 0)
+				(length 2.54)
+				(name "G"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -6.35 0)
+				(length 2.54)
+				(name "DP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 7.62 -3.81 180)
+				(length 2.54)
+				(name "CC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 7.62 -6.35 180)
+				(length 2.54)
+				(name "CC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "HCF4010"
 		(exclude_from_sim no)
@@ -2172,17 +2558,17 @@
 			)
 		)
 		(symbol "HCF4010_0_0"
-			(pin power_in line
-				(at -2.54 17.78 270)
+			(pin input line
+				(at -10.16 8.89 0)
 				(length 2.54)
-				(name "VCC"
+				(name "Ain"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "1"
+				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2190,17 +2576,53 @@
 					)
 				)
 			)
-			(pin output line
-				(at 10.16 1.27 180)
+			(pin input line
+				(at -10.16 6.35 0)
 				(length 2.54)
-				(name "Dout"
+				(name "Bin"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "10"
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 3.81 0)
+				(length 2.54)
+				(name "Cin"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 1.27 0)
+				(length 2.54)
+				(name "Din"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2226,24 +2648,6 @@
 					)
 				)
 			)
-			(pin output line
-				(at 10.16 -1.27 180)
-				(length 2.54)
-				(name "Eout"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin input line
 				(at -10.16 -3.81 0)
 				(length 2.54)
@@ -2262,17 +2666,35 @@
 					)
 				)
 			)
-			(pin output line
-				(at 10.16 -3.81 180)
+			(pin power_in line
+				(at -2.54 17.78 270)
 				(length 2.54)
-				(name "Fout"
+				(name "VCC"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "15"
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -12.7 90)
+				(length 2.54)
+				(name "VSS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2316,24 +2738,6 @@
 					)
 				)
 			)
-			(pin input line
-				(at -10.16 8.89 0)
-				(length 2.54)
-				(name "Ain"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin output line
 				(at 10.16 6.35 180)
 				(length 2.54)
@@ -2345,24 +2749,6 @@
 					)
 				)
 				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -10.16 6.35 0)
-				(length 2.54)
-				(name "Bin"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2388,17 +2774,17 @@
 					)
 				)
 			)
-			(pin input line
-				(at -10.16 3.81 0)
+			(pin output line
+				(at 10.16 1.27 180)
 				(length 2.54)
-				(name "Cin"
+				(name "Dout"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "7"
+				(number "10"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2406,17 +2792,17 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 0 -12.7 90)
+			(pin output line
+				(at 10.16 -1.27 180)
 				(length 2.54)
-				(name "VSS"
+				(name "Eout"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "8"
+				(number "12"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2424,17 +2810,17 @@
 					)
 				)
 			)
-			(pin input line
-				(at -10.16 1.27 0)
+			(pin output line
+				(at 10.16 -3.81 180)
 				(length 2.54)
-				(name "Din"
+				(name "Fout"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "9"
+				(number "15"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2459,7 +2845,8 @@
 		(symbol "HCF4010_1_1"
 			(pin no_connect line
 				(at 7.62 -8.255 180)
-				(length 2.54) hide
+				(length 2.54)
+				(hide yes)
 				(name "NC"
 					(effects
 						(font
@@ -2476,6 +2863,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "HT16K33"
 		(pin_names
@@ -2493,14 +2881,13 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "HTK16K33"
-			(at 0 0 0)
+		(property "Value" "HT16K33"
+			(at -12.7 -30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify bottom)
-				(hide yes)
+				(justify left bottom)
 			)
 		)
 		(property "Footprint" "HT16K33:HT16K33"
@@ -2541,7 +2928,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description_1" "\n                        \n                            HT16K33 14-Segment 4-Digit Display Feather Platform Evaluation Expansion Board\n                        \n"
+		(property "Description_1" "HT16K33 14-Segment 4-Digit Display Feather Platform Evaluation Expansion Board"
 			(at 0 0 0)
 			(effects
 				(font
@@ -2572,6 +2959,16 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/HT16K33/Adafruit+Industries/view-part/?ref=eda"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "VALUE" "HTK16K33"
 			(at 0 0 0)
 			(effects
 				(font
@@ -2633,17 +3030,17 @@
 					(type background)
 				)
 			)
-			(pin bidirectional line
-				(at -15.24 -25.4 0)
+			(pin power_in line
+				(at -15.24 25.4 0)
 				(length 2.54)
-				(name "VSS"
+				(name "VDD"
 					(effects
 						(font
 							(size 1.016 1.016)
 						)
 					)
 				)
-				(number "1"
+				(number "24"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2652,232 +3049,16 @@
 				)
 			)
 			(pin bidirectional line
-				(at 15.24 -2.54 180)
+				(at -15.24 7.62 0)
 				(length 2.54)
-				(name "ROW11/K10/INT"
+				(name "SDA"
 					(effects
 						(font
 							(size 1.016 1.016)
 						)
 					)
 				)
-				(number "10"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 0 180)
-				(length 2.54)
-				(name "ROW10/K9"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 2.54 180)
-				(length 2.54)
-				(name "ROW9/K8"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 5.08 180)
-				(length 2.54)
-				(name "ROW8/K7"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "13"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 7.62 180)
-				(length 2.54)
-				(name "ROW7/K6"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "14"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 10.16 180)
-				(length 2.54)
-				(name "ROW6/K5"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "15"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 12.7 180)
-				(length 2.54)
-				(name "ROW5/K4"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "16"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 15.24 180)
-				(length 2.54)
-				(name "ROW4/K3"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "17"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 17.78 180)
-				(length 2.54)
-				(name "ROW3/K2"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "18"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 20.32 180)
-				(length 2.54)
-				(name "ROW2/K1"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "19"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 -7.62 180)
-				(length 2.54)
-				(name "COM0/AD"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 22.86 180)
-				(length 2.54)
-				(name "ROW1/A0"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "20"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 15.24 25.4 180)
-				(length 2.54)
-				(name "ROW0/A1"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "21"
+				(number "23"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2904,16 +3085,16 @@
 				)
 			)
 			(pin bidirectional line
-				(at -15.24 7.62 0)
+				(at -15.24 -25.4 0)
 				(length 2.54)
-				(name "SDA"
+				(name "VSS"
 					(effects
 						(font
 							(size 1.016 1.016)
 						)
 					)
 				)
-				(number "23"
+				(number "1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -2921,17 +3102,233 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at -15.24 25.4 0)
+			(pin bidirectional line
+				(at 15.24 25.4 180)
 				(length 2.54)
-				(name "VDD"
+				(name "ROW0/A1"
 					(effects
 						(font
 							(size 1.016 1.016)
 						)
 					)
 				)
-				(number "24"
+				(number "21"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 22.86 180)
+				(length 2.54)
+				(name "ROW1/A0"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 20.32 180)
+				(length 2.54)
+				(name "ROW2/K1"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 17.78 180)
+				(length 2.54)
+				(name "ROW3/K2"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 15.24 180)
+				(length 2.54)
+				(name "ROW4/K3"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 12.7 180)
+				(length 2.54)
+				(name "ROW5/K4"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 10.16 180)
+				(length 2.54)
+				(name "ROW6/K5"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 7.62 180)
+				(length 2.54)
+				(name "ROW7/K6"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 5.08 180)
+				(length 2.54)
+				(name "ROW8/K7"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 2.54 180)
+				(length 2.54)
+				(name "ROW9/K8"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 0 180)
+				(length 2.54)
+				(name "ROW10/K9"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -2.54 180)
+				(length 2.54)
+				(name "ROW11/K10/INT"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -7.62 180)
+				(length 2.54)
+				(name "COM0/AD"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "2"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -3066,6 +3463,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "ILQ615-4X009T"
 		(exclude_from_sim no)
@@ -3128,403 +3526,7 @@
 			)
 			(polyline
 				(pts
-					(xy -3.81 -23.495) (xy -2.54 -23.495)
-				)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -3.81 -13.335) (xy -2.54 -13.335)
-				)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -3.81 -3.175) (xy -2.54 -3.175)
-				)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -3.81 6.985) (xy -2.54 6.985)
-				)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 -22.987) (xy 3.81 -24.13)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 -22.733) (xy 3.81 -21.59)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 -12.827) (xy 3.81 -13.97)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 -12.573) (xy 3.81 -11.43)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 -2.667) (xy 3.81 -3.81)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 -2.413) (xy 3.81 -1.27)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 7.493) (xy 3.81 6.35)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 7.747) (xy 3.81 8.89)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -25.4) (xy 5.08 -25.4)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -24.13) (xy 3.81 -25.4)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -21.59) (xy 3.81 -20.32)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -20.32) (xy 5.08 -20.32)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -15.24) (xy 5.08 -15.24)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -13.97) (xy 3.81 -15.24)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -11.43) (xy 3.81 -10.16)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -10.16) (xy 5.08 -10.16)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -5.08) (xy 5.08 -5.08)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -3.81) (xy 3.81 -5.08)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 -1.27) (xy 3.81 0)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 0) (xy 5.08 0)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 5.08) (xy 5.08 5.08)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 6.35) (xy 3.81 5.08)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 8.89) (xy 3.81 10.16)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 3.81 10.16) (xy 5.08 10.16)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 -21.844) (xy 2.667 -23.876) (xy 2.667 -23.876)
-				)
-				(stroke
-					(width 0.3556)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 -11.684) (xy 2.667 -13.716) (xy 2.667 -13.716)
-				)
-				(stroke
-					(width 0.3556)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 -1.524) (xy 2.667 -3.556) (xy 2.667 -3.556)
-				)
-				(stroke
-					(width 0.3556)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.667 8.636) (xy 2.667 6.604) (xy 2.667 6.604)
-				)
-				(stroke
-					(width 0.3556)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -5.08 -25.4) (xy -3.175 -25.4) (xy -3.175 -20.32) (xy -5.08 -20.32)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -5.08 -15.24) (xy -3.175 -15.24) (xy -3.175 -10.16) (xy -5.08 -10.16)
+					(xy -5.08 5.08) (xy -3.175 5.08) (xy -3.175 10.16) (xy -5.08 10.16)
 				)
 				(stroke
 					(width 0)
@@ -3548,7 +3550,7 @@
 			)
 			(polyline
 				(pts
-					(xy -5.08 5.08) (xy -3.175 5.08) (xy -3.175 10.16) (xy -5.08 10.16)
+					(xy -5.08 -15.24) (xy -3.175 -15.24) (xy -3.175 -10.16) (xy -5.08 -10.16)
 				)
 				(stroke
 					(width 0)
@@ -3560,7 +3562,19 @@
 			)
 			(polyline
 				(pts
-					(xy -3.175 -23.495) (xy -3.81 -22.225) (xy -2.54 -22.225) (xy -3.175 -23.495)
+					(xy -5.08 -25.4) (xy -3.175 -25.4) (xy -3.175 -20.32) (xy -5.08 -20.32)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.81 6.985) (xy -2.54 6.985)
 				)
 				(stroke
 					(width 0.254)
@@ -3572,7 +3586,7 @@
 			)
 			(polyline
 				(pts
-					(xy -3.175 -13.335) (xy -3.81 -12.065) (xy -2.54 -12.065) (xy -3.175 -13.335)
+					(xy -3.81 -3.175) (xy -2.54 -3.175)
 				)
 				(stroke
 					(width 0.254)
@@ -3584,7 +3598,19 @@
 			)
 			(polyline
 				(pts
-					(xy -3.175 -3.175) (xy -3.81 -1.905) (xy -2.54 -1.905) (xy -3.175 -3.175)
+					(xy -3.81 -13.335) (xy -2.54 -13.335)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.81 -23.495) (xy -2.54 -23.495)
 				)
 				(stroke
 					(width 0.254)
@@ -3608,10 +3634,10 @@
 			)
 			(polyline
 				(pts
-					(xy 3.683 -24.003) (xy 3.429 -23.495) (xy 3.175 -23.749) (xy 3.683 -24.003)
+					(xy -3.175 -3.175) (xy -3.81 -1.905) (xy -2.54 -1.905) (xy -3.175 -3.175)
 				)
 				(stroke
-					(width 0)
+					(width 0.254)
 					(type default)
 				)
 				(fill
@@ -3620,10 +3646,10 @@
 			)
 			(polyline
 				(pts
-					(xy 3.683 -13.843) (xy 3.429 -13.335) (xy 3.175 -13.589) (xy 3.683 -13.843)
+					(xy -3.175 -13.335) (xy -3.81 -12.065) (xy -2.54 -12.065) (xy -3.175 -13.335)
 				)
 				(stroke
-					(width 0)
+					(width 0.254)
 					(type default)
 				)
 				(fill
@@ -3632,10 +3658,10 @@
 			)
 			(polyline
 				(pts
-					(xy 3.683 -3.683) (xy 3.429 -3.175) (xy 3.175 -3.429) (xy 3.683 -3.683)
+					(xy -3.175 -23.495) (xy -3.81 -22.225) (xy -2.54 -22.225) (xy -3.175 -23.495)
 				)
 				(stroke
-					(width 0)
+					(width 0.254)
 					(type default)
 				)
 				(fill
@@ -3644,79 +3670,7 @@
 			)
 			(polyline
 				(pts
-					(xy 3.683 6.477) (xy 3.429 6.985) (xy 3.175 6.731) (xy 3.683 6.477)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -0.635 -23.368) (xy 0.635 -23.368) (xy 0.254 -23.495) (xy 0.254 -23.241) (xy 0.635 -23.368)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -0.635 -22.352) (xy 0.635 -22.352) (xy 0.254 -22.479) (xy 0.254 -22.225) (xy 0.635 -22.352)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -0.635 -13.208) (xy 0.635 -13.208) (xy 0.254 -13.335) (xy 0.254 -13.081) (xy 0.635 -13.208)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -0.635 -12.192) (xy 0.635 -12.192) (xy 0.254 -12.319) (xy 0.254 -12.065) (xy 0.635 -12.192)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -0.635 -3.048) (xy 0.635 -3.048) (xy 0.254 -3.175) (xy 0.254 -2.921) (xy 0.635 -3.048)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -0.635 -2.032) (xy 0.635 -2.032) (xy 0.254 -2.159) (xy 0.254 -1.905) (xy 0.635 -2.032)
+					(xy -0.635 8.128) (xy 0.635 8.128) (xy 0.254 8.001) (xy 0.254 8.255) (xy 0.635 8.128)
 				)
 				(stroke
 					(width 0)
@@ -3740,7 +3694,451 @@
 			)
 			(polyline
 				(pts
-					(xy -0.635 8.128) (xy 0.635 8.128) (xy 0.254 8.001) (xy 0.254 8.255) (xy 0.635 8.128)
+					(xy -0.635 -2.032) (xy 0.635 -2.032) (xy 0.254 -2.159) (xy 0.254 -1.905) (xy 0.635 -2.032)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.635 -3.048) (xy 0.635 -3.048) (xy 0.254 -3.175) (xy 0.254 -2.921) (xy 0.635 -3.048)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.635 -12.192) (xy 0.635 -12.192) (xy 0.254 -12.319) (xy 0.254 -12.065) (xy 0.635 -12.192)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.635 -13.208) (xy 0.635 -13.208) (xy 0.254 -13.335) (xy 0.254 -13.081) (xy 0.635 -13.208)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.635 -22.352) (xy 0.635 -22.352) (xy 0.254 -22.479) (xy 0.254 -22.225) (xy 0.635 -22.352)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.635 -23.368) (xy 0.635 -23.368) (xy 0.254 -23.495) (xy 0.254 -23.241) (xy 0.635 -23.368)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 8.636) (xy 2.667 6.604) (xy 2.667 6.604)
+				)
+				(stroke
+					(width 0.3556)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 7.747) (xy 3.81 8.89)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 7.493) (xy 3.81 6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 -1.524) (xy 2.667 -3.556) (xy 2.667 -3.556)
+				)
+				(stroke
+					(width 0.3556)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 -2.413) (xy 3.81 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 -2.667) (xy 3.81 -3.81)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 -11.684) (xy 2.667 -13.716) (xy 2.667 -13.716)
+				)
+				(stroke
+					(width 0.3556)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 -12.573) (xy 3.81 -11.43)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 -12.827) (xy 3.81 -13.97)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 -21.844) (xy 2.667 -23.876) (xy 2.667 -23.876)
+				)
+				(stroke
+					(width 0.3556)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 -22.733) (xy 3.81 -21.59)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.667 -22.987) (xy 3.81 -24.13)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.683 6.477) (xy 3.429 6.985) (xy 3.175 6.731) (xy 3.683 6.477)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.683 -3.683) (xy 3.429 -3.175) (xy 3.175 -3.429) (xy 3.683 -3.683)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.683 -13.843) (xy 3.429 -13.335) (xy 3.175 -13.589) (xy 3.683 -13.843)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.683 -24.003) (xy 3.429 -23.495) (xy 3.175 -23.749) (xy 3.683 -24.003)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 10.16) (xy 5.08 10.16)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 8.89) (xy 3.81 10.16)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 6.35) (xy 3.81 5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 5.08) (xy 5.08 5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 0) (xy 5.08 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -1.27) (xy 3.81 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -3.81) (xy 3.81 -5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -5.08) (xy 5.08 -5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -10.16) (xy 5.08 -10.16)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -11.43) (xy 3.81 -10.16)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -13.97) (xy 3.81 -15.24)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -15.24) (xy 5.08 -15.24)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -20.32) (xy 5.08 -20.32)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -21.59) (xy 3.81 -20.32)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -24.13) (xy 3.81 -25.4)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -25.4) (xy 5.08 -25.4)
 				)
 				(stroke
 					(width 0)
@@ -3763,132 +4161,6 @@
 					)
 				)
 				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 7.62 -20.32 180)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 7.62 -15.24 180)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 7.62 -10.16 180)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 7.62 -5.08 180)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "13"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 7.62 0 180)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "14"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 7.62 5.08 180)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "15"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 7.62 10.16 180)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "16"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4023,6 +4295,132 @@
 				)
 			)
 			(pin passive line
+				(at 7.62 10.16 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 5.08 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 -5.08 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 -10.16 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 -15.24 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 -20.32 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
 				(at 7.62 -25.4 180)
 				(length 2.54)
 				(name "~"
@@ -4041,6 +4439,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "INA125U_2K5"
 		(exclude_from_sim no)
@@ -4194,132 +4593,6 @@
 				)
 			)
 			(pin passive line
-				(at 38.1 -15.24 180)
-				(length 5.08)
-				(name "VO"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 38.1 -12.7 180)
-				(length 5.08)
-				(name "SENSE"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 38.1 -10.16 180)
-				(length 5.08)
-				(name "VREFCOM"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 38.1 -7.62 180)
-				(length 5.08)
-				(name "VREFBG"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "13"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 38.1 -5.08 180)
-				(length 5.08)
-				(name "VREF2.5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "14"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 38.1 -2.54 180)
-				(length 5.08)
-				(name "VREF5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "15"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 38.1 0 180)
-				(length 5.08)
-				(name "VREF10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "16"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
 				(at 0 -2.54 0)
 				(length 5.08)
 				(name "~{SLEEP}"
@@ -4446,6 +4719,132 @@
 				)
 			)
 			(pin passive line
+				(at 38.1 0 180)
+				(length 5.08)
+				(name "VREF10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 38.1 -2.54 180)
+				(length 5.08)
+				(name "VREF5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 38.1 -5.08 180)
+				(length 5.08)
+				(name "VREF2.5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 38.1 -7.62 180)
+				(length 5.08)
+				(name "VREFBG"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 38.1 -10.16 180)
+				(length 5.08)
+				(name "VREFCOM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 38.1 -12.7 180)
+				(length 5.08)
+				(name "SENSE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 38.1 -15.24 180)
+				(length 5.08)
+				(name "VO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
 				(at 38.1 -17.78 180)
 				(length 5.08)
 				(name "RG_2"
@@ -4464,6 +4863,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "LD33CV"
 		(exclude_from_sim no)
@@ -4527,6 +4927,24 @@
 		)
 		(symbol "LD33CV_1_1"
 			(pin power_in line
+				(at -7.62 -3.81 0)
+				(length 2.54)
+				(name "VI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
 				(at 0 -11.43 90)
 				(length 2.54)
 				(name "GND"
@@ -4562,25 +4980,8 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at -7.62 -3.81 0)
-				(length 2.54)
-				(name "VI"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "LM1084"
 		(pin_names
@@ -4668,6 +5069,24 @@
 		)
 		(symbol "LM1084_1_1"
 			(pin power_in line
+				(at -7.62 0 0)
+				(length 2.54)
+				(name "IN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
 				(at 0 -7.62 90)
 				(length 2.54)
 				(name "GND"
@@ -4703,25 +5122,8 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at -7.62 0 0)
-				(length 2.54)
-				(name "IN"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "LMR33620CQRNXRQ1"
 		(exclude_from_sim no)
@@ -4847,60 +5249,6 @@
 					)
 				)
 				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 33.02 -7.62 180)
-				(length 5.08)
-				(name "VIN_2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 33.02 -10.16 180)
-				(length 5.08)
-				(name "PGND_2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 33.02 -12.7 180)
-				(length 5.08)
-				(name "SW"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5052,7 +5400,62 @@
 					)
 				)
 			)
+			(pin passive line
+				(at 33.02 -7.62 180)
+				(length 5.08)
+				(name "VIN_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 33.02 -10.16 180)
+				(length 5.08)
+				(name "PGND_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 33.02 -12.7 180)
+				(length 5.08)
+				(name "SW"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "M24256-A125"
 		(exclude_from_sim no)
@@ -5196,35 +5599,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 10.16 -5.08 180)
+			(pin power_in line
+				(at 10.16 2.54 180)
 				(length 3.81)
-				(name "SDA"
+				(name "VCC"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input clock
-				(at 10.16 -2.54 180)
-				(length 3.81)
-				(name "SCL"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
+				(number "8"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5250,17 +5635,35 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 10.16 2.54 180)
+			(pin input clock
+				(at 10.16 -2.54 180)
 				(length 3.81)
-				(name "VCC"
+				(name "SCL"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "8"
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 10.16 -5.08 180)
+				(length 3.81)
+				(name "SDA"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5269,6 +5672,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "MAX14878"
 		(exclude_from_sim no)
@@ -5423,34 +5827,16 @@
 				)
 			)
 			(pin power_in line
-				(at 8.89 -3.81 180)
+				(at 8.89 3.81 180)
 				(length 2.54)
-				(name "GNDB"
+				(name "VDDB"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 8.89 -1.27 180)
-				(length 2.54)
-				(name "CANL"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
+				(number "8"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5476,17 +5862,35 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 8.89 3.81 180)
+			(pin passive line
+				(at 8.89 -1.27 180)
 				(length 2.54)
-				(name "VDDB"
+				(name "CANL"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "8"
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 8.89 -3.81 180)
+				(length 2.54)
+				(name "GNDB"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5495,6 +5899,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "MAX6955"
 		(exclude_from_sim no)
@@ -5555,17 +5960,233 @@
 					(type background)
 				)
 			)
-			(pin bidirectional line
-				(at 19.05 -3.81 180)
+			(pin power_in line
+				(at -13.97 46.99 0)
 				(length 2.54)
-				(name "P0"
+				(name "V+"
 					(effects
 						(font
 							(size 1.016 1.016)
 						)
 					)
 				)
-				(number "1"
+				(number "19"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -13.97 44.45 0)
+				(length 2.54)
+				(name "V+"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -13.97 11.43 0)
+				(length 2.54)
+				(name "SCL"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -13.97 8.89 0)
+				(length 2.54)
+				(name "AD0"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -13.97 6.35 0)
+				(length 2.54)
+				(name "AD1"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -13.97 3.81 0)
+				(length 2.54)
+				(name "SDA"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -13.97 -3.81 0)
+				(length 2.54)
+				(name "BLINK"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "32"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -13.97 -11.43 0)
+				(length 2.54)
+				(name "OSC_OUT"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "33"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -13.97 -16.51 0)
+				(length 2.54)
+				(name "OSC"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -13.97 -21.59 0)
+				(length 2.54)
+				(name "ISET"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 46.99 180)
+				(length 2.54)
+				(name "O0"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 44.45 180)
+				(length 2.54)
+				(name "O1"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 41.91 180)
+				(length 2.54)
+				(name "O2"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "9"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -5674,132 +6295,6 @@
 					)
 				)
 				(number "15"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 19.05 -19.05 180)
-				(length 2.54)
-				(name "GND"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "16"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin unspecified line
-				(at -13.97 -21.59 0)
-				(length 2.54)
-				(name "ISET"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "17"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 19.05 -21.59 180)
-				(length 2.54)
-				(name "GND"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "18"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -13.97 46.99 0)
-				(length 2.54)
-				(name "V+"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "19"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 -6.35 180)
-				(length 2.54)
-				(name "P1"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin unspecified line
-				(at -13.97 -16.51 0)
-				(length 2.54)
-				(name "OSC"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "20"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -13.97 44.45 0)
-				(length 2.54)
-				(name "V+"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "21"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -5951,24 +6446,6 @@
 					)
 				)
 			)
-			(pin input line
-				(at -13.97 8.89 0)
-				(length 2.54)
-				(name "AD0"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
 			(pin output line
 				(at 19.05 3.81 180)
 				(length 2.54)
@@ -6005,17 +6482,17 @@
 					)
 				)
 			)
-			(pin output line
-				(at -13.97 -3.81 0)
+			(pin bidirectional line
+				(at 19.05 -3.81 180)
 				(length 2.54)
-				(name "BLINK"
+				(name "P0"
 					(effects
 						(font
 							(size 1.016 1.016)
 						)
 					)
 				)
-				(number "32"
+				(number "1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -6023,17 +6500,17 @@
 					)
 				)
 			)
-			(pin output line
-				(at -13.97 -11.43 0)
+			(pin bidirectional line
+				(at 19.05 -6.35 180)
 				(length 2.54)
-				(name "OSC_OUT"
+				(name "P1"
 					(effects
 						(font
 							(size 1.016 1.016)
 						)
 					)
 				)
-				(number "33"
+				(number "2"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -6095,17 +6572,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -13.97 3.81 0)
+			(pin power_in line
+				(at 19.05 -19.05 180)
 				(length 2.54)
-				(name "SDA"
+				(name "GND"
 					(effects
 						(font
 							(size 1.016 1.016)
 						)
 					)
 				)
-				(number "4"
+				(number "16"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -6113,89 +6590,17 @@
 					)
 				)
 			)
-			(pin input line
-				(at -13.97 11.43 0)
+			(pin power_in line
+				(at 19.05 -21.59 180)
 				(length 2.54)
-				(name "SCL"
+				(name "GND"
 					(effects
 						(font
 							(size 1.016 1.016)
 						)
 					)
 				)
-				(number "5"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -13.97 6.35 0)
-				(length 2.54)
-				(name "AD1"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 19.05 46.99 180)
-				(length 2.54)
-				(name "O0"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "7"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 19.05 44.45 180)
-				(length 2.54)
-				(name "O1"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "8"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 19.05 41.91 180)
-				(length 2.54)
-				(name "O2"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "9"
+				(number "18"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -6204,6 +6609,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "MAX6958BAEE+T"
 		(exclude_from_sim no)
@@ -6264,6 +6670,24 @@
 					(type background)
 				)
 			)
+			(pin input clock
+				(at -17.78 -8.89 0)
+				(length 5.08)
+				(name "SCL"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
 			(pin bidirectional line
 				(at -17.78 -11.43 0)
 				(length 5.08)
@@ -6293,6 +6717,114 @@
 					)
 				)
 				(number "10"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -17.78 -31.75 0)
+				(length 5.08)
+				(name "NC"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 17.78 -3.81 180)
+				(length 5.08)
+				(name "V+"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 17.78 -8.89 180)
+				(length 5.08)
+				(name "DIG0/SEG0"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 17.78 -11.43 180)
+				(length 5.08)
+				(name "DIG1/SEG1"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 17.78 -13.97 180)
+				(length 5.08)
+				(name "DIG2/SEG2"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 17.78 -16.51 180)
+				(length 5.08)
+				(name "DIG3/SEG3"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "7"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -6390,42 +6922,6 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 17.78 -3.81 180)
-				(length 5.08)
-				(name "V+"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "16"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin input clock
-				(at -17.78 -8.89 0)
-				(length 5.08)
-				(name "SCL"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
 			(pin output line
 				(at 17.78 -31.75 180)
 				(length 5.08)
@@ -6437,78 +6933,6 @@
 					)
 				)
 				(number "3"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 17.78 -8.89 180)
-				(length 5.08)
-				(name "DIG0/SEG0"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 17.78 -11.43 180)
-				(length 5.08)
-				(name "DIG1/SEG1"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "5"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 17.78 -13.97 180)
-				(length 5.08)
-				(name "DIG2/SEG2"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 17.78 -16.51 180)
-				(length 5.08)
-				(name "DIG3/SEG3"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "7"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -6534,25 +6958,8 @@
 					)
 				)
 			)
-			(pin passive line
-				(at -17.78 -31.75 0)
-				(length 5.08)
-				(name "NC"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "9"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "MC14504B"
 		(exclude_from_sim no)
@@ -6626,132 +7033,6 @@
 					)
 				)
 				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 11.43 -5.715 180)
-				(length 2.54)
-				(name "DOUT"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 11.43 -3.175 180)
-				(length 2.54)
-				(name "EIN"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 11.43 -0.635 180)
-				(length 2.54)
-				(name "EOUT"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 11.43 1.905 180)
-				(length 2.54)
-				(name "MODE"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "13"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 11.43 4.445 180)
-				(length 2.54)
-				(name "FIN"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "14"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 11.43 6.985 180)
-				(length 2.54)
-				(name "FOUT"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "15"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 11.43 9.525 180)
-				(length 2.54)
-				(name "VDD"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "16"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6885,6 +7166,132 @@
 					)
 				)
 			)
+			(pin power_in line
+				(at 11.43 9.525 180)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 11.43 6.985 180)
+				(length 2.54)
+				(name "FOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 11.43 4.445 180)
+				(length 2.54)
+				(name "FIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 11.43 1.905 180)
+				(length 2.54)
+				(name "MODE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 11.43 -0.635 180)
+				(length 2.54)
+				(name "EOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 11.43 -3.175 180)
+				(length 2.54)
+				(name "EIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 11.43 -5.715 180)
+				(length 2.54)
+				(name "DOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin input line
 				(at 11.43 -8.255 180)
 				(length 2.54)
@@ -6904,6 +7311,432 @@
 				)
 			)
 		)
+		(embedded_fonts no)
+	)
+	(symbol "MP3435GL"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 5.08 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MPS3435GL"
+			(at 5.08 -4.826 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.monolithicpower.com/en/documentview/productdocument/index/version/2/document_type/Datasheet/lang/en/sku/MP3435GL"
+			(at 3.556 -10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "MP3435GL_0_1"
+			(rectangle
+				(start -11.43 12.7)
+				(end 21.59 -21.59)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "MP3435GL_1_1"
+			(pin passive line
+				(at -13.97 6.35 0)
+				(length 2.54)
+				(name "GATE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -13.97 1.27 0)
+				(length 2.54)
+				(name "SENSE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -13.97 -3.81 0)
+				(length 2.54)
+				(name "VIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -13.97 -8.89 0)
+				(length 2.54)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -13.97 -13.97 0)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -13.97 -19.05 0)
+				(length 2.54)
+				(name "SS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -6.35 15.24 270)
+				(length 2.54)
+				(name "SW"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 15.24 270)
+				(length 2.54)
+				(name "SW"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -24.13 90)
+				(length 2.54)
+				(name "PGND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -1.27 -24.13 90)
+				(length 2.54)
+				(name "PGND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 1.27 -24.13 90)
+				(length 2.54)
+				(name "PGND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 15.24 270)
+				(length 2.54)
+				(name "BST"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 -24.13 90)
+				(length 2.54)
+				(name "PGND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 15.24 270)
+				(length 2.54)
+				(hide yes)
+				(name "TM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 -24.13 90)
+				(length 2.54)
+				(name "AGND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 13.97 15.24 270)
+				(length 2.54)
+				(name "VOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 16.51 15.24 270)
+				(length 2.54)
+				(name "VOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 24.13 1.27 180)
+				(length 2.54)
+				(name "SOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 24.13 -6.35 180)
+				(length 2.54)
+				(name "FB"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 24.13 -13.97 180)
+				(length 2.54)
+				(name "COMP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
 	)
 	(symbol "OP777"
 		(pin_names
@@ -6990,17 +7823,17 @@
 			)
 		)
 		(symbol "OP777_1_1"
-			(pin no_connect line
-				(at -2.54 -8.89 90)
-				(length 5.08) hide
-				(name ""
+			(pin input line
+				(at -7.62 1.905 0)
+				(length 2.54)
+				(name "+"
 					(effects
 						(font
-							(size 0.508 0.508)
+							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "1"
+				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7026,17 +7859,55 @@
 					)
 				)
 			)
-			(pin input line
-				(at -7.62 1.905 0)
+			(pin no_connect line
+				(at -2.54 6.35 270)
 				(length 2.54)
-				(name "+"
+				(hide yes)
+				(name "NC"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "3"
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at -2.54 -8.89 90)
+				(length 5.08)
+				(hide yes)
+				(name ""
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -1.27 6.985 270)
+				(length 3.81)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7063,16 +7934,17 @@
 				)
 			)
 			(pin no_connect line
-				(at -2.54 6.35 270)
-				(length 2.54) hide
-				(name "NC"
+				(at 2.54 -7.62 90)
+				(length 6.35)
+				(hide yes)
+				(name ""
 					(effects
 						(font
-							(size 1.27 1.27)
+							(size 0.508 0.508)
 						)
 					)
 				)
-				(number "5"
+				(number "8"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7098,43 +7970,8 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at -1.27 6.985 270)
-				(length 3.81)
-				(name "V+"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin no_connect line
-				(at 2.54 -7.62 90)
-				(length 6.35) hide
-				(name ""
-					(effects
-						(font
-							(size 0.508 0.508)
-						)
-					)
-				)
-				(number "8"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "PIC18F47Q84-I/PT"
 		(exclude_from_sim no)
@@ -7185,186 +8022,6 @@
 		)
 		(symbol "PIC18F47Q84-I/PT_0_0"
 			(pin bidirectional line
-				(at -19.05 -29.21 0)
-				(length 2.54)
-				(name "RC7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -19.05 3.81 0)
-				(length 2.54)
-				(name "RB2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -19.05 1.27 0)
-				(length 2.54)
-				(name "RB3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 19.05 -24.13 180)
-				(length 2.54)
-				(name "NC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 19.05 -21.59 180)
-				(length 2.54)
-				(name "NC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "13"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -19.05 -1.27 0)
-				(length 2.54)
-				(name "RB4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "14"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -19.05 -3.81 0)
-				(length 2.54)
-				(name "RB5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "15"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -19.05 -6.35 0)
-				(length 2.54)
-				(name "RB6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "16"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -19.05 -8.89 0)
-				(length 2.54)
-				(name "RB7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "17"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 -12.7 180)
-				(length 2.54)
-				(name "RE3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "18"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
 				(at -19.05 29.21 0)
 				(length 2.54)
 				(name "RA0"
@@ -7375,24 +8032,6 @@
 					)
 				)
 				(number "19"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 5.08 180)
-				(length 2.54)
-				(name "RD4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7491,106 +8130,16 @@
 				)
 			)
 			(pin bidirectional line
-				(at 19.05 -5.08 180)
+				(at -19.05 13.97 0)
 				(length 2.54)
-				(name "RE0"
+				(name "RA6"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "25"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 -7.62 180)
-				(length 2.54)
-				(name "RE1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "26"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 -10.16 180)
-				(length 2.54)
-				(name "RE2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "27"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 19.05 26.67 180)
-				(length 2.54)
-				(name "VDD"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "28"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 19.05 21.59 180)
-				(length 2.54)
-				(name "VSS"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "29"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 2.54 180)
-				(length 2.54)
-				(name "RD5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
+				(number "31"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7617,16 +8166,142 @@
 				)
 			)
 			(pin bidirectional line
-				(at -19.05 13.97 0)
+				(at -19.05 8.89 0)
 				(length 2.54)
-				(name "RA6"
+				(name "RB0"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "31"
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -19.05 6.35 0)
+				(length 2.54)
+				(name "RB1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -19.05 3.81 0)
+				(length 2.54)
+				(name "RB2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -19.05 1.27 0)
+				(length 2.54)
+				(name "RB3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -19.05 -1.27 0)
+				(length 2.54)
+				(name "RB4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -19.05 -3.81 0)
+				(length 2.54)
+				(name "RB5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -19.05 -6.35 0)
+				(length 2.54)
+				(name "RB6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -19.05 -8.89 0)
+				(length 2.54)
+				(name "RB7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7645,42 +8320,6 @@
 					)
 				)
 				(number "32"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 19.05 -29.21 180)
-				(length 2.54)
-				(name "NC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "33"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 19.05 -26.67 180)
-				(length 2.54)
-				(name "NC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "34"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7743,96 +8382,6 @@
 				)
 			)
 			(pin bidirectional line
-				(at 19.05 15.24 180)
-				(length 2.54)
-				(name "RD0"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "38"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 12.7 180)
-				(length 2.54)
-				(name "RD1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "39"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 0 180)
-				(length 2.54)
-				(name "RD6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 10.16 180)
-				(length 2.54)
-				(name "RD2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "40"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 7.62 180)
-				(length 2.54)
-				(name "RD3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "41"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
 				(at -19.05 -21.59 0)
 				(length 2.54)
 				(name "RC4"
@@ -7887,16 +8436,52 @@
 				)
 			)
 			(pin bidirectional line
-				(at 19.05 -2.54 180)
+				(at -19.05 -29.21 0)
 				(length 2.54)
-				(name "RD7"
+				(name "RC7"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "5"
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 19.05 29.21 180)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 19.05 26.67 180)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "28"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7923,16 +8508,16 @@
 				)
 			)
 			(pin power_in line
-				(at 19.05 29.21 180)
+				(at 19.05 21.59 180)
 				(length 2.54)
-				(name "VDD"
+				(name "VSS"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "7"
+				(number "29"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7941,16 +8526,16 @@
 				)
 			)
 			(pin bidirectional line
-				(at -19.05 8.89 0)
+				(at 19.05 15.24 180)
 				(length 2.54)
-				(name "RB0"
+				(name "RD0"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "8"
+				(number "38"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7959,16 +8544,268 @@
 				)
 			)
 			(pin bidirectional line
-				(at -19.05 6.35 0)
+				(at 19.05 12.7 180)
 				(length 2.54)
-				(name "RB1"
+				(name "RD1"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "9"
+				(number "39"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 10.16 180)
+				(length 2.54)
+				(name "RD2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "40"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 7.62 180)
+				(length 2.54)
+				(name "RD3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "41"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 5.08 180)
+				(length 2.54)
+				(name "RD4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 2.54 180)
+				(length 2.54)
+				(name "RD5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 0 180)
+				(length 2.54)
+				(name "RD6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 -2.54 180)
+				(length 2.54)
+				(name "RD7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 -5.08 180)
+				(length 2.54)
+				(name "RE0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "25"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 -7.62 180)
+				(length 2.54)
+				(name "RE1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "26"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 -10.16 180)
+				(length 2.54)
+				(name "RE2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "27"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 -12.7 180)
+				(length 2.54)
+				(name "RE3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 19.05 -21.59 180)
+				(length 2.54)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 19.05 -24.13 180)
+				(length 2.54)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 19.05 -26.67 180)
+				(length 2.54)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "34"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 19.05 -29.21 180)
+				(length 2.54)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "33"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7990,6 +8827,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "RSH3-1205S"
 		(exclude_from_sim no)
@@ -8071,43 +8909,7 @@
 			)
 			(polyline
 				(pts
-					(xy 0 -5.08) (xy 0 -6.35)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 -2.54) (xy 0 -3.81)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 0) (xy 0 -1.27)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 2.54) (xy 0 1.27)
+					(xy 0 7.62) (xy 0 6.35)
 				)
 				(stroke
 					(width 0)
@@ -8131,7 +8933,43 @@
 			)
 			(polyline
 				(pts
-					(xy 0 7.62) (xy 0 6.35)
+					(xy 0 2.54) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -2.54) (xy 0 -3.81)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -5.08) (xy 0 -6.35)
 				)
 				(stroke
 					(width 0)
@@ -8143,24 +8981,6 @@
 			)
 		)
 		(symbol "RSH3-1205S_1_1"
-			(pin power_out line
-				(at -12.7 -5.08 0)
-				(length 2.54)
-				(name "-VIN"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin power_in line
 				(at -12.7 5.08 0)
 				(length 2.54)
@@ -8197,17 +9017,17 @@
 					)
 				)
 			)
-			(pin no_connect line
-				(at 10.16 -5.08 180)
-				(length 2.54) hide
-				(name "NC"
+			(pin power_out line
+				(at -12.7 -5.08 0)
+				(length 2.54)
+				(name "-VIN"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "6"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -8217,7 +9037,8 @@
 			)
 			(pin no_connect line
 				(at 10.16 -2.54 180)
-				(length 2.54) hide
+				(length 2.54)
+				(hide yes)
 				(name "NC"
 					(effects
 						(font
@@ -8226,6 +9047,25 @@
 					)
 				)
 				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 10.16 -5.08 180)
+				(length 2.54)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -8270,6 +9110,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "SLW-913535-2A-RA-D"
 		(pin_names
@@ -8414,7 +9255,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description_1" "\n                        \n                            9.1 x 3.5 x 3.5 mm, 2 mm Raised Slide Actuator, Right-Angle, Through Hole, Slide Switch\n                        \n"
+		(property "Description_1" "9.1 x 3.5 x 3.5 mm, 2 mm Raised Slide Actuator, Right-Angle, Through Hole, Slide Switch"
 			(at 0 0 0)
 			(effects
 				(font
@@ -8469,10 +9310,20 @@
 					(type none)
 				)
 			)
-			(polyline
-				(pts
-					(xy 5.08 -2.54) (xy 2.921 -2.54)
+			(circle
+				(center 2.54 2.54)
+				(radius 0.3302)
+				(stroke
+					(width 0.1524)
+					(type default)
 				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.54 -2.54)
+				(radius 0.3302)
 				(stroke
 					(width 0.1524)
 					(type default)
@@ -8493,44 +9344,16 @@
 					(type none)
 				)
 			)
-			(circle
-				(center 2.54 -2.54)
-				(radius 0.3302)
+			(polyline
+				(pts
+					(xy 5.08 -2.54) (xy 2.921 -2.54)
+				)
 				(stroke
 					(width 0.1524)
 					(type default)
 				)
 				(fill
 					(type none)
-				)
-			)
-			(circle
-				(center 2.54 2.54)
-				(radius 0.3302)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(pin passive line
-				(at 7.62 2.54 180)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.016 1.016)
-						)
-					)
 				)
 			)
 			(pin passive line
@@ -8544,6 +9367,24 @@
 					)
 				)
 				(number "2"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 2.54 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -8570,6 +9411,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "SN74LV1T125"
 		(exclude_from_sim no)
@@ -8669,6 +9511,24 @@
 				)
 			)
 			(pin power_in line
+				(at 1.27 8.89 270)
+				(length 2.54)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
 				(at 1.27 -8.89 90)
 				(length 2.54)
 				(name "GND"
@@ -8704,25 +9564,8 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 1.27 8.89 270)
-				(length 2.54)
-				(name "VCC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "SPDT"
 		(exclude_from_sim no)
@@ -8855,7 +9698,7 @@
 			)
 			(polyline
 				(pts
-					(xy -5.08 -5.08) (xy -5.08 -1.905)
+					(xy -5.08 5.08) (xy -5.08 1.905)
 				)
 				(stroke
 					(width 0)
@@ -8867,7 +9710,7 @@
 			)
 			(polyline
 				(pts
-					(xy -5.08 5.08) (xy -5.08 1.905)
+					(xy -5.08 -5.08) (xy -5.08 -1.905)
 				)
 				(stroke
 					(width 0)
@@ -8964,7 +9807,7 @@
 		)
 		(symbol "SPDT_1_1"
 			(pin passive line
-				(at 7.62 7.62 270)
+				(at -5.08 7.62 270)
 				(length 2.54)
 				(name "~"
 					(effects
@@ -8973,25 +9816,7 @@
 						)
 					)
 				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 2.54 7.62 270)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
+				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9018,7 +9843,7 @@
 				)
 			)
 			(pin passive line
-				(at -5.08 7.62 270)
+				(at 2.54 7.62 270)
 				(length 2.54)
 				(name "~"
 					(effects
@@ -9027,7 +9852,7 @@
 						)
 					)
 				)
-				(number "5"
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9053,7 +9878,26 @@
 					)
 				)
 			)
+			(pin passive line
+				(at 7.62 7.62 270)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "SPST-NC"
 		(exclude_from_sim no)
@@ -9174,7 +10018,7 @@
 			)
 			(polyline
 				(pts
-					(xy -5.08 -5.08) (xy -5.08 -1.905)
+					(xy -5.08 5.08) (xy -5.08 1.905)
 				)
 				(stroke
 					(width 0)
@@ -9186,7 +10030,7 @@
 			)
 			(polyline
 				(pts
-					(xy -5.08 5.08) (xy -5.08 1.905)
+					(xy -5.08 -5.08) (xy -5.08 -1.905)
 				)
 				(stroke
 					(width 0)
@@ -9295,7 +10139,7 @@
 		)
 		(symbol "SPST-NC_1_1"
 			(pin passive line
-				(at 5.08 -7.62 90)
+				(at -5.08 7.62 270)
 				(length 2.54)
 				(name "~"
 					(effects
@@ -9304,7 +10148,7 @@
 						)
 					)
 				)
-				(number "1"
+				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9331,24 +10175,6 @@
 				)
 			)
 			(pin passive line
-				(at -5.08 7.62 270)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
 				(at 5.08 7.62 270)
 				(length 2.54)
 				(name "~"
@@ -9366,12 +10192,35 @@
 					)
 				)
 			)
+			(pin passive line
+				(at 5.08 -7.62 90)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "SW_Push_Earthed"
-		(pin_numbers hide)
+		(pin_numbers
+			(hide yes)
+		)
 		(pin_names
-			(offset 1.016) hide)
+			(offset 1.016)
+			(hide yes)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -9463,10 +10312,9 @@
 					(type none)
 				)
 			)
-			(polyline
-				(pts
-					(xy 2.54 1.27) (xy -2.54 1.27)
-				)
+			(circle
+				(center 2.032 0)
+				(radius 0.508)
 				(stroke
 					(width 0)
 					(type default)
@@ -9475,9 +10323,10 @@
 					(type none)
 				)
 			)
-			(circle
-				(center 2.032 0)
-				(radius 0.508)
+			(polyline
+				(pts
+					(xy 2.54 1.27) (xy -2.54 1.27)
+				)
 				(stroke
 					(width 0)
 					(type default)
@@ -9543,9 +10392,12 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "SiS413DNT"
-		(pin_names hide)
+		(pin_names
+			(hide yes)
+		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -9618,6 +10470,18 @@
 		(symbol "SiS413DNT_0_1"
 			(polyline
 				(pts
+					(xy 0.254 1.905) (xy 0.254 -1.905)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
 					(xy 0.254 0) (xy -2.54 0)
 				)
 				(stroke
@@ -9630,7 +10494,31 @@
 			)
 			(polyline
 				(pts
-					(xy 0.254 1.905) (xy 0.254 -1.905)
+					(xy 0.762 2.286) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 0.508) (xy 0.762 -0.508)
 				)
 				(stroke
 					(width 0.254)
@@ -9652,60 +10540,11 @@
 					(type none)
 				)
 			)
-			(polyline
-				(pts
-					(xy 0.762 0.508) (xy 0.762 -0.508)
-				)
+			(circle
+				(center 1.651 0)
+				(radius 2.794)
 				(stroke
 					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0.762 2.286) (xy 0.762 1.27)
-				)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.54 2.54) (xy 2.54 1.778)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
-				)
-				(stroke
-					(width 0)
 					(type default)
 				)
 				(fill
@@ -9722,6 +10561,52 @@
 				)
 				(fill
 					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 2.54) (xy 2.54 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.54 1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 2.54 -1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
 				)
 			)
 			(polyline
@@ -9748,95 +10633,8 @@
 					(type none)
 				)
 			)
-			(circle
-				(center 1.651 0)
-				(radius 2.794)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(circle
-				(center 2.54 -1.778)
-				(radius 0.254)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(circle
-				(center 2.54 1.778)
-				(radius 0.254)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
 		)
 		(symbol "SiS413DNT_1_1"
-			(pin passive line
-				(at 2.54 -5.08 90)
-				(length 2.54)
-				(name "S"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 2.54 -5.08 90)
-				(length 2.54) hide
-				(name "S"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 2.54 -5.08 90)
-				(length 2.54) hide
-				(name "S"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin passive line
 				(at -5.08 0 0)
 				(length 2.54)
@@ -9873,7 +10671,64 @@
 					)
 				)
 			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(hide yes)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(hide yes)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "TLW-105-06-T-S"
 		(exclude_from_sim no)
@@ -10099,6 +10954,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "TS7Y103KR32"
 		(exclude_from_sim no)
@@ -10232,24 +11088,6 @@
 				)
 			)
 			(pin passive line
-				(at 27.94 0 180)
-				(length 5.08)
-				(name "WIPER"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
 				(at 0 -2.54 0)
 				(length 5.08)
 				(name "CW"
@@ -10267,604 +11105,25 @@
 					)
 				)
 			)
+			(pin passive line
+				(at 27.94 0 180)
+				(length 5.08)
+				(name "WIPER"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
-  (symbol "INA125U_2K5" (in_bom yes) (on_board yes)
-    (property "Reference" "IC" (at 34.29 7.62 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (property "Value" "INA125U_2K5" (at 34.29 5.08 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (property "Footprint" "SOIC127P600X175-16N" (at 34.29 -94.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Datasheet" "http://www.ti.com/lit/gpn/INA125" (at 34.29 -194.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "ki_description" "Instrumentation Amplifier with Precision Voltage Reference" (at 34.29 -294.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Height" "1.75" (at 34.29 -394.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Manufacturer_Name" "Texas Instruments" (at 34.29 -494.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Manufacturer_Part_Number" "INA125U/2K5" (at 34.29 -594.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Mouser Part Number" "595-INA125U/2K5" (at 34.29 -694.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/INA125U-2K5?qs=VBduBm9rCJQGPPOc6d8%2FKg%3D%3D" (at 34.29 -794.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Arrow Part Number" "INA125U/2K5" (at 34.29 -894.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Arrow Price/Stock" "https://www.arrow.com/en/products/ina125u2k5/texas-instruments?region=nac" (at 34.29 -994.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (rectangle
-      (start 5.08 2.54)
-      (end 33.02 -20.32)
-      (stroke (width 0.254) (type default))
-      (fill (type background))
-    )
-    (pin passive line (at 0 0 0) (length 5.08)
-      (name "V+" (effects (font (size 1.27 1.27))))
-      (number "1" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -2.54 0) (length 5.08)
-      (name "~{SLEEP}" (effects (font (size 1.27 1.27))))
-      (number "2" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -5.08 0) (length 5.08)
-      (name "V-" (effects (font (size 1.27 1.27))))
-      (number "3" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -7.62 0) (length 5.08)
-      (name "V_REFOUT" (effects (font (size 1.27 1.27))))
-      (number "4" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -10.16 0) (length 5.08)
-      (name "IA_REF" (effects (font (size 1.27 1.27))))
-      (number "5" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -12.7 0) (length 5.08)
-      (name "VIN+" (effects (font (size 1.27 1.27))))
-      (number "6" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -15.24 0) (length 5.08)
-      (name "VIN-" (effects (font (size 1.27 1.27))))
-      (number "7" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -17.78 0) (length 5.08)
-      (name "RG_1" (effects (font (size 1.27 1.27))))
-      (number "8" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 38.1 0 180) (length 5.08)
-      (name "VREF10" (effects (font (size 1.27 1.27))))
-      (number "16" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 38.1 -2.54 180) (length 5.08)
-      (name "VREF5" (effects (font (size 1.27 1.27))))
-      (number "15" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 38.1 -5.08 180) (length 5.08)
-      (name "VREF2.5" (effects (font (size 1.27 1.27))))
-      (number "14" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 38.1 -7.62 180) (length 5.08)
-      (name "VREFBG" (effects (font (size 1.27 1.27))))
-      (number "13" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 38.1 -10.16 180) (length 5.08)
-      (name "VREFCOM" (effects (font (size 1.27 1.27))))
-      (number "12" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 38.1 -12.7 180) (length 5.08)
-      (name "SENSE" (effects (font (size 1.27 1.27))))
-      (number "11" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 38.1 -15.24 180) (length 5.08)
-      (name "VO" (effects (font (size 1.27 1.27))))
-      (number "10" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 38.1 -17.78 180) (length 5.08)
-      (name "RG_2" (effects (font (size 1.27 1.27))))
-      (number "9" (effects (font (size 1.27 1.27))))
-    )
-  )
-  (symbol "TLW-105-06-T-S" (in_bom yes) (on_board yes)
-    (property "Reference" "J" (at 16.51 7.62 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (property "Value" "TLW-105-06-T-S" (at 16.51 5.08 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (property "Footprint" "SAMTEC_TLW-105-06-T-S" (at 16.51 -94.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Datasheet" "" (at 16.51 -194.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "ki_description" "CONNECTOR HEADER, 5 WAY, 1ROW" (at 16.51 -294.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Height" "" (at 16.51 -394.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Manufacturer_Name" "SAMTEC" (at 16.51 -494.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Manufacturer_Part_Number" "TLW-105-06-T-S" (at 16.51 -594.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Mouser Part Number" "200-TLW10506TS" (at 16.51 -694.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Samtec/TLW-105-06-T-S?qs=0lQeLiL1qyZAH8cwhJmdpg%3D%3D" (at 16.51 -794.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Arrow Part Number" "" (at 16.51 -894.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Arrow Price/Stock" "" (at 16.51 -994.92 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (rectangle
-      (start 5.08 2.54)
-      (end 15.24 -12.7)
-      (stroke (width 0.254) (type default))
-      (fill (type background))
-    )
-    (pin passive line (at 0 0 0) (length 5.08)
-      (name "1" (effects (font (size 1.27 1.27))))
-      (number "1" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -2.54 0) (length 5.08)
-      (name "2" (effects (font (size 1.27 1.27))))
-      (number "2" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -5.08 0) (length 5.08)
-      (name "3" (effects (font (size 1.27 1.27))))
-      (number "3" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -7.62 0) (length 5.08)
-      (name "4" (effects (font (size 1.27 1.27))))
-      (number "4" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -10.16 0) (length 5.08)
-      (name "5" (effects (font (size 1.27 1.27))))
-      (number "5" (effects (font (size 1.27 1.27))))
-    )
-  )
-  (symbol "ADXL343BCCZ-RL" (in_bom yes) (on_board yes)
-    (property "Reference" "IC" (at 46.99 20.32 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (property "Value" "ADXL343BCCZ-RL" (at 46.99 17.78 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (property "Footprint" "ADXL343BCCZRL" (at 46.99 -82.22 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf" (at 46.99 -182.22 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "ki_description" "Accelerometer X, Y, Z Axis +/-2g, 4g, 8g, 16g 0.05Hz ~ 1.6kHz 14-LGA (3x5)" (at 46.99 -282.22 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Height" "1" (at 46.99 -382.22 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Mouser Part Number" "584-ADXL343BCCZ-R" (at 46.99 -482.22 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Analog-Devices/ADXL343BCCZ-RL?qs=WIvQP4zGaniHpowyrbt1Aw%3D%3D" (at 46.99 -582.22 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Manufacturer_Name" "Analog Devices" (at 46.99 -682.22 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (property "Manufacturer_Part_Number" "ADXL343BCCZ-RL" (at 46.99 -782.22 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (rectangle
-      (start 5.08 15.24)
-      (end 45.72 -22.86)
-      (stroke (width 0.254) (type default))
-      (fill (type background))
-    )
-    (pin passive line (at 0 0 0) (length 5.08)
-      (name "VDD_I/O" (effects (font (size 1.27 1.27))))
-      (number "1" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -2.54 0) (length 5.08)
-      (name "GND_1" (effects (font (size 1.27 1.27))))
-      (number "2" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -5.08 0) (length 5.08)
-      (name "RESERVED_1" (effects (font (size 1.27 1.27))))
-      (number "3" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -7.62 0) (length 5.08)
-      (name "GND_2" (effects (font (size 1.27 1.27))))
-      (number "4" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -10.16 0) (length 5.08)
-      (name "GND_3" (effects (font (size 1.27 1.27))))
-      (number "5" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 0 -12.7 0) (length 5.08)
-      (name "VS" (effects (font (size 1.27 1.27))))
-      (number "6" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 25.4 -27.94 90) (length 5.08)
-      (name "~{CS}" (effects (font (size 1.27 1.27))))
-      (number "7" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 50.8 -12.7 180) (length 5.08)
-      (name "INT1" (effects (font (size 1.27 1.27))))
-      (number "8" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 50.8 -10.16 180) (length 5.08)
-      (name "INT2" (effects (font (size 1.27 1.27))))
-      (number "9" (effects (font (size 1.27 1.27))))
-    )
-    (pin no_connect line (at 50.8 -7.62 180) (length 5.08)
-      (name "NC" (effects (font (size 1.27 1.27))))
-      (number "10" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 50.8 -5.08 180) (length 5.08)
-      (name "RESERVED_2" (effects (font (size 1.27 1.27))))
-      (number "11" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 50.8 -2.54 180) (length 5.08)
-      (name "SDO/ALT_ADDRESS" (effects (font (size 1.27 1.27))))
-      (number "12" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 50.8 0 180) (length 5.08)
-      (name "SDA/SDI/SDIO" (effects (font (size 1.27 1.27))))
-      (number "13" (effects (font (size 1.27 1.27))))
-    )
-    (pin passive line (at 25.4 20.32 270) (length 5.08)
-      (name "SCL/SCLK" (effects (font (size 1.27 1.27))))
-      (number "14" (effects (font (size 1.27 1.27))))
-    )
-  )
-
-	
-  (symbol "HT16K33" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-    (property "Reference" "IC" (id 0) (at -12.7 27.94 0)
-      (effects (font (size 1.27 1.27)) (justify bottom left))
-    )
-    (property "Value" "HT16K33" (id 1) (at -12.7 -30.48 0)
-      (effects (font (size 1.27 1.27)) (justify bottom left))
-    )
-    (property "Footprint" "HT16K33:HT16K33" (id 2) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "MF" "Adafruit Industries" (id 4) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Description" "\n                        \n                            HT16K33 14-Segment 4-Digit Display Feather Platform Evaluation Expansion Board\n                        \n" (id 5) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Package" "None" (id 6) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Price" "None" (id 7) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Check_prices" "https://www.snapeda.com/parts/HT16K33/Adafruit+Industries/view-part/?ref=eda" (id 8) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "VALUE" "HTK16K33" (id 9) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "SnapEDA_Link" "https://www.snapeda.com/parts/HT16K33/Adafruit+Industries/view-part/?ref=snap" (id 10) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "PROD_ID" "IC-14891" (id 11) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Availability" "Not in stock" (id 12) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "MP" "HT16K33" (id 13) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (symbol "HT16K33_0_0"
-      (rectangle (start -12.7 -27.94) (end 12.7 27.94)
-        (stroke (width 0.254)) (fill (type background))
-      )
-      (pin bidirectional line (at 15.24 -7.62 180.0) (length 2.54)
-        (name "COM0/AD"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "2"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 -10.16 180.0) (length 2.54)
-        (name "COM1/KS0"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "3"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 -12.7 180.0) (length 2.54)
-        (name "COM2/KS1"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "4"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 -15.24 180.0) (length 2.54)
-        (name "COM3/KS2"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "5"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 -17.78 180.0) (length 2.54)
-        (name "COM4"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "6"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 -20.32 180.0) (length 2.54)
-        (name "COM5"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "7"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 -22.86 180.0) (length 2.54)
-        (name "COM6"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "8"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 -25.4 180.0) (length 2.54)
-        (name "COM7"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "9"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 25.4 180.0) (length 2.54)
-        (name "ROW0/A1"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "21"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 22.86 180.0) (length 2.54)
-        (name "ROW1/A0"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "20"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 20.32 180.0) (length 2.54)
-        (name "ROW2/K1"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "19"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 17.78 180.0) (length 2.54)
-        (name "ROW3/K2"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "18"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 15.24 180.0) (length 2.54)
-        (name "ROW4/K3"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "17"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 12.7 180.0) (length 2.54)
-        (name "ROW5/K4"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "16"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 10.16 180.0) (length 2.54)
-        (name "ROW6/K5"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "15"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 7.62 180.0) (length 2.54)
-        (name "ROW7/K6"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "14"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 5.08 180.0) (length 2.54)
-        (name "ROW8/K7"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "13"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 2.54 180.0) (length 2.54)
-        (name "ROW9/K8"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "12"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 0.0 180.0) (length 2.54)
-        (name "ROW10/K9"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "11"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at 15.24 -2.54 180.0) (length 2.54)
-        (name "ROW11/K10/INT"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "10"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at -15.24 5.08 0) (length 2.54)
-        (name "SCL"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "22"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at -15.24 7.62 0) (length 2.54)
-        (name "SDA"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "23"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin power_in line (at -15.24 25.4 0) (length 2.54)
-        (name "VDD"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "24"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin bidirectional line (at -15.24 -25.4 0) (length 2.54)
-        (name "VSS"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "1"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-    )
-  )
-  
-  (symbol "SLW-913535-2A-RA-D" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-    (property "Reference" "S" (id 0) (at -2.54 5.08 0)
-      (effects (font (size 1.27 1.27)) (justify bottom left))
-    )
-    (property "Value" "SLW-913535-2A-RA-D" (id 1) (at -2.54 -5.08 0)
-      (effects (font (size 1.27 1.27)) (justify top left))
-    )
-    (property "Footprint" "SLW-913535-2A-RA-D:SW_SLW-913535-2A-RA-D" (id 2) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "MF" "Same Sky" (id 4) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "MAXIMUM_PACKAGE_HEIGHT" "3.7mm" (id 5) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Package" "None" (id 6) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Price" "None" (id 7) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Check_prices" "https://www.snapeda.com/parts/SLW-913535-2A-RA-D/Same+Sky/view-part/?ref=eda" (id 8) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "STANDARD" "Manufacturer Recommendations" (id 9) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "PARTREV" "1.01" (id 10) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "SnapEDA_Link" "https://www.snapeda.com/parts/SLW-913535-2A-RA-D/Same+Sky/view-part/?ref=snap" (id 11) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "MP" "SLW-913535-2A-RA-D" (id 12) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Description" "\n                        \n                            9.1 x 3.5 x 3.5 mm, 2 mm Raised Slide Actuator, Right-Angle, Through Hole, Slide Switch\n                        \n" (id 13) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "Availability" "In Stock" (id 14) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (property "MANUFACTURER" "Same Sky" (id 15) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (justify bottom) hide)
-    )
-    (symbol "SLW-913535-2A-RA-D_0_0"
-      (polyline
-        (pts (xy -2.54 0.0) (xy 2.794 2.1336)) (stroke (width 0.1524))
-      )
-      (circle (center 2.54 2.54) (radius 0.3302)
-        (stroke (width 0.1524)) (fill (type none))
-      )
-      (polyline
-        (pts (xy 5.08 2.54) (xy 2.921 2.54)) (stroke (width 0.1524))
-      )
-      (polyline
-        (pts (xy -2.54 0.0) (xy -5.08 0.0)) (stroke (width 0.1524))
-      )
-      (circle (center 2.54 -2.54) (radius 0.3302)
-        (stroke (width 0.1524)) (fill (type none))
-      )
-      (polyline
-        (pts (xy 5.08 -2.54) (xy 2.921 -2.54)) (stroke (width 0.1524))
-      )
-      (pin passive line (at 7.62 2.54 180.0) (length 2.54)
-        (name "~"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "1"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin passive line (at -7.62 0.0 0) (length 2.54)
-        (name "~"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "2"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-      (pin passive line (at 7.62 -2.54 180.0) (length 2.54)
-        (name "~"
-          (effects (font (size 1.016 1.016)))
-        )
-        (number "3"
-          (effects (font (size 1.016 1.016)))
-        )
-      )
-    )
-  )
 )
