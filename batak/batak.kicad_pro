@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -59,10 +59,10 @@
         }
       ],
       "drc_exclusions": [
-        "footprint_type_mismatch|242723159|77498857|4449f6bc-7c71-41d7-bcbd-679c2c4c83a4|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|222400000|57090000|fe61369d-c099-4736-844e-fe320b1a7d43|00000000-0000-0000-0000-000000000000",
-        "missing_courtyard|219200000|62600000|d58f8d6e-3ebc-45f9-ab06-0b288eb9af2d|00000000-0000-0000-0000-000000000000",
-        "silk_overlap|214882100|137993500|cbcf4145-da43-4817-a271-4d1b8ed0bf4c|2255771d-13fb-41cd-9a97-a0bf05cf19db"
+        [
+          "lib_footprint_mismatch|90370000|58680000|62010b3b-46bf-4857-9d22-56991d82b204|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
       ],
       "meta": {
         "version": 2
@@ -74,16 +74,19 @@
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
+        "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
         "drill_out_of_range": "error",
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
+        "footprint_filters_mismatch": "ignore",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "hole_to_hole": "error",
         "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
@@ -94,9 +97,11 @@
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
+        "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "warning",
         "missing_footprint": "warning",
         "net_conflict": "warning",
+        "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
@@ -108,10 +113,13 @@
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
         "text_height": "warning",
+        "text_on_edge_cuts": "error",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
+        "track_angle": "error",
         "track_dangling": "warning",
+        "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
         "unconnected_items": "error",
@@ -124,6 +132,7 @@
         "min_clearance": 0.15,
         "min_connection": 0.15,
         "min_copper_edge_clearance": 0.5,
+        "min_groove_width": 0.0,
         "min_hole_clearance": 0.19,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
@@ -136,15 +145,16 @@
         "min_track_width": 0.15,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
         {
-          "td_onpadsmd": true,
+          "td_onpthpad": true,
           "td_onroundshapesonly": false,
+          "td_onsmdpad": true,
           "td_ontrackend": false,
-          "td_onviapad": true
+          "td_onvia": true
         }
       ],
       "teardrop_parameters": [
@@ -232,7 +242,72 @@
       "mfg": "",
       "mpn": ""
     },
-    "layer_presets": [],
+    "layer_pairs": [],
+    "layer_presets": [
+      {
+        "activeLayer": -2,
+        "flipBoard": false,
+        "layers": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          29,
+          30,
+          31,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42,
+          44,
+          46,
+          48,
+          50,
+          52,
+          54,
+          56,
+          58,
+          60,
+          62
+        ],
+        "name": "Routing",
+        "renderLayers": [
+          "vias",
+          "footprint_text",
+          "footprint_anchors",
+          "ratsnest",
+          "grid",
+          "footprints_front",
+          "footprints_back",
+          "footprint_values",
+          "footprint_references",
+          "tracks",
+          "drc_errors",
+          "drawing_sheet",
+          "bitmaps",
+          "pads",
+          "zones",
+          "drc_warnings",
+          "locked_item_shadows",
+          "conflict_shadows",
+          "shapes"
+        ]
+      }
+    ],
     "viewports": []
   },
   "boards": [],
@@ -426,10 +501,15 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
+      "footprint_filter": "ignore",
+      "footprint_link_issues": "warning",
+      "four_way_junction": "ignore",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
+      "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
+      "lib_symbol_mismatch": "warning",
       "missing_bidi_pin": "warning",
       "missing_input_pin": "warning",
       "missing_power_pin": "error",
@@ -442,9 +522,15 @@
       "pin_not_driven": "error",
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
+      "same_local_global_label": "warning",
+      "similar_label_and_power": "warning",
       "similar_labels": "warning",
+      "similar_power": "warning",
       "simulation_model_issue": "ignore",
+      "single_global_label": "ignore",
       "unannotated": "error",
+      "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -456,7 +542,7 @@
   },
   "meta": {
     "filename": "batak.kicad_pro",
-    "version": 1
+    "version": 3
   },
   "net_settings": {
     "classes": [
@@ -471,6 +557,7 @@
         "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "via_diameter": 0.6,
@@ -479,7 +566,7 @@
       }
     ],
     "meta": {
-      "version": 3
+      "version": 4
     },
     "net_colors": null,
     "netclass_assignments": null,
@@ -675,6 +762,7 @@
       ],
       "filter_string": "",
       "group_symbols": true,
+      "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
@@ -706,10 +794,11 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "",
+    "net_format_name": "SPICE",
     "page_layout_descr_file": "",
     "plot_directory": "output",
-    "spice_current_sheet_as_root": false,
+    "space_save_all_events": false,
+    "spice_current_sheet_as_root": true,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
     "spice_save_all_currents": false,
@@ -724,68 +813,88 @@
       "Root"
     ],
     [
-      "37c70aec-8949-4f93-b635-fd50e2a33b53",
-      "Button12"
-    ],
-    [
-      "30d5d332-7f30-458f-b626-b89e238ff8b2",
+      "d7183154-dc73-4a08-b68e-666a26bc476b",
       "Button1"
     ],
     [
-      "35724192-cfa8-4205-b8ba-928ed6202b1f",
+      "55187579-087f-4b25-b029-bf24b979e0d1",
       "Button2"
     ],
     [
-      "7220a8f7-6184-449c-8e3f-34a424cb6301",
+      "6d750113-7eed-4d9d-9a77-8d1aea89d39f",
       "Button3"
     ],
     [
-      "7ccf7ea6-4c39-4cb2-96a4-6a162cc58bcc",
+      "01542007-6c22-4cad-92f5-362e22c5ade3",
       "Button4"
     ],
     [
-      "4e0eea34-b41f-41fe-8891-82e1369e5449",
+      "84466a8e-44bc-4171-9090-c5a4ba1a22ea",
       "Button5"
     ],
     [
-      "9e5553e0-7596-46fe-a896-90b3b406423f",
+      "2d92479e-ee05-4c87-a05e-961b0fbce536",
+      "Arcade Button Array + Multiplexers"
+    ],
+    [
+      "341fc8cf-ed38-46be-9bf1-14a546ca9d95",
       "Button6"
     ],
     [
-      "2d913531-92a3-4f1b-b468-0a276e55f1b7",
+      "090c234f-8c23-4e8b-89f8-d658160caf2e",
       "Button7"
     ],
     [
-      "d1fd7a25-87d5-4caa-922f-eeff4202ccfc",
+      "0b68a31f-7990-4aa7-9011-2b04558b3d6d",
       "Button8"
     ],
     [
-      "887dffaa-940e-4478-98bf-1f5b64284a5a",
+      "74560a62-818e-4194-b0b7-2592be67e977",
       "Button9"
     ],
     [
-      "d38b5a04-8d4d-44a1-acce-746932f9d6d4",
+      "e4af50e9-cf1f-4457-b718-e096193b32bd",
       "Button10"
     ],
     [
-      "0d0d3e6b-ce5f-4c02-8969-479243957397",
+      "f2b7bfdb-6f73-4ea1-9047-052bc53b4931",
       "Button11"
     ],
     [
-      "c3527d67-e89f-409d-8038-7c340cf94529",
-      "4 digit 7 segment display"
+      "c87ef237-b2f6-4e4c-a63c-c9a42a9eb84c",
+      "Button12"
     ],
     [
-      "13a62773-3b35-4a48-9fa3-99c8f6986a74",
-      "4 digit 7 segment display1"
+      "aa81c154-94c1-48e1-a283-3e774b82e7f0",
+      "PMOS Diode1"
     ],
     [
-      "0cd6cbc7-01b6-4924-a6d1-6da1d75a1473",
-      "Bidirectional logic level shifter"
+      "103c0202-a90b-42f6-ab92-b81e3753fb90",
+      "Auto reset"
     ],
     [
-      "cf25f261-5be6-4f83-b7e0-36de2687f00e",
-      "Bidirectional logic level shifter1"
+      "2d0bd569-c72a-4bb1-825f-165b19e72617",
+      "USB to UART converter"
+    ],
+    [
+      "de608fe0-565a-41aa-bf4a-12a0caa42987",
+      "USB-C data port"
+    ],
+    [
+      "802df351-106d-4b8b-953f-a31462433d19",
+      "12V -> 5V Buck Converter (2A)"
+    ],
+    [
+      "608fc8d1-ca68-4c5a-9190-97c6f7ddbf5f",
+      "PMOS Diode"
+    ],
+    [
+      "8de16532-9310-4097-a452-771c3e4b14c4",
+      "5V -> 3.3V LDO (1.35A)"
+    ],
+    [
+      "a6926906-1305-4e13-a4ba-256f4ab49bbc",
+      "P5 Display Connector + Level shifter"
     ]
   ],
   "text_variables": {}
