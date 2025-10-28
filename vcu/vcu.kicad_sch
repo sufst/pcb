@@ -2633,16 +2633,6 @@
 		)
 		(uuid b15615fb-7eda-454f-95e0-0e4653596a8b)
 	)
-	(text "APPS2\n"
-		(exclude_from_sim no)
-		(at 327.66 213.868 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "0c6ffe4d-8b95-47a9-99f3-134f7c95929c")
-	)
 	(text "Key"
 		(exclude_from_sim no)
 		(at 383.54 238.76 0)
@@ -2664,13 +2654,14 @@
 		)
 		(uuid "219908f4-9f8c-4097-bd04-7bc265ecca9f")
 	)
-	(text "APPS1"
+	(text "Note: APPS power bias\nmoved onto new BSPD\nboard"
 		(exclude_from_sim no)
-		(at 313.182 214.122 0)
+		(at 313.055 208.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left top)
 		)
 		(uuid "2302aed9-f504-4526-868c-90afb3aef979")
 	)
@@ -2697,7 +2688,7 @@
 	)
 	(text "BPS"
 		(exclude_from_sim no)
-		(at 343.916 213.36 0)
+		(at 335.915 214.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2718,7 +2709,7 @@
 	)
 	(text "SAGL"
 		(exclude_from_sim no)
-		(at 360.68 213.614 0)
+		(at 360.68 214.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2843,16 +2834,6 @@
 		)
 		(uuid "749b97a2-1186-4910-9e9a-39b8f23fcfd6")
 	)
-	(text "Key"
-		(exclude_from_sim no)
-		(at 294.386 231.394 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "7e322da7-02df-416d-81d5-2cbadd3f9bd6")
-	)
 	(text "Place these connectors as \nclose to eachother as possible"
 		(exclude_from_sim no)
 		(at 267.97 249.682 0)
@@ -2886,16 +2867,6 @@
 		)
 		(uuid "92496a52-9394-4287-b6b7-c1697365adb8")
 	)
-	(text "OTHER"
-		(exclude_from_sim no)
-		(at 377.19 213.106 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "9e859d71-0659-4140-92f9-ed6def2bbdb2")
-	)
 	(text "Combine dash connector with RTD connector\n"
 		(exclude_from_sim no)
 		(at 370.078 185.42 0)
@@ -2916,6 +2887,16 @@
 			(justify left bottom)
 		)
 		(uuid "a4c025b0-bde4-4d7d-97e5-60bf8daf8f8b")
+	)
+	(text "BSPD"
+		(exclude_from_sim no)
+		(at 379.73 214.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "af287d3b-99d9-45f7-b398-00955fe31f79")
 	)
 	(text "EEPROM (Config Memory)\n"
 		(exclude_from_sim no)
@@ -3297,10 +3278,6 @@
 	(no_connect
 		(at 327.66 86.36)
 		(uuid "ad143deb-9d7c-44c8-9cfd-d9e66e0ca2a9")
-	)
-	(no_connect
-		(at 290.83 231.14)
-		(uuid "c3037a98-98a1-4483-af53-e909f0ba0e50")
 	)
 	(no_connect
 		(at 210.82 249.555)
@@ -3739,13 +3716,13 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 228.6) (xy 386.08 228.6)
+			(xy 53.34 207.01) (xy 71.12 207.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0cc684b5-f8cd-4965-9515-30f5a0ffb5d4")
+		(uuid "0cdbeb79-fb19-4f8f-bc29-6e1512ee4eed")
 	)
 	(wire
 		(pts
@@ -4767,16 +4744,6 @@
 		)
 		(uuid "6dd327ae-6941-463e-a7d1-3ba5766ee518")
 	)
-	(wire
-		(pts
-			(xy 295.91 228.6) (xy 290.83 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e7ce047-c54b-4018-a773-74b175c9cda7")
-	)
 	(bus
 		(pts
 			(xy 180.34 144.78) (xy 180.34 147.32)
@@ -5016,6 +4983,16 @@
 			(type default)
 		)
 		(uuid "81b47266-3592-4873-8e1e-c90a57ad6ded")
+	)
+	(wire
+		(pts
+			(xy 290.83 228.6) (xy 295.91 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81f3c70e-e55d-485b-8110-ddd44ae197b3")
 	)
 	(bus
 		(pts
@@ -5549,6 +5526,16 @@
 	)
 	(wire
 		(pts
+			(xy 290.83 231.14) (xy 295.91 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b360ee75-4bde-40d5-aed3-1f64443aa508")
+	)
+	(wire
+		(pts
 			(xy 344.17 78.74) (xy 344.17 83.82)
 		)
 		(stroke
@@ -5719,16 +5706,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 207.01) (xy 71.12 207.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c381f433-3b94-4c4b-9aad-4fb7533cf907")
-	)
-	(wire
-		(pts
 			(xy 199.39 101.6) (xy 193.04 101.6)
 		)
 		(stroke
@@ -5796,6 +5773,16 @@
 			(type default)
 		)
 		(uuid "ca6032f0-fb76-42ce-8fdf-74c3da7e7bb7")
+	)
+	(wire
+		(pts
+			(xy 360.68 228.6) (xy 386.08 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb333f37-c466-4662-ae0c-538ff105f1dc")
 	)
 	(polyline
 		(pts
@@ -6517,6 +6504,16 @@
 		)
 		(uuid "1ad3a0dd-1496-45ce-acea-d575356195ef")
 	)
+	(label "BPS_R_IN"
+		(at 295.91 228.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1c84b322-b599-4b36-a40f-d1b62aa025ab")
+	)
 	(label "IMD_LED"
 		(at 53.34 204.47 0)
 		(effects
@@ -6526,6 +6523,16 @@
 			(justify left bottom)
 		)
 		(uuid "2191b322-9b92-484a-904a-ebeda9936255")
+	)
+	(label "BPS_F_PWR"
+		(at 363.22 233.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2a66bd96-e7b4-4867-b1c9-68b8e09b8f13")
 	)
 	(label "IMD_LED"
 		(at 182.88 220.98 0)
@@ -6587,7 +6594,7 @@
 		)
 		(uuid "4541c3a0-5e29-4cae-bf2a-444e1e5a9de1")
 	)
-	(label "APPS1_PWR"
+	(label "APPS_PWR"
 		(at 363.22 236.22 0)
 		(effects
 			(font
@@ -6667,6 +6674,16 @@
 		)
 		(uuid "5c9e58a5-ab78-4853-8ea7-d414793cd3c2")
 	)
+	(label "BPS_R_PWR"
+		(at 363.22 231.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "63891079-1045-4751-9f16-aba79d69ea88")
+	)
 	(label "EEPROM_SDA"
 		(at 228.6 142.24 0)
 		(effects
@@ -6687,7 +6704,7 @@
 		)
 		(uuid "669a6671-176e-46f8-b33c-8121fef5ae3c")
 	)
-	(label "BPS_IN"
+	(label "BPS_F_IN"
 		(at 295.91 226.06 0)
 		(effects
 			(font
@@ -6756,16 +6773,6 @@
 			(justify right bottom)
 		)
 		(uuid "7ca63afc-b298-4874-b2fc-734f66755d11")
-	)
-	(label "SAGL_PWR"
-		(at 363.22 228.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7ef8e040-4938-43f2-a766-a3240e0aba24")
 	)
 	(label "SHDN_STATE"
 		(at 82.55 121.92 180)
@@ -6918,7 +6925,7 @@
 		(uuid "992246d0-32fb-44be-b038-a569d2035e33")
 	)
 	(label "SAGL_IN"
-		(at 295.91 228.6 0)
+		(at 295.91 231.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7037,6 +7044,16 @@
 		)
 		(uuid "b85c1d53-8903-43fe-8c01-248f0fc73f90")
 	)
+	(label "BSPD"
+		(at 379.73 226.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bae61140-8962-4435-a5c6-cdc935e5cd4b")
+	)
 	(label "CAN_C_H"
 		(at 346.71 81.28 0)
 		(effects
@@ -7047,16 +7064,6 @@
 		)
 		(uuid "bd347ab9-e649-46e4-a7f1-27a0760d2126")
 	)
-	(label "BPS_PWR"
-		(at 363.22 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bdac4dfd-4b41-4796-8597-91436bce9676")
-	)
 	(label "DRS_BTN"
 		(at 104.14 129.54 180)
 		(effects
@@ -7066,6 +7073,16 @@
 			(justify right bottom)
 		)
 		(uuid "be0d4d0a-c025-4a07-a2ce-862ea0975c6f")
+	)
+	(label "SAGL_PWR"
+		(at 363.22 228.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c4698b72-b5e6-4671-88b7-b01e4bde3f7d")
 	)
 	(label "TS_ON_LED"
 		(at 53.34 196.85 0)
@@ -7127,16 +7144,6 @@
 		)
 		(uuid "dac86149-946b-4192-9661-977df271bc3e")
 	)
-	(label "APPS2_PWR"
-		(at 363.22 233.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "dbcc0d41-a358-4fea-8ca5-587a43af8fe2")
-	)
 	(label "DRS_LED"
 		(at 140.97 177.8 270)
 		(effects
@@ -7158,12 +7165,12 @@
 		(uuid "e4701d41-d2df-4da5-b65d-be44ae95dd34")
 	)
 	(label "DRS_LED"
-		(at 60.96 207.01 180)
+		(at 53.34 207.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "e7bd4825-c704-4693-a359-b68dbb0a0a0c")
 	)
