@@ -9073,7 +9073,20 @@
 		)
 		(uuid "0f1660a5-bc94-4671-978e-7791dd3762ea")
 	)
-	(text "**CHECK CONNECTIONS**"
+	(text "**CHECK CONNECTIONS**\n**CHECK DECOUPLING**"
+		(exclude_from_sim no)
+		(at 22.098 138.938 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+				(color 194 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "102a4f2c-60a3-4704-a8af-31181784b4c9")
+	)
+	(text "**CHECK CONNECTIONS**\n**CHECK DECOUPLING**"
 		(exclude_from_sim no)
 		(at 24.13 213.36 0)
 		(effects
@@ -9195,9 +9208,9 @@
 		)
 		(uuid "5716b085-3f9e-4a3e-956d-e31bf9aa630a")
 	)
-	(text "**CHECK CONNECTIONS**"
+	(text "**CHECK CONNECTIONS**\n**ADD DECOUPLING**"
 		(exclude_from_sim no)
-		(at 24.13 274.32 0)
+		(at 23.368 273.304 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9253,6 +9266,19 @@
 			(justify left)
 		)
 		(uuid "7d4c37e0-4b59-4a9c-8a47-059581ffe8fa")
+	)
+	(text "**CHECK CONNECTIONS**\n**ADD DECOUPLING**"
+		(exclude_from_sim no)
+		(at 240.792 231.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+				(color 194 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "7f2f6c9f-ff48-40b4-8cd1-0bbd45523a07")
 	)
 	(text "Touch Panel Down"
 		(exclude_from_sim no)
@@ -9450,6 +9476,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0cdb1aca-433d-491d-9820-4f73e3b3b6d3")
+	)
+	(junction
+		(at 256.54 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0cea8e7d-f9e6-4e30-9f68-d7e9100597d4")
 	)
 	(junction
 		(at 267.97 52.07)
@@ -11058,6 +11090,16 @@
 			(type default)
 		)
 		(uuid "4cf700fb-4697-41ff-ad47-753e47b9e11b")
+	)
+	(wire
+		(pts
+			(xy 256.54 53.975) (xy 256.54 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d7ad0ad-1bb3-4142-9e54-65c2bc59cc7b")
 	)
 	(wire
 		(pts
@@ -15487,7 +15529,7 @@
 	(rule_area
 		(polyline
 			(pts
-				(xy 139.7 229.235) (xy 163.195 228.6) (xy 163.195 166.37) (xy 139.7 167.005)
+				(xy 139.7 228.6) (xy 163.195 228.6) (xy 163.195 166.37) (xy 139.7 167.005)
 			)
 			(stroke
 				(width 0)
@@ -21499,6 +21541,71 @@
 			(project "Dashboard"
 				(path "/ed2ead0c-db91-475a-bfeb-6d6144b9301b/b2a949e3-c2ae-4e71-a404-97f91448d983"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 256.54 53.975 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0576057-7f75-4a5c-9dc2-fb5b11f9ab75")
+		(property "Reference" "#PWR068"
+			(at 256.54 60.325 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 256.54 58.293 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 256.54 53.975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 53.975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 256.54 53.975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2f03cf56-74ec-4f79-af34-f5a266a660ae")
+		)
+		(instances
+			(project "Dashboard"
+				(path "/ed2ead0c-db91-475a-bfeb-6d6144b9301b/b2a949e3-c2ae-4e71-a404-97f91448d983"
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
