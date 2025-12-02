@@ -1022,6 +1022,89 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_SPDT"
 			(pin_names
 				(offset 0)
@@ -1533,12 +1616,6 @@
 		(uuid "066e7a0d-c78f-4ca2-bc55-978aa57f453a")
 	)
 	(junction
-		(at 87.63 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "07164ed1-aca3-44ee-ac4b-2e8e20619e44")
-	)
-	(junction
 		(at 127 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1563,22 +1640,10 @@
 		(uuid "29875c51-3f64-494f-869d-e3d186036f70")
 	)
 	(junction
-		(at 107.95 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6fb254a4-cec8-49b4-a92f-036206b5cfb1")
-	)
-	(junction
 		(at 39.37 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "91068872-2d70-4148-b87d-f228dbbdc2b1")
-	)
-	(junction
-		(at 107.95 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a0ba4ae0-9636-4311-90da-887d8d34de65")
 	)
 	(junction
 		(at 30.48 50.8)
@@ -1609,12 +1674,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f2a27518-2a26-460c-ac7a-7daafb5fb0a1")
-	)
-	(junction
-		(at 63.5 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f54f90d3-4c1c-4374-ab7e-fefc4dfb27e8")
 	)
 	(junction
 		(at 33.02 35.56)
@@ -1653,16 +1712,6 @@
 			(type default)
 		)
 		(uuid "0215f0e8-5787-4791-9a03-9762746b2803")
-	)
-	(wire
-		(pts
-			(xy 107.95 80.01) (xy 107.95 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "061d044f-1494-43f2-b17f-22ba0d4e1dd1")
 	)
 	(wire
 		(pts
@@ -1796,7 +1845,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 80.01) (xy 87.63 87.63)
+			(xy 87.63 73.66) (xy 87.63 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1896,16 +1945,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 102.87) (xy 107.95 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d8fba3f-107a-4925-bde7-a35db42ba803")
-	)
-	(wire
-		(pts
 			(xy 149.86 54.61) (xy 142.24 54.61)
 		)
 		(stroke
@@ -1966,16 +2005,6 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 80.01) (xy 78.74 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "552a35cc-6345-434e-80cf-a491cc6df3a5")
-	)
-	(wire
-		(pts
 			(xy 156.21 48.26) (xy 156.21 78.74)
 		)
 		(stroke
@@ -2026,7 +2055,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 102.87) (xy 107.95 102.87)
+			(xy 95.25 102.87) (xy 115.57 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2126,16 +2155,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 102.87) (xy 115.57 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ee2c2d0-73de-453a-aa4d-96bbf29852c8")
-	)
-	(wire
-		(pts
 			(xy 81.28 64.77) (xy 107.95 64.77)
 		)
 		(stroke
@@ -2153,26 +2172,6 @@
 			(type default)
 		)
 		(uuid "909e108d-2d96-4195-a68a-b60d13e7b9c8")
-	)
-	(wire
-		(pts
-			(xy 78.74 99.06) (xy 63.5 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "913628ba-dfbb-47f8-92dc-fe6c50f8fd5d")
-	)
-	(wire
-		(pts
-			(xy 87.63 73.66) (xy 87.63 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9309823f-aed2-42ca-97d9-1cb7d170fe2e")
 	)
 	(wire
 		(pts
@@ -2233,16 +2232,6 @@
 			(type default)
 		)
 		(uuid "a5f5f866-457d-4449-9fc1-3f9810cb5f97")
-	)
-	(wire
-		(pts
-			(xy 87.63 80.01) (xy 78.74 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa55b653-ca55-41ce-949a-8ad3c901d8f1")
 	)
 	(wire
 		(pts
@@ -2815,7 +2804,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0508_1220Metric_Pad1.12x2.15mm_HandSolder"
 			(at 138.43 50.038 90)
 			(effects
 				(font
@@ -2885,7 +2874,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0508_1220Metric_Pad1.12x2.15mm_HandSolder"
 			(at 85.852 91.44 90)
 			(effects
 				(font
@@ -2955,7 +2944,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0508_1220Metric_Pad1.12x2.15mm_HandSolder"
 			(at 85.852 69.85 90)
 			(effects
 				(font
@@ -2998,83 +2987,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 78.74 87.63 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3332d1d8-d6bf-409d-87d7-f3bbd172d9ca")
-		(property "Reference" "D2"
-			(at 72.39 89.2175 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 74.93 89.2175 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 78.74 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 78.74 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 78.74 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1affc869-b3f9-42da-8c63-15ca1fceca3f")
-		)
-		(pin "1"
-			(uuid "73926426-a8a7-47ac-be79-1e5fa21e68a8")
-		)
-		(instances
-			(project "BSPD_testkit"
-				(path "/a8701bb2-f5ca-4fb1-9483-47172a307edf"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_SPDT")
 		(at 171.45 39.37 0)
 		(mirror y)
@@ -3101,7 +3013,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q"
 			(at 171.45 39.37 0)
 			(effects
 				(font
@@ -3213,83 +3125,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 107.95 87.63 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5aed88ab-e2ee-42cc-b80a-42ad1a61d20c")
-		(property "Reference" "D3"
-			(at 101.6 89.2175 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 104.14 89.2175 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 107.95 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 107.95 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 107.95 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 107.95 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "25343bfd-f8b8-4fc6-bbdc-d3176682082a")
-		)
-		(pin "1"
-			(uuid "2f9a6f86-a18e-4c04-9bca-69b98a43f55f")
-		)
-		(instances
-			(project "BSPD_testkit"
-				(path "/a8701bb2-f5ca-4fb1-9483-47172a307edf"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 95.25 91.44 0)
 		(unit 1)
@@ -3317,7 +3152,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0508_1220Metric_Pad1.12x2.15mm_HandSolder"
 			(at 93.472 91.44 90)
 			(effects
 				(font
@@ -3387,7 +3222,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 47.9552 60.96 0)
 			(effects
 				(font
@@ -3424,74 +3259,6 @@
 			(project ""
 				(path "/a8701bb2-f5ca-4fb1-9483-47172a307edf"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 107.95 95.25 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "78a6aaa6-75c3-49fc-8e54-1fc7c79df42e")
-		(property "Reference" "R3"
-			(at 101.6 95.25 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R"
-			(at 104.14 95.25 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 109.728 95.25 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 107.95 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 107.95 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "52f01cb7-7643-4ab1-ada0-bbd45a2996b3")
-		)
-		(pin "1"
-			(uuid "a9179d0e-a5e4-4bfd-9347-1cdf1f2908ec")
-		)
-		(instances
-			(project "BSPD_testkit"
-				(path "/a8701bb2-f5ca-4fb1-9483-47172a307edf"
-					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -3656,7 +3423,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q"
 			(at 171.45 24.13 0)
 			(effects
 				(font
@@ -3792,7 +3559,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0508_1220Metric_Pad1.12x2.15mm_HandSolder"
 			(at 138.43 56.388 90)
 			(effects
 				(font
@@ -3835,6 +3602,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 213.36 22.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b41fa12d-ef04-43c1-ad44-c21dbfda7cd2")
+		(property "Reference" "H1"
+			(at 215.9 21.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 215.9 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 213.36 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 213.36 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/a8701bb2-f5ca-4fb1-9483-47172a307edf"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 115.57 66.04 180)
 		(unit 1)
@@ -3860,7 +3691,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0508_1220Metric_Pad1.12x2.15mm_HandSolder"
 			(at 117.348 66.04 90)
 			(effects
 				(font
@@ -3930,7 +3761,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 31.4452 60.96 0)
 			(effects
 				(font
@@ -3999,7 +3830,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm"
 			(at 149.86 59.69 0)
 			(effects
 				(font
@@ -4078,7 +3909,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0508_1220Metric_Pad1.12x2.15mm_HandSolder"
 			(at 106.172 69.85 90)
 			(effects
 				(font
@@ -4148,7 +3979,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
 			(at 39.37 33.02 0)
 			(effects
 				(font
@@ -4215,7 +4046,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q"
 			(at 132.08 24.13 0)
 			(effects
 				(font
@@ -4287,7 +4118,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q"
 			(at 132.08 39.37 0)
 			(effects
 				(font
@@ -4360,7 +4191,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical"
 			(at 77.47 64.77 0)
 			(effects
 				(font
@@ -4433,7 +4264,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
 			(at 139.7 64.77 0)
 			(effects
 				(font
@@ -4515,7 +4346,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical"
 			(at 77.47 54.61 0)
 			(effects
 				(font
@@ -4653,7 +4484,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm"
 			(at 115.57 58.42 0)
 			(effects
 				(font
@@ -4699,74 +4530,6 @@
 			(project ""
 				(path "/a8701bb2-f5ca-4fb1-9483-47172a307edf"
 					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 78.74 95.25 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fe99f43b-7e96-4e1b-b6d2-c00a32f58735")
-		(property "Reference" "R2"
-			(at 72.39 95.25 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R"
-			(at 74.93 95.25 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 80.518 95.25 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 78.74 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 78.74 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "81ddfc5c-ec92-407f-a69e-fc7c63bae9af")
-		)
-		(pin "1"
-			(uuid "5c6ca2a7-b734-42a9-a8f9-daf494121430")
-		)
-		(instances
-			(project "BSPD_testkit"
-				(path "/a8701bb2-f5ca-4fb1-9483-47172a307edf"
-					(reference "R2")
 					(unit 1)
 				)
 			)
