@@ -2811,25 +2811,14 @@
 		)
 		(uuid "1193532b-6b45-47a9-ac7e-38a24cd52f51")
 	)
-	(text "Needs double checking - should be right"
-		(exclude_from_sim no)
-		(at 146.05 181.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "2dd5bd04-6210-46d4-814d-e68e6c93d999")
-	)
-	(text "**ADD DECOUPLING TO GLV**"
+	(text "Decoupling Capacitor Added"
 		(exclude_from_sim no)
 		(at 18.288 61.722 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 				(thickness 0.1588)
-				(color 194 0 0 1)
+				(color 32 194 0 1)
 			)
 			(justify left)
 		)
@@ -2867,14 +2856,14 @@
 		)
 		(uuid "4ec5c49e-29c1-44cf-9562-6172360bc390")
 	)
-	(text "**CHECK COMPONENTS**"
+	(text "Connection Checked\nComponents Value may be Changed"
 		(exclude_from_sim no)
-		(at 19.558 192.278 0)
+		(at 18.288 191.262 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 				(thickness 0.1588)
-				(color 194 0 0 1)
+				(color 58 194 0 1)
 			)
 			(justify left)
 		)
@@ -2981,14 +2970,14 @@
 		)
 		(uuid "cf85934f-39c3-461a-a7f5-92ae80497f7e")
 	)
-	(text "**CHECK COMPONENTS**"
+	(text "Checked\n\n"
 		(exclude_from_sim no)
 		(at 19.304 120.904 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 				(thickness 0.1588)
-				(color 194 0 0 1)
+				(color 0 194 20 1)
 			)
 			(justify left)
 		)
@@ -3162,6 +3151,12 @@
 		(uuid "66b0d558-34b7-43d8-8921-c68ede153169")
 	)
 	(junction
+		(at 33.02 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "67f445e4-deb4-4bc5-971b-3a0527f80600")
+	)
+	(junction
 		(at 115.57 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3178,6 +3173,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7c948027-d477-4fc7-9e27-6178bc17d7f0")
+	)
+	(junction
+		(at 45.72 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f2353e2-0b21-434b-9005-02db4903cc02")
 	)
 	(junction
 		(at 127 96.52)
@@ -3541,6 +3542,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 36.83) (xy 33.02 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23ba2810-25c4-4800-a3a1-b4c03cc346ca")
+	)
+	(wire
+		(pts
 			(xy 105.41 186.69) (xy 114.3 186.69)
 		)
 		(stroke
@@ -3811,6 +3822,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 53.34) (xy 45.72 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66302279-0c6e-4a52-96df-89b7813fcd70")
+	)
+	(wire
+		(pts
 			(xy 106.68 95.25) (xy 115.57 95.25)
 		)
 		(stroke
@@ -4058,6 +4079,16 @@
 			(type default)
 		)
 		(uuid "a7a9ec42-dacc-481c-8f52-04d7835e1033")
+	)
+	(wire
+		(pts
+			(xy 33.02 50.8) (xy 33.02 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9ca2d62-b586-42f2-8d00-365f63f06811")
 	)
 	(wire
 		(pts
@@ -7232,6 +7263,76 @@
 			(project "Dashboard"
 				(path "/ed2ead0c-db91-475a-bfeb-6d6144b9301b/af335906-16f7-4171-9604-a120cf780e93"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 33.02 46.99 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a21aef92-8827-4620-a41a-cb2552730050")
+		(property "Reference" "C2"
+			(at 28.194 47.244 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 29.718 49.276 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 32.0548 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 33.02 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 33.02 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cebc2ee7-d715-423f-b94a-248869365b0c")
+		)
+		(pin "2"
+			(uuid "c9599831-3501-4c91-b997-2c2dc824de14")
+		)
+		(instances
+			(project "Dashboard"
+				(path "/ed2ead0c-db91-475a-bfeb-6d6144b9301b/af335906-16f7-4171-9604-a120cf780e93"
+					(reference "C2")
 					(unit 1)
 				)
 			)
