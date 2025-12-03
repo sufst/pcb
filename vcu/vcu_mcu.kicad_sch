@@ -7922,7 +7922,7 @@
 	)
 	(text "- ALERT pulls @ configurable temp\n- place this guy in sensor in dense area\n- added temp so we have an idea how hot\n   the vcu box gets\n- could be used to thermal shutdown"
 		(exclude_from_sim no)
-		(at 137.414 191.77 0)
+		(at 137.414 202.946 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7934,7 +7934,7 @@
 	)
 	(text "- will need to add\n   a second i2c bus\n   for debug card\n- route bus with care\n  to avoid excess load"
 		(exclude_from_sim no)
-		(at 247.396 266.192 0)
+		(at 247.65 271.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7958,9 +7958,9 @@
 		)
 		(uuid "48aa5eb5-cbd5-423d-abda-c35d5cea22b6")
 	)
-	(text "- bulk capacitence needed = 10pF\n- assume parasitic of 7pf\n  CL1/L2 = 10 - 7 * 2\n         = 6pF\n- closest standard value = 4.7\n\n- nice caps should be chosen,\n   ideally np0/c0g\n- add part and footprint\n"
+	(text "- bulk capacitence needed = 10pF\n- assume parasitic of 7pf\n  CL1/L2 = 10 - 7 * 2\n         = 6pF\n- closest standard value = 4.7\nECS-250-10-47Q-CES-TR\n\n- nice caps should be chosen,\n   ideally np0/c0g\n- add part and footprint\n"
 		(exclude_from_sim no)
-		(at 137.414 115.57 0)
+		(at 137.16 114.046 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7984,12 +7984,15 @@
 		)
 		(uuid "56557027-5ff3-4d46-a07b-a6ac59c6cf92")
 	)
-	(text "PIN ASSIGNMENTS"
+	(text "ASSIGN PINS"
 		(exclude_from_sim no)
-		(at 286.004 104.394 0)
+		(at 277.114 106.426 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 3.81 3.81)
+				(thickness 1.016)
+				(bold yes)
+				(color 194 0 0 1)
 			)
 		)
 		(uuid "60451a4b-a184-46ab-ace8-b8cb86a99bc5")
@@ -8010,7 +8013,7 @@
 	)
 	(text "- super small jtag header\n- if no space boot becomes pads\n- and rsts will be connected\n- if thats a thing i can do idk\n- add tvs to buttons\n"
 		(exclude_from_sim no)
-		(at 137.668 70.612 0)
+		(at 137.668 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8020,7 +8023,7 @@
 		)
 		(uuid "7bcecb8d-ef97-4678-9292-56116fce1e35")
 	)
-	(text "- some dumbass WILL somehow plug in a USB\n  C the wrong way around otherwise\n- note D+/D- are differential\n- watch routing so this doesnt become\n  impossible to solder\n- current chip has 500mA built in current limit\n- pin4pin 900mA alternate availible\n- TPD3S044\n"
+	(text "- some dumbass WILL somehow plug in a USB\n  C the wrong way around otherwise\n- note D+/D- are differential\n- watch routing so this doesnt become\n  impossible to solder\n- xxx14 chip has 500mA built in current limit\n- pin4pin 900mA alternate availible\n- TPD3S044\n"
 		(exclude_from_sim no)
 		(at 76.2 191.262 0)
 		(effects
@@ -8033,7 +8036,7 @@
 		)
 		(uuid "87a48c65-d091-4329-a221-163e04372cc7")
 	)
-	(text "- sd can consume around 100mA\n- current limit somehow\n- or add a shutdown \n- need to consider if this is same SPI bus\n   as the debug card\n- programming this looks horrible\n- add smaller footprint"
+	(text "- sd can consume around 100mA\n- current limit with resistors?\n- or add a shutdown \n- need to consider if this is same SPI bus\n   as the debug card\n- programming this looks horrible\n- add smaller footprint"
 		(exclude_from_sim no)
 		(at 82.042 269.494 0)
 		(effects
@@ -8075,7 +8078,7 @@
 	)
 	(text "**CHECK FOOTPRINT**\n**CHECK IO DIRECTION**"
 		(exclude_from_sim no)
-		(at 137.414 98.552 0)
+		(at 137.16 96.012 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8088,7 +8091,7 @@
 	)
 	(text "**CHECK DEBOUNCE**\n**CHECK IO DIRECTIONS**\n"
 		(exclude_from_sim no)
-		(at 137.414 62.992 0)
+		(at 137.414 69.85 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8099,22 +8102,9 @@
 		)
 		(uuid "a88246b8-3777-45a0-87d8-b569cf4408ff")
 	)
-	(text "**SPEC CAP**"
-		(exclude_from_sim no)
-		(at 137.414 184.912 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-				(color 194 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "b003ce1f-d607-4ed9-a331-dd83202c2e00")
-	)
 	(text "**CHECK CAP VALUE AND PULLUP**"
 		(exclude_from_sim no)
-		(at 137.668 145.796 0)
+		(at 137.668 162.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8141,7 +8131,7 @@
 	)
 	(text "- UMU_INTR1/2 are programmable interrupts\n- IMU_MODE decides operation mode of chip\n- check if any extra bulk caps needed\n- this is footprint compatible with other st IMUs\n- this one has some ai bs idk\n- up to rob which one we use"
 		(exclude_from_sim no)
-		(at 137.414 249.174 0)
+		(at 137.668 272.034 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8151,9 +8141,9 @@
 		)
 		(uuid "b5f8a4e2-5861-4739-ac76-23946ef20847")
 	)
-	(text "- leviathan header for draft stage\n- aiming for 20-30 pin\n- need to work out what is needed\n- will be a samtec board edge connector vertical socket\n- configured part number = MEC1-120-02-L-D-A-K-TR\n- use gpio pins for debug leds\n"
+	(text "- aiming for 20-30 pin\n- double check buses with programming\n- will be a samtec board edge connector vertical socket\n- configured part number = MEC1-120-02-L-D-A-K-TR\n- use gpio pins for debug leds\n"
 		(exclude_from_sim no)
-		(at 21.844 118.872 0)
+		(at 20.574 126.238 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8165,7 +8155,7 @@
 	)
 	(text "**WATCH IDs**"
 		(exclude_from_sim no)
-		(at 248.158 259.08 0)
+		(at 248.412 264.668 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8176,9 +8166,9 @@
 		)
 		(uuid "cee8a0c2-24b3-4d14-ad26-607b5189db60")
 	)
-	(text "- is eeprom acc needed??? \n- cant u just flash to the f7 eeprom?\n- stuck with previously specced one\n- has 256kb flash as 32K * 8"
+	(text "- has 256kb flash as 32K * 8"
 		(exclude_from_sim no)
-		(at 137.414 151.638 0)
+		(at 137.668 165.354 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8204,7 +8194,7 @@
 	)
 	(text "**CHECK I2C ADDR**"
 		(exclude_from_sim no)
-		(at 137.668 241.3 0)
+		(at 137.922 264.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8214,19 +8204,6 @@
 			(justify left)
 		)
 		(uuid "ee455e97-7733-4589-87d6-d8acf5736432")
-	)
-	(text "**ADD REVERSE PROT IN PWR SHEET**"
-		(exclude_from_sim no)
-		(at 76.708 181.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-				(color 194 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "f11ddd22-8c3e-4330-ae2c-10d8ff1a7aed")
 	)
 	(junction
 		(at 375.92 46.99)
@@ -10473,7 +10450,7 @@
 		(uuid "fd395ffb-dc9d-4784-869c-964c8fa465e4")
 	)
 	(image
-		(at 147.32 103.378)
+		(at 147.066 100.838)
 		(scale 0.412346)
 		(uuid "9a852121-008f-4fb7-9245-a79a36ad9391")
 		(data "iVBORw0KGgoAAAANSUhEUgAAAOgAAAA1CAIAAADEazDeAAAAA3NCSVQICAjb4U/gAAAACXBIWXMA"
@@ -11105,7 +11082,7 @@
 		)
 		(uuid "c16f1e75-cbc5-46da-87b6-31fb3886d370")
 	)
-	(label "CAN1_13"
+	(label "CAN1_H"
 		(at 52.07 69.85 0)
 		(effects
 			(font
