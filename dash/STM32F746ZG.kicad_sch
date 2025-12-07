@@ -3043,6 +3043,7 @@
 				(offset 1.016)
 				(hide yes)
 			)
+			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "D"
@@ -9255,14 +9256,14 @@
 		)
 		(uuid "0f1660a5-bc94-4671-978e-7791dd3762ea")
 	)
-	(text "**CHECK CONNECTIONS**\n**CHECK DECOUPLING**"
+	(text "Pin numbers flipped due to how connector mounted on back side of board"
 		(exclude_from_sim no)
-		(at 22.098 138.938 0)
+		(at 21.59 141.224 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 				(thickness 0.1588)
-				(color 194 0 0 1)
+				(color 0 0 255 1)
 			)
 			(justify left)
 		)
@@ -12318,7 +12319,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 120.65) (xy 78.74 134.62)
+			(xy 78.74 120.65) (xy 78.74 130.81)
 		)
 		(stroke
 			(width 0)
@@ -17183,33 +17184,31 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x40_Socket")
-		(at 49.53 80.01 0)
-		(mirror y)
+		(at 49.53 82.55 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "36077e9d-bd6c-499b-938f-a8a722a417b5")
 		(property "Reference" "J1"
-			(at 50.165 26.67 0)
+			(at 51.562 28.448 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "Conn_01x40_Socket"
-			(at 50.165 29.21 0)
+		(property "Value" "XF2M-4015-1A"
+			(at 51.562 25.908 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 49.53 80.01 0)
+		(property "Footprint" "SUFST:XF2M40151A"
+			(at 49.53 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17218,7 +17217,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 49.53 80.01 0)
+			(at 49.53 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17227,7 +17226,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x40, script generated"
-			(at 49.53 80.01 0)
+			(at 49.53 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17356,7 +17355,7 @@
 			(uuid "6f743d81-d21e-4273-a660-47c0ee7e9c52")
 		)
 		(instances
-			(project ""
+			(project "Dashboard"
 				(path "/ed2ead0c-db91-475a-bfeb-6d6144b9301b/b2a949e3-c2ae-4e71-a404-97f91448d983"
 					(reference "J1")
 					(unit 1)
@@ -22201,7 +22200,7 @@
 	(symbol
 		(lib_name "GND_2")
 		(lib_id "power:GND")
-		(at 78.74 134.62 0)
+		(at 78.74 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22210,7 +22209,7 @@
 		(fields_autoplaced yes)
 		(uuid "ea244a7f-51f8-41cf-9514-502a9341ae4c")
 		(property "Reference" "#PWR01"
-			(at 78.74 140.97 0)
+			(at 78.74 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22219,7 +22218,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 78.74 139.7 0)
+			(at 78.74 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22227,7 +22226,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 134.62 0)
+			(at 78.74 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22236,7 +22235,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 134.62 0)
+			(at 78.74 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22245,7 +22244,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 134.62 0)
+			(at 78.74 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
