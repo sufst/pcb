@@ -3017,23 +3017,27 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical:MountingHole"
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
-			(in_bom yes)
+			(in_bom no)
 			(on_board yes)
 			(property "Reference" "H"
-				(at 0 5.08 0)
+				(at 0 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "MountingHole"
-				(at 0 3.175 0)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3058,7 +3062,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Mounting Hole without connection"
+			(property "Description" "Mounting Hole with connection"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3076,7 +3080,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "MountingHole*"
+			(property "ki_fp_filters" "MountingHole*Pad*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3085,9 +3089,9 @@
 					(hide yes)
 				)
 			)
-			(symbol "MountingHole_0_1"
+			(symbol "MountingHole_Pad_0_1"
 				(circle
-					(center 0 0)
+					(center 0 1.27)
 					(radius 1.27)
 					(stroke
 						(width 1.27)
@@ -3095,6 +3099,26 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -3640,6 +3664,24 @@
 		(uuid "0c381842-5aac-408c-b46c-a53c6c5c946c")
 	)
 	(junction
+		(at 88.9 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "384cf403-6ecf-4737-9df4-d28975d3222f")
+	)
+	(junction
+		(at 88.9 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "423e439a-da2a-4b31-9919-5b9a9c4f17b9")
+	)
+	(junction
+		(at 99.06 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e420cce-27d4-4a3b-8db4-6110ab5b413c")
+	)
+	(junction
 		(at 78.74 240.03)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3652,10 +3694,22 @@
 		(uuid "a08f8286-7932-4536-b18f-811d1bc2674f")
 	)
 	(junction
+		(at 99.06 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c9107144-4d08-4175-992b-511777534b70")
+	)
+	(junction
 		(at 78.74 227.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cf17c31a-0f45-4e31-94e8-6f059e4dfdd6")
+	)
+	(junction
+		(at 99.06 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef53ca29-b828-4e4b-bdd4-61d515d94f98")
 	)
 	(wire
 		(pts
@@ -3786,6 +3840,16 @@
 			(type default)
 		)
 		(uuid "10daa8d1-1124-4de8-94c6-76cc19906d94")
+	)
+	(wire
+		(pts
+			(xy 88.9 35.56) (xy 99.06 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13c2e70a-85fb-4ae1-93b7-c7e1a09fbcc1")
 	)
 	(wire
 		(pts
@@ -3999,6 +4063,16 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 35.56) (xy 88.9 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37232f10-2bde-4c8b-b7e8-f63ed8b8fb66")
+	)
+	(wire
+		(pts
 			(xy 26.67 184.15) (xy 41.91 184.15)
 		)
 		(stroke
@@ -4056,6 +4130,16 @@
 			(type default)
 		)
 		(uuid "3bad9f9e-8e51-45c9-a10c-74a8d1739640")
+	)
+	(wire
+		(pts
+			(xy 88.9 30.48) (xy 99.06 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cc30181-ef4c-431c-b224-ea501299daa3")
 	)
 	(wire
 		(pts
@@ -4539,6 +4623,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 34.29) (xy 109.22 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84143f3d-3ff2-4bb3-861a-1b02c1479ecb")
+	)
+	(wire
+		(pts
 			(xy 355.6 93.98) (xy 370.84 93.98)
 		)
 		(stroke
@@ -4586,6 +4680,16 @@
 			(type default)
 		)
 		(uuid "8903a691-9393-4221-b4a0-cc8c8698b5d6")
+	)
+	(wire
+		(pts
+			(xy 99.06 33.02) (xy 109.22 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "893a48bb-fb07-4192-8287-5c2c033f3175")
 	)
 	(wire
 		(pts
@@ -5129,6 +5233,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 35.56) (xy 99.06 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4be7ce0-f92d-48c4-aebb-856a1a9fe69c")
+	)
+	(wire
+		(pts
 			(xy 114.3 74.93) (xy 133.35 74.93)
 		)
 		(stroke
@@ -5249,6 +5363,16 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 30.48) (xy 88.9 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e197cc14-6330-4ba9-b57c-7798555ef41b")
+	)
+	(wire
+		(pts
 			(xy 297.18 82.55) (xy 314.96 82.55)
 		)
 		(stroke
@@ -5266,6 +5390,16 @@
 			(type default)
 		)
 		(uuid "e4d26850-d1d7-4838-8cef-6ed08b8f3388")
+	)
+	(wire
+		(pts
+			(xy 99.06 33.02) (xy 99.06 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e518ffd8-7bd0-4011-a3e0-7629079292c1")
 	)
 	(wire
 		(pts
@@ -10594,35 +10728,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 88.9 36.83 0)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 99.06 38.1 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "242e879b-ce29-488c-936a-964efdcf6b01")
-		(property "Reference" "H4"
-			(at 91.44 35.5599 0)
+		(uuid "13331693-5881-4066-806f-351facbadc5e")
+		(property "Reference" "H6"
+			(at 101.6 38.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "M3"
-			(at 91.44 38.0999 0)
+			(at 101.6 40.6399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 88.9 36.83 0)
+			(at 99.06 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10631,7 +10765,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 88.9 36.83 0)
+			(at 99.06 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10639,22 +10773,167 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 88.9 36.83 0)
+		(property "Description" "Mounting Hole with connection"
+			(at 99.06 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Optional" "False"
-			(at 88.9 36.83 0)
+			(at 99.06 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "fc069837-6319-4071-ae4d-a14c6bf470af")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
+					(reference "H6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 109.22 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1c311eb3-cc3f-4d1e-9a75-373cc5e44182")
+		(property "Reference" "#PWR0250"
+			(at 109.22 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 109.474 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 109.22 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "403c864d-50cd-4492-a3e9-171f101a757c")
+		)
+		(instances
+			(project ""
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
+					(reference "#PWR0250")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 88.9 38.1 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "242e879b-ce29-488c-936a-964efdcf6b01")
+		(property "Reference" "H4"
+			(at 91.44 38.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "M3"
+			(at 91.44 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 88.9 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.9 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 88.9 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Optional" "False"
+			(at 88.9 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6277824f-1fa3-4310-9516-94f4f12b2936")
 		)
 		(instances
 			(project "CANna-VCU"
@@ -11055,35 +11334,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 78.74 36.83 0)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 78.74 38.1 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6f753e33-b750-47ff-8a39-af7ed1d46264")
 		(property "Reference" "H2"
-			(at 81.28 35.5599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "M3"
 			(at 81.28 38.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
+			)
+		)
+		(property "Value" "M3"
+			(at 81.28 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 78.74 36.83 0)
+			(at 78.74 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11092,7 +11371,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 78.74 36.83 0)
+			(at 78.74 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11100,22 +11379,26 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 78.74 36.83 0)
+		(property "Description" "Mounting Hole with connection"
+			(at 78.74 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Optional" "False"
-			(at 78.74 36.83 0)
+			(at 78.74 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "12fe6da4-82e7-43da-844f-38372dfd8bbb")
 		)
 		(instances
 			(project "CANna-VCU"
@@ -11127,17 +11410,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 88.646 26.035 0)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 88.9 27.94 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "872a3c93-b400-44a7-8da3-883bb960eba0")
 		(property "Reference" "H3"
-			(at 91.186 24.7649 0)
+			(at 91.694 25.3999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11146,7 +11429,7 @@
 			)
 		)
 		(property "Value" "M3"
-			(at 91.186 27.3049 0)
+			(at 91.694 27.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11155,7 +11438,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 88.646 26.035 0)
+			(at 88.9 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11164,7 +11447,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 88.646 26.035 0)
+			(at 88.9 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11172,27 +11455,107 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 88.646 26.035 0)
+		(property "Description" "Mounting Hole with connection"
+			(at 88.9 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Optional" "False"
-			(at 88.646 26.035 0)
+			(at 88.9 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "4f1e7e96-8241-4591-b793-1678f87bda1f")
 		)
 		(instances
 			(project "CANna-VCU"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
 					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 99.06 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6a01817-6068-4966-8498-a5b14f4d0074")
+		(property "Reference" "H5"
+			(at 101.854 25.3999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 101.854 27.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 99.06 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 99.06 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Optional" "False"
+			(at 99.06 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1dfa6f58-b32b-4fd1-9479-3a43e2e7dd11")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
+					(reference "H5")
 					(unit 1)
 				)
 			)
@@ -11329,17 +11692,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 78.74 26.035 0)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 78.74 27.94 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f4817f11-2334-4b2e-9929-3664dab2fcae")
 		(property "Reference" "H1"
-			(at 81.28 24.7649 0)
+			(at 81.28 25.3999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11348,7 +11711,7 @@
 			)
 		)
 		(property "Value" "M3"
-			(at 81.28 27.3049 0)
+			(at 81.28 27.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11357,7 +11720,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 78.74 26.035 0)
+			(at 78.74 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11366,7 +11729,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 78.74 26.035 0)
+			(at 78.74 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11374,22 +11737,26 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 78.74 26.035 0)
+		(property "Description" "Mounting Hole with connection"
+			(at 78.74 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Optional" "False"
-			(at 78.74 26.035 0)
+			(at 78.74 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "f24a991c-306f-4fa8-9a66-edebee13d3ea")
 		)
 		(instances
 			(project "CANna-VCU"
