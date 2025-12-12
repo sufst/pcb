@@ -1329,6 +1329,168 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:SM15T36CA"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SM15T36CA"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:ST_D_SMC"
+				(at 0.508 -8.636 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.st.com/resource/en/datasheet/sm15t36a.pdf"
+				(at 0 -6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "1500W (10/1000 μs) Bidirectional TVS Diode, VRM = 30.8V (IRM = 0.2 μA at 25°C), VBR = 34.2 ... 37.8V, 'BEV' marking, SMC"
+				(at 0 -4.572 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "ESD protection transient voltage-suppressor transil thyrector transorb"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*D*SMC*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SM15T36CA_0_1"
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy 0 0) (xy -2.54 1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 -1.27) (xy 0 0) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SM15T36CA_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "GND_1"
 			(power)
 			(pin_numbers
@@ -3195,6 +3357,12 @@
 		(uuid "6b40d994-c781-4e93-9544-a6faab532de8")
 	)
 	(junction
+		(at 50.8 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6fe6bce5-db6c-4902-9d20-30ebf992602e")
+	)
+	(junction
 		(at 148.59 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3357,6 +3525,12 @@
 		(uuid "d4e46d4d-ef1e-4902-aa67-6fbe1ce048b8")
 	)
 	(junction
+		(at 38.1 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d664b31f-aee8-45e2-9b9f-d761f5f8034d")
+	)
+	(junction
 		(at 148.59 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3497,6 +3671,16 @@
 			(type default)
 		)
 		(uuid "08745f65-82d8-4608-9beb-450c9cce7cca")
+	)
+	(wire
+		(pts
+			(xy 38.1 52.07) (xy 50.8 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "089928a7-f0f4-456d-af0d-9d67344b3a55")
 	)
 	(wire
 		(pts
@@ -4301,6 +4485,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 43.18) (xy 38.1 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aca6201e-1aa7-49e7-9540-181c67a1cf80")
+	)
+	(wire
+		(pts
 			(xy 44.45 173.99) (xy 57.15 173.99)
 		)
 		(stroke
@@ -4421,6 +4615,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 35.56) (xy 44.45 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3edb3b1-2c10-4b47-bdd5-b2b900879356")
+	)
+	(wire
+		(pts
 			(xy 90.17 97.79) (xy 96.52 97.79)
 		)
 		(stroke
@@ -4461,7 +4665,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 35.56) (xy 44.45 35.56)
+			(xy 33.02 35.56) (xy 38.1 35.56)
 		)
 		(stroke
 			(width 0)
@@ -13594,6 +13798,75 @@
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/33c87969-d543-4809-83eb-5f9a35fc6ce2"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SM15T36CA")
+		(at 38.1 39.37 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f71af6c0-90ef-4348-b48f-c7146e13629f")
+		(property "Reference" "D67"
+			(at 24.892 37.592 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SM15T36CA"
+			(at 24.892 40.132 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:ST_D_SMC"
+			(at 29.464 39.878 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/sm15t36a.pdf"
+			(at 31.496 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1500W (10/1000 μs) Bidirectional TVS Diode, VRM = 30.8V (IRM = 0.2 μA at 25°C), VBR = 34.2 ... 37.8V, 'BEV' marking, SMC"
+			(at 33.528 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9bdb5693-d85e-466a-bbef-fedea1f86d63")
+		)
+		(pin "1"
+			(uuid "a1162cdd-290f-479a-a8a1-8f9b5a87d368")
+		)
+		(instances
+			(project ""
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/33c87969-d543-4809-83eb-5f9a35fc6ce2"
+					(reference "D67")
 					(unit 1)
 				)
 			)

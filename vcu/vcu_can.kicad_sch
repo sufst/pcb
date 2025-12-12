@@ -1484,7 +1484,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "SUFST:TRS33221EIRGTR"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1784,7 +1784,7 @@
 					)
 				)
 				(pin input line
-					(at 27.94 -36.83 180)
+					(at 27.94 -34.29 180)
 					(length 2.54)
 					(name "RIN"
 						(effects
@@ -1802,7 +1802,7 @@
 					)
 				)
 				(pin input line
-					(at 27.94 -39.37 180)
+					(at 27.94 -45.72 180)
 					(length 2.54)
 					(name "DOUT"
 						(effects
@@ -2161,19 +2161,6 @@
 		)
 		(uuid "935fb56b-2bc7-4bfe-893a-5be620a38718")
 	)
-	(text "TVS"
-		(exclude_from_sim no)
-		(at 119.38 29.21 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(color 194 0 0 1)
-			)
-		)
-		(uuid "99a93597-f904-4138-9073-549ad6b3c0a7")
-	)
 	(text "CAN bus operating at 1MHz\n\n1.1MHz corner frequency\n\n  R = 60 || 60 = 30 ohms\n  T = RC = 141 ns\n  f = 1/(2*pi*T) = 1.13 MHz\n"
 		(exclude_from_sim no)
 		(at 301.498 164.846 0)
@@ -2248,6 +2235,12 @@
 		(uuid "55262b42-3487-4e4b-9bdd-f76ec54cd227")
 	)
 	(junction
+		(at 224.79 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "57bf1d6e-7305-48cb-b1be-c6c695c0d22f")
+	)
+	(junction
 		(at 82.55 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2264,6 +2257,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9ed4d83f-1fbf-470f-ba63-c6ff2a19fdb4")
+	)
+	(junction
+		(at 224.79 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b08d74a2-06cc-43e6-af17-9c4c7e712b90")
 	)
 	(junction
 		(at 109.22 69.85)
@@ -2329,6 +2328,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 87.63) (xy 224.79 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15452343-d5b0-4ea5-a3d4-66ecfef48868")
+	)
+	(wire
+		(pts
 			(xy 109.22 41.91) (xy 109.22 39.37)
 		)
 		(stroke
@@ -2376,16 +2385,6 @@
 			(type default)
 		)
 		(uuid "2f10e049-4834-47d7-a2fa-540ef9e6a44a")
-	)
-	(wire
-		(pts
-			(xy 231.14 90.17) (xy 220.98 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "385be770-56b7-4431-b60d-66e7fc3332fe")
 	)
 	(wire
 		(pts
@@ -2449,16 +2448,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 92.71) (xy 220.98 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48ae669a-0b5a-4f8f-9e61-7f47cc559b38")
-	)
-	(wire
-		(pts
 			(xy 85.09 146.05) (xy 82.55 146.05)
 		)
 		(stroke
@@ -2519,6 +2508,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 87.63) (xy 224.79 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68b360c4-f158-4f9d-a397-a59bff8f39bc")
+	)
+	(wire
+		(pts
 			(xy 109.22 67.31) (xy 109.22 69.85)
 		)
 		(stroke
@@ -2526,6 +2525,16 @@
 			(type default)
 		)
 		(uuid "6b1471e0-d8ad-463a-9ff1-5cda46141500")
+	)
+	(wire
+		(pts
+			(xy 224.79 99.06) (xy 224.79 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6df3d086-bbe2-4f03-aca4-10d44aface7a")
 	)
 	(wire
 		(pts
@@ -2556,6 +2565,16 @@
 			(type default)
 		)
 		(uuid "79f440c8-c4df-4b86-952b-59e9c59268fd")
+	)
+	(wire
+		(pts
+			(xy 224.79 87.63) (xy 246.38 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "842923fc-6c41-40a2-9ae5-15d14143e476")
 	)
 	(wire
 		(pts
@@ -2889,6 +2908,26 @@
 	)
 	(wire
 		(pts
+			(xy 234.95 93.98) (xy 234.95 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0762ad4-8ac6-4381-939d-c588b04cadc6")
+	)
+	(wire
+		(pts
+			(xy 220.98 99.06) (xy 224.79 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e10e3f9e-d657-4001-8288-2e8e04091c5a")
+	)
+	(wire
+		(pts
 			(xy 220.98 76.2) (xy 223.52 76.2)
 		)
 		(stroke
@@ -2956,6 +2995,16 @@
 			(type default)
 		)
 		(uuid "efd7df82-d94f-41d9-bc30-688df717f712")
+	)
+	(wire
+		(pts
+			(xy 224.79 99.06) (xy 246.38 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd05c55c-d4b4-4d7b-9eeb-9fd1a7008e7c")
 	)
 	(wire
 		(pts
@@ -5119,7 +5168,7 @@
 	)
 	(hierarchical_label "RS232_TX"
 		(shape output)
-		(at 231.14 92.71 0)
+		(at 246.38 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5152,7 +5201,7 @@
 	)
 	(hierarchical_label "RS232_RX"
 		(shape input)
-		(at 231.14 90.17 0)
+		(at 246.38 87.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6239,6 +6288,79 @@
 			(project "CANna-VCU"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
 					(reference "C56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Power_Protection:NUP2105L")
+		(at 229.87 92.71 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5526fbd9-4a99-4994-8e97-e74520489243")
+		(property "Reference" "D66"
+			(at 226.822 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NUP2105L"
+			(at 242.824 89.662 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 231.14 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/NUP2105L-D.PDF"
+			(at 226.695 89.535 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 229.87 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "e372553e-80c5-4945-a4e5-e76d2d8d06f6")
+		)
+		(pin "1"
+			(uuid "dc9d084d-f411-4429-8cc7-25fb990787d5")
+		)
+		(pin "2"
+			(uuid "c84ab608-e646-4a9e-b59a-9ebbff39094f")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "D66")
 					(unit 1)
 				)
 			)
@@ -7420,6 +7542,72 @@
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
 					(reference "#PWR0246")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 234.95 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ae5fb5c0-cca8-43e1-879c-051df01ad547")
+		(property "Reference" "#PWR0274"
+			(at 234.95 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 234.95 98.044 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 234.95 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 234.95 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f369f013-20fa-45c0-833a-cad37d5d054e")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "#PWR0274")
 					(unit 1)
 				)
 			)
