@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.75,
-          "width": 1.75
+          "drill": 0.25,
+          "height": 0.5,
+          "width": 0.5
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -58,7 +58,52 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|120039210|105092595|72da3a3f-8055-4047-be30-955f5d546eb4|a069ae64-3b2e-49fa-998b-eeb3a57a75c0",
+          "Courtyard for mounting holes is oversized"
+        ],
+        [
+          "courtyards_overlap|125835000|101055000|0370c20c-43a2-409f-908d-b0e917eb8c8f|72da3a3f-8055-4047-be30-955f5d546eb4",
+          "This will not collide"
+        ],
+        [
+          "courtyards_overlap|143955000|64745000|0a5cdfa5-ec7d-4519-8947-da4b110f0d67|b65b72a9-7aaf-499b-a7c1-75b426ebd231",
+          "This will not collide"
+        ],
+        [
+          "courtyards_overlap|145455000|59563000|051ae8fc-b8ac-4232-b161-1cab1d58d90b|fbdbe963-eaac-4541-9a71-99298b318b18",
+          "This will not collide"
+        ],
+        [
+          "courtyards_overlap|146045000|59583000|051ae8fc-b8ac-4232-b161-1cab1d58d90b|f1d32445-c3db-4a7c-ac8c-eec173665e6a",
+          "This will not collide"
+        ],
+        [
+          "courtyards_overlap|146775000|64745000|0a5cdfa5-ec7d-4519-8947-da4b110f0d67|54432556-71e4-4b6a-bef4-aa30b73ff6be",
+          "This will not collide"
+        ],
+        [
+          "courtyards_overlap|147045000|64745000|0a5cdfa5-ec7d-4519-8947-da4b110f0d67|bbce5ded-1126-4145-9c1c-1539ab4b83d4",
+          "This won't collide"
+        ],
+        [
+          "courtyards_overlap|199445000|56958241|051ae8fc-b8ac-4232-b161-1cab1d58d90b|a3f1dae2-ff77-47d4-842f-b7eacb53cec2",
+          "Mounting hole courtyard oversized"
+        ],
+        [
+          "solder_mask_bridge|143125000|99500000|f81850ba-bccf-4c45-aec8-29c32c63163e|7e13fa66-c0d7-4455-bb8d-82ed75d0cc4d",
+          "THermal pad connects to GND"
+        ],
+        [
+          "solder_mask_bridge|143750000|99750000|5ae63a3c-b901-47d4-a0a8-8f384b07ef5f|7e13fa66-c0d7-4455-bb8d-82ed75d0cc4d",
+          "Thermal pad should connect to GND"
+        ],
+        [
+          "solder_mask_bridge|143750000|99750000|7837f3d4-1f82-4d8c-9001-d4980bd7b0a2|7e13fa66-c0d7-4455-bb8d-82ed75d0cc4d",
+          "Thermal pad connects to GND"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -135,7 +180,7 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
+        "min_through_hole_diameter": 0.25,
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
