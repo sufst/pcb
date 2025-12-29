@@ -1511,6 +1511,15 @@
 					(hide yes)
 				)
 			)
+			(property "MP" "TRS3221EIRGTR "
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 			(property "ki_locked" ""
 				(at 0 0 0)
 				(effects
@@ -1704,6 +1713,24 @@
 						)
 					)
 					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 -49.53 90)
+					(length 2.54)
+					(name "EXP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2211,6 +2238,12 @@
 		(uuid "ff553469-2bec-49ef-953f-61dd2b9e3cf7")
 	)
 	(junction
+		(at 205.74 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f24d321-9b42-42a5-9eb5-f77f0ec8d9f9")
+	)
+	(junction
 		(at 109.22 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2485,6 +2518,16 @@
 			(type default)
 		)
 		(uuid "50943701-5ea2-4316-b1c9-dd84e7b91aee")
+	)
+	(wire
+		(pts
+			(xy 205.74 102.87) (xy 208.28 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56ca4a22-72e6-4ab5-af48-e56f361555bb")
 	)
 	(wire
 		(pts
@@ -5210,7 +5253,7 @@
 		)
 		(uuid "6bcf5579-163c-4c00-af6f-226be033b54b")
 	)
-	(hierarchical_label "2_CANL"
+	(hierarchical_label "CAN2-"
 		(shape bidirectional)
 		(at 123.19 158.75 0)
 		(effects
@@ -5221,7 +5264,7 @@
 		)
 		(uuid "6e2e2d55-98ec-4173-b2fc-7b638f44997d")
 	)
-	(hierarchical_label "1_CANH"
+	(hierarchical_label "CAN1+"
 		(shape bidirectional)
 		(at 123.19 39.37 0)
 		(effects
@@ -5232,7 +5275,7 @@
 		)
 		(uuid "6ebb4394-2f7e-4859-a32f-1ab8adf015cf")
 	)
-	(hierarchical_label "2_CANH"
+	(hierarchical_label "CAN2+"
 		(shape bidirectional)
 		(at 123.19 128.27 0)
 		(effects
@@ -5243,7 +5286,7 @@
 		)
 		(uuid "7c6139bb-c713-446b-a393-1d27ea8db435")
 	)
-	(hierarchical_label "1_CANL"
+	(hierarchical_label "CAN1-"
 		(shape bidirectional)
 		(at 123.19 69.85 0)
 		(effects
@@ -5696,6 +5739,9 @@
 		)
 		(pin "7"
 			(uuid "36213a67-6152-45ee-a18d-c7389237b7ed")
+		)
+		(pin "17"
+			(uuid "17be3f9c-ef64-42c2-98f4-bce955f51894")
 		)
 		(instances
 			(project ""
