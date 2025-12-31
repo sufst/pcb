@@ -51,7 +51,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -180,7 +186,11 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.125,
+        0.5
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -207,7 +217,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.25
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -474,6 +493,33 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "name": "RAM_ADDR",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.125,
+        "via_diameter": 0.5,
+        "via_drill": 0.25
+      },
+      {
+        "name": "RAM_DH",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.125,
+        "via_diameter": 0.5,
+        "via_drill": 0.25
+      },
+      {
+        "name": "RAM_DL",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.125,
+        "via_diameter": 0.5,
+        "via_drill": 0.25
       }
     ],
     "meta": {
@@ -578,8 +624,7 @@
         "RAM_DL"
       ],
       "/MCU/RAM_D7": [
-        "RAM_DH",
-        "RAM_DL"
+        "RAM_DH"
       ],
       "/MCU/RAM_D8": [
         "RAM_DH"
@@ -757,20 +802,12 @@
       "MCU"
     ],
     [
-      "6ced25df-e129-4619-bfc0-b87d83c28fc4",
-      "XBee"
-    ],
-    [
       "af335906-16f7-4171-9604-a120cf780e93",
       "Power"
     ],
     [
       "802ad9f9-6daf-4a39-95fa-a8e9190b38c1",
       "I/O"
-    ],
-    [
-      "622ec74a-992c-49fa-aded-6123ac037349",
-      "7-Segment"
     ]
   ],
   "text_variables": {}
