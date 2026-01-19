@@ -190,6 +190,7 @@
         0.0,
         0.127,
         0.2,
+        0.254,
         0.4,
         0.5,
         1.0
@@ -507,6 +508,14 @@
         "via_drill": 0.25
       },
       {
+        "clearance": 0.3,
+        "name": "Passthrough",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2
+      },
+      {
         "name": "RAM_ADDR",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 3,
@@ -541,6 +550,36 @@
     "netclass_assignments": {
       "+3V3": [
         "RAM_ADDR"
+      ],
+      "/I/O/AMS.LED.SIG": [
+        "Passthrough"
+      ],
+      "/I/O/IMD.LED.SIG": [
+        "Passthrough"
+      ],
+      "/I/O/R2D.BUTTON.GND": [
+        "Passthrough"
+      ],
+      "/I/O/R2D.LED.GND": [
+        "Passthrough"
+      ],
+      "/I/O/SPARE.BUTTON.GND": [
+        "Passthrough"
+      ],
+      "/I/O/SPARE.LED.GND": [
+        "Passthrough"
+      ],
+      "/I/O/TS.ON.BUTTON.GND": [
+        "Passthrough"
+      ],
+      "/I/O/TS.ON.LED.GND": [
+        "Passthrough"
+      ],
+      "/I/O/TSAL.DASH.EXC": [
+        "Passthrough"
+      ],
+      "/I/O/TSAL.GREEN.DASH.LED.GND": [
+        "Passthrough"
       ],
       "/MCU/LCD_B2": [
         "LCD"
