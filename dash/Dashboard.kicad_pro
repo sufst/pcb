@@ -26,9 +26,9 @@
         },
         "fab_line_width": 0.1,
         "fab_text_italic": false,
-        "fab_text_size_h": 1.0,
-        "fab_text_size_v": 1.0,
-        "fab_text_thickness": 0.15,
+        "fab_text_size_h": 0.9,
+        "fab_text_size_v": 0.9,
+        "fab_text_thickness": 0.12,
         "fab_text_upright": false,
         "other_line_width": 0.1,
         "other_text_italic": false,
@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.25
         }
       },
       "diff_pair_dimensions": [
@@ -58,7 +58,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "net_conflict|192450000|61150000|6cad435d-bc91-4247-9d3c-b2f568fa92e7|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "net_conflict|198950000|61150000|af123401-8d8d-443e-a020-d64c36984c73|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -135,7 +144,7 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
+        "min_through_hole_diameter": 0.25,
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
@@ -188,8 +197,12 @@
       ],
       "track_widths": [
         0.0,
-        0.125,
-        0.5
+        0.127,
+        0.2,
+        0.254,
+        0.4,
+        0.5,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -495,9 +508,26 @@
         "wire_width": 6
       },
       {
+        "name": "LCD",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.125,
+        "via_diameter": 0.5,
+        "via_drill": 0.25
+      },
+      {
+        "clearance": 0.3,
+        "name": "Passthrough",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2
+      },
+      {
         "name": "RAM_ADDR",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.125,
         "via_diameter": 0.5,
@@ -506,7 +536,7 @@
       {
         "name": "RAM_DH",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.125,
         "via_diameter": 0.5,
@@ -515,7 +545,7 @@
       {
         "name": "RAM_DL",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.125,
         "via_diameter": 0.5,
@@ -529,6 +559,105 @@
     "netclass_assignments": {
       "+3V3": [
         "RAM_ADDR"
+      ],
+      "/I/O/AMS.LED.SIG": [
+        "Passthrough"
+      ],
+      "/I/O/IMD.LED.SIG": [
+        "Passthrough"
+      ],
+      "/I/O/R2D.BUTTON.GND": [
+        "Passthrough"
+      ],
+      "/I/O/R2D.LED.GND": [
+        "Passthrough"
+      ],
+      "/I/O/SPARE.BUTTON.GND": [
+        "Passthrough"
+      ],
+      "/I/O/SPARE.LED.GND": [
+        "Passthrough"
+      ],
+      "/I/O/TS.ON.BUTTON.GND": [
+        "Passthrough"
+      ],
+      "/I/O/TS.ON.LED.GND": [
+        "Passthrough"
+      ],
+      "/I/O/TSAL.DASH.EXC": [
+        "Passthrough"
+      ],
+      "/I/O/TSAL.GREEN.DASH.LED.GND": [
+        "Passthrough"
+      ],
+      "/MCU/LCD_B2": [
+        "LCD"
+      ],
+      "/MCU/LCD_B3": [
+        "LCD"
+      ],
+      "/MCU/LCD_B4": [
+        "LCD"
+      ],
+      "/MCU/LCD_B5": [
+        "LCD"
+      ],
+      "/MCU/LCD_B6": [
+        "LCD"
+      ],
+      "/MCU/LCD_B7": [
+        "LCD"
+      ],
+      "/MCU/LCD_DCLK": [
+        "LCD"
+      ],
+      "/MCU/LCD_DE": [
+        "LCD"
+      ],
+      "/MCU/LCD_DISP": [
+        "LCD"
+      ],
+      "/MCU/LCD_G2": [
+        "LCD"
+      ],
+      "/MCU/LCD_G3": [
+        "LCD"
+      ],
+      "/MCU/LCD_G4": [
+        "LCD"
+      ],
+      "/MCU/LCD_G5": [
+        "LCD"
+      ],
+      "/MCU/LCD_G6": [
+        "LCD"
+      ],
+      "/MCU/LCD_G7": [
+        "LCD"
+      ],
+      "/MCU/LCD_HSYNC": [
+        "LCD"
+      ],
+      "/MCU/LCD_R2": [
+        "LCD"
+      ],
+      "/MCU/LCD_R3": [
+        "LCD"
+      ],
+      "/MCU/LCD_R4": [
+        "LCD"
+      ],
+      "/MCU/LCD_R5": [
+        "LCD"
+      ],
+      "/MCU/LCD_R6": [
+        "LCD"
+      ],
+      "/MCU/LCD_R7": [
+        "LCD"
+      ],
+      "/MCU/LCD_VSYNC": [
+        "LCD"
       ],
       "/MCU/RAM_A0": [
         "RAM_ADDR"
@@ -624,8 +753,7 @@
         "RAM_DL"
       ],
       "/MCU/RAM_D7": [
-        "RAM_DH",
-        "RAM_DL"
+        "RAM_DH"
       ],
       "/MCU/RAM_D8": [
         "RAM_DH"
@@ -662,6 +790,183 @@
       ],
       "/MCU/SD_D3": [
         "SD"
+      ],
+      "GND": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_10)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_11)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_13)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_14)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_15)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_16)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_17)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_18)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_21)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_22)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_23)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_24)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_25)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_26)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_29)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_30)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_31)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_32)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_33)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_34)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_7)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_8)": [
+        "LCD"
+      ],
+      "Net-(J1-Pin_9)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_10)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_11)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_13)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_14)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_15)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_16)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_17)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_18)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_21)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_22)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_23)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_24)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_25)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_26)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_29)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_30)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_31)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_32)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_33)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_34)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_7)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_8)": [
+        "LCD"
+      ],
+      "Net-(J2-Pin_9)": [
+        "LCD"
+      ],
+      "unconnected-(J1-Pin_12-Pad12)": [
+        "LCD"
+      ],
+      "unconnected-(J1-Pin_19-Pad19)": [
+        "LCD"
+      ],
+      "unconnected-(J1-Pin_20-Pad20)": [
+        "LCD"
+      ],
+      "unconnected-(J1-Pin_27-Pad27)": [
+        "LCD"
+      ],
+      "unconnected-(J1-Pin_28-Pad28)": [
+        "LCD"
+      ],
+      "unconnected-(J1-Pin_35-Pad35)": [
+        "LCD"
+      ],
+      "unconnected-(J2-Pin_12-Pad12)": [
+        "LCD"
+      ],
+      "unconnected-(J2-Pin_19-Pad19)": [
+        "LCD"
+      ],
+      "unconnected-(J2-Pin_20-Pad20)": [
+        "LCD"
+      ],
+      "unconnected-(J2-Pin_27-Pad27)": [
+        "LCD"
+      ],
+      "unconnected-(J2-Pin_28-Pad28)": [
+        "LCD"
+      ],
+      "unconnected-(J2-Pin_35-Pad35)": [
+        "LCD"
       ]
     },
     "netclass_patterns": []
@@ -803,20 +1108,12 @@
       "MCU"
     ],
     [
-      "6ced25df-e129-4619-bfc0-b87d83c28fc4",
-      "XBee"
-    ],
-    [
       "af335906-16f7-4171-9604-a120cf780e93",
       "Power"
     ],
     [
       "802ad9f9-6daf-4a39-95fa-a8e9190b38c1",
       "I/O"
-    ],
-    [
-      "622ec74a-992c-49fa-aded-6123ac037349",
-      "7-Segment"
     ]
   ],
   "text_variables": {}
