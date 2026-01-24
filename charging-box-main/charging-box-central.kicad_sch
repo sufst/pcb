@@ -1813,7 +1813,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 123.19) (xy 114.935 123.19)
+			(xy 96.52 123.19) (xy 116.205 123.19)
 		)
 		(stroke
 			(width 0)
@@ -1970,6 +1970,16 @@
 			(type default)
 		)
 		(uuid "3e7c676e-e46a-4d50-8d61-525e8ed128bd")
+	)
+	(wire
+		(pts
+			(xy 117.475 102.235) (xy 117.475 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "420ffe92-2ab3-4f63-a63b-f8392871fb69")
 	)
 	(wire
 		(pts
@@ -2313,7 +2323,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.205 125.73) (xy 96.52 125.73)
+			(xy 96.52 125.73) (xy 117.475 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2443,13 +2453,23 @@
 	)
 	(wire
 		(pts
-			(xy 114.935 102.235) (xy 96.52 102.235)
+			(xy 96.52 102.235) (xy 117.475 102.235)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cdcb3265-9ab6-4a19-b3d5-b3396d0a6e85")
+	)
+	(wire
+		(pts
+			(xy 116.205 99.695) (xy 116.205 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4b9d2c7-91e8-40eb-a4a3-ac27e95ee8a6")
 	)
 	(wire
 		(pts
@@ -2531,27 +2551,7 @@
 		)
 		(uuid "e719ab30-08c2-4441-a938-02930b7cd3e2")
 	)
-	(wire
-		(pts
-			(xy 114.935 123.19) (xy 114.935 102.235)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec8359af-e522-421b-8036-6fc43ec0cf9d")
-	)
-	(wire
-		(pts
-			(xy 116.205 99.695) (xy 116.205 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f05897b8-2065-4cca-928c-522fdc882d52")
-	)
-	(label "CAN.CHARGER.HIGH"
+	(label "CAN.CHARGER.LOW"
 		(at 97.155 99.695 0)
 		(effects
 			(font
@@ -2559,7 +2559,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "03e2fe33-60bf-440b-bad2-56bc899c2301")
+		(uuid "0c75b26a-d7e6-497b-82e3-c0484a5e37f3")
 	)
 	(label "INV.CLOSE.+AIR"
 		(at 96.52 62.865 0)
@@ -2721,16 +2721,6 @@
 		)
 		(uuid "97ec78c9-d7f5-4ce4-b078-2b541e8e8963")
 	)
-	(label "CAN.CHARGER.LOW"
-		(at 97.155 102.235 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9d671dc7-44db-4025-8113-ba644b5a3a8b")
-	)
 	(label "ACCU.GND"
 		(at 97.155 92.075 0)
 		(effects
@@ -2830,6 +2820,16 @@
 			(justify left bottom)
 		)
 		(uuid "f85e535f-876d-40a5-9078-44fab4fc63cd")
+	)
+	(label "CAN.CHARGER.HIGH"
+		(at 97.155 102.235 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f953b93c-d4ba-4f25-b5d1-2ff7772132fa")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2965,16 +2965,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 196.85 96.52 0)
+		(at 196.85 99.06 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1c225402-ea6a-4c49-b35c-9aeeaa86e8d8")
 		(property "Reference" "J8"
-			(at 200.025 96.5199 0)
+			(at 200.025 99.0601 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2983,7 +2983,7 @@
 			)
 		)
 		(property "Value" "Latching reset"
-			(at 200.025 99.0599 0)
+			(at 200.025 96.5201 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2992,7 +2992,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0200_2x01_P3.00mm_Horizontal"
-			(at 196.85 96.52 0)
+			(at 196.85 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3001,7 +3001,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 196.85 96.52 0)
+			(at 196.85 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3010,7 +3010,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 196.85 96.52 0)
+			(at 196.85 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3035,16 +3035,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 196.85 103.505 0)
+		(at 196.85 106.045 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1eacb774-c804-4f5c-8c7f-678635f46494")
 		(property "Reference" "J9"
-			(at 200.025 103.5049 0)
+			(at 200.025 106.0451 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3053,7 +3053,7 @@
 			)
 		)
 		(property "Value" "JESUS button"
-			(at 200.025 106.0449 0)
+			(at 200.025 103.5051 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3062,7 +3062,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0200_2x01_P3.00mm_Horizontal"
-			(at 196.85 103.505 0)
+			(at 196.85 106.045 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3071,7 +3071,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 196.85 103.505 0)
+			(at 196.85 106.045 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3080,7 +3080,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 196.85 103.505 0)
+			(at 196.85 106.045 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3171,16 +3171,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 196.85 89.535 0)
+		(at 196.85 92.075 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2f341b5f-10da-4ce1-9861-6fe58c23a71b")
 		(property "Reference" "J7"
-			(at 199.39 89.5349 0)
+			(at 199.39 92.0751 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3189,7 +3189,7 @@
 			)
 		)
 		(property "Value" "IMD FAULT LED active low"
-			(at 199.39 92.0749 0)
+			(at 199.39 89.5351 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3198,7 +3198,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0200_2x01_P3.00mm_Horizontal"
-			(at 196.85 89.535 0)
+			(at 196.85 92.075 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3207,7 +3207,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 196.85 89.535 0)
+			(at 196.85 92.075 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3216,7 +3216,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 196.85 89.535 0)
+			(at 196.85 92.075 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3346,16 +3346,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 196.85 82.55 0)
+		(at 196.85 85.09 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3679752c-2568-4a0e-8b40-04e780d3fe86")
 		(property "Reference" "J6"
-			(at 199.39 82.5499 0)
+			(at 199.39 85.0901 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3364,7 +3364,7 @@
 			)
 		)
 		(property "Value" "BMS LED active low"
-			(at 199.39 85.0899 0)
+			(at 199.39 82.5501 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3373,7 +3373,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0200_2x01_P3.00mm_Horizontal"
-			(at 196.85 82.55 0)
+			(at 196.85 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3382,7 +3382,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 196.85 82.55 0)
+			(at 196.85 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3391,7 +3391,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 196.85 82.55 0)
+			(at 196.85 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3406,7 +3406,7 @@
 			(uuid "24f51ac9-e500-426a-896a-825f9980c6c4")
 		)
 		(instances
-			(project ""
+			(project "charging-box-central"
 				(path "/58f30d17-2e70-48b3-883a-be84a394a8cc"
 					(reference "J6")
 					(unit 1)
@@ -3978,7 +3978,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "9fe5bddc-d541-4bb0-9560-efd59edcb184")
 		(property "Reference" "J10"
 			(at 129.54 132.7149 0)
@@ -4129,16 +4128,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 118.745 67.945 0)
+		(at 118.745 70.485 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "be5bd4f0-bf02-4007-8c54-7f3196d7b0d2")
 		(property "Reference" "J11"
-			(at 121.285 67.9449 0)
+			(at 121.285 70.4851 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4147,7 +4146,7 @@
 			)
 		)
 		(property "Value" "Close AIRs"
-			(at 121.285 70.4849 0)
+			(at 121.285 67.9451 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4156,7 +4155,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0200_2x01_P3.00mm_Horizontal"
-			(at 118.745 67.945 0)
+			(at 118.745 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4165,7 +4164,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 118.745 67.945 0)
+			(at 118.745 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4174,7 +4173,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 118.745 67.945 0)
+			(at 118.745 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4400,17 +4399,15 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 91.44 125.73 0)
-		(mirror y)
+		(at 91.44 128.27 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f78a25ce-6bbc-4ee8-b4ae-b8c46b30fcd2")
 		(property "Reference" "J5"
-			(at 91.44 116.84 0)
+			(at 91.44 133.985 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4418,7 +4415,7 @@
 			)
 		)
 		(property "Value" "Charger"
-			(at 91.44 119.38 0)
+			(at 92.075 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4426,7 +4423,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal"
-			(at 91.44 125.73 0)
+			(at 91.44 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4435,7 +4432,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 91.44 125.73 0)
+			(at 91.44 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4444,7 +4441,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 91.44 125.73 0)
+			(at 91.44 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4465,7 +4462,7 @@
 			(uuid "9199c49c-5a85-4d60-81b6-557c3b7536e7")
 		)
 		(instances
-			(project ""
+			(project "charging-box-central"
 				(path "/58f30d17-2e70-48b3-883a-be84a394a8cc"
 					(reference "J5")
 					(unit 1)
