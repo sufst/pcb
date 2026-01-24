@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.7,
-          "height": 1.15,
-          "width": 1.15
+          "drill": 0.0,
+          "height": 0.95,
+          "width": 1.075
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -58,7 +58,24 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|172458999|73825000|0171186c-74ed-4ca8-abb6-3e5738655a31|a78f0ef2-221f-41f7-a0c3-52dc2b7cca45",
+          ""
+        ],
+        [
+          "courtyards_overlap|174775000|73825000|0171186c-74ed-4ca8-abb6-3e5738655a31|580620d1-fa1f-41ff-81b1-43b177fed009",
+          ""
+        ],
+        [
+          "courtyards_overlap|196657581|85982501|2762cb6c-783d-4688-8da9-ddcca645f776|867102d9-191a-47ba-9437-8e4962e7dfea",
+          ""
+        ],
+        [
+          "courtyards_overlap|198315385|68455000|3c900652-16ff-40ad-b4a6-f208446e1c91|867102d9-191a-47ba-9437-8e4962e7dfea",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -139,7 +156,7 @@
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -170,7 +187,7 @@
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
           "td_maxlen": 1.0,
-          "td_on_pad_in_zone": false,
+          "td_on_pad_in_zone": true,
           "td_target_name": "td_rect_shape",
           "td_width_to_size_filter_ratio": 0.9
         },
