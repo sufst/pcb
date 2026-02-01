@@ -5,11 +5,14 @@
 	(uuid "972a06e7-fdf3-4884-8551-1597116061c1")
 	(paper "A3")
 	(title_block
-		(title "Vehicle Control Unit")
-		(date "2026-01-05")
-		(rev "1")
+		(title "Vehicle Control Unit Test")
+		(date "2026-02-01")
+		(rev "v3.0.0")
 		(company "SUFST")
-		(comment 1 "cannabel")
+		(comment 1 "STAG 12")
+		(comment 2 "Annabel Owen")
+		(comment 3 "Adam Eastman, Ray Wang, John McGarvey")
+		(comment 4 "26-E99-001-0")
 	)
 	(lib_symbols
 		(symbol "+12V_3"
@@ -4945,6 +4948,12 @@
 		(uuid "6cf15534-abe9-4dcc-9699-568a8a14788b")
 	)
 	(junction
+		(at 296.545 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d707c2b-230c-444f-b32e-73156b02e818")
+	)
+	(junction
 		(at 279.4 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5678,6 +5687,16 @@
 	)
 	(wire
 		(pts
+			(xy 296.545 95.25) (xy 299.72 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c3fcbe1-7a3d-42f6-9886-960a8608bfae")
+	)
+	(wire
+		(pts
 			(xy 113.03 133.35) (xy 116.84 133.35)
 		)
 		(stroke
@@ -6278,7 +6297,7 @@
 	)
 	(wire
 		(pts
-			(xy 280.67 95.25) (xy 299.72 95.25)
+			(xy 280.67 95.25) (xy 296.545 95.25)
 		)
 		(stroke
 			(width 0)
@@ -29985,17 +30004,6 @@
 			)
 		)
 	)
-	(label "KILL"
-		(at 157.48 233.68 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify right bottom)
-		)
-		(uuid "1068916b-fee3-4811-8fc0-03687039d29a")
-	)
 	(label "FB1"
 		(at 264.16 55.88 0)
 		(effects
@@ -30005,6 +30013,17 @@
 			(justify left bottom)
 		)
 		(uuid "34b90f96-6677-4248-99da-a987f590fed8")
+	)
+	(label "~{KIL}L"
+		(at 157.48 233.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify right bottom)
+		)
+		(uuid "588986ef-3831-4347-9925-baf8ed8bf17a")
 	)
 	(label "MUX"
 		(at 224.79 154.94 0)
@@ -30037,7 +30056,7 @@
 		)
 		(uuid "85c06295-1274-4190-ac06-c043b767031a")
 	)
-	(label "KILL"
+	(label "~{KIL}L"
 		(at 156.21 151.13 180)
 		(effects
 			(font
@@ -30047,6 +30066,17 @@
 			(justify right bottom)
 		)
 		(uuid "917a5120-fed8-484a-961b-5fdeb3ed9064")
+	)
+	(label "~{KIL}L"
+		(at 327.66 163.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify right bottom)
+		)
+		(uuid "9498909a-8bca-41d1-b8d6-9a2a0ffe4506")
 	)
 	(label "PG_3V3"
 		(at 217.17 49.53 0)
@@ -30068,17 +30098,6 @@
 			(justify right bottom)
 		)
 		(uuid "ebeac2b8-6fcc-4e48-b5af-0dd0741abd30")
-	)
-	(label "KILL"
-		(at 327.66 163.83 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify right bottom)
-		)
-		(uuid "ecfdcd2b-dff4-4e88-9ef4-422736e62732")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -34161,6 +34180,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 296.545 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79f22a98-04ae-428f-ad3b-2b91fead82ad")
+		(property "Reference" "#FLG02"
+			(at 296.545 97.155 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 296.545 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 296.545 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 296.545 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 296.545 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d0f621e7-0be4-4369-a1f7-c5c2e8d4bf8f")
+		)
+		(instances
+			(project ""
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/33c87969-d543-4809-83eb-5f9a35fc6ce2"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+6V")
 		(at 299.72 95.25 0)
 		(unit 1)
@@ -38121,7 +38206,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "x"
+		(property "Value" "1k"
 			(at 71.12 79.756 90)
 			(effects
 				(font
