@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.0,
-          "width": 0.6
+          "drill": 0.8,
+          "height": 1.27,
+          "width": 2.54
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "min_clearance": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -58,76 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "hole_clearance|117965000|61250000|36079eb3-a15a-46c6-9a9f-233f32d97b9a|2aa90ff9-0584-47c1-93ba-8f6d6fbf4a23",
-          "just how usbc is bud "
-        ],
-        [
-          "hole_clearance|117965000|61250000|ffbc7a87-8cb8-4fe7-be8d-0e0bc85b826b|2aa90ff9-0584-47c1-93ba-8f6d6fbf4a23",
-          "just how usbc is bud "
-        ],
-        [
-          "hole_clearance|117965000|67350000|25cc3e2f-9521-4a23-afa6-362e0951e7db|b341b844-d407-42cd-ba70-55bbae487439",
-          "just how usbc is bud "
-        ],
-        [
-          "hole_clearance|117965000|67350000|c768b2f8-e3c9-4303-918f-782245fa6029|b341b844-d407-42cd-ba70-55bbae487439",
-          "just how usbc is bud "
-        ],
-        [
-          "hole_clearance|167300000|103600000|9b8daa11-09c0-4cd6-90ba-231c80064573|738af744-06b7-42a1-a098-d2e519461655",
-          "this is for my star gnd"
-        ],
-        [
-          "shorting_items|167303518|104010087|738af744-06b7-42a1-a098-d2e519461655|85cf1775-d654-4db2-b738-b19933ef6dc8",
-          "this is for my star ground"
-        ],
-        [
-          "shorting_items|167309377|103609378|2d60c9e0-2fad-4565-be9b-c73ec540c46d|738af744-06b7-42a1-a098-d2e519461655",
-          "this is for my star ground"
-        ],
-        [
-          "shorting_items|167420000|104126569|738af744-06b7-42a1-a098-d2e519461655|8746b6e2-3d53-4e51-a32c-a805659981b1",
-          "this is for my star ground"
-        ],
-        [
-          "solder_mask_bridge|167768755|103600000|738af744-06b7-42a1-a098-d2e519461655|9b8daa11-09c0-4cd6-90ba-231c80064573",
-          "this is for my star ground"
-        ],
-        [
-          "starved_thermal|120220000|71200000|db7aa0b6-2b35-4e8e-827f-26fdf695c605|c7be5e5d-19dd-4180-a960-2e5a09a2823f|F.Cu",
-          "added spokes"
-        ],
-        [
-          "starved_thermal|122736244|68979201|db7aa0b6-2b35-4e8e-827f-26fdf695c605|689c2412-a9a2-43c2-b59b-0f327e811100|F.Cu",
-          "added spokes"
-        ],
-        [
-          "starved_thermal|156750000|80087500|db7aa0b6-2b35-4e8e-827f-26fdf695c605|29cc790d-3e2e-4a5f-ae9b-2c33fba452e9|F.Cu",
-          "added spokes"
-        ],
-        [
-          "starved_thermal|157250000|101412500|db7aa0b6-2b35-4e8e-827f-26fdf695c605|f4266899-261c-4937-9eb1-3f69cb22afe4|F.Cu",
-          "added spokes"
-        ],
-        [
-          "starved_thermal|163350000|64500000|db7aa0b6-2b35-4e8e-827f-26fdf695c605|bc9f62c1-603b-441d-8182-21ce1be0cd38|F.Cu",
-          "added spokes"
-        ],
-        [
-          "starved_thermal|170694135|87967582|db7aa0b6-2b35-4e8e-827f-26fdf695c605|8fe777e5-8249-4791-bbcf-8af49d6f04af|F.Cu",
-          "added spokes"
-        ],
-        [
-          "starved_thermal|175800000|64000000|db7aa0b6-2b35-4e8e-827f-26fdf695c605|eadd5741-9bfd-4f9d-9227-f3ec1cd2de33|F.Cu",
-          "added spokes"
-        ],
-        [
-          "starved_thermal|186200000|64510000|db7aa0b6-2b35-4e8e-827f-26fdf695c605|14110eb4-d598-47bd-a61b-396bde412d66|F.Cu",
-          "added spokes"
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -171,7 +102,7 @@
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
-        "silk_overlap": "ignore",
+        "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -204,7 +135,7 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.25,
+        "min_through_hole_diameter": 0.3,
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
@@ -257,21 +188,7 @@
       ],
       "track_widths": [
         0.0,
-        0.0,
-        0.05,
-        0.1,
-        0.1016,
-        0.1016,
-        0.127,
-        0.2,
-        0.2,
-        0.254,
-        0.36,
-        0.4,
-        0.635,
-        1.27,
-        1.905,
-        2.54
+        0.5
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -303,10 +220,6 @@
         {
           "diameter": 0.0,
           "drill": 0.0
-        },
-        {
-          "diameter": 0.5,
-          "drill": 0.25
         }
       ],
       "zones_allow_external_fillets": false
@@ -506,7 +419,6 @@
       "bus_entry_needed": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
-      "conflicting_netclasses": "error",
       "different_unit_footprint": "error",
       "different_unit_net": "error",
       "duplicate_reference": "error",
@@ -553,7 +465,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "CANna-VCU1.kicad_pro",
+    "filename": "charging-box-central.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -571,7 +483,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 1.0,
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -581,26 +493,7 @@
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "/MCU/SD_CK": [
-        "SD"
-      ],
-      "/MCU/SD_CMD": [
-        "SD"
-      ],
-      "/MCU/SD_D0": [
-        "SD"
-      ],
-      "/MCU/SD_D1": [
-        "SD"
-      ],
-      "/MCU/SD_D2": [
-        "SD"
-      ],
-      "/MCU/SD_D3": [
-        "SD"
-      ]
-    },
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -608,7 +501,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "C:/Users/annab/Downloads/",
+      "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -653,12 +546,6 @@
           "show": true
         },
         {
-          "group_by": false,
-          "label": "MP",
-          "name": "MP",
-          "show": true
-        },
-        {
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
@@ -687,150 +574,12 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Check_prices",
-          "name": "Check_prices",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Description_1",
-          "name": "Description_1",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MANUFACTURER",
-          "name": "MANUFACTURER",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MAXIMUM_PACKAGE_HEIGHT",
-          "name": "MAXIMUM_PACKAGE_HEIGHT",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MF",
-          "name": "MF",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Optional",
-          "name": "Optional",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Order Code",
-          "name": "Order Code",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "PARTREV",
-          "name": "PARTREV",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Package",
-          "name": "Package",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Price",
-          "name": "Price",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "STANDARD",
-          "name": "STANDARD",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Device",
-          "name": "Sim.Device",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Library",
-          "name": "Sim.Library",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Name",
-          "name": "Sim.Name",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Pins",
-          "name": "Sim.Pins",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "SnapEDA_Link",
-          "name": "SnapEDA_Link",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Supplier",
-          "name": "Supplier",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Availability",
-          "name": "Availability",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Description",
-          "name": "Description",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MPN",
-          "name": "MPN",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Drawn By",
-          "name": "Drawn By",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Voltage",
-          "name": "Voltage",
-          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "",
+      "name": "Default Editing",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -862,8 +611,8 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "kicad-embed://sheet-layout.kicad_wks",
-    "plot_directory": "C:/Users/annab/Downloads/",
+    "page_layout_descr_file": "",
+    "plot_directory": "",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -876,32 +625,8 @@
   },
   "sheets": [
     [
-      "d2b041cf-e68d-49d7-b31d-fe6ebce83d7e",
+      "58f30d17-2e70-48b3-883a-be84a394a8cc",
       "Root"
-    ],
-    [
-      "92c190b0-cb7c-4416-a15b-38caa0d4babc",
-      "MCU"
-    ],
-    [
-      "33c87969-d543-4809-83eb-5f9a35fc6ce2",
-      "Power"
-    ],
-    [
-      "2cf44fa6-1178-4df0-b6ad-8fb28a6c1e81",
-      "ADC"
-    ],
-    [
-      "1b41b139-095c-4084-b93a-58b03562937d",
-      "HSIO"
-    ],
-    [
-      "e20bcd50-e953-4e5c-b1c5-a9c9ec609e53",
-      "CAN"
-    ],
-    [
-      "3e776ffc-c1e4-418b-b577-135f10612716",
-      "Documentation"
     ]
   ],
   "text_variables": {}
