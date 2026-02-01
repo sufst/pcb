@@ -5375,7 +5375,7 @@
 	)
 	(text "CHECK LED"
 		(exclude_from_sim no)
-		(at 218.948 278.13 0)
+		(at 212.852 251.714 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -5386,9 +5386,9 @@
 		)
 		(uuid "00caa251-1182-490c-bb6d-6afa14a6ed5d")
 	)
-	(text "ARRANGE RESISTORS IN STAR\nFOR CHANNEL SELECT"
+	(text "SELECT PULLUP VOLTAGE\nUSING APPROPRIATE 0603 \nRESISTOR\n"
 		(exclude_from_sim no)
-		(at 200.152 27.432 0)
+		(at 200.66 30.226 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5412,6 +5412,16 @@
 			(justify left)
 		)
 		(uuid "067be56e-3455-4c79-a006-d2f697177fea")
+	)
+	(text "led divider lmao\nwill probs be fine"
+		(exclude_from_sim no)
+		(at 219.964 276.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0838f407-4505-456d-87ea-65dab4790504")
 	)
 	(text "50V"
 		(exclude_from_sim no)
@@ -5438,6 +5448,16 @@
 		)
 		(uuid "1a6a8183-153e-412d-8880-f674a97de985")
 	)
+	(text "0603 footprint, current lim R,\njumper or 0603 fuse"
+		(exclude_from_sim no)
+		(at 295.656 174.752 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3c6f364d-5c8b-49c0-ba7e-ff82dbb27734")
+	)
 	(text "BEWARE: OUTPUTS ARE INVERTED"
 		(exclude_from_sim no)
 		(at 292.608 141.986 0)
@@ -5450,6 +5470,19 @@
 			)
 		)
 		(uuid "3eedcae3-f81d-449a-a3bd-2d3950b9fa8b")
+	)
+	(text "600mA PER CHANNEL ABSOLUTE MAX\nREALSITICALLY A LOT LESS\n"
+		(exclude_from_sim no)
+		(at 360.934 168.656 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "4a0b0535-eb92-4c66-89cb-46297941f0e2")
 	)
 	(text "BEWARE: INPUTS ARE INVERTED"
 		(exclude_from_sim no)
@@ -5478,16 +5511,38 @@
 		)
 		(uuid "51ea42e6-f51d-417f-a150-6b5d641d94a7")
 	)
-	(text "All LED connections are current paths to ground \nvia MOSFET, rather than a driving output\n\nOther side of LED should be connected to 12V, \ncurrent limiting resistors here are optional \n(could be external)\n"
+	(text "BEWARE: OUTPUTS ARE INVERTED"
 		(exclude_from_sim no)
-		(at 333.248 190.754 0)
+		(at 361.442 174.752 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 0 4 1)
+			)
+		)
+		(uuid "5953e777-4789-4b33-8571-dfa1d8f0f55b")
+	)
+	(text "latches for AMS and IMD"
+		(exclude_from_sim no)
+		(at 330.962 184.15 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
 		)
-		(uuid "58bc8125-f9ed-4a4f-aebd-cd7722a2abf4")
+		(uuid "5a04b262-9e47-4799-8b32-8b26aeb78361")
+	)
+	(text "optional current\nlim R"
+		(exclude_from_sim no)
+		(at 248.92 173.482 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "639ea55b-e1fe-47c4-b858-e4fb7ebc68b2")
 	)
 	(text "50V"
 		(exclude_from_sim no)
@@ -5511,16 +5566,16 @@
 		)
 		(uuid "9e22ed1c-bc1d-419a-a152-384667721994")
 	)
-	(text "Pull to ground\nin case MCU\ndisconnected"
+	(text "CHECK_LED to comply with regs\njump link to set outputs high for\n2s on startup"
 		(exclude_from_sim no)
-		(at 267.081 263.525 0)
+		(at 214.122 216.662 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left)
 		)
-		(uuid "ab3b3798-2435-4169-a8a9-40b68ed682e0")
+		(uuid "a88f73bc-a46f-4f99-8afa-8264526bd8c4")
 	)
 	(text "IN"
 		(exclude_from_sim no)
@@ -5534,6 +5589,16 @@
 			(justify left)
 		)
 		(uuid "afc10eff-f852-472c-b4a4-58b08988578b")
+	)
+	(text "profet max 700mA out"
+		(exclude_from_sim no)
+		(at 249.682 246.634 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b14a4765-0f55-4b6e-930a-72b89e834b1d")
 	)
 	(text "BEWARE: INPUTS ARE INVERTED"
 		(exclude_from_sim no)
@@ -5586,17 +5651,6 @@
 		)
 		(uuid "cfe3db8b-bc70-4d9f-b96d-d8f4366ee7b6")
 	)
-	(text "CHECK_LEDS provides a connection to ground for 2s \non start up\n\nThis is used to meet T11.9.5(\"visual check\")"
-		(exclude_from_sim no)
-		(at 333.248 176.53 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d1cca6cd-62d2-4a7d-a70f-814a792d415f")
-	)
 	(text "OUT"
 		(exclude_from_sim no)
 		(at 281.178 17.018 0)
@@ -5623,18 +5677,16 @@
 		)
 		(uuid "dfcfcf24-c03e-4228-944e-b97b3d75cc61")
 	)
-	(text "CHECK R"
+	(text "please ignore the net names,\ni will be changing them.\ni dont know why i named them high\nadn low side i was very tired lol"
 		(exclude_from_sim no)
-		(at 249.936 266.7 0)
+		(at 135.382 83.058 0)
 		(effects
 			(font
-				(size 2.54 2.54)
-				(thickness 0.508)
-				(bold yes)
-				(color 255 0 0 1)
+				(size 1.27 1.27)
 			)
+			(justify left)
 		)
-		(uuid "ec644c1f-ae70-4bd5-b399-7c3dca24b956")
+		(uuid "ed57d408-4133-49da-9c4d-111db94b36fe")
 	)
 	(text "50V"
 		(exclude_from_sim no)
@@ -5646,6 +5698,17 @@
 			)
 		)
 		(uuid "ee781364-9660-49fd-a681-9d426f31a94a")
+	)
+	(text "TXH0137D is pin4pin with TPL7407L:\nTXH0137D - 100mA per channel, faster switching\nTPL7407L - 600mA per channel, slower switching\n\nboth:\n- internal flyback diodes\n- inverting output\n- output low on high z in"
+		(exclude_from_sim no)
+		(at 125.222 181.356 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f7907d5b-caff-4977-9573-e3f4fc9c9d1f")
 	)
 	(text "50V"
 		(exclude_from_sim no)
@@ -15950,7 +16013,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 100.33 163.576 90)
 			(effects
 				(font
@@ -16520,7 +16583,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 77.47 163.576 90)
 			(effects
 				(font
@@ -16624,7 +16687,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 88.9 163.576 90)
 			(effects
 				(font
@@ -17044,7 +17107,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 62.23 90)
 			(effects
 				(font
@@ -17572,7 +17635,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 83.82 82.296 90)
 			(effects
 				(font
@@ -17780,7 +17843,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 91.44 82.296 90)
 			(effects
 				(font
@@ -18149,7 +18212,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 85.09 163.576 90)
 			(effects
 				(font
@@ -18489,7 +18552,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 96.52 163.576 90)
 			(effects
 				(font
@@ -18729,7 +18792,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 87.63 82.296 90)
 			(effects
 				(font
@@ -18833,7 +18896,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 121.92 90)
 			(effects
 				(font
@@ -19372,7 +19435,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 249.174 180.34 90)
 			(effects
 				(font
@@ -19623,7 +19686,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 46.99 90)
 			(effects
 				(font
@@ -20529,7 +20592,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 80.01 82.296 90)
 			(effects
 				(font
@@ -20633,7 +20696,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 76.2 82.296 90)
 			(effects
 				(font
@@ -20980,7 +21043,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 66.04 90)
 			(effects
 				(font
@@ -21240,7 +21303,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 118.11 90)
 			(effects
 				(font
@@ -21562,7 +21625,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 99.06 82.296 90)
 			(effects
 				(font
@@ -21876,7 +21939,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 249.174 195.58 90)
 			(effects
 				(font
@@ -22382,7 +22445,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 288.29 191.77 90)
 			(effects
 				(font
@@ -22564,7 +22627,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 58.42 90)
 			(effects
 				(font
@@ -23227,7 +23290,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 125.73 90)
 			(effects
 				(font
@@ -23331,7 +23394,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 288.29 196.85 90)
 			(effects
 				(font
@@ -23617,7 +23680,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 133.35 90)
 			(effects
 				(font
@@ -23997,7 +24060,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 92.71 163.576 90)
 			(effects
 				(font
@@ -24273,7 +24336,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 95.25 82.296 90)
 			(effects
 				(font
@@ -24443,7 +24506,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 114.3 90)
 			(effects
 				(font
@@ -24613,7 +24676,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 50.8 90)
 			(effects
 				(font
@@ -24717,7 +24780,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 81.28 163.576 90)
 			(effects
 				(font
@@ -25558,7 +25621,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 249.174 200.66 90)
 			(effects
 				(font
@@ -25740,7 +25803,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 288.29 201.93 90)
 			(effects
 				(font
@@ -25912,7 +25975,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 288.29 186.69 90)
 			(effects
 				(font
@@ -26712,7 +26775,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 288.29 207.01 90)
 			(effects
 				(font
@@ -26988,8 +27051,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1k"
-			(at 246.38 260.35 90)
+		(property "Value" "x"
+			(at 246.888 260.35 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27579,7 +27642,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 69.85 90)
 			(effects
 				(font
@@ -27683,7 +27746,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 249.174 185.42 90)
 			(effects
 				(font
@@ -27865,7 +27928,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 288.29 181.61 90)
 			(effects
 				(font
@@ -28364,7 +28427,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 249.174 190.5 90)
 			(effects
 				(font
@@ -29497,7 +29560,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 110.49 90)
 			(effects
 				(font
@@ -29679,7 +29742,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 129.54 90)
 			(effects
 				(font
@@ -29783,7 +29846,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 217.424 54.61 90)
 			(effects
 				(font
@@ -30019,7 +30082,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "x"
 			(at 249.174 205.74 90)
 			(effects
 				(font

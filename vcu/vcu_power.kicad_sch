@@ -4603,17 +4603,6 @@
 		)
 		(uuid "07e27e37-1d27-4c5f-90df-3f08f3fbbf56")
 	)
-	(text "FUSE DEAD INDICATOR\nCHANGE RESISTOR DEPENDING ON \n+GLV"
-		(exclude_from_sim no)
-		(at 289.814 69.85 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "16f41108-3411-4744-91bb-dab3bddf884a")
-	)
 	(text "CHGANGE OUTPUT R"
 		(exclude_from_sim no)
 		(at 249.428 21.336 0)
@@ -4637,6 +4626,18 @@
 			)
 		)
 		(uuid "34f8fdbd-b48f-424a-9e68-5c8abf759b3a")
+	)
+	(text "ldo to 3.3v for analog bits\nWAY overspecced on current capability for better thermal"
+		(exclude_from_sim no)
+		(at 246.38 85.852 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify left)
+		)
+		(uuid "4b689ff0-1ded-493f-9dc8-1172499ecb21")
 	)
 	(text "50V"
 		(exclude_from_sim no)
@@ -4673,9 +4674,9 @@
 		)
 		(uuid "7346ad41-12df-4a55-9a2e-253f17c1b96d")
 	)
-	(text "VOUT: 3.3V\nIOUT: 3A\n"
+	(text "VOUT: 3.3V\nIOUT: 3A\n\nvalues for buck chosen based on ti datasheet reccomendations"
 		(exclude_from_sim no)
-		(at 289.56 58.928 0)
+		(at 289.306 61.468 0)
 		(effects
 			(font
 				(size 1.778 1.778)
@@ -4686,24 +4687,13 @@
 	)
 	(text "PG flag when \"Power Good\"\n"
 		(exclude_from_sim no)
-		(at 303.53 74.676 0)
+		(at 226.568 52.832 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "92123af6-ac38-4b53-a8b1-9b59a5216340")
-	)
-	(text "check switching frequency, \nwould BDDA be better?\n"
-		(exclude_from_sim no)
-		(at 289.814 64.262 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "bff2f334-5d7d-4819-8883-8a2600911c9e")
 	)
 	(text "set uvlo for usb to 4.5V\n\nset uvlo for VIN to 0.5V under lowest expected LV voltage\n\nprevents buck overcurrent if input < output\nwithout needing a diode"
 		(exclude_from_sim no)
@@ -4729,16 +4719,30 @@
 		)
 		(uuid "c9c3b2c4-bf98-43b5-a48d-f91af660fd02")
 	)
-	(text "STANDARDS FOR POWER:\n\n- 15mil per amp MIN trace width\n- 200mA per via\n- fb far away from inductor (other side of pcb/behind ground plane)\n- switching loops same direction\n- heavy gnd connect for thermal"
+	(text "protection loop"
 		(exclude_from_sim no)
-		(at 162.56 259.08 0)
+		(at 222.758 136.144 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
 			)
 			(justify left)
 		)
-		(uuid "efc8faf2-543b-49da-a7b6-5f7de6e58856")
+		(uuid "d37fe30d-7360-402e-95e7-f0689d253002")
+	)
+	(text "this is intended to ONLY connect each efuse when:\n\n- the pcb is powered via the main power connector\n\nand \n\n- the buck has the \"power good\" flag high\n\nand (\n\n- ch1 efuse does not have \"fault\" high (ig overcurrent, overvoltage, sc)\n\nor\n\n- ch2 efuse does not have \"fault\" high (ig overcurrent, overvoltage, sc)\n\n)\n"
+		(exclude_from_sim no)
+		(at 226.314 225.806 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.3175)
+			)
+			(justify left)
+		)
+		(uuid "da2e5dcc-c749-4ace-9098-1657e5edc817")
 	)
 	(junction
 		(at 113.03 133.35)
@@ -30463,8 +30467,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.5k"
-			(at 273.05 144.018 90)
+		(property "Value" "x"
+			(at 272.796 145.288 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33049,7 +33053,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "x"
 			(at 271.78 109.22 90)
 			(effects
 				(font
@@ -33633,7 +33637,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "x"
 			(at 271.78 101.6 90)
 			(effects
 				(font
@@ -38073,7 +38077,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.5k"
+		(property "Value" "x"
 			(at 71.12 79.756 90)
 			(effects
 				(font
