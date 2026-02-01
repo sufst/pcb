@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.25,
-          "height": 0.5,
-          "width": 0.5
+          "drill": 0.0,
+          "height": 1.0,
+          "width": 0.6
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -58,7 +58,56 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "hole_clearance|167300000|103600000|9b8daa11-09c0-4cd6-90ba-231c80064573|738af744-06b7-42a1-a098-d2e519461655",
+          "this is for my star gnd"
+        ],
+        [
+          "shorting_items|167303518|104010087|738af744-06b7-42a1-a098-d2e519461655|85cf1775-d654-4db2-b738-b19933ef6dc8",
+          "this is for my star ground"
+        ],
+        [
+          "shorting_items|167309377|103609378|2d60c9e0-2fad-4565-be9b-c73ec540c46d|738af744-06b7-42a1-a098-d2e519461655",
+          "this is for my star ground"
+        ],
+        [
+          "shorting_items|167420000|104126569|738af744-06b7-42a1-a098-d2e519461655|8746b6e2-3d53-4e51-a32c-a805659981b1",
+          "this is for my star ground"
+        ],
+        [
+          "solder_mask_bridge|167768755|103600000|738af744-06b7-42a1-a098-d2e519461655|9b8daa11-09c0-4cd6-90ba-231c80064573",
+          "this is for my star ground"
+        ],
+        [
+          "starved_thermal|120220000|71200000|db7aa0b6-2b35-4e8e-827f-26fdf695c605|c7be5e5d-19dd-4180-a960-2e5a09a2823f|F.Cu",
+          "added spokes"
+        ],
+        [
+          "starved_thermal|156750000|80087500|db7aa0b6-2b35-4e8e-827f-26fdf695c605|29cc790d-3e2e-4a5f-ae9b-2c33fba452e9|F.Cu",
+          "added spokes"
+        ],
+        [
+          "starved_thermal|157250000|101412500|db7aa0b6-2b35-4e8e-827f-26fdf695c605|f4266899-261c-4937-9eb1-3f69cb22afe4|F.Cu",
+          "added spokes"
+        ],
+        [
+          "starved_thermal|163350000|64500000|db7aa0b6-2b35-4e8e-827f-26fdf695c605|bc9f62c1-603b-441d-8182-21ce1be0cd38|F.Cu",
+          "added spokes"
+        ],
+        [
+          "starved_thermal|170694135|87967582|db7aa0b6-2b35-4e8e-827f-26fdf695c605|8fe777e5-8249-4791-bbcf-8af49d6f04af|F.Cu",
+          "added spokes"
+        ],
+        [
+          "starved_thermal|175800000|64000000|db7aa0b6-2b35-4e8e-827f-26fdf695c605|eadd5741-9bfd-4f9d-9227-f3ec1cd2de33|F.Cu",
+          "added spokes"
+        ],
+        [
+          "starved_thermal|186200000|64510000|db7aa0b6-2b35-4e8e-827f-26fdf695c605|14110eb4-d598-47bd-a61b-396bde412d66|F.Cu",
+          "added spokes"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -192,6 +241,7 @@
         0.05,
         0.1,
         0.1016,
+        0.1016,
         0.127,
         0.2,
         0.2,
@@ -199,7 +249,9 @@
         0.36,
         0.4,
         0.635,
-        1.27
+        1.27,
+        1.905,
+        2.54
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -728,12 +780,30 @@
           "group_by": false,
           "label": "Description",
           "name": "Description",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "#",
           "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Drawn By",
+          "name": "Drawn By",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Voltage",
+          "name": "Voltage",
           "show": false
         }
       ],
@@ -772,8 +842,8 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "",
-    "plot_directory": "",
+    "page_layout_descr_file": "kicad-embed://sheet-layout.kicad_wks",
+    "plot_directory": "C:/Users/annab/Downloads/",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
