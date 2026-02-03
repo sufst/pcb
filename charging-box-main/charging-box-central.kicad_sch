@@ -1219,6 +1219,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_DPST"
 			(pin_names
 				(offset 0)
@@ -1752,10 +1859,28 @@
 		(uuid "4b7643df-56de-459d-80c6-888ed5acfbfd")
 	)
 	(junction
+		(at 224.79 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "65a1e1e0-86c4-466e-b7ae-5a5ad1a2a73d")
+	)
+	(junction
+		(at 213.36 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "872ddecb-80bb-41ac-98f0-32afb509798a")
+	)
+	(junction
 		(at 121.285 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "98ed016c-04ec-47fa-ab7a-537ae09a6609")
+	)
+	(junction
+		(at 199.39 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9da5fc7-bb0d-48e4-ae31-6e6cdfcbc7e1")
 	)
 	(junction
 		(at 115.57 60.325)
@@ -1887,6 +2012,16 @@
 			(type default)
 		)
 		(uuid "1eea39e6-8806-4379-968b-37bc198c7d85")
+	)
+	(wire
+		(pts
+			(xy 173.99 142.24) (xy 199.39 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28774a49-7e7c-4062-aac4-9bc31101d123")
 	)
 	(wire
 		(pts
@@ -2027,6 +2162,16 @@
 			(type default)
 		)
 		(uuid "4cdf911f-8c14-40e8-93cb-0e4a715d7d46")
+	)
+	(wire
+		(pts
+			(xy 199.39 142.24) (xy 213.36 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d12daaa-9a9a-4994-ac41-2d3ac62a25c0")
 	)
 	(wire
 		(pts
@@ -2370,6 +2515,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 142.24) (xy 250.19 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b70d504a-ddfd-4f70-9265-2f5d2f966e6a")
+	)
+	(wire
+		(pts
 			(xy 128.27 98.425) (xy 128.27 94.615)
 		)
 		(stroke
@@ -2597,6 +2752,16 @@
 			(type default)
 		)
 		(uuid "f0f92e1e-ca40-46cd-a2b8-2edda371a329")
+	)
+	(wire
+		(pts
+			(xy 213.36 142.24) (xy 224.79 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4182b0f-7f5a-4fd6-b871-7619130bad52")
 	)
 	(wire
 		(pts
@@ -3401,6 +3566,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 199.39 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b0fb4cd-c532-4c9f-9244-9b3fea782d74")
+		(property "Reference" "H1"
+			(at 201.93 137.1599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 201.93 139.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 199.39 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 199.39 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 199.39 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38b1bdee-ebc6-4084-a767-46fc594e9b93")
+		)
+		(instances
+			(project ""
+				(path "/58f30d17-2e70-48b3-883a-be84a394a8cc"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 106.68 74.295 0)
 		(unit 1)
@@ -3817,6 +4049,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 224.79 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "722ae3a1-7fc2-49e1-a35c-3eeba8d2f33c")
+		(property "Reference" "H2"
+			(at 227.33 137.1599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 227.33 139.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 224.79 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 224.79 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "afc82c36-3592-46ad-a875-ef439b2d6990")
+		)
+		(instances
+			(project "charging-box-central"
+				(path "/58f30d17-2e70-48b3-883a-be84a394a8cc"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 125.095 135.89 270)
 		(unit 1)
@@ -3948,6 +4247,72 @@
 			(project "charging-box-central"
 				(path "/58f30d17-2e70-48b3-883a-be84a394a8cc"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 213.36 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7c83f4ef-0df8-450b-8188-de4ae1fce93b")
+		(property "Reference" "#PWR012"
+			(at 213.36 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 213.36 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 213.36 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 213.36 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cc95f21f-cefb-4be8-b505-d594cf4068ee")
+		)
+		(instances
+			(project "charging-box-central"
+				(path "/58f30d17-2e70-48b3-883a-be84a394a8cc"
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -4180,6 +4545,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 250.19 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cd51488d-6628-481d-846b-bca8900d66cc")
+		(property "Reference" "H3"
+			(at 252.73 137.1599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 252.73 139.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 250.19 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 250.19 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 250.19 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da4b2456-4c56-444b-a2de-0cb9462f2413")
+		)
+		(instances
+			(project "charging-box-central"
+				(path "/58f30d17-2e70-48b3-883a-be84a394a8cc"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 180.34 89.535 90)
 		(unit 1)
@@ -4375,6 +4807,73 @@
 			(project "charging-box-central"
 				(path "/58f30d17-2e70-48b3-883a-be84a394a8cc"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 173.99 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f4d9959f-8ecb-4658-9244-871ac1e1f7a5")
+		(property "Reference" "H4"
+			(at 176.53 137.1599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 176.53 139.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 173.99 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 173.99 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 173.99 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4f680c13-41a2-40b4-a308-c0bc54e0e181")
+		)
+		(instances
+			(project "charging-box-central"
+				(path "/58f30d17-2e70-48b3-883a-be84a394a8cc"
+					(reference "H4")
 					(unit 1)
 				)
 			)
