@@ -4,6 +4,14 @@
 	(generator_version "9.0")
 	(uuid "57c4dc1a-e09d-4886-a14e-e0877af2a5b1")
 	(paper "A3")
+	(title_block
+		(title "Tyre-Temp PCB")
+		(rev "v1.0.0")
+		(company "SUFST")
+		(comment 1 "STAG12")
+		(comment 2 "Nikolaos Koutsogiannis, Ben Hammond")
+		(comment 3 "Adam Eastman, Ray Wang")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x04_Pin"
 			(pin_names
@@ -5438,16 +5446,6 @@
 		)
 		(uuid f5e1a840-fb94-40c7-8fb7-eb3e38737b7f)
 	)
-	(text "SDA\nSCL\nVDD\nGND"
-		(exclude_from_sim no)
-		(at 36.322 127.254 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "03af869f-30f6-40e6-8915-f883b8afe1ea")
-	)
 	(text "TODO ADD CAMERA CONNECTIONS"
 		(exclude_from_sim no)
 		(at 13.208 108.966 0)
@@ -5491,16 +5489,6 @@
 		)
 		(uuid "46ee6c68-620f-4cb5-bf24-ba3882a4f5e6")
 	)
-	(text "Nikolaos Koutsogiannis, Ben Hammond"
-		(exclude_from_sim no)
-		(at 331.47 258.318 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "4d281c61-278a-4f3b-a3b5-5b08aeecaa5f")
-	)
 	(text "Microcontroller\n"
 		(exclude_from_sim no)
 		(at 116.332 16.256 0)
@@ -5510,16 +5498,6 @@
 			)
 		)
 		(uuid "4f25bd1b-6250-4b53-a325-a678c1daa0da")
-	)
-	(text "02/12/2025\n"
-		(exclude_from_sim no)
-		(at 335.28 280.416 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5952039e-71da-4455-ab22-2e40f330fa1f")
 	)
 	(text "CAN to car"
 		(exclude_from_sim no)
@@ -5550,16 +5528,6 @@
 			)
 		)
 		(uuid "726318b5-b099-4996-90be-48626115a599")
-	)
-	(text "STAG12\n"
-		(exclude_from_sim no)
-		(at 314.198 255.27 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "7391b8c8-1284-4fa8-9205-6ed0e3522ba4")
 	)
 	(text "ECS-250-10-47Q-CES-TR"
 		(exclude_from_sim no)
@@ -5624,16 +5592,6 @@
 		)
 		(uuid "acfcea74-fb46-4f45-a354-ee0ff12df7a7")
 	)
-	(text "Tyre Temperature PCB - IR Sensor"
-		(exclude_from_sim no)
-		(at 327.152 276.606 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "b0f48ddd-6b2b-413f-abfa-a8b0434bb425")
-	)
 	(text "3.3V Buck Converter\n\n"
 		(exclude_from_sim no)
 		(at 24.13 155.448 0)
@@ -5643,16 +5601,6 @@
 			)
 		)
 		(uuid "b8ca1d62-7c66-47cb-b944-7c23fd36d7e4")
-	)
-	(text "Adam Eastman, Ray Wang\n"
-		(exclude_from_sim no)
-		(at 328.676 261.366 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "bff7572e-4890-46ad-86b9-1b2455f81ac3")
 	)
 	(text "pogo pins\n"
 		(exclude_from_sim no)
@@ -5801,6 +5749,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4c537ff6-3fa4-466a-bc40-8fbd428e4724")
+	)
+	(junction
+		(at 24.13 137.16)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4fbaed54-ffbe-4b69-a4c9-8916889d95e5")
 	)
 	(junction
 		(at 195.58 22.86)
@@ -6284,6 +6238,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 125.73) (xy 33.02 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d24e4b1-e58f-4bc2-86c6-0249c4e438d8")
+	)
+	(wire
+		(pts
 			(xy 200.66 22.86) (xy 198.12 22.86)
 		)
 		(stroke
@@ -6321,6 +6285,16 @@
 			(type default)
 		)
 		(uuid "13508ecc-7b48-4762-831f-c94725a6ecfa")
+	)
+	(wire
+		(pts
+			(xy 43.18 115.57) (xy 24.13 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13ff77c2-8ad2-4e47-9f2f-d74af542d17a")
 	)
 	(wire
 		(pts
@@ -6424,7 +6398,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 128.27) (xy 59.69 128.27)
+			(xy 43.18 128.27) (xy 59.69 128.27)
 		)
 		(stroke
 			(width 0)
@@ -6531,6 +6505,16 @@
 			(type default)
 		)
 		(uuid "2b8af0ba-9ea9-4c88-8881-2013cfafc6f9")
+	)
+	(wire
+		(pts
+			(xy 24.13 135.89) (xy 24.13 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f5fb2f3-188a-4348-8dc6-144c427c87cc")
 	)
 	(wire
 		(pts
@@ -6661,16 +6645,6 @@
 			(type default)
 		)
 		(uuid "4569845f-9af9-403b-823b-edf74bad94b6")
-	)
-	(wire
-		(pts
-			(xy 44.45 123.19) (xy 57.15 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "45d0c0b7-9e42-48bd-b7e7-7606c4e89c58")
 	)
 	(wire
 		(pts
@@ -6874,16 +6848,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 130.81) (xy 50.8 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66880371-6dcc-45e6-a766-e14a3843892f")
-	)
-	(wire
-		(pts
 			(xy 276.86 30.48) (xy 270.51 30.48)
 		)
 		(stroke
@@ -6891,6 +6855,16 @@
 			(type default)
 		)
 		(uuid "66e81637-0e86-4a6f-b102-a179057cbabb")
+	)
+	(wire
+		(pts
+			(xy 43.18 128.27) (xy 43.18 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67f1d6ca-22e9-4f79-93c8-dfacdf6b56cf")
 	)
 	(wire
 		(pts
@@ -7214,16 +7188,6 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 130.81) (xy 50.8 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9f26f95e-1f73-42e4-a252-b9d2cd38be6f")
-	)
-	(wire
-		(pts
 			(xy 71.12 171.45) (xy 71.12 173.99)
 		)
 		(stroke
@@ -7291,6 +7255,16 @@
 			(type default)
 		)
 		(uuid "aed19a25-618e-4690-b2a6-b3aff596573e")
+	)
+	(wire
+		(pts
+			(xy 33.02 123.19) (xy 57.15 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af0c9e84-5ee1-426b-a924-27b907815c1a")
 	)
 	(wire
 		(pts
@@ -7704,13 +7678,13 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 125.73) (xy 52.07 125.73)
+			(xy 33.02 125.73) (xy 52.07 125.73)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fe30efc3-50a1-4d5b-941c-98ddb0de0571")
+		(uuid "fdf80ae8-6d3e-4671-ac0a-9fd280a548e9")
 	)
 	(image
 		(at 167.386 181.61)
@@ -10130,80 +10104,6 @@
 			(project "tyre-temp"
 				(path "/57c4dc1a-e09d-4886-a14e-e0877af2a5b1"
 					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x04_Pin")
-		(at 39.37 125.73 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1caf60ee-5585-414c-a588-32cf0bd60b47")
-		(property "Reference" "J1"
-			(at 40.005 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x04_Pin"
-			(at 40.005 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical"
-			(at 39.37 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 39.37 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 39.37 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9480679c-0b60-4449-bcd4-6102de77d20c")
-		)
-		(pin "1"
-			(uuid "121fd1df-3570-404b-8507-85e61058f65a")
-		)
-		(pin "4"
-			(uuid "04de81ff-a5e6-4ad4-b7d7-299bb980a927")
-		)
-		(pin "3"
-			(uuid "1d8f7876-e890-4c3b-8150-78f5eef0b089")
-		)
-		(instances
-			(project ""
-				(path "/57c4dc1a-e09d-4886-a14e-e0877af2a5b1"
-					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -14651,7 +14551,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 50.8 135.89 0)
+		(at 24.13 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14660,7 +14560,7 @@
 		(fields_autoplaced yes)
 		(uuid "793e8946-11e3-451b-8cca-01d5ae46c86a")
 		(property "Reference" "#PWR08"
-			(at 50.8 142.24 0)
+			(at 24.13 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14669,7 +14569,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 50.8 140.97 0)
+			(at 24.13 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14677,7 +14577,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 135.89 0)
+			(at 24.13 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14686,7 +14586,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 135.89 0)
+			(at 24.13 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14695,7 +14595,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 50.8 135.89 0)
+			(at 24.13 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
