@@ -1,0 +1,107 @@
+
+**** 12/29/25 02:19:21 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Adam\OneDrive - University of Southampton\Documents\SUFST\pcb\dash\Sim\BacklightSim-P
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 8m 0 SKIPBP 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.OPTIONS METHOD= Gear
+.AUTOCONVERGE ITL1=1000 ITL2=1000 ITL4=1000 RELTOL=0.05 ABSTOL=1.0E-6 VNTOL=.001 PIVTOL=1.0E-10 
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source BACKLIGHTSIM
+X_U1         N00889 N00327 N00166 0 N00509 N00145 0 TPS61165_TRANS PARAMS:
++  CODE=0 EASY_SCALE=0 SS=0
+C_C1         0 N00885  68n  TC=0,0 
+C_C2         0 N00145  4.7n  TC=0,0 
+V_V1         N00145 0 5Vdc
+V_V2         N00327 0  
++PULSE 0 3.3 0 1u 1u 50u 100u
+L_L1         N00145 N00509  10uH  
+D_D2         N00509 N00601 MBR340 
+C_C3         0 N00601  2.2u  TC=0,0 
+R_R1         0 N00166  3.3R TC=0,0 
+R_R2         N00601 N00166  300R TC=0,0 
+R_R3         N00885 N00889  1k TC=0,0 
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 12/29/25 02:19:21 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Adam\OneDrive - University of Southampton\Documents\SUFST\pcb\dash\Sim\BacklightSim-P
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DD              X_U1.X_U26.D_D12 
+          IS    1.000000E-15    1.000000E-15 
+           N     .01             .01         
+          RS                     .05         
+          TT   10.000000E-12   10.000000E-12 
+
+
+               X_U1.X_U94.D_D12 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+**** 12/29/25 02:19:21 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\Users\Adam\OneDrive - University of Southampton\Documents\SUFST\pcb\dash\Sim\BacklightSim-P
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_S59._S59 X_U1.X_S58._S58 X_U1.X_S56._S56 X_U1.X_S54._S54 
+         RON    1.000000E-03    1.000000E-03     .3              .1          
+        ROFF    1.000000E+09    1.000000E+09    1.000000E+06    1.000000E+09 
+         VON     .9              .9              .8              .9          
+        VOFF     .6              .6              .2              .6          
+
+
+               X_U1.X_S57._S57 X_U1.X_OCP7_S1._OCP7_S1 
+         RON    1.000000E-03    2            
+        ROFF    1.000000E+09    1.000000E+06 
+         VON     .9              .8          
+        VOFF     .6              .3          
+
