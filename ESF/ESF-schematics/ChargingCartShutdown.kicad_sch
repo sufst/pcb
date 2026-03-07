@@ -1159,8 +1159,8 @@
 		(uuid a8462c68-4f98-4268-9423-191815421a53)
 	)
 	(rectangle
-		(start 149.86 40.64)
-		(end 241.3 142.24)
+		(start 149.86 46.99)
+		(end 241.3 127)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1194,7 +1194,7 @@
 		)
 		(uuid "0f8b09b7-be63-4a39-8144-9ad1bca3da10")
 	)
-	(text "Need Model Number of \nE-STOP HERE and SPECS"
+	(text "FSG EV 7.1.6\nPush type\nMinimum diameter 24mm\nClearly visible and labeled"
 		(exclude_from_sim no)
 		(at 79.248 81.788 0)
 		(effects
@@ -1219,7 +1219,7 @@
 	)
 	(text "ACCUMULATOR CONTAINER"
 		(exclude_from_sim no)
-		(at 163.83 43.18 0)
+		(at 163.576 51.054 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1269,7 +1269,7 @@
 		)
 		(uuid "d304f30d-3500-4fbb-ab06-d61201daac0b")
 	)
-	(text "Tractive Relay \nController PCB\n\nAwaits TSON Signal"
+	(text "Tractive Relay \nController PCB"
 		(exclude_from_sim no)
 		(at 191.77 87.63 0)
 		(effects
@@ -1288,12 +1288,6 @@
 			)
 		)
 		(uuid "e9f084be-7bc5-4f71-adda-88330bb7b9fa")
-	)
-	(junction
-		(at 57.15 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7eff5a32-2172-4a09-8d52-edaa533239d9")
 	)
 	(wire
 		(pts
@@ -1364,16 +1358,6 @@
 			(type default)
 		)
 		(uuid "2c232173-76ef-44a2-ae2e-43ee86abf879")
-	)
-	(wire
-		(pts
-			(xy 83.185 60.96) (xy 184.785 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3e528ffb-c9c7-4ef2-8c80-e72723630b52")
 	)
 	(wire
 		(pts
@@ -1457,16 +1441,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 87.63) (xy 57.15 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90187d7e-f0d8-4ec4-92eb-3d2392d15039")
-	)
-	(wire
-		(pts
 			(xy 57.15 99.06) (xy 57.15 87.63)
 		)
 		(stroke
@@ -1527,16 +1501,6 @@
 	)
 	(wire
 		(pts
-			(xy 184.785 60.96) (xy 184.785 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf8c801a-f760-4082-91e0-d3074c09d555")
-	)
-	(wire
-		(pts
 			(xy 212.725 69.215) (xy 210.82 69.215)
 		)
 		(stroke
@@ -1574,38 +1538,6 @@
 			(type default)
 		)
 		(uuid "e9200811-aa0a-4b02-bd06-f5fc95b44c9f")
-	)
-	(wire
-		(pts
-			(xy 57.15 60.96) (xy 73.025 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f3e9eb15-134f-4494-b6fc-235b0c49ec4f")
-	)
-	(label "TSON"
-		(at 87.63 60.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify left bottom)
-		)
-		(uuid "59c33428-5064-4d49-8341-d70fa1732e5f")
-	)
-	(label "TSON"
-		(at 184.785 80.01 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify left bottom)
-		)
-		(uuid "843420a9-0db4-4854-b0fd-a1a2df491423")
 	)
 	(global_label "HV+"
 		(shape output)
@@ -1652,74 +1584,6 @@
 				)
 				(justify left)
 				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_SPST")
-		(at 78.105 60.96 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "39d83b85-08b4-4bcb-9dcd-14561fca49ba")
-		(property "Reference" "SW1"
-			(at 78.105 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Master Switch"
-			(at 78.105 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.105 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 78.105 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Single Pole Single Throw (SPST) switch"
-			(at 78.105 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9e5bb116-cc73-4eba-a82d-231a4076613c")
-		)
-		(pin "1"
-			(uuid "e46d3a17-88a2-410f-b640-a09311c0e837")
-		)
-		(instances
-			(project "ESF-schematics"
-				(path "/0a974815-ef64-4073-a8fa-af9729a41b28/4adb5f6c-34de-4e56-8477-31c2196a2ceb"
-					(reference "SW1")
-					(unit 1)
-				)
 			)
 		)
 	)
