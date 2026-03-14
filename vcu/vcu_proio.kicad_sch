@@ -5353,6 +5353,18 @@
 		(uuid 53515c06-0bd7-412b-b448-73e8860da8e3)
 	)
 	(rectangle
+		(start 529.59 119.38)
+		(end 605.79 160.02)
+		(stroke
+			(width 0.381)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 5b8f13d5-8d50-4a63-93a7-670d3c4694a0)
+	)
+	(rectangle
 		(start 20.828 20.574)
 		(end 179.07 283.21)
 		(stroke
@@ -5403,17 +5415,6 @@
 		)
 		(uuid "067be56e-3455-4c79-a006-d2f697177fea")
 	)
-	(text "Spec Resistor"
-		(exclude_from_sim no)
-		(at 241.3 266.446 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "06874380-797a-41f9-9b42-1c31ebc703b1")
-	)
 	(text "short LED to R2DS \nkapton the 3v3 pad"
 		(exclude_from_sim no)
 		(at 219.964 276.86 0)
@@ -5459,6 +5460,20 @@
 			(justify left)
 		)
 		(uuid "1a6a8183-153e-412d-8880-f674a97de985")
+	)
+	(text "R2DS\n"
+		(exclude_from_sim no)
+		(at 529.082 117.856 0)
+		(effects
+			(font
+				(size 2.286 2.286)
+				(thickness 0.3556)
+				(bold yes)
+				(color 0 0 194 1)
+			)
+			(justify left)
+		)
+		(uuid "2eee9804-7f45-448c-90fe-f565a0d634b3")
 	)
 	(text "0603 footprint, current lim R,\njumper or 0603 fuse"
 		(exclude_from_sim no)
@@ -5566,6 +5581,16 @@
 			)
 		)
 		(uuid "639ea55b-e1fe-47c4-b858-e4fb7ebc68b2")
+	)
+	(text "max 700mA out"
+		(exclude_from_sim no)
+		(at 555.244 123.952 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "652d158e-91ea-4943-a5eb-4d4feea5dfd9")
 	)
 	(text "50V"
 		(exclude_from_sim no)
@@ -5722,19 +5747,6 @@
 		)
 		(uuid "ee781364-9660-49fd-a681-9d426f31a94a")
 	)
-	(text "ics done"
-		(exclude_from_sim no)
-		(at 251.46 276.352 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-				(thickness 0.254)
-				(bold yes)
-				(color 0 255 0 1)
-			)
-		)
-		(uuid "f61c52e6-2b9e-4568-bfca-fe4130d93c48")
-	)
 	(text "TXH0137D is pin4pin with TPL7407L:\nTXH0137D - 100mA per channel, faster switching\nTPL7407L - 600mA per channel, slower switching\n\nboth:\n- internal flyback diodes\n- inverting output\n- output low on high z in"
 		(exclude_from_sim no)
 		(at 125.222 181.356 0)
@@ -5816,6 +5828,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "10c04131-21dd-499a-80d7-0a3dfc6abea0")
+	)
+	(junction
+		(at 543.56 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1229d200-15ba-46e9-986c-528c77a9dc97")
 	)
 	(junction
 		(at 356.87 146.05)
@@ -6897,6 +6915,16 @@
 	)
 	(wire
 		(pts
+			(xy 543.56 139.7) (xy 546.1 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "186d0e95-5a39-43e3-b479-b22900e4e6e8")
+	)
+	(wire
+		(pts
 			(xy 361.95 121.92) (xy 361.95 135.89)
 		)
 		(stroke
@@ -7464,6 +7492,16 @@
 			(type default)
 		)
 		(uuid "3c1d01ce-8247-4aaa-9c6e-7c7700cbd4e2")
+	)
+	(wire
+		(pts
+			(xy 577.85 142.24) (xy 577.85 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e0ceb6a-5a6f-44af-86ac-70c4b7b54129")
 	)
 	(wire
 		(pts
@@ -8147,6 +8185,16 @@
 	)
 	(wire
 		(pts
+			(xy 543.56 139.7) (xy 543.56 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b5be34d-5467-463b-91ce-f644449d3237")
+	)
+	(wire
+		(pts
 			(xy 128.27 152.4) (xy 153.67 152.4)
 		)
 		(stroke
@@ -8407,6 +8455,16 @@
 	)
 	(wire
 		(pts
+			(xy 535.94 139.7) (xy 524.51 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c0d6dc2-b58e-4bb0-aa19-33188d345768")
+	)
+	(wire
+		(pts
 			(xy 368.3 82.55) (xy 363.22 82.55)
 		)
 		(stroke
@@ -8484,6 +8542,16 @@
 			(type default)
 		)
 		(uuid "7fd4e2b7-7cc7-416a-8b8d-ea2d943cfb46")
+	)
+	(wire
+		(pts
+			(xy 541.02 139.7) (xy 543.56 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80f25c7f-ca9b-4578-b946-7a5f91a57525")
 	)
 	(wire
 		(pts
@@ -9497,6 +9565,16 @@
 	)
 	(wire
 		(pts
+			(xy 563.88 139.7) (xy 579.12 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6d10310-8588-4c3f-bdc9-36563a8542e0")
+	)
+	(wire
+		(pts
 			(xy 243.84 190.5) (xy 240.03 190.5)
 		)
 		(stroke
@@ -9524,6 +9602,16 @@
 			(type default)
 		)
 		(uuid "c95af7e3-000e-428d-a3ca-61d5452d992c")
+	)
+	(wire
+		(pts
+			(xy 577.85 142.24) (xy 579.12 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caafc3de-9c3a-4b1d-b742-bb0f656492d1")
 	)
 	(polyline
 		(pts
@@ -9595,6 +9683,16 @@
 			(type default)
 		)
 		(uuid "cce2e53f-5524-483d-a151-eb24ecaf81e8")
+	)
+	(wire
+		(pts
+			(xy 543.56 147.32) (xy 543.56 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce72fb83-16d6-45e4-9779-2c795c2532c3")
 	)
 	(wire
 		(pts
@@ -15961,6 +16059,17 @@
 		)
 		(uuid "c1ba3ed8-10bc-467e-a0fe-53cb49297a9b")
 	)
+	(hierarchical_label "RTDS_ON"
+		(shape input)
+		(at 524.51 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cedb74b3-1e04-4b4d-a4ec-99e2697e7146")
+	)
 	(hierarchical_label "LSD_RTDS"
 		(shape input)
 		(at 209.55 260.35 180)
@@ -16059,6 +16168,247 @@
 			(justify right)
 		)
 		(uuid "f3e08748-a237-4ddb-8f00-478d95fff360")
+	)
+	(symbol
+		(lib_name "R_Small_2")
+		(lib_id "Device:R_Small")
+		(at 543.56 144.78 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00c8bdf7-897d-45d3-85b9-5727142d94de")
+		(property "Reference" "R192"
+			(at 541.528 147.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "20k"
+			(at 543.56 146.558 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 543.56 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 543.56 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 543.56 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 543.56 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 543.56 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Optional" "True"
+			(at 543.56 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" "RC0402FR-070RL"
+			(at 543.56 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Drawn By" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Order Number" "603-RC0402FR-070RL "
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "To Order" "TRUE"
+			(at 543.56 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e62130dc-8e1b-458c-b0bf-b4e8bcbeb00d")
+		)
+		(pin "2"
+			(uuid "fa65230d-c4cb-4974-a3ea-6c1068751447")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
+					(reference "R192")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_name "R_Small_26")
@@ -19790,6 +20140,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Speaker")
+		(at 584.2 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(uuid "1e12a9b5-28ff-462f-ae56-8b7291deee31")
+		(property "Reference" "#SP2"
+			(at 589.28 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "KP1600"
+			(at 577.85 136.144 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 584.2 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 583.946 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 584.2 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Notes" "99db @ 2m"
+			(at 594.36 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Freq" "2kHz-4kHz"
+			(at 594.36 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Current" "260mA (max)"
+			(at 595.63 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "51e4359f-e5a1-4796-961b-1597c528314c")
+		)
+		(pin "2"
+			(uuid "1a73b6b2-8ab5-4122-809c-a253be9f9964")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
+					(reference "#SP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "R_Small_35")
 		(lib_id "Device:R_Small")
 		(at 91.44 82.55 0)
@@ -20156,6 +20599,223 @@
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
 					(reference "#PWR096")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SUFST:ISP452")
+		(at 548.64 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "22b299a0-a582-4dc0-80ab-b516130ee1b7")
+		(property "Reference" "U21"
+			(at 562.356 129.794 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ISP452"
+			(at 561.086 132.0098 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223"
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/assets/row/public/documents/10/49/infineon-isp452-ds-en.pdf"
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "High side power switch with integrated vertical power FET, providing embedded protection and diagnostic functions"
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" "ISP452HUMA1"
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Drawn By" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Order Number" "726-ISP452HUMA1"
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "To Order" "TRUE"
+			(at 548.64 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "2f3b3849-bef4-4e61-af82-8fc577efeb79")
+		)
+		(pin "4"
+			(uuid "0a405ebd-d240-49fb-b448-b7a0e1716860")
+		)
+		(pin "1"
+			(uuid "85d064f0-e848-45cd-99e6-cfa5ef6b7d23")
+		)
+		(pin "2"
+			(uuid "89331332-8fe5-4038-a10c-ecfa242fa131")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
+					(reference "U21")
 					(unit 1)
 				)
 			)
@@ -22870,6 +23530,247 @@
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
 					(reference "R66")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_Small_2")
+		(lib_id "Device:R_Small")
+		(at 538.48 139.7 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "35eaeefb-cb77-48e6-8785-68507f454d8e")
+		(property "Reference" "R190"
+			(at 536.194 137.414 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10"
+			(at 537.21 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 538.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 538.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 538.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 538.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 538.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Optional" "True"
+			(at 538.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" "RC0402FR-070RL"
+			(at 538.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Drawn By" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Order Number" "603-RC0402FR-070RL "
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "To Order" "TRUE"
+			(at 538.48 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "18dffccb-53ce-4fde-b80a-4393d0a34898")
+		)
+		(pin "2"
+			(uuid "5f2e9d06-aa07-4fc8-952d-dc5db963190f")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
+					(reference "R190")
 					(unit 1)
 				)
 			)
@@ -30925,6 +31826,73 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_3")
+		(lib_id "power:GND")
+		(at 577.85 144.78 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "78a04c4f-f906-49d0-9765-d2c5297be891")
+		(property "Reference" "#PWR0272"
+			(at 577.85 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 577.85 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 577.85 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 577.85 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 577.85 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "189c3b3b-19f1-4ea3-bc14-7849facd4683")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
+					(reference "#PWR0272")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "R_Small_23")
 		(lib_id "Device:R_Small")
 		(at 217.17 125.73 270)
@@ -35453,6 +36421,73 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_3")
+		(lib_id "power:GND")
+		(at 543.56 148.59 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a439cbc9-ce71-4361-a3c8-e1f37a8d7a2b")
+		(property "Reference" "#PWR0266"
+			(at 543.56 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 543.56 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 543.56 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 543.56 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 543.56 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "48ff6425-37cd-40ed-97ed-161bb3ba5d2d")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
+					(reference "#PWR0266")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "SUFST:SUFST_2x_Resistor_Selector")
 		(at 372.11 39.37 0)
 		(mirror y)
@@ -35722,6 +36757,73 @@
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
 					(reference "#PWR0147")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_3")
+		(lib_id "power:GND")
+		(at 554.99 148.59 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a7197dd5-9e51-4485-a4d1-c0372f0ce51b")
+		(property "Reference" "#PWR0269"
+			(at 554.99 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 554.99 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 554.99 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 554.99 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 554.99 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5acad83c-3892-4583-b3a1-0a141383c3e9")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
+					(reference "#PWR0269")
 					(unit 1)
 				)
 			)
@@ -36948,6 +38050,71 @@
 			(project "CANna-VCU"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
 					(reference "R85")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "+12V_7")
+		(lib_id "power:+12V")
+		(at 554.99 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "af14c118-a632-49e7-8979-1d9f71d4c603")
+		(property "Reference" "#PWR0267"
+			(at 554.99 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+GLV"
+			(at 554.99 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 554.99 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 554.99 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 554.99 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8661d669-99d2-4b4e-af0b-37f0ec067a46")
+		)
+		(instances
+			(project "CANna-VCU1"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/1b41b139-095c-4084-b93a-58b03562937d"
+					(reference "#PWR0267")
 					(unit 1)
 				)
 			)
