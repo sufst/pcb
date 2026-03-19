@@ -4001,9 +4001,13 @@
 		)
 		(symbol "GND_1"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -4094,6 +4098,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+12V"
 			(power)
@@ -4427,6 +4432,19 @@
 			(justify left bottom)
 		)
 		(uuid "32b0da69-f190-4d82-8e30-40c4be782499")
+	)
+	(text "TODO: WHAT HAPPENS IF +AIR IS WELDED?"
+		(exclude_from_sim no)
+		(at 205.232 187.96 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 132 0 0 1)
+			)
+		)
+		(uuid "34e0d65d-bec0-447c-b901-228a77c47a38")
 	)
 	(text "Goes high 0.1s after TS_ON goes high.\nGoes low immediately after TS_ON\ngoes low.\nRising edge here turns latch on, unless\nit's held in reset. Delay required\nto ensure rising edge happens after\nreset goes low."
 		(exclude_from_sim no)
@@ -13753,7 +13771,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67dd52e7-94a4-47f6-9ff0-1258d6650d30")
-		(property "Reference" "U3"
+		(property "Reference" "U4"
 			(at 123.1817 368.3 0)
 			(effects
 				(font
@@ -13859,13 +13877,13 @@
 	(symbol
 		(lib_id "power:GND")
 		(at 77.47 186.69 0)
-		(unit 1)
+		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "6d2bdab8-2a65-4fb7-9a7e-8ce0da1a8ec3")
-		(property "Reference" "#PWR021"
+		(property "Reference" "U3"
 			(at 77.47 193.04 0)
 			(effects
 				(font
@@ -13930,7 +13948,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6d2bdab8-2a65-4fb7-9a7e-8ce0da1a8ec3")
+		(uuid "6d2bdab8-2a65-4fb7-9a7e-8ce0da1a8ec4")
 		(property "Reference" "#PWR19"
 			(at 77.47 193.04 0)
 			(effects
