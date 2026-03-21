@@ -1,0 +1,185 @@
+name: Generate release files using config in PR comment
+
+on:
+  issue_comment:
+    types: created
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  check_permissions:
+    name: Check everything is valid
+    runs-on: ubuntu-latest
+
+    if: contains(github.event.comment.body, '@github-actions generate')
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Not a pull request
+        if: github.event.issue.pull_request == ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.issue.url }}
+          USER: ${{ github.event.comment.user.login }}
+        run: |
+          pr_number="$(echo "$PR" | sed 's/.*\/issues\///')"
+          gh issue comment "$pr_number" --body "@$USER This command only works in a pull request"
+          exit 1
+
+      - name: No permission
+        if: github.event.comment.author_association != 'COLLABORATOR' && github.event.comment.author_association != 'OWNER' && github.event.comment.author_association != 'MEMBER'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.issue.pull_request.url }}
+          USER: ${{ github.event.comment.user.login }}
+          ASSOCIATION: ${{ github.event.comment.author_association }}
+        run: |
+          pr_number="$(echo "$PR" | sed 's/.*\/pulls\///')"
+          gh pr comment "$pr_number" --body "@$USER You don't have permission to run this command. You must be either a \`COLLABORATOR\`, \`MEMBER\` or \`OWNER\`. Your association: \`$ASSOCIATION\`."
+          exit 1
+
+  run:
+    name: Run requested action(s)
+    runs-on: ubuntu-latest
+
+    needs: check_permissions
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Checkout to latest PR commit
+        env:
+          PR: ${{ github.event.issue.pull_request.url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global --add safe.directory "$(pwd)"
+          gh pr checkout "$(echo "$PR" | sed 's/.*\/pulls\///')"
+
+      - name: Parse schematic arguments
+        id: parse-sch-args
+        if: contains(github.event.comment.body, '- schematic')
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: |
+          ARGS="$(echo "$BODY" | grep "^- schematic" | head -n 1 | sed 's/'\`'/"/g' | sed "s/^- schematic //")"
+          echo "sch=$(echo "$ARGS" | sed 's/^ *"\([^"]*\)".*$/\1/')" >> "$GITHUB_OUTPUT"
+          echo "out=$(echo "$ARGS" | sed 's/^ *"[^"]*" "\([^"]*\)".*$/\1/')" >> "$GITHUB_OUTPUT"
+
+      - name: Generate schematic
+        if: steps.parse-sch-args.conclusion == 'success'
+        uses: maartin0/kicad-sch-action@v1
+        with:
+          sch: ${{ steps.parse-sch-args.outputs.sch }}
+          output: ${{ steps.parse-sch-args.outputs.out }}
+
+      - name: Parse fabrication arguments
+        id: parse-fab-args
+        if: contains(github.event.comment.body, '- fabrication')
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: |
+          ARGS="$(echo "$BODY" | grep "^- fabrication" | head -n 1 | sed 's/'\`'/"/g' | sed "s/^- fabrication //")"
+          echo "pcb=$(echo "$ARGS" | sed 's/^ *"\([^"]*\)".*$/\1/')" >> "$GITHUB_OUTPUT"
+          echo "out=$(echo "$ARGS" | sed 's/^ *"[^"]*" "\([^"]*\)".*$/\1/')" >> "$GITHUB_OUTPUT"
+
+      - name: Generate fabrication files
+        if: steps.parse-fab-args.conclusion == 'success'
+        uses: maartin0/kicad-fab-action@v1
+        with:
+          pcb: ${{ steps.parse-fab-args.outputs.pcb }}
+          output: ${{ steps.parse-fab-args.outputs.out }}
+
+      - name: Parse iBOM arguments
+        id: parse-ibom-args
+        if: contains(github.event.comment.body, '- ibom')
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: |
+          ARGS="$(echo "$BODY" | grep "^- ibom" | head -n 1 | sed 's/'\`'/"/g' | sed "s/^- ibom //")"
+          echo "pcb=$(echo "$ARGS" | sed 's/^ *"\([^"]*\)".*$/\1/')" >> "$GITHUB_OUTPUT"
+          echo "out=$(echo "$ARGS" | sed 's/^ *"[^"]*" "\([^"]*\)".*$/\1/')" >> "$GITHUB_OUTPUT"
+
+      - name: Generate iBOM
+        if: steps.parse-ibom-args.conclusion == 'success'
+        uses: maartin0/kicad-ibom-action@v1
+        with:
+          pcb: ${{ steps.parse-ibom-args.outputs.pcb }}
+          output: ${{ steps.parse-ibom-args.outputs.out }}
+
+      - name: Generate info file
+        if: contains(github.event.comment.body, '- info')
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: |
+          ARGS="$(echo "$BODY" | grep "^- info" | head -n 1 | sed 's/'\`'/"/g' | sed "s/^- info //")"
+          OUT="$(echo "$ARGS" | sed 's/^ *"\([^"]*\)".*$/\1/')"
+          dir="$(dirname "$OUT")"
+          [ -d "$dir" ] && mkdir -p "$dir"
+          sudo chown -R "$(whoami)" "$dir" # The docker containers run as root so can create a directory owned by the root user
+          touch "$OUT"
+          echo "version: $(echo "$ARGS" | sed 's/^.*version="\([^"]*\)".*$/\1/')" > "$OUT"
+          echo "layers: $(echo "$ARGS" | sed 's/^.*layers="\([^"]*\)".*$/\1/')" >> "$OUT"
+          echo "date: $(echo "$ARGS" | sed 's/^.*date="\([^"]*\)".*$/\1/')" >> "$OUT"
+          echo "fabrication: $(echo "$ARGS" | sed 's/^.*fabrication="\([^"]*\)".*$/\1/')" >> "$OUT"
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global --add safe.directory "$(pwd)"
+          git add .
+          git commit -m "Generate release files"
+          git config --global --add safe.directory "$(pwd)"
+          git push
+
+      - name: Parse tag
+        id: parse-tag
+        if: contains(github.event.comment.body, '- tag')
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: |
+          ARGS="$(echo "$BODY" | grep "^- tag" | head -n 1 | sed 's/'\`'/"/g' | sed "s/^- tag //")"
+          echo "tag=$(echo "$ARGS" | sed 's/^ *"\([^"]*\)".*$/\1/')" >> "$GITHUB_OUTPUT"
+
+      - name: Delete tag if it already exists
+        if: steps.parse-tag.conclusion == 'success'
+        continue-on-error: true # tag may not already exist
+        env:
+          TAG: ${{ steps.parse-tag.outputs.tag }}
+        run: git push origin :$TAG
+
+      - name: Tag changes
+        if: steps.parse-tag.conclusion == 'success'
+        env:
+          TAG: ${{ steps.parse-tag.outputs.tag }}
+        run: |
+          git config --global --add safe.directory "$(pwd)"
+          git tag "$TAG"
+          git push --tags
+
+  alert_on_error:
+    name: Send a message if this workflow fails
+    runs-on: ubuntu-latest
+    needs: run
+
+    if: always() && contains(needs.*.result, 'failure')
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Send message
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.issue.pull_request.url }}
+          USER: ${{ github.event.comment.user.login }}
+          ACTION_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          pr_number="$(echo "$PR" | sed 's/.*\/pulls\///')"
+          gh pr comment "$pr_number" --body "@$USER This command failed. Check the [error logs in the actions tab]($ACTION_RUN_URL) for more details."

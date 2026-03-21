@@ -5,13 +5,20 @@ Central repository of all schematics and PCB design files.
 
 | Folder     | Project                          | Project Code |
 |------------|----------------------------------|--------------|
-| ail        | Accumulator Indicator Light      | `ail`        |
+| ail        | Accumulator Indicator Light Logic| `ail`        |
+| ail-led    | Accumulator Indicator Light Led  | `ail-led`    |
+| batak      | Batak Game (non-car)             | `batak`      |
+| break-light| Rear Break Light                 | `break-light`|
 | bspd       | Brake System Plausibility Device | `bspd`       |
+| can-node   | Voltage Reader and Broadcaster   | `can-node`   |
+| curr-amp   | Current Sensor Amplifier         | `curr-amp`   |
 | dash       | Dashboard                        | `dash`       |
 | discharge  | Discharge Relay Breakout         | `discharge`  |
 | hv-sense   | High Voltage Sense               | `hvs`        |
 | latching   | Latch Circuit                    | `latching`   |
 | loom*      | Loom Design                      | `loom`       |
+| lvbms      | Low Voltage Battery Management System | `lvbms` |
+| precharge  | Precharge Controller             | `precharge`  |
 | segment    | Segment                          | `segment`    |
 | telemetry  | On-Car Telemetry                 | `telemetry`  |
 | test-rig   | PCB Test / Demo Rig              | `test`       |
@@ -20,9 +27,9 @@ Central repository of all schematics and PCB design files.
 | tsal       | Tractive System Active Light     | `tsal`       |
 | vcu        | Vehicle Control Unit             | `vcu`        |
 
-We design our PCBs in KiCad (version 7+).
+We design our PCBs in KiCad (version 8+).
 
->*Schematic only.
+>*Moved to https://github.com/sufst/loom
 
 ## Version Control for KiCad Projects
 
