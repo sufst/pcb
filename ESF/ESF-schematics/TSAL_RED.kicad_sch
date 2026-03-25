@@ -4792,6 +4792,16 @@
 		)
 		(uuid "5608fc3c-e639-490a-8699-c7452cfb522c")
 	)
+	(text "ON"
+		(exclude_from_sim no)
+		(at 28.956 249.936 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "590fe81c-a56a-418b-85ff-41bb783b1731")
+	)
 	(text "Source follower turns on\nwhen sufficient voltage\non TS line.\nProvides necessary current\nto drive optocoupler LED,\nwithout exposing U13\nto full TS voltage"
 		(exclude_from_sim no)
 		(at 119.126 43.688 0)
@@ -4847,7 +4857,7 @@
 		)
 		(uuid "75f915ad-c1b6-49ce-8592-31f7a8b26ff0")
 	)
-	(text "TSAL Driver PCB - located at top of Roll Hoop"
+	(text "TSAL LED PCB - located at top of Roll Hoop"
 		(exclude_from_sim no)
 		(at 79.248 206.248 0)
 		(effects
@@ -4879,6 +4889,17 @@
 			(justify left bottom)
 		)
 		(uuid "9878161f-5de2-45bd-94f3-490e0b0735b1")
+	)
+	(text "Weak pull down to ensure safe state\nif wire disconnected"
+		(exclude_from_sim no)
+		(at 21.59 271.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c343724-2eb8-43eb-8e65-63ba400d1cf1")
 	)
 	(text "TS+ voltage divided across\nfive 200k Ohm resistors.\nPower dissipation divided across string\n\nEach resistor rated for 150V,\nso capable of up to 750V - above the \nmaximum 600V TS Voltage\nand can handle transients"
 		(exclude_from_sim no)
@@ -4912,6 +4933,16 @@
 			(justify left)
 		)
 		(uuid "a71b52cc-9f95-425a-b15b-7f2c3a57eba4")
+	)
+	(text "Safe State is LED off"
+		(exclude_from_sim no)
+		(at 33.02 243.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ac5eb645-6247-482b-8962-59b6fd90408a")
 	)
 	(text "Flashing light operation controlled\nby Schmitt Trigger Oscillator.\n\nWhen HV_DETECTED is true, the diode \nis off, and the output oscillates\nat required 2-5 Hz frequency, \nwith 50% duty cycle.\n\nWhen HV_DETECTED is false, the input to\nthe second Schmitt inverter is pulled\nhigh, and the output is low."
 		(exclude_from_sim no)
@@ -4956,6 +4987,16 @@
 			(justify left bottom)
 		)
 		(uuid "f3428b48-9939-4c9a-9be5-8c9297fcf61e")
+	)
+	(text "OFF"
+		(exclude_from_sim no)
+		(at 37.338 249.936 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "fcb908a7-53d0-4dac-bef2-fab835e35de0")
 	)
 	(text "High Power, bright LEDs"
 		(exclude_from_sim no)
@@ -6128,7 +6169,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.165 259.08) (xy 61.595 259.08)
+			(xy 43.18 259.08) (xy 61.595 259.08)
 		)
 		(stroke
 			(width 0)
@@ -6776,6 +6817,16 @@
 		)
 		(uuid "b7c0cfac-0066-4ef2-93c4-655e35f248cd")
 	)
+	(polyline
+		(pts
+			(xy 33.02 252.73) (xy 40.64 252.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b82eb56e-7bae-4134-be0a-c7cfe30d2d84")
+	)
 	(wire
 		(pts
 			(xy 61.595 262.89) (xy 61.595 259.08)
@@ -7166,6 +7217,16 @@
 		)
 		(uuid "e47ed6a4-30f0-4989-8d53-936c60676a38")
 	)
+	(polyline
+		(pts
+			(xy 33.02 246.38) (xy 33.02 252.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4c07d9b-3eb7-4988-90a7-a52f2881b1eb")
+	)
 	(wire
 		(pts
 			(xy 77.47 245.11) (xy 82.55 245.11)
@@ -7376,6 +7437,16 @@
 		)
 		(uuid "fc3022ec-a563-455b-94e3-08a9f73a125d")
 	)
+	(polyline
+		(pts
+			(xy 25.4 246.38) (xy 33.02 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fddfa846-a589-49f4-9ebd-819b99cb3816")
+	)
 	(wire
 		(pts
 			(xy 142.24 238.125) (xy 142.24 242.57)
@@ -7457,7 +7528,7 @@
 		(uuid "b71507b2-43c1-4dc1-bb01-673b6a00a783")
 	)
 	(label "RED_LED_ENABLED"
-		(at 50.165 259.08 180)
+		(at 43.18 259.08 180)
 		(effects
 			(font
 				(size 1.27 1.27)
