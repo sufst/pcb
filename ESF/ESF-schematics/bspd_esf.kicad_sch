@@ -6739,7 +6739,7 @@
 	)
 	(text "RC approx 500ms"
 		(exclude_from_sim no)
-		(at 58.42 381.635 0)
+		(at 70.612 379.984 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6814,9 +6814,9 @@
 		)
 		(uuid "4a94b051-96a7-4c1a-9823-f5c1bf05ee64")
 	)
-	(text "Both brake and throttle pressed.\nIf this persists, trigger shutdown."
+	(text "Both brake and current sensor\nabove trigger thresholds.\nIf this persists, trigger shutdown."
 		(exclude_from_sim no)
-		(at 23.495 365.76 0)
+		(at 19.558 367.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6935,7 +6935,7 @@
 		)
 		(uuid "a0b978ce-1a81-40e7-a9f0-00791856c72e")
 	)
-	(text "High only if both brake and\nthrottle pressed (if either\nwas not pressed, the\ncorresponding comparator\nwould pull low)."
+	(text "High only if both brake\npressed and current above\nthreshold (if either\nwas not pressed, the\ncorresponding comparator\nwould pull low)."
 		(exclude_from_sim no)
 		(at 150.495 252.73 0)
 		(effects
@@ -7023,7 +7023,7 @@
 		)
 		(uuid "c2b60e6f-b22c-49f2-aade-395c4f5d262c")
 	)
-	(text "On startup, charge C12\nquickly, else\nBRAKE_PLAUSIBLE will be\nfalse for 10s. Base\ncurrent is supplied\nthrough C11. Once this\nis charged (after ~0.1s),\nthe transistor will\nremain off."
+	(text "On startup, charge C16\nquickly, else\nBRAKE_PLAUSIBLE will be\nfalse for 10s. Base\ncurrent is supplied\nthrough C14. Once this\nis charged (after ~0.1s),\nthe transistor will\nremain off."
 		(exclude_from_sim no)
 		(at 154.305 309.245 0)
 		(effects
@@ -8401,16 +8401,6 @@
 	)
 	(wire
 		(pts
-			(xy 314.96 116.205) (xy 314.96 120.015)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "35406638-537a-4f6e-bec3-f443ace62d32")
-	)
-	(wire
-		(pts
 			(xy 90.805 379.095) (xy 90.805 382.27)
 		)
 		(stroke
@@ -9338,6 +9328,16 @@
 			(type default)
 		)
 		(uuid "6c98f9a2-21e4-48bb-8041-723f6222267b")
+	)
+	(wire
+		(pts
+			(xy 314.96 118.11) (xy 314.96 120.015)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6db79164-cc0b-44d9-b029-ab43c2d8611d")
 	)
 	(wire
 		(pts
@@ -10991,7 +10991,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.145 257.175) (xy 150.495 257.175)
+			(xy 144.145 257.175) (xy 149.225 257.175)
 		)
 		(stroke
 			(width 0)
@@ -11793,6 +11793,28 @@
 			)
 		)
 	)
+	(global_label "CT_PWR"
+		(shape input)
+		(at 314.96 118.11 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "31b2ec49-008d-4c1c-be08-530a1003617c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 314.96 109.6066 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "BRAKE_AND_THROTTLE_PRESSED"
 		(shape input)
 		(at 53.975 370.84 180)
@@ -11816,7 +11838,7 @@
 		)
 	)
 	(global_label "2V4_SINK"
-		(shape input)
+		(shape output)
 		(at 372.11 63.5 0)
 		(fields_autoplaced yes)
 		(effects
@@ -11827,7 +11849,7 @@
 		)
 		(uuid "41f27bca-a7bc-4a44-9f5b-75ef2b2be4f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 383.9852 63.5 0)
+			(at 382.745 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12036,7 +12058,7 @@
 		)
 	)
 	(global_label "9V_SOURCE"
-		(shape input)
+		(shape output)
 		(at 372.11 40.005 0)
 		(fields_autoplaced yes)
 		(effects
@@ -12047,7 +12069,7 @@
 		)
 		(uuid "8830c6c5-e8c7-4442-9649-33cf6083b758")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 385.9204 40.005 0)
+			(at 383.8108 40.005 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12125,7 +12147,7 @@
 	)
 	(global_label "BRAKE_AND_THROTTLE_PRESSED"
 		(shape output)
-		(at 150.495 257.175 0)
+		(at 149.225 257.175 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12135,7 +12157,7 @@
 		)
 		(uuid "dc259eb4-eb65-47fa-8abd-9d241d8a40e3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.3145 257.175 0)
+			(at 179.0445 257.175 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12164,72 +12186,6 @@
 				)
 				(justify left)
 				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 314.96 116.205 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00ad0eeb-702d-4f92-a3a2-b4260d3cf393")
-		(property "Reference" "#PWR053"
-			(at 314.96 120.015 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 314.96 112.395 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 314.96 116.205 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 314.96 116.205 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 314.96 116.205 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ae2dd3b2-1b60-4be4-9ff1-1f73899cfcbe")
-		)
-		(instances
-			(project "ESF-schematics"
-				(path "/0a974815-ef64-4073-a8fa-af9729a41b28/78a4b377-6b12-440c-bd30-8992bd1f6fa1"
-					(reference "#PWR053")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -14789,10 +14745,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "385e7dab-f99e-4527-971a-1d623fa1d7ce")
 		(property "Reference" "Q2"
-			(at 153.67 309.88 0)
+			(at 153.162 313.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14801,7 +14756,7 @@
 			)
 		)
 		(property "Value" "BC856"
-			(at 153.67 312.42 0)
+			(at 153.162 316.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
