@@ -1640,17 +1640,6 @@
 		)
 		(uuid "b0edad50-0e12-43dc-a0c9-a9df5fcf912d")
 	)
-	(text "Fuse rated at 750mA to provide strict \novercurrent protection for the interlocks\nwhile safely accommodating\nthe 312mA nominal SDC current."
-		(exclude_from_sim no)
-		(at 142.24 47.752 0)
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.1588)
-			)
-		)
-		(uuid "b6525705-8148-4afd-a3cd-7888ccdcf79f")
-	)
 	(text "AMS"
 		(exclude_from_sim no)
 		(at 151.384 141.478 0)
@@ -1662,6 +1651,17 @@
 			)
 		)
 		(uuid "c0a29882-f8f0-4daa-bff7-d31210d02312")
+	)
+	(text "Fuse rated at 750mA to provide strict \novercurrent protection for the interlocks\nwhile safely accommodating\nthe 392mA nominal SDC current.\n\nSlow blow to avoid tripping during\nSDC inrush current"
+		(exclude_from_sim no)
+		(at 142.494 51.816 0)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1588)
+			)
+		)
+		(uuid "caf54130-705d-49e0-8204-8f907d4ef781")
 	)
 	(text "AIRS:\n- 1.7W @ 12V DC\n   hold power\n- 156mA coil current\nTotal 312mA"
 		(exclude_from_sim no)
@@ -3308,82 +3308,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Fuse")
-		(at 142.24 38.735 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "70cea4c0-f6e4-4241-9995-d539731588a3")
-		(property "Reference" "F6"
-			(at 142.24 32.385 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "Fuse"
-			(at 142.113 35.433 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 40.513 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 142.24 38.735 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Fuse"
-			(at 142.24 38.735 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Current" "750mA"
-			(at 142.367 41.021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "67abea53-bd90-443f-9c9e-bd7089c8faf4")
-		)
-		(pin "1"
-			(uuid "150231e9-3c07-4870-aed8-bc1afc8e178a")
-		)
-		(instances
-			(project "ESF-schematics"
-				(path "/0a974815-ef64-4073-a8fa-af9729a41b28/4adb5f6c-34de-4e56-8477-31c2196a2ceb"
-					(reference "F6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 98.425 125.73 0)
 		(unit 1)
@@ -3654,6 +3578,90 @@
 			(project "ESF-schematics"
 				(path "/0a974815-ef64-4073-a8fa-af9729a41b28/4adb5f6c-34de-4e56-8477-31c2196a2ceb"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 142.24 38.735 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dc74e85e-a11c-49f9-8896-8a53e24220e3")
+		(property "Reference" "F4"
+			(at 142.24 32.385 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Fuse"
+			(at 142.113 35.433 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 40.513 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 38.735 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 142.24 38.735 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Current" "750mA continuous"
+			(at 142.367 41.021 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Current2" "5A for ~500ms"
+			(at 142.113 42.799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ee5b4dd1-42ff-46a5-96f8-9338f7eda0f1")
+		)
+		(pin "1"
+			(uuid "652623b2-0ef6-4e94-8f38-afae8bc760b1")
+		)
+		(instances
+			(project "ESF-schematics"
+				(path "/0a974815-ef64-4073-a8fa-af9729a41b28/4adb5f6c-34de-4e56-8477-31c2196a2ceb"
+					(reference "F4")
 					(unit 1)
 				)
 			)
