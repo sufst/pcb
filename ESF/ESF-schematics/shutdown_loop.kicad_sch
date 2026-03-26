@@ -1658,9 +1658,9 @@
 		)
 		(uuid "36e5d989-1705-4a9a-8276-503192ced4a3")
 	)
-	(text "Fuse rated at 750mA to provide strict \novercurrent protection for the interlocks\nwhile safely accommodating\nthe 392mA nominal SDC current."
+	(text "Fuse rated at 750mA to provide strict \novercurrent protection for the interlocks\nwhile safely accommodating\nthe 392mA nominal SDC current.\n\nSlow blow to avoid tripping during\nSDC inrush current"
 		(exclude_from_sim no)
-		(at 82.931 94.996 0)
+		(at 82.804 98.044 0)
 		(effects
 			(font
 				(size 1 1)
@@ -4204,8 +4204,16 @@
 				(hide yes)
 			)
 		)
-		(property "Current" "750mA"
+		(property "Current" "750mA continuous"
 			(at 82.042 88.646 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Current2" "5A for ~500ms"
+			(at 81.788 90.424 90)
 			(effects
 				(font
 					(size 1.27 1.27)
