@@ -7680,7 +7680,7 @@
 	)
 	(text "High Voltage Not Detected Signal"
 		(exclude_from_sim no)
-		(at 74.676 151.638 0)
+		(at 83.82 151.384 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7774,7 +7774,7 @@
 		)
 		(uuid "4ffcfb07-9159-4e46-8cb7-893d951958a1")
 	)
-	(text "12V Zener clamps gate voltage of Q3 to 12V,\nand prevents noise or low voltage \naccidentally triggering \"HV Detected\"\nsignal until 12V gate voltage.\n\nStarts conducting at 12V.\nOnce voltage through D14 creates \n1.24V drop across R60, U13 turns on\nlike a low side switch."
+	(text "12V Zener clamps gate voltage of Q20 to 12V,\nand prevents noise or low voltage \naccidentally triggering \"HV Detected\"\nsignal until 12V gate voltage.\n\nStarts conducting at 12V.\nOnce voltage through D76 creates \n1.24V drop across R165, U32 turns on\nlike a low side switch."
 		(exclude_from_sim no)
 		(at 19.558 110.744 0)
 		(effects
@@ -8029,6 +8029,17 @@
 		)
 		(uuid "c65e9345-f43b-45bb-b496-092445ea1156")
 	)
+	(text "Pull down to ensure SCS\nWire disconnect = short to GND\nGREEN LED off - Safe state"
+		(exclude_from_sim no)
+		(at 55.118 157.734 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cbaa8e79-c9d3-4ca1-b67b-49a6b5d089f2")
+	)
 	(text "Galvanic isolation between \nTractive System (TS) and Low Voltage (LV) planes\n\n4mm Creepage Distance on PCB\nwith conformal coating\n"
 		(exclude_from_sim no)
 		(at 153.162 37.846 0)
@@ -8051,7 +8062,7 @@
 		)
 		(uuid "d4d897d4-35cd-42fe-93c2-c5c12d97aba4")
 	)
-	(text "3.3V Zener Diode D15 protect inputs \nto U13, clamping voltage to 3.3V"
+	(text "3.3V Zener Diode D77 protect inputs \nto U13, clamping voltage to 3.3V"
 		(exclude_from_sim no)
 		(at 78.994 131.572 0)
 		(effects
@@ -8577,6 +8588,12 @@
 		(uuid "d9364724-244c-48de-9c7b-090dd313bdba")
 	)
 	(junction
+		(at 50.165 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6c58429-6db4-4225-9e07-2ac9ac68d3aa")
+	)
+	(junction
 		(at 198.12 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8931,6 +8948,16 @@
 			(type default)
 		)
 		(uuid "0f008da1-3fe5-48b6-93c1-cecb085f215a")
+	)
+	(wire
+		(pts
+			(xy 50.165 153.67) (xy 50.165 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f589293-23ba-4840-acfe-069363e7c423")
 	)
 	(wire
 		(pts
@@ -10032,6 +10059,16 @@
 		)
 		(uuid "587e74a5-a92e-4a25-b80e-4adae6ed1f2d")
 	)
+	(wire
+		(pts
+			(xy 50.165 158.75) (xy 50.165 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58913b34-d5d3-447b-bec3-c381eea143d8")
+	)
 	(polyline
 		(pts
 			(xy 147.32 25.4) (xy 147.32 132.08)
@@ -11105,7 +11142,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 152.4) (xy 41.91 152.4)
+			(xy 53.975 152.4) (xy 50.165 152.4)
 		)
 		(stroke
 			(width 0)
@@ -11995,6 +12032,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.165 152.4) (xy 41.91 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f47df6ab-a54e-483b-9e0b-7d77d421a9a7")
+	)
+	(wire
+		(pts
 			(xy 115.57 554.355) (xy 115.57 560.705)
 		)
 		(stroke
@@ -12131,12 +12178,12 @@
 				(type solid)
 			)
 		)
-		(column_widths 16.51 19.05 16.51 19.05 24.13)
-		(row_heights 5.08 5.08 5.08 3.81 7.62)
+		(column_widths 16.51 19.05 16.51 21.59 24.13)
+		(row_heights 5.08 5.08 7.62 5.08 7.62 3.81 7.62)
 		(cells
 			(table_cell "Intended Relay\nState"
 				(exclude_from_sim no)
-				(at 157.48 495.3 0)
+				(at 158.75 483.87 0)
 				(size 16.51 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12153,7 +12200,7 @@
 			)
 			(table_cell "Mechanical Relay\nState"
 				(exclude_from_sim no)
-				(at 173.99 495.3 0)
+				(at 175.26 483.87 0)
 				(size 19.05 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12170,7 +12217,7 @@
 			)
 			(table_cell "HV Detected"
 				(exclude_from_sim no)
-				(at 193.04 495.3 0)
+				(at 194.31 483.87 0)
 				(size 16.51 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12187,8 +12234,8 @@
 			)
 			(table_cell "Plausibility?"
 				(exclude_from_sim no)
-				(at 209.55 495.3 0)
-				(size 19.05 5.08)
+				(at 210.82 483.87 0)
+				(size 21.59 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -12204,7 +12251,7 @@
 			)
 			(table_cell "TSAL Green Light\nAction"
 				(exclude_from_sim no)
-				(at 228.6 495.3 0)
+				(at 232.41 483.87 0)
 				(size 24.13 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12221,7 +12268,7 @@
 			)
 			(table_cell "Open"
 				(exclude_from_sim no)
-				(at 157.48 500.38 0)
+				(at 158.75 488.95 0)
 				(size 16.51 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12238,7 +12285,7 @@
 			)
 			(table_cell "Open"
 				(exclude_from_sim no)
-				(at 173.99 500.38 0)
+				(at 175.26 488.95 0)
 				(size 19.05 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12255,7 +12302,7 @@
 			)
 			(table_cell "No"
 				(exclude_from_sim no)
-				(at 193.04 500.38 0)
+				(at 194.31 488.95 0)
 				(size 16.51 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12272,8 +12319,8 @@
 			)
 			(table_cell "Plausible"
 				(exclude_from_sim no)
-				(at 209.55 500.38 0)
-				(size 19.05 5.08)
+				(at 210.82 488.95 0)
+				(size 21.59 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -12289,7 +12336,7 @@
 			)
 			(table_cell "GREEN ON"
 				(exclude_from_sim no)
-				(at 228.6 500.38 0)
+				(at 232.41 488.95 0)
 				(size 24.13 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12306,7 +12353,92 @@
 			)
 			(table_cell "Open"
 				(exclude_from_sim no)
-				(at 157.48 505.46 0)
+				(at 158.75 494.03 0)
+				(size 16.51 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "c352b6ac-d82a-4239-bc7d-429cfa1ae430")
+			)
+			(table_cell "Open"
+				(exclude_from_sim no)
+				(at 175.26 494.03 0)
+				(size 19.05 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "5d2f3faa-f559-4336-bcd2-10f88dce5897")
+			)
+			(table_cell "Yes"
+				(exclude_from_sim no)
+				(at 194.31 494.03 0)
+				(size 16.51 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "7d506f1a-d330-4249-b32e-642c0647fa78")
+			)
+			(table_cell "Implausible\n(Voltage sense error)"
+				(exclude_from_sim no)
+				(at 210.82 494.03 0)
+				(size 21.59 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "b044eb3b-cd4a-4924-9084-4476881d11a6")
+			)
+			(table_cell "Latch off"
+				(exclude_from_sim no)
+				(at 232.41 494.03 0)
+				(size 24.13 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "fcbfc870-b97d-43ea-8823-490dce7a7ce2")
+			)
+			(table_cell "Open"
+				(exclude_from_sim no)
+				(at 158.75 501.65 0)
 				(size 16.51 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12323,7 +12455,7 @@
 			)
 			(table_cell "Closed"
 				(exclude_from_sim no)
-				(at 173.99 505.46 0)
+				(at 175.26 501.65 0)
 				(size 19.05 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12340,7 +12472,7 @@
 			)
 			(table_cell "Doesn't matter"
 				(exclude_from_sim no)
-				(at 193.04 505.46 0)
+				(at 194.31 501.65 0)
 				(size 16.51 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12357,8 +12489,8 @@
 			)
 			(table_cell "Implausible\n(Relay welded)"
 				(exclude_from_sim no)
-				(at 209.55 505.46 0)
-				(size 19.05 5.08)
+				(at 210.82 501.65 0)
+				(size 21.59 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -12374,7 +12506,7 @@
 			)
 			(table_cell "Latch off"
 				(exclude_from_sim no)
-				(at 228.6 505.46 0)
+				(at 232.41 501.65 0)
 				(size 24.13 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12391,7 +12523,92 @@
 			)
 			(table_cell "Closed"
 				(exclude_from_sim no)
-				(at 157.48 510.54 0)
+				(at 158.75 506.73 0)
+				(size 16.51 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "602724e8-3705-429f-bf6d-a55fb5b9492f")
+			)
+			(table_cell "Closed"
+				(exclude_from_sim no)
+				(at 175.26 506.73 0)
+				(size 19.05 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "8cdbab10-6ab4-4aec-8bba-82167d37a7d0")
+			)
+			(table_cell "No"
+				(exclude_from_sim no)
+				(at 194.31 506.73 0)
+				(size 16.51 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "22526022-810c-418d-9e14-44d2db134adb")
+			)
+			(table_cell "Implausible\n(Voltage sense error)"
+				(exclude_from_sim no)
+				(at 210.82 506.73 0)
+				(size 21.59 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "ebccd87f-9dd2-4765-82b8-6c23da5832c9")
+			)
+			(table_cell "Latch off"
+				(exclude_from_sim no)
+				(at 232.41 506.73 0)
+				(size 24.13 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "7b2932ad-6010-4f6c-ad44-acd882519e59")
+			)
+			(table_cell "Closed"
+				(exclude_from_sim no)
+				(at 158.75 514.35 0)
 				(size 16.51 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12408,7 +12625,7 @@
 			)
 			(table_cell "Closed"
 				(exclude_from_sim no)
-				(at 173.99 510.54 0)
+				(at 175.26 514.35 0)
 				(size 19.05 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12425,7 +12642,7 @@
 			)
 			(table_cell "Yes"
 				(exclude_from_sim no)
-				(at 193.04 510.54 0)
+				(at 194.31 514.35 0)
 				(size 16.51 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12442,8 +12659,8 @@
 			)
 			(table_cell "Plausible"
 				(exclude_from_sim no)
-				(at 209.55 510.54 0)
-				(size 19.05 3.81)
+				(at 210.82 514.35 0)
+				(size 21.59 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -12459,7 +12676,7 @@
 			)
 			(table_cell "Off"
 				(exclude_from_sim no)
-				(at 228.6 510.54 0)
+				(at 232.41 514.35 0)
 				(size 24.13 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12476,7 +12693,7 @@
 			)
 			(table_cell "Closed"
 				(exclude_from_sim no)
-				(at 157.48 514.35 0)
+				(at 158.75 518.16 0)
 				(size 16.51 7.62)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12493,7 +12710,7 @@
 			)
 			(table_cell "Open"
 				(exclude_from_sim no)
-				(at 173.99 514.35 0)
+				(at 175.26 518.16 0)
 				(size 19.05 7.62)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12510,7 +12727,7 @@
 			)
 			(table_cell "Doesn't matter"
 				(exclude_from_sim no)
-				(at 193.04 514.35 0)
+				(at 194.31 518.16 0)
 				(size 16.51 7.62)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12527,8 +12744,8 @@
 			)
 			(table_cell "Implausible\n(Broken aux wire\nor failed relay)"
 				(exclude_from_sim no)
-				(at 209.55 514.35 0)
-				(size 19.05 7.62)
+				(at 210.82 518.16 0)
+				(size 21.59 7.62)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -12544,7 +12761,7 @@
 			)
 			(table_cell "Latch off"
 				(exclude_from_sim no)
-				(at 228.6 514.35 0)
+				(at 232.41 518.16 0)
 				(size 24.13 7.62)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -12592,7 +12809,7 @@
 		(uuid "0fb1120c-a3f5-433f-b77d-a804c92e89b5")
 	)
 	(label "~{HV_DETECTED}"
-		(at 44.45 152.4 0)
+		(at 53.975 152.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20818,6 +21035,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 50.165 156.21 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "825b3bcb-1d19-4748-99fd-89af9db2dd67")
+		(property "Reference" "R1"
+			(at 54.356 155.956 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 55.372 157.734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 50.165 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.165 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.165 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98715a5f-ba9a-4734-8c91-b382bfad9988")
+		)
+		(pin "2"
+			(uuid "65ac96ea-2286-41cf-bbcc-b712bdc1cff6")
+		)
+		(instances
+			(project "ESF-schematics"
+				(path "/0a974815-ef64-4073-a8fa-af9729a41b28/1d2283b0-72a8-4815-9b4a-968e7b878b41"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 88.9 185.42 0)
 		(unit 1)
@@ -23439,6 +23726,71 @@
 			(project "ESF-schematics"
 				(path "/0a974815-ef64-4073-a8fa-af9729a41b28/1d2283b0-72a8-4815-9b4a-968e7b878b41"
 					(reference "R188")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 50.165 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b1f9ab15-644e-49bd-a8c7-8e16a91303c9")
+		(property "Reference" "#PWR079"
+			(at 50.165 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.165 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.165 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.165 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.165 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9380f64c-f397-4c17-a64e-d8e94cd88062")
+		)
+		(instances
+			(project "ESF-schematics"
+				(path "/0a974815-ef64-4073-a8fa-af9729a41b28/1d2283b0-72a8-4815-9b4a-968e7b878b41"
+					(reference "#PWR079")
 					(unit 1)
 				)
 			)
