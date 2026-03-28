@@ -1292,6 +1292,105 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_SparkFun-PowerSymbol:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(do_not_autoplace)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "SparkFun global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "SamacSys:S1941-42R"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1688,11 +1787,67 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Fuse Debug LEDs"
+		(exclude_from_sim no)
+		(at 98.044 118.618 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "08d9c138-e339-420f-910b-6abe641278ea")
+	)
+	(text "LVMP GND"
+		(exclude_from_sim no)
+		(at 261.874 105.918 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0ce64c00-607c-464f-b311-f7994aba09fe")
+	)
+	(text "LVMS"
+		(exclude_from_sim no)
+		(at 235.966 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0e80ae32-2926-4b04-b38d-eb76e75a593b")
+	)
+	(text "Reset Button"
+		(exclude_from_sim no)
+		(at 214.122 20.066 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b87eec08-a66d-4c1f-ae60-cf4d0aca225e")
+	)
+	(text "LVMP V+"
+		(exclude_from_sim no)
+		(at 234.188 116.332 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e419d6b3-bcd5-450b-bda7-5e4ce8ac00a1")
+	)
 	(junction
 		(at 53.975 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "02552400-4d02-4dae-bf00-ced73e36d5ab")
+	)
+	(junction
+		(at 139.065 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0aa63c12-af0a-424c-803d-90da09ae8a2f")
 	)
 	(junction
 		(at 196.85 88.9)
@@ -2346,6 +2501,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.065 114.3) (xy 172.085 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71f454b2-3b1b-4d10-bc7e-cb5ecddbc0e1")
+	)
+	(wire
+		(pts
 			(xy 53.975 77.47) (xy 53.975 83.82)
 		)
 		(stroke
@@ -2586,7 +2751,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.285 114.3) (xy 172.085 114.3)
+			(xy 121.285 114.3) (xy 139.065 114.3)
 		)
 		(stroke
 			(width 0)
@@ -5610,6 +5775,73 @@
 			(project "lvms-fuse"
 				(path "/03f20e21-53eb-492c-8578-520f02fa4449"
 					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 139.065 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e923834b-b660-4da3-a32d-25ce4bea94bf")
+		(property "Reference" "#PWR02"
+			(at 139.065 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.065 118.11 0)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.065 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.065 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 139.065 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cfe2c286-0a33-4223-8a73-dc20955d7fb3")
+		)
+		(instances
+			(project ""
+				(path "/03f20e21-53eb-492c-8578-520f02fa4449"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
