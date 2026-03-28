@@ -1786,10 +1786,111 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Fuse Debug LEDs"
 		(exclude_from_sim no)
-		(at 98.044 118.618 0)
+		(at 97.79 118.745 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1799,7 +1900,7 @@
 	)
 	(text "LVMP GND"
 		(exclude_from_sim no)
-		(at 261.874 105.918 0)
+		(at 261.62 106.045 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1809,7 +1910,7 @@
 	)
 	(text "LVMS"
 		(exclude_from_sim no)
-		(at 235.966 59.69 0)
+		(at 236.22 59.69 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1819,7 +1920,7 @@
 	)
 	(text "Reset Button"
 		(exclude_from_sim no)
-		(at 214.122 20.066 0)
+		(at 213.995 20.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1829,7 +1930,7 @@
 	)
 	(text "LVMP V+"
 		(exclude_from_sim no)
-		(at 234.188 116.332 0)
+		(at 234.315 116.205 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1848,6 +1949,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0aa63c12-af0a-424c-803d-90da09ae8a2f")
+	)
+	(junction
+		(at 130.175 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "145abc8b-8ea2-4c50-a53b-e686de00dede")
 	)
 	(junction
 		(at 196.85 88.9)
@@ -1896,6 +2003,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "53a9cb34-4c67-4f18-991c-cb04d1d835e1")
+	)
+	(junction
+		(at 24.13 67.945)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55375b8b-c3d0-4f8a-bd35-3324b615d9bc")
 	)
 	(junction
 		(at 73.66 83.82)
@@ -2021,7 +2134,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.225 67.945) (xy 33.02 67.945)
+			(xy 22.225 67.945) (xy 24.13 67.945)
 		)
 		(stroke
 			(width 0)
@@ -2471,6 +2584,16 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 67.945) (xy 33.02 67.945)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65a0a226-d6cb-4ec1-aad8-55eae1f22b70")
+	)
+	(wire
+		(pts
 			(xy 137.16 71.12) (xy 146.05 71.12)
 		)
 		(stroke
@@ -2751,7 +2874,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.285 114.3) (xy 139.065 114.3)
+			(xy 121.285 114.3) (xy 130.175 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2981,6 +3104,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.175 114.3) (xy 139.065 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8fdebc9-ff5c-46b4-bee0-b96b2137a482")
+	)
+	(wire
+		(pts
 			(xy 137.16 52.07) (xy 203.2 52.07)
 		)
 		(stroke
@@ -3040,7 +3173,7 @@
 		(uuid "34b7bd90-9ace-485c-845b-b0259ea932b2")
 	)
 	(label "SPARE"
-		(at 178.398 101.6 0)
+		(at 178.435 101.6 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5560,6 +5693,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 24.13 67.945 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdb83782-b1be-4e1e-a0cd-7e17d22045d3")
+		(property "Reference" "#FLG01"
+			(at 24.13 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 24.13 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 24.13 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 24.13 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 24.13 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3c49e266-82aa-48ad-92e1-58244b9f87ac")
+		)
+		(instances
+			(project ""
+				(path "/03f20e21-53eb-492c-8578-520f02fa4449"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
 		(at 208.28 26.67 0)
 		(unit 1)
@@ -5630,6 +5829,72 @@
 			(project ""
 				(path "/03f20e21-53eb-492c-8578-520f02fa4449"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 130.175 114.3 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de9471c8-4f16-4106-b5f8-9c0dd82dace7")
+		(property "Reference" "#FLG02"
+			(at 130.175 116.205 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 130.175 118.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 130.175 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.175 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 130.175 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5da0f267-b20a-4506-8492-2f8e7737cd82")
+		)
+		(instances
+			(project "right-sidepanel"
+				(path "/03f20e21-53eb-492c-8578-520f02fa4449"
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
