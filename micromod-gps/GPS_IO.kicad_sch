@@ -4305,7 +4305,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 183.515) (xy 117.475 183.515)
+			(xy 116.205 183.515) (xy 117.475 183.515)
 		)
 		(stroke
 			(width 0)
@@ -4803,25 +4803,45 @@
 		)
 		(uuid "ff9c1655-7c10-4c02-bf68-2f5d7d87f742")
 	)
-	(label "GPS_EXTINT"
-		(at 81.28 55.88 0)
+	(label "RS232_OUT"
+		(at 237.49 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "108d5c7b-6c96-4958-9b3e-e3e8d6ac78f8")
+		(uuid "1bf8fa3d-803f-404f-b274-d9ad7f0c2879")
 	)
-	(label "GPS_PPS"
-		(at 116.84 45.085 180)
+	(label "RS232_IN"
+		(at 237.49 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1d401d55-de3f-47a4-896c-3ad80175d4fc")
+	)
+	(label "CAN-"
+		(at 252.095 66.675 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "177ffb89-aef7-4147-b788-a49c13312b8e")
+		(uuid "2b87282c-aa58-48f0-ba69-c344d0933066")
+	)
+	(label "CAN-"
+		(at 131.445 186.055 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "357b8cd2-4854-45e7-af68-e050b3583855")
 	)
 	(label "LAP_BUTTON"
 		(at 29.21 94.615 180)
@@ -4832,6 +4852,16 @@
 			(justify right bottom)
 		)
 		(uuid "37f855ff-a367-4536-8673-2ce36b25fbb7")
+	)
+	(label "CAN+"
+		(at 252.095 33.655 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "39c97afb-7ec0-4ab6-a5fc-5aee0123446f")
 	)
 	(label "LAP_BUTTON"
 		(at 116.205 186.055 180)
@@ -4864,7 +4894,7 @@
 		(uuid "5e3267a8-e4bd-49bd-aa99-2956d389730d")
 	)
 	(label "Marker_Button"
-		(at 102.87 183.515 180)
+		(at 116.205 183.515 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4873,15 +4903,15 @@
 		)
 		(uuid "75e43b7d-90a8-41ec-9567-09631208cedf")
 	)
-	(label "LAP_BUTTON_GPIO"
-		(at 81.915 112.395 0)
+	(label "RS232_IN"
+		(at 131.445 180.975 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "785f1f67-dcd2-49f8-ba39-2c985f697f3b")
+		(uuid "91bba5ac-0d5c-4703-8bc4-772770650789")
 	)
 	(label "PPS_OUT1"
 		(at 159.385 47.625 0)
@@ -4892,6 +4922,26 @@
 			(justify left bottom)
 		)
 		(uuid "a56432fa-47eb-4f49-bcdf-fc5e38a91997")
+	)
+	(label "CAN+"
+		(at 131.445 183.515 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ab233250-49af-47e5-b707-ed66b118dd4a")
+	)
+	(label "RS232_OUT"
+		(at 116.205 180.975 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ba75517b-8f3b-4dfd-ab7f-3b774c7fa123")
 	)
 	(label "PPS_OUT2"
 		(at 116.205 175.895 180)
@@ -4933,265 +4983,104 @@
 		)
 		(uuid "e8472c8c-90dc-454c-85a8-cb721cd4af71")
 	)
-	(label "GPS_RX"
-		(at 196.85 146.05 180)
+	(hierarchical_label "LAP_BUTTON_GPIO"
+		(shape output)
+		(at 81.915 112.395 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left)
 		)
-		(uuid "f0f97ec6-8cda-4866-ba3a-db26be9fb04b")
+		(uuid "2a5ff14f-f3f9-4229-8222-8e52fdc8c763")
 	)
-	(label "GPS_PPS"
-		(at 116.84 87.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f755f07a-7e7c-45b8-bead-3472e0f53782")
-	)
-	(label "GPS_TX"
+	(hierarchical_label "GPS_TX"
+		(shape input)
 		(at 196.85 135.89 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify right)
 		)
-		(uuid "fb4b0690-3cec-4ab5-b6ae-7db9a958556f")
+		(uuid "47869ab5-2348-4d8b-8799-f7ba272b69d0")
 	)
-	(label "GPS_PPS"
+	(hierarchical_label "GPS_PPS"
+		(shape input)
+		(at 116.84 45.085 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "49701e4e-003b-46fb-9025-bd11c68bd00b")
+	)
+	(hierarchical_label "GPS_PPS"
+		(shape input)
 		(at 116.205 128.27 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify right)
 		)
-		(uuid "fc454f53-3388-4a0d-8a2c-dd3fca3cf881")
+		(uuid "51101e11-392c-4330-85da-e800b4e23426")
 	)
-	(global_label "CAN_RX"
+	(hierarchical_label "GPS_EXTINT"
+		(shape output)
+		(at 81.28 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "51b24076-cfa4-443e-8b34-5238b08c8e5f")
+	)
+	(hierarchical_label "GPS_RX"
 		(shape input)
-		(at 186.055 47.625 180)
-		(fields_autoplaced yes)
+		(at 196.85 146.05 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "1c442ec1-d9ff-4242-92f1-fa1f5f3a9df4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 175.9336 47.625 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
+		(uuid "5cb60b77-aec2-4ea0-9741-8fa9c62fc7fc")
 	)
-	(global_label "CAN+"
+	(hierarchical_label "GPS_PPS"
 		(shape input)
-		(at 252.095 33.655 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1e209841-6ded-4436-bc6d-a5932315f161")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 260.3417 33.655 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "RS232_IN"
-		(shape input)
-		(at 131.445 180.975 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6324c8f8-f436-496e-9569-a7c0a02a508b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 143.4411 180.975 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "RS232_OUT"
-		(shape input)
-		(at 116.205 180.975 180)
-		(fields_autoplaced yes)
+		(at 116.84 87.63 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "7abd815a-9383-4fd1-a9d1-7882e33547f5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.5156 180.975 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
+		(uuid "72843aba-6da5-48d8-a7ce-be64a1213274")
 	)
-	(global_label "RS232_IN"
-		(shape input)
-		(at 237.49 146.05 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "917c6c0f-a29f-439e-a38f-36d9cebbd91e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 249.4861 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CAN-"
-		(shape input)
-		(at 252.095 66.675 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a54101b8-c938-4e47-80d7-6d3f7e9eb01b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 260.3417 66.675 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CAN+"
-		(shape input)
-		(at 131.445 183.515 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b3b0db18-76e8-4546-9f9c-48e6704490e6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.6917 183.515 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CAN-"
-		(shape input)
-		(at 131.445 186.055 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "bc9c78bf-ccf1-487c-8ce9-802d8760d8b1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.6917 186.055 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CAN_TX"
+	(hierarchical_label "CAN_TX"
 		(shape input)
 		(at 186.055 45.085 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "cf92d07b-cfcc-4697-9171-432e60209bb6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 176.236 45.085 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
+		(uuid "781a9bfd-fc50-480e-9cfa-87919ddfc380")
 	)
-	(global_label "RS232_OUT"
+	(hierarchical_label "CAN_RX"
 		(shape input)
-		(at 237.49 135.89 0)
-		(fields_autoplaced yes)
+		(at 186.055 47.625 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "ec1c9c88-cfc4-4808-9b08-bd8d33f17c24")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 251.1794 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
+		(uuid "8b684d8f-048e-43c8-84b1-6ea08ce6d28b")
 	)
 	(symbol
 		(lib_name "+12V_1")
