@@ -4498,41 +4498,34 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:TLV75533PDBV"
+		(symbol "Power_Protection:TVS1800DRV"
 			(pin_names
-				(offset 0.254)
+				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U10"
-				(at 0 9.525 0)
+			(property "Reference" "U"
+				(at 2.54 1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "TLV75533PDBV"
-				(at 0 6.985 0)
+			(property "Value" "TVS1800DRV"
+				(at 2.54 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-				(at 0 8.255 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv755p.pdf"
-				(at 0 1.27 0)
+			(property "Footprint" "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+				(at 5.08 -8.89 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -4540,7 +4533,16 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "500mA Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tvs1800.pdf"
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Flat-Clamp Surge Protection Device. 18Vrwm, WSON-6"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4549,7 +4551,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "LDO Regulator Fixed Positive"
+			(property "ki_keywords" "EMI, ESD, TVS protection transient"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4558,7 +4560,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?23*"
+			(property "ki_fp_filters" "WSON*1EP*2x2mm*P0.65mm*EP1x1.6mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4567,10 +4569,75 @@
 					(hide yes)
 				)
 			)
-			(symbol "TLV75533PDBV_0_1"
+			(symbol "TVS1800DRV_0_0"
 				(rectangle
-					(start -5.08 4.445)
-					(end 5.08 -5.08)
+					(start -11.43 2.54)
+					(end -5.08 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.255 2.54) (xy -8.255 3.81) (xy 0 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.255 -2.54) (xy -8.255 -3.81) (xy 0 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy -1.778 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "Det &"
+					(at -8.255 0.635 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "Drv"
+					(at -8.255 -1.27 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "TVS1800DRV_0_1"
+				(rectangle
+					(start -12.065 5.08)
+					(end 2.54 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -4579,10 +4646,117 @@
 						(type background)
 					)
 				)
+				(polyline
+					(pts
+						(xy -2.286 1.397) (xy -2.286 -1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 0) (xy -5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 1.778) (xy -1.778 -1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -0.889 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.127 -1.27) (xy -1.143 -1.651) (xy -1.143 -0.889) (xy -0.127 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 5.08) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -1.27) (xy -1.778 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 			)
-			(symbol "TLV75533PDBV_1_1"
-				(pin power_in line
-					(at -7.62 2.54 0)
+			(symbol "TVS1800DRV_1_1"
+				(pin passive line
+					(at 0 7.62 270)
 					(length 2.54)
 					(name "IN"
 						(effects
@@ -4591,7 +4765,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4599,17 +4773,37 @@
 						)
 					)
 				)
-				(pin input line
-					(at -7.62 0 0)
+				(pin passive line
+					(at 0 7.62 270)
 					(length 2.54)
-					(name "EN"
+					(hide yes)
+					(name "IN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 7.62 270)
+					(length 2.54)
+					(hide yes)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4627,6 +4821,25 @@
 							)
 						)
 					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "2"
 						(effects
 							(font
@@ -4636,35 +4849,17 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -7.62 90)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 5.08 0 180)
+					(at 0 -7.62 90)
 					(length 2.54)
 					(hide yes)
-					(name "NC"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4672,17 +4867,18 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 7.62 2.54 180)
+				(pin passive line
+					(at 0 -7.62 90)
 					(length 2.54)
-					(name "OUT"
+					(hide yes)
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6300,6 +6496,188 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "SUFST:TLV75533PDYD"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 4.826 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TLV75533PDYD"
+				(at 0 3.048 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "SUFST:TLV75533PDYD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv755p.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fixed voltage 3.3V, 500mA LDO, SOT-23-5-1EP"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Drawn By" "Adam Eastman"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TLV75533PDYD_0_1"
+				(rectangle
+					(start -5.08 1.905)
+					(end 5.08 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TLV75533PDYD_1_1"
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -10.16 90)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Sensor_Temperature:MCP9800Ax-xOT"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -7646,7 +8024,7 @@
 	)
 	(text "Maybe choose different zener?"
 		(exclude_from_sim no)
-		(at 55.88 58.42 0)
+		(at 66.548 54.864 0)
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -7656,16 +8034,6 @@
 			)
 		)
 		(uuid "b0819494-adb5-4fc4-a86c-5e3c4cde4589")
-	)
-	(text "SOT-23"
-		(exclude_from_sim no)
-		(at 38.735 40.005 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "b9df93e2-5bdd-4e02-833e-9e270d2a1469")
 	)
 	(text "GLV - 5V Buck Converter"
 		(exclude_from_sim no)
@@ -7831,6 +8199,12 @@
 		(uuid "302a19fd-31c3-413d-8b08-48e7c889e2d2")
 	)
 	(junction
+		(at 60.325 136.525)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3bd88f9a-eebe-450c-8780-78aa15785a09")
+	)
+	(junction
 		(at 85.725 29.845)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7981,16 +8355,16 @@
 		(uuid "a60be64a-85d2-46e8-8583-389c172f1a73")
 	)
 	(junction
+		(at 34.29 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a854e99f-4a4a-436f-924f-59ba505c4752")
+	)
+	(junction
 		(at 187.325 29.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ab01de5b-a311-4676-abf3-38135b947a9e")
-	)
-	(junction
-		(at 60.325 136.525)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "af26be0e-2347-411c-bb7b-edf65ca507b1")
 	)
 	(junction
 		(at 189.865 29.21)
@@ -8059,6 +8433,12 @@
 		(uuid "ca3b7b8a-2a2f-4ca5-acee-11a252abc7c6")
 	)
 	(junction
+		(at 43.18 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ce26d819-c06d-46c0-b970-6ab740787c84")
+	)
+	(junction
 		(at 143.51 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8101,16 +8481,16 @@
 		(uuid "dc86f440-1403-4b74-827c-12ca4bf5e2ad")
 	)
 	(junction
+		(at 34.29 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ea3fea18-6bbd-4a66-986f-f00ad9a02359")
+	)
+	(junction
 		(at 238.76 232.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eb31ae40-c319-476f-ab46-ed883680a55e")
-	)
-	(junction
-		(at 37.465 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f05eeddc-1b0d-4643-9bab-5bd7da354d88")
 	)
 	(no_connect
 		(at 343.535 47.625)
@@ -8356,16 +8736,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.785 136.525) (xy 60.325 136.525)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07443fdd-100f-413c-97b3-5084e8ef49ed")
-	)
-	(wire
-		(pts
 			(xy 46.99 172.72) (xy 46.99 175.26)
 		)
 		(stroke
@@ -8403,6 +8773,16 @@
 			(type default)
 		)
 		(uuid "0d6d7590-7d50-4e7f-99db-db7e74463d50")
+	)
+	(wire
+		(pts
+			(xy 34.29 55.245) (xy 34.29 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0da2f1b6-6709-4ef2-a0d5-3e5229125dee")
 	)
 	(wire
 		(pts
@@ -8543,6 +8923,16 @@
 			(type default)
 		)
 		(uuid "206b7ea0-92db-469c-9114-4ca937dec9f7")
+	)
+	(wire
+		(pts
+			(xy 43.18 54.61) (xy 47.625 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20f4345e-81fa-438e-8455-f4b2c7d9446e")
 	)
 	(wire
 		(pts
@@ -8946,6 +9336,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 36.83) (xy 41.275 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45f6d734-7462-4c01-b7ac-4f8817c9cc31")
+	)
+	(wire
+		(pts
 			(xy 135.255 77.47) (xy 135.255 81.915)
 		)
 		(stroke
@@ -9006,6 +9406,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 54.61) (xy 34.29 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a71ecf5-50cd-4650-a685-46d9c85d2710")
+	)
+	(wire
+		(pts
 			(xy 165.735 76.2) (xy 172.085 76.2)
 		)
 		(stroke
@@ -9026,6 +9436,16 @@
 	)
 	(wire
 		(pts
+			(xy 47.625 54.61) (xy 47.625 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bc7b398-b713-408d-a5d1-994a68be4c5b")
+	)
+	(wire
+		(pts
 			(xy 85.725 38.1) (xy 85.725 41.275)
 		)
 		(stroke
@@ -9036,7 +9456,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.325 136.525) (xy 70.485 136.525)
+			(xy 57.785 136.525) (xy 60.325 136.525)
 		)
 		(stroke
 			(width 0)
@@ -9133,6 +9553,16 @@
 			(type default)
 		)
 		(uuid "564a77d9-3e12-41b0-94ed-9e9992a24398")
+	)
+	(wire
+		(pts
+			(xy 43.18 55.245) (xy 43.18 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56d890ca-dec5-40d8-b382-92c866db5b30")
 	)
 	(wire
 		(pts
@@ -9233,16 +9663,6 @@
 			(type default)
 		)
 		(uuid "60a7cc9a-d768-4b67-b069-af6d6cb50103")
-	)
-	(wire
-		(pts
-			(xy 37.465 53.34) (xy 47.625 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "619cb716-05ea-4d36-90d1-d71e2ea9312b")
 	)
 	(wire
 		(pts
@@ -9606,6 +10026,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.325 136.525) (xy 70.485 136.525)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "843bc0d5-7e07-4ddc-809a-5cb4277b23b9")
+	)
+	(wire
+		(pts
 			(xy 48.26 128.905) (xy 48.26 126.365)
 		)
 		(stroke
@@ -9876,6 +10306,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 36.83) (xy 34.29 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f18aea6-9160-44b1-ad67-a0b9f6a9996d")
+	)
+	(wire
+		(pts
 			(xy 375.285 85.725) (xy 343.535 85.725)
 		)
 		(stroke
@@ -9903,16 +10343,6 @@
 			(type default)
 		)
 		(uuid "a04b39cd-e8c9-47c8-b2ef-e1410795d930")
-	)
-	(wire
-		(pts
-			(xy 34.925 53.34) (xy 37.465 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a10290b9-e7c9-47dc-bf34-90b48415ce7c")
 	)
 	(wire
 		(pts
@@ -10286,7 +10716,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 36.83) (xy 41.275 36.83)
+			(xy 31.75 36.83) (xy 34.29 36.83)
 		)
 		(stroke
 			(width 0)
@@ -10483,6 +10913,16 @@
 			(type default)
 		)
 		(uuid "d153ca7c-ea14-482b-8948-b569831c5dfe")
+	)
+	(wire
+		(pts
+			(xy 34.29 54.61) (xy 43.18 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1a548d4-b60e-418b-be36-428abfa4a988")
 	)
 	(wire
 		(pts
@@ -10776,7 +11216,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.035 36.83) (xy 30.48 36.83)
+			(xy 22.86 36.83) (xy 24.13 36.83)
 		)
 		(stroke
 			(width 0)
@@ -11956,7 +12396,7 @@
 	)
 	(symbol
 		(lib_id "Device:Fuse")
-		(at 34.29 36.83 90)
+		(at 27.94 36.83 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11965,7 +12405,7 @@
 		(fields_autoplaced yes)
 		(uuid "01afb52e-9d6e-4797-b91d-1a23fc907958")
 		(property "Reference" "F1"
-			(at 34.29 31.115 90)
+			(at 27.94 31.115 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11973,7 +12413,7 @@
 			)
 		)
 		(property "Value" "Fuse"
-			(at 34.29 33.655 90)
+			(at 27.94 33.655 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11981,7 +12421,7 @@
 			)
 		)
 		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 34.29 38.608 90)
+			(at 27.94 38.608 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11990,7 +12430,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 34.29 36.83 0)
+			(at 27.94 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11999,7 +12439,7 @@
 			)
 		)
 		(property "Description" "Fuse"
-			(at 34.29 36.83 0)
+			(at 27.94 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12747,7 +13187,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 26.035 36.83 0)
+		(at 22.86 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12755,7 +13195,7 @@
 		(dnp no)
 		(uuid "155206a3-5c2d-432c-bce5-999d95786f2c")
 		(property "Reference" "#PWR012"
-			(at 26.035 40.64 0)
+			(at 22.86 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12764,7 +13204,7 @@
 			)
 		)
 		(property "Value" "+GLV"
-			(at 23.495 33.02 0)
+			(at 20.32 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12772,7 +13212,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 26.035 36.83 0)
+			(at 22.86 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12781,7 +13221,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 26.035 36.83 0)
+			(at 22.86 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12790,7 +13230,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 26.035 36.83 0)
+			(at 22.86 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13510,96 +13950,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:TLV75533PDBV")
-		(at 57.785 128.905 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3069b010-9030-4ba2-99d6-9e8533722c71")
-		(property "Reference" "U10"
-			(at 57.785 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TLV75533PDBV"
-			(at 57.785 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 57.785 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv755p.pdf"
-			(at 57.785 127.635 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "500mA Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"
-			(at 57.785 128.905 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "TLV75533PDBV"
-			(at 57.785 128.905 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "500bb2b9-ce09-4de0-8bbc-a97d50c088d9")
-		)
-		(pin "4"
-			(uuid "50721691-9c08-437f-b743-55feb817cf11")
-		)
-		(pin "5"
-			(uuid "09ddce0e-c21f-49d3-a2a3-e1fdb4a06187")
-		)
-		(pin "3"
-			(uuid "7198ad5a-0bdb-4362-8582-0ef9f7338d24")
-		)
-		(pin "2"
-			(uuid "9e4c1b21-6154-4f77-90c3-cff5013d2cb9")
-		)
-		(pin "4"
-			(uuid "bbc5cba3-6e36-4c9c-85e6-5554aefe464c")
-		)
-		(instances
-			(project ""
-				(path "/de1c89a8-60ad-4219-8e58-e4b5538835d9"
-					(reference "U10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 29.845 90.805 0)
 		(unit 1)
@@ -13805,6 +14155,90 @@
 			(project "micromod-gps"
 				(path "/de1c89a8-60ad-4219-8e58-e4b5538835d9"
 					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Power_Protection:TVS1800DRV")
+		(at 34.29 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "38fc2ca2-a1f3-43ef-9feb-81a74432fd6d")
+		(property "Reference" "U13"
+			(at 19.304 52.832 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TVS1800DRV"
+			(at 19.304 55.372 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+			(at 39.37 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tvs1800.pdf"
+			(at 31.75 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Flat-Clamp Surge Protection Device. 18Vrwm, WSON-6"
+			(at 34.29 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "daf07988-486e-423c-b73e-3d2f3f933a7a")
+		)
+		(pin "4"
+			(uuid "2ba797e9-a71d-4ccd-880e-48986f8eb2b5")
+		)
+		(pin "1"
+			(uuid "92465887-a9d6-4dbd-aa45-3f3852c91ad9")
+		)
+		(pin "6"
+			(uuid "cf3e9a5f-6e97-49a7-b6ec-e75ef713bd77")
+		)
+		(pin "7"
+			(uuid "58bd483c-2897-4f5c-bb47-12adb57ccf9b")
+		)
+		(pin "3"
+			(uuid "ce67f997-4523-4b12-b610-e34b0b6d9169")
+		)
+		(pin "2"
+			(uuid "d8835d4c-86e4-4a3a-b274-c049770a50f4")
+		)
+		(instances
+			(project ""
+				(path "/de1c89a8-60ad-4219-8e58-e4b5538835d9"
+					(reference "U13")
 					(unit 1)
 				)
 			)
@@ -15727,6 +16161,95 @@
 		)
 	)
 	(symbol
+		(lib_id "SUFST:TLV75533PDYD")
+		(at 57.785 126.365 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6c672ae4-2bfe-4733-b1f7-fd238cc63e62")
+		(property "Reference" "U10"
+			(at 57.785 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLV75533PDYD"
+			(at 57.785 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SUFST:TLV75533PDYD"
+			(at 57.785 126.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv755p.pdf"
+			(at 57.785 126.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fixed voltage 3.3V, 500mA LDO, SOT-23-5-1EP"
+			(at 57.785 126.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Drawn By" "Adam Eastman"
+			(at 57.785 126.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38aeb3c6-e34a-448e-b2a4-f2181469f8fe")
+		)
+		(pin "3"
+			(uuid "89feb0ee-3151-40db-a0cd-1e9e205e5e49")
+		)
+		(pin "2"
+			(uuid "95578284-51c7-4f4f-a5fe-6f74ec17742f")
+		)
+		(pin "4"
+			(uuid "01222030-b0a2-4195-bb02-7cc569ad81cf")
+		)
+		(pin "5"
+			(uuid "f8109099-ec40-4d68-b866-e57d8e13f766")
+		)
+		(pin "6"
+			(uuid "3774087b-dff6-48d9-ba4d-494900af2cdc")
+		)
+		(instances
+			(project ""
+				(path "/de1c89a8-60ad-4219-8e58-e4b5538835d9"
+					(reference "U10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 170.18 46.99 0)
 		(unit 1)
@@ -15926,7 +16449,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 37.465 53.34 0)
+		(at 43.18 55.245 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15934,7 +16457,7 @@
 		(dnp no)
 		(uuid "6f7c0bf3-59ea-438b-80f9-c87c712473e7")
 		(property "Reference" "#FLG03"
-			(at 37.465 51.435 0)
+			(at 43.18 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15943,7 +16466,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 37.465 48.895 0)
+			(at 43.18 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15951,7 +16474,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 37.465 53.34 0)
+			(at 43.18 55.245 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15960,7 +16483,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 37.465 53.34 0)
+			(at 43.18 55.245 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15969,7 +16492,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 37.465 53.34 0)
+			(at 43.18 55.245 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16817,7 +17340,7 @@
 	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
-		(at 34.925 53.34 0)
+		(at 34.29 55.245 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16826,7 +17349,7 @@
 		(fields_autoplaced yes)
 		(uuid "8396a09d-5da9-4e42-8405-62ecfcf6fc03")
 		(property "Reference" "#PWR019"
-			(at 34.925 59.69 0)
+			(at 34.29 61.595 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16835,7 +17358,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 34.925 58.42 0)
+			(at 34.29 60.325 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16843,7 +17366,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 34.925 53.34 0)
+			(at 34.29 55.245 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16852,7 +17375,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 34.925 53.34 0)
+			(at 34.29 55.245 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16861,7 +17384,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 34.925 53.34 0)
+			(at 34.29 55.245 0)
 			(effects
 				(font
 					(size 1.27 1.27)
