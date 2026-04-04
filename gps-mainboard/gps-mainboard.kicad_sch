@@ -11,6 +11,7 @@
 		(company "SUFST")
 		(comment 1 "STAG 12")
 		(comment 2 "Adam Eastman")
+		(comment 3 "Annabel Owen, Ray Wang")
 	)
 	(lib_symbols
 		(symbol "+12V_1"
@@ -7855,6 +7856,17 @@
 		)
 		(uuid ebcc7966-6649-4dd5-bf9d-a3943c398712)
 	)
+	(text "Temperature Sensor"
+		(exclude_from_sim no)
+		(at 19.558 253.238 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left bottom)
+		)
+		(uuid "02496cce-a16a-40fa-ab33-fd3a2461d888")
+	)
 	(text "Route through unused pins"
 		(exclude_from_sim no)
 		(at 356.743 102.108 0)
@@ -7875,6 +7887,28 @@
 			(justify left bottom)
 		)
 		(uuid "04272542-f777-4ce7-b87e-fe47945bcb43")
+	)
+	(text "LEDs & Button"
+		(exclude_from_sim no)
+		(at 129.286 221.234 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left bottom)
+		)
+		(uuid "1e7ba097-6e9f-4a36-803e-a992118b160b")
+	)
+	(text "Debug"
+		(exclude_from_sim no)
+		(at 19.812 220.98 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left bottom)
+		)
+		(uuid "1fd62fb3-14bc-4b9d-814a-b5530ad30a55")
 	)
 	(text "Pull up resistors\nprovided on GPS board"
 		(exclude_from_sim no)
@@ -7897,6 +7931,17 @@
 			(justify left bottom)
 		)
 		(uuid "3a2aa522-5e70-4096-a33f-2c16a8617930")
+	)
+	(text "IMU and Magnetometer"
+		(exclude_from_sim no)
+		(at 183.388 159.258 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left bottom)
+		)
+		(uuid "49edc621-290d-411d-9153-e6e99d6f7fe4")
 	)
 	(text "Nreset when pin \npulled low"
 		(exclude_from_sim no)
@@ -7981,6 +8026,17 @@
 		)
 		(uuid "6de19e2d-b662-4ce3-b4a1-421d8a2e05f2")
 	)
+	(text "Mounting Holes"
+		(exclude_from_sim no)
+		(at 279.654 221.488 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left bottom)
+		)
+		(uuid "6f438248-ed62-421a-9f34-3d92ef269a37")
+	)
 	(text "Normally pulled up to 5V on GPS board\nSetting pin 9 high turns off GPS board\nwith exception to EEPROM or RTC battery"
 		(exclude_from_sim no)
 		(at 230.632 29.845 0)
@@ -8000,6 +8056,17 @@
 			)
 		)
 		(uuid "72b8503b-7428-4d66-8e8d-cba6f401319a")
+	)
+	(text "Inputs and Outputs"
+		(exclude_from_sim no)
+		(at 279.908 159.004 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b2d9272-5642-428d-ac63-7c7987d3388e")
 	)
 	(text "5V - 3.3V LDO"
 		(exclude_from_sim no)
@@ -8034,6 +8101,17 @@
 			)
 		)
 		(uuid "b0819494-adb5-4fc4-a86c-5e3c4cde4589")
+	)
+	(text "Micromod Connector"
+		(exclude_from_sim no)
+		(at 280.416 22.86 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left bottom)
+		)
+		(uuid "c120ada3-f797-4c36-818a-4107185708c7")
 	)
 	(text "GLV - 5V Buck Converter"
 		(exclude_from_sim no)
@@ -8076,6 +8154,28 @@
 			)
 		)
 		(uuid "e1ae07b1-334b-4277-951b-9c4ae4ce7cba")
+	)
+	(text "UART Direction Selection"
+		(exclude_from_sim no)
+		(at 19.558 159.512 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left bottom)
+		)
+		(uuid "e548c7a2-4542-49a9-8369-a4c6e54b9428")
+	)
+	(text "STM32 MCU"
+		(exclude_from_sim no)
+		(at 109.474 21.59 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left bottom)
+		)
+		(uuid "e5f74535-1e9e-49ef-b22e-d2c185875779")
 	)
 	(text "GPS I2C Address 0x42"
 		(exclude_from_sim no)
@@ -22385,7 +22485,7 @@
 			)
 		)
 		(instances
-			(project "micromod-gps"
+			(project "gps-mainboard"
 				(path "/de1c89a8-60ad-4219-8e58-e4b5538835d9"
 					(page "3")
 				)
@@ -22497,7 +22597,7 @@
 			)
 		)
 		(instances
-			(project "micromod-gps"
+			(project "gps-mainboard"
 				(path "/de1c89a8-60ad-4219-8e58-e4b5538835d9"
 					(page "2")
 				)
