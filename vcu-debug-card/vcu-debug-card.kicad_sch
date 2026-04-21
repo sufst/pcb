@@ -6263,6 +6263,12 @@
 		(uuid "d80e7b10-fc9b-4be1-9ae2-d3a6ad338efc")
 	)
 	(junction
+		(at 67.31 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9268e0e-7318-4eca-8880-c277759db07d")
+	)
+	(junction
 		(at 80.01 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6626,7 +6632,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 110.49) (xy 73.66 110.49)
+			(xy 60.96 110.49) (xy 67.31 110.49)
 		)
 		(stroke
 			(width 0)
@@ -7313,6 +7319,16 @@
 			(type default)
 		)
 		(uuid "7576b201-1a93-45ea-a796-c9584a02bb4e")
+	)
+	(wire
+		(pts
+			(xy 67.31 110.49) (xy 73.66 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75b457fd-7135-4d7a-a71a-b12a1912de94")
 	)
 	(wire
 		(pts
@@ -8323,6 +8339,16 @@
 			(type default)
 		)
 		(uuid "edb60293-6b9b-4075-ac41-5c360b543dee")
+	)
+	(wire
+		(pts
+			(xy 67.31 110.49) (xy 67.31 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef02bfc1-be00-4515-ae09-b4960e87fe1d")
 	)
 	(wire
 		(pts
@@ -12363,6 +12389,73 @@
 			(project ""
 				(path "/23e7d71c-21ec-46b7-8c57-b564591aec8c"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 67.31 115.57 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cedbdf27-2cdf-4081-828a-6982a3cff1b5")
+		(property "Reference" "TP1"
+			(at 69.85 117.6019 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 69.85 120.1419 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 62.23 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 67.31 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "95266033-2302-42b2-b5a5-5047655d5c13")
+		)
+		(instances
+			(project ""
+				(path "/23e7d71c-21ec-46b7-8c57-b564591aec8c"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
