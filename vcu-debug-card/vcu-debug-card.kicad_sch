@@ -6727,6 +6727,10 @@
 		(at 220.98 57.15)
 		(uuid "fb1228c3-c12d-4f00-acb4-0a36bd2c2263")
 	)
+	(no_connect
+		(at 125.73 105.41)
+		(uuid "ffeb265a-1cbf-4f54-b7ee-6bd983f4521d")
+	)
 	(wire
 		(pts
 			(xy 31.75 172.72) (xy 49.53 172.72)
@@ -6866,6 +6870,16 @@
 			(type default)
 		)
 		(uuid "0acadedb-c4b7-4a8e-876b-e6fce8228b0a")
+	)
+	(wire
+		(pts
+			(xy 125.73 110.49) (xy 132.08 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dcc8629-d35e-4170-8556-00312595f5d5")
 	)
 	(wire
 		(pts
@@ -7169,6 +7183,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 107.95) (xy 113.03 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d259a53-5740-49b9-b63e-2e26a5022f27")
+	)
+	(wire
+		(pts
 			(xy 256.54 46.99) (xy 256.54 25.4)
 		)
 		(stroke
@@ -7226,6 +7250,16 @@
 			(type default)
 		)
 		(uuid "46bdaed3-0416-4c32-93ec-cce0ae389d79")
+	)
+	(wire
+		(pts
+			(xy 109.22 110.49) (xy 113.03 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4700b288-7717-420e-9f0d-4e06afeb48ab")
 	)
 	(wire
 		(pts
@@ -8039,6 +8073,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 105.41) (xy 113.03 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b530a243-4cd6-401e-9b82-66c8aa5e20af")
+	)
+	(wire
+		(pts
 			(xy 41.91 48.26) (xy 45.72 48.26)
 		)
 		(stroke
@@ -8096,6 +8140,16 @@
 			(type default)
 		)
 		(uuid "b9faab23-1332-4fb3-9214-20882b80d7f6")
+	)
+	(wire
+		(pts
+			(xy 125.73 107.95) (xy 132.08 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbe653ee-35ef-4c7d-b53a-6d769f9855bb")
 	)
 	(wire
 		(pts
@@ -9092,6 +9146,16 @@
 		)
 		(uuid "6a169b66-3ab7-4b9c-8b19-c893a1ec3bde")
 	)
+	(label "USART1_CK"
+		(at 132.08 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7326d71a-524b-41b0-9ef6-77389a75666b")
+	)
 	(label "USART1_RX"
 		(at 120.65 179.07 0)
 		(effects
@@ -9439,6 +9503,16 @@
 		(uuid "dfc88f34-df2b-4025-8026-6ff00b33b50d")
 	)
 	(label "USART1_TX"
+		(at 132.08 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e4ce8dcb-9b48-489c-a21a-674fbd4871a4")
+	)
+	(label "USART1_TX"
 		(at 31.75 142.24 0)
 		(effects
 			(font
@@ -9448,6 +9522,16 @@
 			(justify left bottom)
 		)
 		(uuid "e972bf23-90a0-4640-aedb-09f44abd0c61")
+	)
+	(label "USART1_RX"
+		(at 109.22 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ecf892ed-ca0a-4a4b-a5f8-747d0e5e0a70")
 	)
 	(label "nRST"
 		(at 212.09 119.38 0)
@@ -11662,6 +11746,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 109.22 105.41 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7801db82-b2c5-4843-9800-3efc7685ec2b")
+		(property "Reference" "#PWR014"
+			(at 102.87 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 105.41 105.4099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 109.22 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7b7fd8ff-3aeb-4c50-953c-8f3d39c5c162")
+		)
+		(instances
+			(project ""
+				(path "/23e7d71c-21ec-46b7-8c57-b564591aec8c"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 260.35 109.22 90)
 		(unit 1)
@@ -12058,7 +12209,7 @@
 				)
 			)
 		)
-		(property "Value" "DS1338Z-33+"
+		(property "Value" "DS1307+"
 			(at 64.77 106.6098 0)
 			(effects
 				(font
@@ -12066,7 +12217,7 @@
 				)
 			)
 		)
-		(property "Footprint" "vcu_debug_card:SOIC127P600X175-8N"
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
 			(at 48.26 123.19 0)
 			(effects
 				(font
@@ -12075,7 +12226,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.analog.com/DS1338/datasheet"
+		(property "Datasheet" "https://datasheets.maximintegrated.com/en/ds/DS1307.pdf"
 			(at 48.26 115.57 0)
 			(effects
 				(font
@@ -12084,7 +12235,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Real Time Clock I C RTC with 56-Byte NV RAM"
+		(property "Description" "64 x 8, Serial, I2C Real-time clock, 4.5V to 5.5V VCC, 0°C to +70°C, DIP-8"
 			(at 48.26 110.49 0)
 			(effects
 				(font
@@ -12564,7 +12715,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SAMTEC_TLW-105-06-T-S"
+		(property "Footprint" "SUFST:SAMTEC_TLW-105-06-T-S"
 			(at 148.59 268.91 0)
 			(effects
 				(font
@@ -12814,6 +12965,73 @@
 			(project "vcu-debug-card"
 				(path "/23e7d71c-21ec-46b7-8c57-b564591aec8c"
 					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 109.22 107.95 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c43ab054-2234-4759-8d07-ee99069cab38")
+		(property "Reference" "#PWR015"
+			(at 113.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 105.41 107.9499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 109.22 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d5b487b5-b658-4665-8be7-d79dcf0769f6")
+		)
+		(instances
+			(project ""
+				(path "/23e7d71c-21ec-46b7-8c57-b564591aec8c"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
