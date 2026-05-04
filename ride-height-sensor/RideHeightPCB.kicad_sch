@@ -5519,6 +5519,16 @@
 		)
 		(uuid "4153171e-90d5-436b-af42-4ad1568bfd49")
 	)
+	(text "will need to configure capacitor values\n"
+		(exclude_from_sim no)
+		(at 170.18 84.582 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "452234e6-ba9d-4026-b4d7-2e8cc51d57ee")
+	)
 	(text "STM32C092FBP6\n"
 		(exclude_from_sim no)
 		(at 68.58 65.532 0)
@@ -5570,6 +5580,16 @@
 			(justify left bottom)
 		)
 		(uuid "77ca487a-803b-4c05-8177-c0db87032ff6")
+	)
+	(text "need to also decide on a diode"
+		(exclude_from_sim no)
+		(at 60.96 191.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7e821a48-9d82-4d16-9a4b-244babda84e1")
 	)
 	(text "MCU LEDs"
 		(exclude_from_sim no)
@@ -8258,7 +8278,7 @@
 			)
 		)
 	)
-	(global_label "GPIOEXIT"
+	(global_label "TOF_INT"
 		(shape input)
 		(at 231.14 90.17 180)
 		(fields_autoplaced yes)
@@ -8270,7 +8290,7 @@
 		)
 		(uuid "39c0efc4-9ef3-49b4-8068-05632c6526e1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 219.7486 90.17 0)
+			(at 220.8976 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8632,7 +8652,7 @@
 			)
 		)
 	)
-	(global_label "GPIOEXIT"
+	(global_label "TOF_INT"
 		(shape input)
 		(at 147.32 107.95 0)
 		(fields_autoplaced yes)
@@ -8644,7 +8664,7 @@
 		)
 		(uuid "a89435cf-8310-4a94-b0da-a10c4543bee9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 158.7114 107.95 0)
+			(at 157.5624 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9128,6 +9148,73 @@
 			(project ""
 				(path "/9d176a9f-00ae-4de3-843e-1a62832e819e"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 218.44 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "070b7b7e-f60a-498a-addb-735ea5283364")
+		(property "Reference" "#PWR047"
+			(at 222.25 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 214.63 85.0899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 218.44 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5fd08c40-dc60-4246-b729-cf5a5f38d82d")
+		)
+		(instances
+			(project ""
+				(path "/9d176a9f-00ae-4de3-843e-1a62832e819e"
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -11061,6 +11148,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 222.25 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5a694a65-a7c8-4ece-aa80-02318c6ec745")
+		(property "Reference" "R19"
+			(at 222.25 82.804 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 222.25 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 86.868 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 222.25 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "15875f82-9d74-4d22-84d4-cdc7d3b36bae")
+		)
+		(pin "2"
+			(uuid "21077479-8a6f-4fb9-81ff-2f4e3e65a0fd")
+		)
+		(instances
+			(project ""
+				(path "/9d176a9f-00ae-4de3-843e-1a62832e819e"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_Diode_Zener_AKL:D_Zener_Generic")
 		(at 33.02 170.18 90)
 		(unit 1)
@@ -12827,7 +12981,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2k"
+		(property "Value" "3.3k"
 			(at 42.164 182.626 90)
 			(effects
 				(font
