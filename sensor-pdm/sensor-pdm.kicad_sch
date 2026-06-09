@@ -2741,6 +2741,27 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Vout = Vfb * (1+R12/R13)\n     = 0.8 * (1+180/20)\n     = 0.8 * 10\n     = 8"
+		(exclude_from_sim no)
+		(at 204.724 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3952aa32-fd9f-4264-acbb-cd65b900ae0e")
+	)
+	(text "0.5A cutoff"
+		(exclude_from_sim no)
+		(at 199.136 196.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5bf2d856-4240-4c30-b483-4f32b99023b4")
+	)
 	(text "Plug these into spare VCU inputs so u know when they switch off"
 		(exclude_from_sim no)
 		(at 357.632 93.98 0)
@@ -2750,6 +2771,46 @@
 			)
 		)
 		(uuid "75d1acf5-bcdb-4641-86d6-e38c241bdc10")
+	)
+	(text "Configured for UVLO of 7.0V and OVLO of 8.88V"
+		(exclude_from_sim no)
+		(at 105.918 190.246 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a04deed5-4bdc-4d6c-a02f-58237e25e8bd")
+	)
+	(text "Ratio 9:1"
+		(exclude_from_sim no)
+		(at 208.28 61.976 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b80ab3d7-57b4-405a-b6bd-bf49eb5ba06b")
+	)
+	(text "Configured for UVLO of 7.0V and OVLO of 8.88V"
+		(exclude_from_sim no)
+		(at 107.442 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "be759178-a4ef-47c0-8cf5-5a8433101444")
+	)
+	(text "0.208A cutoff"
+		(exclude_from_sim no)
+		(at 200.66 135.128 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f0b44737-45c4-4142-bc15-5cd4d68468cc")
 	)
 	(junction
 		(at 354.33 125.73)
@@ -4213,6 +4274,93 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 191.77 46.99 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "02df70ba-2a98-486a-a413-a8c6357295cf")
+		(property "Reference" "R12"
+			(at 194.31 45.466 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "180k"
+			(at 194.31 48.006 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 193.548 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 191.77 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "To Order" "INV"
+			(at 191.77 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "708-RNCP0603FTD10K0 "
+			(at 191.77 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "08468ded-f733-4cc1-a5e0-a79079f6aa24")
+		)
+		(pin "1"
+			(uuid "766680ec-5975-4654-add0-8f926ccb173f")
+		)
+		(instances
+			(project "sensor-pdm"
+				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 358.14 105.41 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4429,93 +4577,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 151.13 185.42 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "113a0101-a8c9-48a4-815b-117907a0ac58")
-		(property "Reference" "R6"
-			(at 144.018 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 144.018 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 149.352 185.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 151.13 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 151.13 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "To Order" "INV"
-			(at 151.13 185.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "708-RNCP0603FTD10K0 "
-			(at 151.13 185.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "297e2fd6-b4bf-4df5-b645-43dd32786d7d")
-		)
-		(pin "1"
-			(uuid "5c5ba363-0850-4830-94e5-181b82a09583")
-		)
-		(instances
-			(project "sensor-pdm"
-				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 351.79 83.82 0)
 		(unit 1)
@@ -4673,94 +4734,6 @@
 			(project "sensor-pdm"
 				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
 					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 191.77 57.15 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "14e9da48-ea52-45af-b514-bcf0e365d27d")
-		(property "Reference" "R13"
-			(at 198.882 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 198.882 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 193.548 57.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 191.77 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "To Order" "INV"
-			(at 191.77 57.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "708-RNCP0603FTD10K0 "
-			(at 191.77 57.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "8f2436e8-881c-4649-b77f-be6f755b67db")
-		)
-		(pin "1"
-			(uuid "5e9e332a-d041-4bb3-8aba-e36c496db0d5")
-		)
-		(instances
-			(project "sensor-pdm"
-				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
-					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -6266,7 +6239,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "240k"
 			(at 186.69 129.286 0)
 			(effects
 				(font
@@ -7107,93 +7080,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 151.13 165.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4f94ff85-3f57-4a62-a1e4-8fa4cbb37f32")
-		(property "Reference" "R4"
-			(at 144.018 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 144.018 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 149.352 165.1 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 151.13 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 151.13 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "To Order" "INV"
-			(at 151.13 165.1 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "708-RNCP0603FTD10K0 "
-			(at 151.13 165.1 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "fac8e783-ef4e-4c41-b709-ceecfbc42439")
-		)
-		(pin "1"
-			(uuid "55f27494-bb14-4b0f-82b4-36bdf9b32277")
-		)
-		(instances
-			(project "sensor-pdm"
-				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 123.19 57.15 0)
 		(unit 1)
@@ -7261,16 +7147,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 191.77 46.99 0)
-		(mirror y)
+		(at 151.13 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5c2b25ec-d47a-43d1-9ce9-52a4ddc9b5ca")
-		(property "Reference" "R12"
-			(at 198.882 45.72 0)
+		(uuid "5aa44c4d-faaa-45c5-b8cb-ef78b8080c9f")
+		(property "Reference" "R5"
+			(at 144.018 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7278,8 +7163,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 198.882 48.26 0)
+		(property "Value" "22.6k"
+			(at 144.018 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7288,7 +7173,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 193.548 46.99 90)
+			(at 149.352 175.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7297,7 +7182,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 46.99 0)
+			(at 151.13 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7306,7 +7191,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 191.77 46.99 0)
+			(at 151.13 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7315,7 +7200,7 @@
 			)
 		)
 		(property "To Order" "INV"
-			(at 191.77 46.99 90)
+			(at 151.13 175.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7324,7 +7209,7 @@
 			)
 		)
 		(property "Mouser Part Number" "708-RNCP0603FTD10K0 "
-			(at 191.77 46.99 90)
+			(at 151.13 175.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7333,15 +7218,102 @@
 			)
 		)
 		(pin "2"
-			(uuid "f28c46b3-1995-435a-9aee-586aeb5628de")
+			(uuid "bddf3edb-2c4b-4d0e-ba27-ddbaea1ab0bc")
 		)
 		(pin "1"
-			(uuid "387f5752-0135-4d41-a6e2-10ed8b0ee4a7")
+			(uuid "c43a326f-154d-47f3-abe2-20d3280474d3")
 		)
 		(instances
 			(project "sensor-pdm"
 				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
-					(reference "R12")
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 191.77 57.15 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5c588a04-66da-4dc5-88a0-cd2458de6456")
+		(property "Reference" "R13"
+			(at 194.31 55.626 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "20k"
+			(at 194.31 58.166 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 193.548 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 191.77 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "To Order" "INV"
+			(at 191.77 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "708-RNCP0603FTD10K0 "
+			(at 191.77 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7cb50c12-d0a7-44b6-8fb0-1e7fa788463f")
+		)
+		(pin "1"
+			(uuid "60df309e-b31f-4136-93df-a393ee618e32")
+		)
+		(instances
+			(project "sensor-pdm"
+				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -7365,7 +7337,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "56k"
 			(at 144.018 129.54 0)
 			(effects
 				(font
@@ -8224,7 +8196,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "330k"
 			(at 144.018 109.22 0)
 			(effects
 				(font
@@ -8377,7 +8349,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "1k"
 			(at 196.85 115.316 0)
 			(effects
 				(font
@@ -8448,15 +8420,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 151.13 175.26 0)
+		(at 151.13 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "89b23c9c-77a6-4ffa-8d47-cd0132ee669a")
-		(property "Reference" "R5"
-			(at 144.018 173.99 0)
+		(uuid "876fa9c2-8f0e-4342-b156-ad609ee2700a")
+		(property "Reference" "R4"
+			(at 144.018 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8464,8 +8436,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 144.018 176.53 0)
+		(property "Value" "470k"
+			(at 144.018 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8474,7 +8446,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 149.352 175.26 90)
+			(at 149.352 165.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8483,7 +8455,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 151.13 175.26 0)
+			(at 151.13 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8492,7 +8464,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 151.13 175.26 0)
+			(at 151.13 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8501,7 +8473,7 @@
 			)
 		)
 		(property "To Order" "INV"
-			(at 151.13 175.26 90)
+			(at 151.13 165.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8510,7 +8482,7 @@
 			)
 		)
 		(property "Mouser Part Number" "708-RNCP0603FTD10K0 "
-			(at 151.13 175.26 90)
+			(at 151.13 165.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8519,15 +8491,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "2512e6b4-46b2-4b29-82c8-c1e728427cb9")
+			(uuid "7fbe2720-3327-4f09-b172-2c6598ada71d")
 		)
 		(pin "1"
-			(uuid "b5ad2a92-66ae-40dd-83a7-0d3fd0e9fff2")
+			(uuid "1e08ae0c-754f-4da0-9203-7b5a07d6a3aa")
 		)
 		(instances
 			(project "sensor-pdm"
 				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
-					(reference "R5")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -8683,7 +8655,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "15k"
 			(at 144.018 119.38 0)
 			(effects
 				(font
@@ -8955,6 +8927,93 @@
 			(project "sensor-pdm"
 				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 151.13 185.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9a30480d-dc78-46bc-8bca-60f101fc18ca")
+		(property "Reference" "R6"
+			(at 144.018 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "78.7k"
+			(at 144.018 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 149.352 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 151.13 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "To Order" "INV"
+			(at 151.13 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "708-RNCP0603FTD10K0 "
+			(at 151.13 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "464c7bb8-567c-489b-8532-684f8fe1fd43")
+		)
+		(pin "1"
+			(uuid "bf4cc9ba-5124-4f84-8364-499c741ebbab")
+		)
+		(instances
+			(project "sensor-pdm"
+				(path "/94ed1b0d-aee9-4567-a7d8-5b4632c9136c"
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -9651,7 +9710,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "1k"
 			(at 196.85 172.466 0)
 			(effects
 				(font
@@ -9738,7 +9797,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "100k"
 			(at 186.69 186.436 0)
 			(effects
 				(font
@@ -10064,7 +10123,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "1k"
 			(at 125.73 54.356 0)
 			(effects
 				(font
