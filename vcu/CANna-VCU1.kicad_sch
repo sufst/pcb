@@ -3989,179 +3989,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:GNDPWR"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "GNDPWR"
-				(at 0 -3.302 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global ground"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "GNDPWR_0_1"
-				(polyline
-					(pts
-						(xy -1.016 -1.27) (xy -1.27 -2.032) (xy -1.27 -2.032)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.508 -1.27) (xy -0.762 -2.032) (xy -0.762 -2.032)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy -0.254 -2.032) (xy -0.254 -2.032)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.508 -1.27) (xy 0.254 -2.032) (xy 0.254 -2.032)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -1.27) (xy -1.016 -1.27) (xy -1.016 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -1.27) (xy 0.762 -2.032) (xy 0.762 -2.032) (xy 0.762 -2.032)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "GNDPWR_1_1"
-				(pin power_in line
-					(at 0 0 270)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:PWR_FLAG"
 			(power)
 			(pin_numbers
@@ -4666,7 +4493,7 @@
 	)
 	(text "tvs discharge"
 		(exclude_from_sim no)
-		(at 114.554 40.894 0)
+		(at 116.332 37.084 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4907,6 +4734,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f52c3cee-ac7f-4a23-90af-c571d8fe9303")
+	)
+	(junction
+		(at 82.55 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f72b9df5-1e45-46bd-bdc4-c1f06bac14bc")
 	)
 	(junction
 		(at 82.55 30.48)
@@ -5543,6 +5376,16 @@
 			(type default)
 		)
 		(uuid "58b7ea12-72cc-4394-bbd8-069c25d45b99")
+	)
+	(wire
+		(pts
+			(xy 82.55 36.83) (xy 105.41 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58c0dfa8-6484-464f-ba96-8b3bb3b17593")
 	)
 	(wire
 		(pts
@@ -20127,7 +19970,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1672b3f6-e88a-4ae1-a5e2-3aa36ddf0819")
-		(property "Reference" "#PWR0273"
+		(property "Reference" "#PWR010"
 			(at 240.665 198.12 0)
 			(effects
 				(font
@@ -20177,7 +20020,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0273")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -20394,7 +20237,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2ce4f803-fa33-405d-be2e-70029be323d2")
-		(property "Reference" "#PWR0248"
+		(property "Reference" "#PWR06"
 			(at 96.52 211.455 0)
 			(effects
 				(font
@@ -20444,7 +20287,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0248")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -20459,7 +20302,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2eafe1ae-7e8b-4d72-a3e5-00cb41e9ca1f")
-		(property "Reference" "#PWR0275"
+		(property "Reference" "#PWR012"
 			(at 250.19 195.58 0)
 			(effects
 				(font
@@ -20509,7 +20352,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0275")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -20524,7 +20367,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "40db07c4-4a0f-4608-ba53-170ef1ca045c")
-		(property "Reference" "#PWR0245"
+		(property "Reference" "#PWR01"
 			(at 42.545 282.575 0)
 			(effects
 				(font
@@ -20574,7 +20417,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0245")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -20582,7 +20425,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 105.41 38.1 0)
+		(at 105.41 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -20590,8 +20433,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4eacf6c1-3eca-48df-a7c1-9da708ae927f")
-		(property "Reference" "H5"
-			(at 107.95 35.5599 0)
+		(property "Reference" "H6"
+			(at 107.95 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20600,7 +20443,7 @@
 			)
 		)
 		(property "Value" "MountingHole_Pad"
-			(at 107.95 38.0999 0)
+			(at 107.95 34.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20609,7 +20452,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20618,7 +20461,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20627,7 +20470,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20636,7 +20479,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20645,7 +20488,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20654,7 +20497,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20663,7 +20506,7 @@
 			)
 		)
 		(property "Drawn By" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20672,7 +20515,7 @@
 			)
 		)
 		(property "MANUFACTURER" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20681,7 +20524,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20690,7 +20533,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20699,7 +20542,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20708,7 +20551,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20717,7 +20560,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20726,7 +20569,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20735,7 +20578,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20744,7 +20587,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20753,7 +20596,7 @@
 			)
 		)
 		(property "Mouser Order Number" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20762,7 +20605,7 @@
 			)
 		)
 		(property "To Order" ""
-			(at 105.41 38.1 0)
+			(at 105.41 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20776,7 +20619,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "H5")
+					(reference "H6")
 					(unit 1)
 				)
 			)
@@ -20791,7 +20634,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6c477e75-1773-4edb-88e4-ca682ce1dfea")
-		(property "Reference" "#PWR0203"
+		(property "Reference" "#PWR04"
 			(at 73.025 269.875 0)
 			(effects
 				(font
@@ -20841,7 +20684,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0203")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -20857,7 +20700,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6ca022e7-5c4b-44ed-b518-fc1bbcca0160")
-		(property "Reference" "J7"
+		(property "Reference" "J1"
 			(at 30.861 167.005 0)
 			(effects
 				(font
@@ -21179,7 +21022,7 @@
 		(instances
 			(project ""
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "J7")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -21396,7 +21239,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "71c0787a-0c70-479a-b41c-fb9188ed16ca")
-		(property "Reference" "#PWR0193"
+		(property "Reference" "#PWR08"
 			(at 127 196.215 0)
 			(effects
 				(font
@@ -21447,7 +21290,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0193")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -21462,7 +21305,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "729e3192-c872-4108-8c46-209f5c78578d")
-		(property "Reference" "#PWR0183"
+		(property "Reference" "#PWR02"
 			(at 53.975 229.235 0)
 			(effects
 				(font
@@ -21512,7 +21355,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0183")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -21528,7 +21371,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7c227a8a-3db8-48a3-a39b-3293eb2a2b24")
-		(property "Reference" "J8"
+		(property "Reference" "J4"
 			(at 229.235 173.609 0)
 			(effects
 				(font
@@ -21742,7 +21585,7 @@
 		(instances
 			(project ""
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "J8")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -21757,7 +21600,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9080ee63-8804-449b-a831-4f1c9ae9dc66")
-		(property "Reference" "#FLG03"
+		(property "Reference" "#FLG02"
 			(at 257.81 183.515 0)
 			(effects
 				(font
@@ -21806,7 +21649,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#FLG03")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -21821,7 +21664,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9d8f768f-8ed0-46bb-8ce0-8a7394857d19")
-		(property "Reference" "#PWR0202"
+		(property "Reference" "#PWR03"
 			(at 73.025 216.535 0)
 			(effects
 				(font
@@ -21871,7 +21714,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0202")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -21886,7 +21729,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a3d1f2d1-4643-4c5a-92bb-29a064d3f456")
-		(property "Reference" "#PWR0277"
+		(property "Reference" "#PWR011"
 			(at 243.84 180.34 0)
 			(effects
 				(font
@@ -21935,7 +21778,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0277")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -21951,7 +21794,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bd0890a8-6a06-4601-8451-ade3eacd30cb")
-		(property "Reference" "J12"
+		(property "Reference" "J3"
 			(at 175.895 173.482 0)
 			(effects
 				(font
@@ -22171,7 +22014,7 @@
 		(instances
 			(project ""
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "J12")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -22389,7 +22232,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d1f2404a-54e3-4da7-a1b0-0b6f445c6a57")
-		(property "Reference" "J10"
+		(property "Reference" "J2"
 			(at 85.725 171.577 0)
 			(effects
 				(font
@@ -22621,7 +22464,7 @@
 		(instances
 			(project ""
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "J10")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -22637,7 +22480,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d530483a-5dbf-4be4-9895-167ea53a3c9e")
-		(property "Reference" "#PWR0261"
+		(property "Reference" "#PWR05"
 			(at 78.74 45.72 0)
 			(effects
 				(font
@@ -22687,73 +22530,7 @@
 		(instances
 			(project ""
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0261")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDPWR")
-		(at 105.41 40.64 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dbf1447e-f32b-47f9-a5c2-6477b863aa33")
-		(property "Reference" "#PWR0101"
-			(at 105.41 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "TGND"
-			(at 105.283 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 105.41 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "28d8e748-b36e-44a8-b5ca-67184a558460")
-		)
-		(instances
-			(project "CANna-VCU1"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0101")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -22769,7 +22546,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9971de5-6a35-4674-9d68-49aced4d6f21")
-		(property "Reference" "H6"
+		(property "Reference" "H5"
 			(at 107.95 25.3999 0)
 			(effects
 				(font
@@ -22955,7 +22732,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "H6")
+					(reference "H5")
 					(unit 1)
 				)
 			)
@@ -22970,7 +22747,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eb2a9327-de8d-4f7f-9cf9-b92a200936ae")
-		(property "Reference" "#PWR0279"
+		(property "Reference" "#PWR09"
 			(at 187.325 203.2 0)
 			(effects
 				(font
@@ -23020,7 +22797,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR0279")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -23035,7 +22812,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eb3c14d8-74fd-47ff-8185-3224954d33b1")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR013"
 			(at 264.16 180.34 0)
 			(effects
 				(font
@@ -23084,7 +22861,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR040")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -23099,7 +22876,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f4b668d7-930f-4f86-bea4-bc404b1dd23a")
-		(property "Reference" "#FLG04"
+		(property "Reference" "#FLG01"
 			(at 243.84 178.435 0)
 			(effects
 				(font
@@ -23148,7 +22925,7 @@
 		(instances
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#FLG04")
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
