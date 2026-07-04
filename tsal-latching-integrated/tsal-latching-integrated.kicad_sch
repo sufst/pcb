@@ -3735,8 +3735,8 @@
 		(uuid 4c761aa3-328a-4127-8115-0651985fec26)
 	)
 	(rectangle
-		(start 228.6 96.52)
-		(end 228.6 96.52)
+		(start 250.19 96.52)
+		(end 250.19 96.52)
 		(stroke
 			(width 0)
 			(type default)
@@ -3745,6 +3745,18 @@
 			(type none)
 		)
 		(uuid 553aa8b2-0f78-4919-94d9-fe078a933248)
+	)
+	(rectangle
+		(start 234.95 88.9)
+		(end 248.92 120.65)
+		(stroke
+			(width 0)
+			(type dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid b572143e-3ef9-4526-8774-89db71e9f493)
 	)
 	(rectangle
 		(start 274.32 16.51)
@@ -3780,6 +3792,16 @@
 			(justify left bottom)
 		)
 		(uuid "065267d4-b9e2-4087-924a-c49f3eea8ebe")
+	)
+	(text "These are divided signals to 5V,\nneeded for TSAL-LED driver v2.x"
+		(exclude_from_sim no)
+		(at 224.028 126.746 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "153e673c-e1ac-423e-b745-2dbe44800fbb")
 	)
 	(text "IMD_OK:\n- 10V no fault\n  (supply minus 2V)\n- 0V fault\n- NC pulled to 0V\n- From IMD high side\n- Datasheet: 2k2 pulldown\n"
 		(exclude_from_sim no)
@@ -3968,7 +3990,7 @@
 	)
 	(text "Signals for\ndash"
 		(exclude_from_sim no)
-		(at 248.158 109.982 0)
+		(at 251.46 114.554 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3986,17 +4008,6 @@
 			)
 		)
 		(uuid "89723a8f-0e92-4684-8950-bc33d1b35f03")
-	)
-	(text "Output divider\nfor TSAL LED v2.x"
-		(exclude_from_sim no)
-		(at 23.114 130.302 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8d5e7ce0-cde9-486d-a0d0-de89a5bac321")
 	)
 	(text "--\n|  \nTSAL power out|  \n|  \n--"
 		(exclude_from_sim no)
@@ -4019,6 +4030,16 @@
 			(justify left bottom)
 		)
 		(uuid "9019762f-3042-495b-a27e-a00b142c7b52")
+	)
+	(text "Pulldown to avoid green light\nturning on if disconnected\nfrom accumulator"
+		(exclude_from_sim no)
+		(at 133.858 125.476 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9787d904-d330-41e7-a58d-46fadd225e28")
 	)
 	(text "External reset switch\nto discharge capacitor"
 		(exclude_from_sim no)
@@ -4107,17 +4128,6 @@
 		)
 		(uuid "bc42b897-cc58-4a6c-a033-ef7de289747b")
 	)
-	(text "RC=4.7s - Long enough for the IMD to  \n        power on and the fault to clear\n"
-		(exclude_from_sim no)
-		(at 298.45 26.924 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "be941c7e-c4d1-4fd7-b67b-0ccb0f69a0fe")
-	)
 	(text "Fault Detection and Latching"
 		(exclude_from_sim no)
 		(at 26.67 180.34 0)
@@ -4186,7 +4196,7 @@
 		(uuid "1e382f0d-e63a-4284-a5de-86674c4d63fa")
 	)
 	(junction
-		(at 242.57 130.81)
+		(at 264.16 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "28393b8c-80a5-4f3b-ad74-b8516f5b0f53")
@@ -4240,7 +4250,7 @@
 		(uuid "4f006276-e954-4ca6-813d-6e194fed0e86")
 	)
 	(junction
-		(at 233.68 119.38)
+		(at 255.27 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4f7386f7-0178-41cf-9f1d-9cd00ce479f8")
@@ -4252,16 +4262,16 @@
 		(uuid "4f946bcd-ffe8-4d3b-ae94-e7d13577ee4b")
 	)
 	(junction
+		(at 144.78 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "54db7cf2-f298-431d-9578-e431ca21013b")
+	)
+	(junction
 		(at 48.26 210.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "59af9cf0-7bdc-4b5d-96c3-66aa56da747a")
-	)
-	(junction
-		(at 54.61 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "59e7f54c-6eba-46a5-a99c-7e4db64eda80")
 	)
 	(junction
 		(at 179.07 208.28)
@@ -4330,12 +4340,6 @@
 		(uuid "90eaed38-0a05-44d6-8157-3deb51cb5324")
 	)
 	(junction
-		(at 55.88 134.62)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "93defe4a-4cd3-409a-a4f5-8a060229db04")
-	)
-	(junction
 		(at 293.37 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4396,7 +4400,7 @@
 		(uuid "b1b83297-9792-4a17-bda5-252befcf1275")
 	)
 	(junction
-		(at 242.57 104.14)
+		(at 264.16 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b30afac6-ea66-4fe6-991e-1a72d26fe563")
@@ -4438,12 +4442,6 @@
 		(uuid "ce2eb6e9-c437-4bef-83bf-53a572448d68")
 	)
 	(junction
-		(at 57.15 120.65)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "da62d5af-a003-4573-80c0-a4bf88ba660b")
-	)
-	(junction
 		(at 41.91 29.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4456,7 +4454,7 @@
 		(uuid "ed22be28-9c2a-4149-9663-50fd51c55a3b")
 	)
 	(junction
-		(at 233.68 93.98)
+		(at 255.27 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ee08024f-531c-4a86-8206-78621445260a")
@@ -4739,7 +4737,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 109.22) (xy 224.79 119.38)
+			(xy 247.65 109.22) (xy 247.65 119.38)
 		)
 		(stroke
 			(width 0)
@@ -4919,16 +4917,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 110.49) (xy 67.31 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "229a0aa8-0f44-48c6-b820-ef284afff673")
-	)
-	(wire
-		(pts
 			(xy 78.74 210.82) (xy 78.74 212.09)
 		)
 		(stroke
@@ -4939,7 +4927,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 99.06) (xy 242.57 104.14)
+			(xy 264.16 99.06) (xy 264.16 104.14)
 		)
 		(stroke
 			(width 0)
@@ -5039,7 +5027,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 104.14) (xy 242.57 104.14)
+			(xy 255.27 104.14) (xy 264.16 104.14)
 		)
 		(stroke
 			(width 0)
@@ -5139,7 +5127,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 128.27) (xy 233.68 130.81)
+			(xy 255.27 128.27) (xy 255.27 130.81)
 		)
 		(stroke
 			(width 0)
@@ -5249,16 +5237,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 123.19) (xy 54.61 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b8b70e3-8829-4bd9-85d5-d1d5ed398c71")
-	)
-	(wire
-		(pts
 			(xy 68.58 36.83) (xy 69.85 36.83)
 		)
 		(stroke
@@ -5276,16 +5254,6 @@
 			(type default)
 		)
 		(uuid "3c3739f0-67ef-4cde-b0cd-7f3b99069775")
-	)
-	(wire
-		(pts
-			(xy 39.37 120.65) (xy 44.45 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c3baa18-3901-43d6-a473-5a93b954fc30")
 	)
 	(wire
 		(pts
@@ -5319,6 +5287,16 @@
 	)
 	(wire
 		(pts
+			(xy 234.95 109.22) (xy 247.65 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41581836-f0b6-4087-83e6-3c080c9be547")
+	)
+	(wire
+		(pts
 			(xy 330.2 170.18) (xy 345.44 170.18)
 		)
 		(stroke
@@ -5336,6 +5314,16 @@
 			(type default)
 		)
 		(uuid "41f3b00d-3418-40d8-a3e5-355d72b5b422")
+	)
+	(polyline
+		(pts
+			(xy 133.35 121.92) (xy 140.97 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42889ab4-dcdf-43f6-979a-a2b744e6d1f0")
 	)
 	(wire
 		(pts
@@ -5429,7 +5417,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 105.41) (xy 203.2 105.41)
+			(xy 247.65 105.41) (xy 234.95 105.41)
 		)
 		(stroke
 			(width 0)
@@ -5439,7 +5427,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 102.87) (xy 233.68 104.14)
+			(xy 255.27 102.87) (xy 255.27 104.14)
 		)
 		(stroke
 			(width 0)
@@ -5539,16 +5527,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 134.62) (xy 55.88 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4dfa0734-56ab-417c-9f1f-18046bdd909b")
-	)
-	(wire
-		(pts
 			(xy 49.53 36.83) (xy 55.88 36.83)
 		)
 		(stroke
@@ -5599,6 +5577,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 105.41) (xy 154.94 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "519f465d-2e80-4c71-ad3a-5e1e8e1cdafa")
+	)
+	(wire
+		(pts
 			(xy 317.5 157.48) (xy 317.5 165.1)
 		)
 		(stroke
@@ -5629,7 +5617,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 105.41) (xy 224.79 93.98)
+			(xy 247.65 105.41) (xy 247.65 93.98)
 		)
 		(stroke
 			(width 0)
@@ -5659,7 +5647,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 120.65) (xy 233.68 119.38)
+			(xy 255.27 120.65) (xy 255.27 119.38)
 		)
 		(stroke
 			(width 0)
@@ -5779,16 +5767,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 134.62) (xy 57.15 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "655976c8-fec3-483e-b863-848019c02f16")
-	)
-	(wire
-		(pts
 			(xy 201.93 24.13) (xy 201.93 36.83)
 		)
 		(stroke
@@ -5859,23 +5837,13 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 105.41) (xy 154.94 105.41)
+			(xy 128.27 105.41) (xy 144.78 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6ab70903-46d6-4717-bb03-01715d846128")
-	)
-	(wire
-		(pts
-			(xy 52.07 123.19) (xy 54.61 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b3e61ee-0f62-4519-ac75-7758710466ef")
 	)
 	(wire
 		(pts
@@ -5909,7 +5877,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 130.81) (xy 242.57 133.35)
+			(xy 264.16 130.81) (xy 264.16 133.35)
 		)
 		(stroke
 			(width 0)
@@ -5939,7 +5907,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 119.38) (xy 233.68 119.38)
+			(xy 247.65 119.38) (xy 255.27 119.38)
 		)
 		(stroke
 			(width 0)
@@ -5956,16 +5924,6 @@
 			(type default)
 		)
 		(uuid "6f1d1279-e8bc-4218-a81b-734b9633ff68")
-	)
-	(wire
-		(pts
-			(xy 54.61 133.35) (xy 54.61 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f5f8a3e-aac1-44fc-abeb-339ce7c52ac6")
 	)
 	(wire
 		(pts
@@ -6019,7 +5977,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 93.98) (xy 234.95 93.98)
+			(xy 255.27 93.98) (xy 256.54 93.98)
 		)
 		(stroke
 			(width 0)
@@ -6069,7 +6027,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 104.14) (xy 242.57 106.68)
+			(xy 264.16 104.14) (xy 264.16 106.68)
 		)
 		(stroke
 			(width 0)
@@ -6189,7 +6147,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 130.81) (xy 242.57 124.46)
+			(xy 264.16 130.81) (xy 264.16 124.46)
 		)
 		(stroke
 			(width 0)
@@ -6206,6 +6164,16 @@
 			(type default)
 		)
 		(uuid "834d071a-a7b7-445a-850e-3ade4b119f92")
+	)
+	(polyline
+		(pts
+			(xy 223.52 123.19) (xy 231.14 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8359020b-67c2-4d00-97c7-a9393232fe9f")
 	)
 	(wire
 		(pts
@@ -6297,16 +6265,6 @@
 		)
 		(uuid "87229953-9faf-41c6-84f1-6bc9a6ddd22f")
 	)
-	(wire
-		(pts
-			(xy 57.15 120.65) (xy 57.15 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8903ce22-4021-4646-9be5-97e50f5ae866")
-	)
 	(polyline
 		(pts
 			(xy 267.97 181.61) (xy 24.13 181.61)
@@ -6329,7 +6287,7 @@
 	)
 	(polyline
 		(pts
-			(xy 261.62 139.7) (xy 15.24 139.7)
+			(xy 279.4 139.7) (xy 15.24 139.7)
 		)
 		(stroke
 			(width 0)
@@ -6369,7 +6327,7 @@
 	)
 	(polyline
 		(pts
-			(xy 261.62 82.55) (xy 261.62 139.7)
+			(xy 279.4 82.55) (xy 279.4 139.7)
 		)
 		(stroke
 			(width 0)
@@ -6489,7 +6447,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 93.98) (xy 233.68 95.25)
+			(xy 255.27 93.98) (xy 255.27 95.25)
 		)
 		(stroke
 			(width 0)
@@ -6589,16 +6547,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 120.65) (xy 69.85 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2ba11e8-f165-4b80-a139-caf5313e1107")
-	)
-	(wire
-		(pts
 			(xy 356.87 209.55) (xy 356.87 212.09)
 		)
 		(stroke
@@ -6609,7 +6557,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 113.03) (xy 242.57 114.3)
+			(xy 264.16 113.03) (xy 264.16 114.3)
 		)
 		(stroke
 			(width 0)
@@ -6629,7 +6577,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 113.03) (xy 245.11 113.03)
+			(xy 264.16 113.03) (xy 266.7 113.03)
 		)
 		(stroke
 			(width 0)
@@ -6646,16 +6594,6 @@
 			(type default)
 		)
 		(uuid "a5244d3f-a07f-488f-b5f5-77ff6bf447e4")
-	)
-	(wire
-		(pts
-			(xy 39.37 123.19) (xy 44.45 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a63083df-2c01-4d93-bbe4-21514852d441")
 	)
 	(wire
 		(pts
@@ -6709,7 +6647,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 109.22) (xy 224.79 109.22)
+			(xy 203.2 109.22) (xy 227.33 109.22)
 		)
 		(stroke
 			(width 0)
@@ -6719,7 +6657,7 @@
 	)
 	(polyline
 		(pts
-			(xy 15.24 82.55) (xy 261.62 82.55)
+			(xy 15.24 82.55) (xy 279.4 82.55)
 		)
 		(stroke
 			(width 0)
@@ -6789,7 +6727,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 110.49) (xy 59.69 110.49)
+			(xy 57.15 110.49) (xy 67.31 110.49)
 		)
 		(stroke
 			(width 0)
@@ -6816,6 +6754,26 @@
 			(type default)
 		)
 		(uuid "b2323cf2-b66e-4c2f-a0f1-50d545d615e5")
+	)
+	(wire
+		(pts
+			(xy 74.93 110.49) (xy 72.39 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b26467a1-10f9-4339-8752-e5759f09d16f")
+	)
+	(wire
+		(pts
+			(xy 227.33 105.41) (xy 203.2 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b29c44cf-fad1-4400-878c-f94f40fabcfe")
 	)
 	(polyline
 		(pts
@@ -7009,7 +6967,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 93.98) (xy 233.68 93.98)
+			(xy 247.65 93.98) (xy 255.27 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7169,16 +7127,6 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 134.62) (xy 57.15 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cec712cc-adbd-4e8a-a0ac-c93c450290ba")
-	)
-	(wire
-		(pts
 			(xy 100.33 113.03) (xy 100.33 114.3)
 		)
 		(stroke
@@ -7186,16 +7134,6 @@
 			(type default)
 		)
 		(uuid "d0807867-8bbf-41b9-b03c-53d58a6dc91f")
-	)
-	(wire
-		(pts
-			(xy 54.61 123.19) (xy 69.85 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d09d1f43-d69d-46e9-9a2a-2e85bab25f2e")
 	)
 	(wire
 		(pts
@@ -7229,7 +7167,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 86.36) (xy 242.57 88.9)
+			(xy 264.16 86.36) (xy 264.16 88.9)
 		)
 		(stroke
 			(width 0)
@@ -7246,16 +7184,6 @@
 			(type default)
 		)
 		(uuid "d392bf71-8885-47a8-8a3c-cb8f34dc8094")
-	)
-	(wire
-		(pts
-			(xy 52.07 120.65) (xy 57.15 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d39ec442-8b81-4c83-81c3-173294ee90eb")
 	)
 	(polyline
 		(pts
@@ -7559,7 +7487,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 119.38) (xy 234.95 119.38)
+			(xy 255.27 119.38) (xy 256.54 119.38)
 		)
 		(stroke
 			(width 0)
@@ -7599,7 +7527,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 130.81) (xy 242.57 130.81)
+			(xy 255.27 130.81) (xy 264.16 130.81)
 		)
 		(stroke
 			(width 0)
@@ -7689,7 +7617,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 86.36) (xy 242.57 86.36)
+			(xy 266.7 86.36) (xy 264.16 86.36)
 		)
 		(stroke
 			(width 0)
@@ -7848,7 +7776,7 @@
 		(uuid "0b4862a3-8f9d-41c7-b030-96edc55e208f")
 	)
 	(label "GREEN.LED.K"
-		(at 245.11 113.03 0)
+		(at 266.7 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8027,6 +7955,16 @@
 		)
 		(uuid "4016ca28-0284-49cb-9067-0685be477c44")
 	)
+	(label "TSAL_RED_EN"
+		(at 247.65 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "44e14f32-d358-4dd3-a827-441347630a42")
+	)
 	(label "Reset Button -"
 		(at 58.42 167.64 0)
 		(effects
@@ -8037,7 +7975,7 @@
 		)
 		(uuid "462e099d-738c-4a30-bd39-0dab9febbf2e")
 	)
-	(label "BATT+"
+	(label "BATT+_FUSED"
 		(at 82.55 30.48 0)
 		(effects
 			(font
@@ -8108,7 +8046,7 @@
 		(uuid "71ff4202-c202-46d8-92cc-40afc05cc57a")
 	)
 	(label "RED.LED.K"
-		(at 245.11 86.36 0)
+		(at 266.7 86.36 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8187,16 +8125,6 @@
 		)
 		(uuid "95bd7642-3595-4dfb-a2d0-c06cf7ea0851")
 	)
-	(label "TSAL_RED_EN"
-		(at 69.85 123.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "95ee84fa-21c0-48ff-8709-b18001d292ef")
-	)
 	(label "IMD_FAULT_LATCHED"
 		(at 295.91 200.66 270)
 		(effects
@@ -8206,16 +8134,6 @@
 			(justify right bottom)
 		)
 		(uuid "99ec391b-eda5-40a6-8da9-3f71a044e683")
-	)
-	(label "TSAL_GRN_EN"
-		(at 69.85 120.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a54a02bd-3890-428d-b66f-7ff8f07d54c7")
 	)
 	(label "LATCH.RESET-"
 		(at 67.31 100.33 0)
@@ -8227,16 +8145,6 @@
 		)
 		(uuid "a7091de0-f928-476f-bd5a-61526ad8c609")
 	)
-	(label "RED_LED_ENABLED"
-		(at 39.37 123.19 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a72c6bf1-da6a-4ea0-b964-c4284a00a79a")
-	)
 	(label "Reset Button -"
 		(at 322.58 44.45 0)
 		(effects
@@ -8246,16 +8154,6 @@
 			(justify left bottom)
 		)
 		(uuid "b598e144-36c0-4a43-b51e-963531c627f0")
-	)
-	(label "GREEN_LED_ENABLED"
-		(at 39.37 120.65 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b8e73568-4dd1-4ef0-991a-a879efe150f6")
 	)
 	(label "SHUTDOWN_IN"
 		(at 43.18 172.72 180)
@@ -8357,8 +8255,18 @@
 		)
 		(uuid "e308b977-01b6-4cca-9492-54824fc2550f")
 	)
+	(label "TSAL_GRN_EN"
+		(at 247.65 119.38 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ec2122fe-6f57-43e1-ac1c-a9ab65944cd5")
+	)
 	(label "BATT+"
-		(at 67.31 110.49 0)
+		(at 59.69 110.49 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8366,6 +8274,16 @@
 			(justify left bottom)
 		)
 		(uuid "f03e6bc9-aba3-480b-8a2e-34f62299167f")
+	)
+	(label "BATT+_FUSED"
+		(at 74.93 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f27e95ed-ac8f-4d3d-a520-3c4003c527af")
 	)
 	(label "LATCH.RESET-"
 		(at 143.51 44.45 0)
@@ -8520,7 +8438,7 @@
 			(uuid "708a86c9-458e-42fb-85d5-ad0ae33a8c7d")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U1")
 					(unit 1)
@@ -8643,7 +8561,7 @@
 			(uuid "41ef9fcc-ec08-4008-90bc-466599d6788a")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U2")
 					(unit 2)
@@ -8708,7 +8626,7 @@
 			(uuid "1de9bf92-9ccc-431e-b998-658b1c221372")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR041")
 					(unit 1)
@@ -8796,7 +8714,7 @@
 			(uuid "6bb3c96d-c7be-4fd2-9e90-5ab2ca4c7352")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "C6")
 					(unit 1)
@@ -8861,7 +8779,7 @@
 			(uuid "9f1a1a56-1fa9-4780-b9da-1e4623959aeb")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR023")
 					(unit 1)
@@ -8871,7 +8789,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 48.26 123.19 270)
+		(at 231.14 109.22 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8880,7 +8798,7 @@
 		(dnp no)
 		(uuid "079c971c-164b-43c7-acbb-bb21a369cd51")
 		(property "Reference" "R19"
-			(at 46.99 124.46 0)
+			(at 229.87 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8889,7 +8807,7 @@
 			)
 		)
 		(property "Value" "14k"
-			(at 48.895 124.46 0)
+			(at 231.775 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8898,7 +8816,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 48.26 124.968 90)
+			(at 231.14 110.998 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8907,7 +8825,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 48.26 123.19 0)
+			(at 231.14 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8916,7 +8834,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 48.26 123.19 0)
+			(at 231.14 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8925,7 +8843,7 @@
 			)
 		)
 		(property "Order Code" ""
-			(at 48.26 123.19 0)
+			(at 231.14 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9005,7 +8923,7 @@
 			(uuid "5354ed0c-f708-435a-a6da-fe861fbc2857")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR01")
 					(unit 1)
@@ -9072,7 +8990,7 @@
 			(uuid "7f8cba55-d761-4f17-9070-dc5654c989e2")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#FLG02")
 					(unit 1)
@@ -9159,7 +9077,7 @@
 			(uuid "54297f11-2cd2-4af4-bcdd-11738c5f77dc")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "D5")
 					(unit 1)
@@ -9398,7 +9316,7 @@
 			(uuid "802e07a1-e33e-4eeb-9079-bac4b5b3cc9b")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "C5")
 					(unit 1)
@@ -9463,7 +9381,7 @@
 			(uuid "e4ddeb80-6e9c-476d-ad66-41bf36794ab5")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR025")
 					(unit 1)
@@ -9553,7 +9471,7 @@
 			(uuid "f74cd2a7-5000-4076-848e-0aa80308ff2c")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "Q10")
 					(unit 1)
@@ -9640,7 +9558,7 @@
 			(uuid "b36e7ba6-31ce-4f5c-8b4d-0213d7bc0d38")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "C8")
 					(unit 1)
@@ -9649,34 +9567,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 233.68 99.06 180)
+		(lib_id "power:GND")
+		(at 144.78 113.03 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2a85b5e4-e828-419e-9b3c-e138ca78912b")
-		(property "Reference" "R10"
-			(at 234.95 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 234.95 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 235.458 99.06 90)
+		(uuid "222416db-9d49-498c-87fd-1f09e35ada68")
+		(property "Reference" "#PWR039"
+			(at 144.78 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9684,8 +9584,25 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 233.68 99.06 0)
+		(property "Value" "GND"
+			(at 147.32 116.205 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9694,7 +9611,73 @@
 			)
 		)
 		(property "Description" ""
-			(at 233.68 99.06 0)
+			(at 144.78 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "272efd5d-fe67-4132-9cc9-da78fca9e0f0")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 255.27 99.06 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2a85b5e4-e828-419e-9b3c-e138ca78912b")
+		(property "Reference" "R10"
+			(at 256.54 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 256.54 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 257.048 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 255.27 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9703,7 +9686,7 @@
 			)
 		)
 		(property "Order Code" ""
-			(at 233.68 99.06 0)
+			(at 255.27 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9718,7 +9701,7 @@
 			(uuid "0270fc31-6645-4413-9b78-c3819bb07758")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R10")
 					(unit 1)
@@ -9799,7 +9782,7 @@
 			)
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "H2")
 					(unit 1)
@@ -9809,7 +9792,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 242.57 133.35 0)
+		(at 264.16 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9817,7 +9800,7 @@
 		(dnp no)
 		(uuid "2d25593c-e439-44a2-bead-677e498a7b27")
 		(property "Reference" "#PWR028"
-			(at 242.57 139.7 0)
+			(at 264.16 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9826,7 +9809,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 246.38 135.255 0)
+			(at 267.97 135.255 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9834,7 +9817,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 242.57 133.35 0)
+			(at 264.16 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9843,7 +9826,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 133.35 0)
+			(at 264.16 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9852,7 +9835,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 242.57 133.35 0)
+			(at 264.16 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9952,7 +9935,7 @@
 			(uuid "67f5ef06-b21e-45b8-8490-5eecb9f1b238")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "D1")
 					(unit 1)
@@ -10041,7 +10024,7 @@
 			(uuid "35d47a51-5c20-4348-9d6f-7771824c8bba")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R2")
 					(unit 1)
@@ -10193,7 +10176,7 @@
 			(uuid "b999fc8d-723f-49b9-9203-d31f476b1be1")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR08")
 					(unit 1)
@@ -10378,7 +10361,7 @@
 			(uuid "f0ea226c-718e-4bc5-83df-9d1479c570fe")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R20")
 					(unit 1)
@@ -10499,7 +10482,7 @@
 			(uuid "de28cd2b-b57c-4341-8d1f-db121566f8d8")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U1")
 					(unit 5)
@@ -10629,7 +10612,7 @@
 			(uuid "2cba9546-a110-4e38-9353-d8a6fc4f3417")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR019")
 					(unit 1)
@@ -10781,7 +10764,7 @@
 			(uuid "5f4a5f0d-b6e0-45ca-843f-433417c72b02")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR018")
 					(unit 1)
@@ -10869,7 +10852,7 @@
 			(uuid "64470485-2a62-4b98-9e42-4f76ce3f8994")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R21")
 					(unit 1)
@@ -10902,7 +10885,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 46.99 34.29 0)
 			(effects
 				(font
@@ -11034,7 +11017,7 @@
 			(uuid "03903e11-8694-41b2-87f6-6d367e78cd52")
 		)
 		(instances
-			(project ""
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "J2")
 					(unit 1)
@@ -11067,7 +11050,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 46.99 26.67 0)
 			(effects
 				(font
@@ -11111,7 +11094,7 @@
 	)
 	(symbol
 		(lib_id "Device:Q_NMOS_GSD")
-		(at 240.03 93.98 0)
+		(at 261.62 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11119,7 +11102,7 @@
 		(dnp no)
 		(uuid "4d21178d-9cfa-4cde-a297-8292c4851441")
 		(property "Reference" "Q1"
-			(at 248.412 96.266 90)
+			(at 270.002 96.266 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11128,7 +11111,7 @@
 			)
 		)
 		(property "Value" "XP262N7002TR-G"
-			(at 246.126 105.664 90)
+			(at 267.716 105.664 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11137,7 +11120,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 245.11 91.44 0)
+			(at 266.7 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11146,7 +11129,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 240.03 93.98 0)
+			(at 261.62 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11155,7 +11138,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 240.03 93.98 0)
+			(at 261.62 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11164,7 +11147,7 @@
 			)
 		)
 		(property "Order Code" "865-XP262N7002TR-G"
-			(at 240.03 93.98 0)
+			(at 261.62 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11173,7 +11156,7 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 240.03 93.98 0)
+			(at 261.62 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11625,7 +11608,7 @@
 			(uuid "9890df9e-ab76-4f7d-886f-347f178cecca")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R3")
 					(unit 1)
@@ -11713,7 +11696,7 @@
 			(uuid "00831284-a3a0-4f69-87b6-ffa89dfd75d2")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R4")
 					(unit 1)
@@ -11801,7 +11784,7 @@
 			(uuid "67629232-56d4-4095-8420-99375053c981")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R18")
 					(unit 1)
@@ -11964,7 +11947,7 @@
 			(uuid "899c6e9d-651f-40c2-b46d-a69f213ce093")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R16")
 					(unit 1)
@@ -12117,7 +12100,7 @@
 			(uuid "97a1900d-bc6e-45ef-b84e-168c1702278f")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR037")
 					(unit 1)
@@ -12283,7 +12266,7 @@
 			(uuid "5f02b2d5-2bf9-4a09-b7dd-c3d18186a044")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R1")
 					(unit 1)
@@ -12348,7 +12331,7 @@
 			(uuid "41bf8e4b-98e2-42fa-8e5c-7dd914bb32f2")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR032")
 					(unit 1)
@@ -12438,7 +12421,7 @@
 			(uuid "5e560bd9-908d-472e-b585-a1a18b622820")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "Q5")
 					(unit 1)
@@ -12526,7 +12509,7 @@
 			(uuid "f46e87fa-0b02-4b7c-b45b-a7c5cbd162ba")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R27")
 					(unit 1)
@@ -12656,7 +12639,7 @@
 			(uuid "b920da0c-1b97-413a-a2f3-39029f33524f")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR011")
 					(unit 1)
@@ -12777,7 +12760,7 @@
 			(uuid "642fde88-ce57-45db-babb-d5d8064e8869")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U1")
 					(unit 4)
@@ -12787,7 +12770,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 242.57 106.68 0)
+		(at 264.16 106.68 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12796,7 +12779,7 @@
 		(dnp no)
 		(uuid "7022f43d-397d-46fd-8859-85425cee5e5b")
 		(property "Reference" "#PWR027"
-			(at 242.57 113.03 0)
+			(at 264.16 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12805,7 +12788,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 238.76 108.585 0)
+			(at 260.35 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12813,7 +12796,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 242.57 106.68 0)
+			(at 264.16 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12822,7 +12805,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 106.68 0)
+			(at 264.16 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12831,7 +12814,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 242.57 106.68 0)
+			(at 264.16 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12843,7 +12826,7 @@
 			(uuid "130a2c3f-162c-43f9-8f9e-f7ec6b024b2c")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR027")
 					(unit 1)
@@ -12876,7 +12859,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 46.99 37.592 90)
 			(effects
 				(font
@@ -12910,7 +12893,7 @@
 			(uuid "c645d262-a572-4658-8250-5aec2a5ff21b")
 		)
 		(instances
-			(project ""
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "F1")
 					(unit 1)
@@ -13040,7 +13023,7 @@
 			(uuid "b68f1fe9-3094-465e-a6ec-4608d16eecc8")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR06")
 					(unit 1)
@@ -13105,7 +13088,7 @@
 			(uuid "200c81d3-c3b5-4e41-a6fc-763096c74cc7")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR012")
 					(unit 1)
@@ -13170,7 +13153,7 @@
 			(uuid "a6940cee-cdbd-4dc2-8bf2-1226ad939e81")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR034")
 					(unit 1)
@@ -13235,7 +13218,7 @@
 			(uuid "ea68bbfa-0536-4144-9950-6e4d30406239")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR038")
 					(unit 1)
@@ -13358,10 +13341,88 @@
 			(uuid "ff48ec5d-4c24-4f3b-bc5d-b91b6490037d")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U1")
 					(unit 7)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 144.78 109.22 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "91c08620-c429-4cba-b274-b397c78aa458")
+		(property "Reference" "R43"
+			(at 146.05 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 146.05 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 146.558 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 144.78 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 144.78 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c114c9a-64a1-4beb-92e0-62e08a48c042")
+		)
+		(pin "2"
+			(uuid "e510f1ff-b47e-4507-8998-24617415b43d")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "R43")
+					(unit 1)
 				)
 			)
 		)
@@ -13510,84 +13571,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 54.61 129.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "952665f9-fc1f-4374-8f58-bee17f40e30b")
-		(property "Reference" "R23"
-			(at 53.34 129.032 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 53.34 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 52.832 129.54 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 54.61 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 54.61 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 54.61 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4f283563-a4d6-43cb-838a-0c779bc37850")
-		)
-		(pin "2"
-			(uuid "fabad9ff-15b3-4251-a79e-08eab75b5188")
-		)
-		(instances
-			(project "tsal-latching-integrated"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "R23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 214.63 245.11 0)
 		(unit 1)
@@ -13644,7 +13627,7 @@
 			(uuid "3c25d2b1-b735-4570-af81-0d96e0fb141e")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR024")
 					(unit 1)
@@ -13709,7 +13692,7 @@
 			(uuid "2293b157-048e-4d1e-a8cf-8d53527b8363")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR031")
 					(unit 1)
@@ -13796,7 +13779,7 @@
 			(uuid "961162c1-5e84-4307-bbe1-6a32859c21db")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "C7")
 					(unit 1)
@@ -13861,7 +13844,7 @@
 			(uuid "26dfd05b-0db7-41a0-8618-9a2c7fcb573a")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR030")
 					(unit 1)
@@ -13871,7 +13854,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 48.26 120.65 270)
+		(at 231.14 105.41 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13879,7 +13862,7 @@
 		(dnp no)
 		(uuid "9c364faf-e48d-453f-955c-a6877052a2f7")
 		(property "Reference" "R15"
-			(at 46.99 119.38 0)
+			(at 229.87 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13888,7 +13871,7 @@
 			)
 		)
 		(property "Value" "14k"
-			(at 48.895 119.38 0)
+			(at 231.775 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13897,7 +13880,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 48.26 118.872 90)
+			(at 231.14 103.632 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13906,7 +13889,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 48.26 120.65 0)
+			(at 231.14 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13915,7 +13898,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 48.26 120.65 0)
+			(at 231.14 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13924,7 +13907,7 @@
 			)
 		)
 		(property "Order Code" ""
-			(at 48.26 120.65 0)
+			(at 231.14 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14004,7 +13987,7 @@
 			(uuid "3396f2f7-5b38-4058-ab2f-61243a3e9c12")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR07")
 					(unit 1)
@@ -14069,7 +14052,7 @@
 			(uuid "8af1a4a0-4115-4eef-88fc-6a5b0236901b")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR042")
 					(unit 1)
@@ -14157,7 +14140,7 @@
 			(uuid "13be6c6a-9349-4014-8df8-2f69b5d68676")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R13")
 					(unit 1)
@@ -14167,7 +14150,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 233.68 124.46 180)
+		(at 255.27 124.46 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14175,7 +14158,7 @@
 		(dnp no)
 		(uuid "a42d78b2-b29b-4dd2-8c1a-9203e906b68a")
 		(property "Reference" "R11"
-			(at 234.95 123.19 0)
+			(at 256.54 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14184,7 +14167,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 234.95 125.095 0)
+			(at 256.54 125.095 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14193,7 +14176,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 235.458 124.46 90)
+			(at 257.048 124.46 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14202,7 +14185,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 233.68 124.46 0)
+			(at 255.27 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14211,7 +14194,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 233.68 124.46 0)
+			(at 255.27 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14220,7 +14203,7 @@
 			)
 		)
 		(property "Order Code" ""
-			(at 233.68 124.46 0)
+			(at 255.27 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14358,7 +14341,7 @@
 			(uuid "66b928d3-718f-4831-894e-55acdb885b76")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U2")
 					(unit 1)
@@ -14479,7 +14462,7 @@
 			(uuid "c60004dc-a27d-40eb-9385-a74b8ab16a59")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U1")
 					(unit 2)
@@ -14567,7 +14550,7 @@
 			(uuid "ba49ed08-a2eb-4a3c-9a72-284c0cefa850")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "C3")
 					(unit 1)
@@ -14730,7 +14713,7 @@
 			(uuid "dd16a460-35e9-40f3-966a-cdb04df3a569")
 		)
 		(instances
-			(project ""
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "J3")
 					(unit 1)
@@ -14795,7 +14778,7 @@
 			(uuid "63be99e7-ac67-4458-8419-016220557f97")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR013")
 					(unit 1)
@@ -14829,7 +14812,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 38.1 99.568 90)
 			(effects
 				(font
@@ -14873,7 +14856,7 @@
 	)
 	(symbol
 		(lib_id "Device:Q_NMOS_GSD")
-		(at 240.03 119.38 0)
+		(at 261.62 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14881,7 +14864,7 @@
 		(dnp no)
 		(uuid "b8a24306-2da9-412b-90b2-271f85c0e380")
 		(property "Reference" "Q2"
-			(at 248.412 121.666 90)
+			(at 270.002 121.666 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14890,7 +14873,7 @@
 			)
 		)
 		(property "Value" "XP262N7002TR-G"
-			(at 246.126 131.064 90)
+			(at 267.716 131.064 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14899,7 +14882,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 245.11 116.84 0)
+			(at 266.7 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14908,7 +14891,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 240.03 119.38 0)
+			(at 261.62 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14917,7 +14900,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 240.03 119.38 0)
+			(at 261.62 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14926,7 +14909,7 @@
 			)
 		)
 		(property "Order Code" "865-XP262N7002TR-G"
-			(at 240.03 119.38 0)
+			(at 261.62 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14935,7 +14918,7 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 240.03 119.38 0)
+			(at 261.62 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15083,7 +15066,7 @@
 			(uuid "bea2a9f0-f8bb-4f84-bd81-a7c03c6ad64e")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR033")
 					(unit 1)
@@ -15116,7 +15099,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 46.99 36.83 0)
 			(effects
 				(font
@@ -15150,7 +15133,7 @@
 			(uuid "71b7edb5-0d18-4a62-a7d8-2c52accd96f2")
 		)
 		(instances
-			(project ""
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "F2")
 					(unit 1)
@@ -15160,7 +15143,7 @@
 	)
 	(symbol
 		(lib_id "Device:Fuse_Small")
-		(at 62.23 110.49 0)
+		(at 69.85 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15168,7 +15151,7 @@
 		(dnp no)
 		(uuid "c1d4a824-322e-4fb5-aef6-64bb17633600")
 		(property "Reference" "F8"
-			(at 59.436 109.22 0)
+			(at 67.056 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15176,15 +15159,15 @@
 			)
 		)
 		(property "Value" "2A"
-			(at 65.278 109.22 0)
+			(at 72.898 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 62.23 110.49 0)
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 69.85 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15193,7 +15176,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 62.23 110.49 0)
+			(at 69.85 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15202,7 +15185,7 @@
 			)
 		)
 		(property "Description" "Fuse, small symbol"
-			(at 62.23 110.49 0)
+			(at 69.85 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15305,7 +15288,7 @@
 			(uuid "9dfba486-1198-4a14-81bf-5025b9888c3f")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "D2")
 					(unit 1)
@@ -15435,7 +15418,7 @@
 			(uuid "24cb6fd5-7bc9-4ddf-a1e4-dcce71dfc7c9")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR020")
 					(unit 1)
@@ -15523,7 +15506,7 @@
 			(uuid "1ba59603-cc8c-4818-9513-ef5b9cbe3771")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R6")
 					(unit 1)
@@ -15653,7 +15636,7 @@
 			(uuid "d1d9ab78-b6c2-4bfe-8e03-278454b45fbc")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR026")
 					(unit 1)
@@ -15817,7 +15800,7 @@
 			(uuid "4930c34d-fcf8-4fe9-b1f3-9d574ae7cdbe")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR017")
 					(unit 1)
@@ -15904,7 +15887,7 @@
 			(uuid "db165c1e-106a-4676-ac9e-5e194ec69b35")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R9")
 					(unit 1)
@@ -15937,7 +15920,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 46.99 31.75 0)
 			(effects
 				(font
@@ -15974,71 +15957,6 @@
 			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "F4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 55.88 134.62 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ce837bba-c946-41d6-b87b-6b4c8db9ff99")
-		(property "Reference" "#PWR029"
-			(at 55.88 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 59.69 136.525 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 55.88 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 55.88 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 55.88 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "16fc35bf-5301-402d-8ada-ef9994e31f27")
-		)
-		(instances
-			(project "tsal-latching-integrated"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -16126,7 +16044,7 @@
 			(uuid "a3fd0036-c474-4f07-ac0e-532dd582a14c")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "Q8")
 					(unit 1)
@@ -16214,7 +16132,7 @@
 			(uuid "a69c6f2c-ec2b-45e1-b504-a1525fe5aeaf")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R29")
 					(unit 1)
@@ -16302,7 +16220,7 @@
 			(uuid "60494108-8c18-4270-8f9e-bda305c38e2f")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "D3")
 					(unit 1)
@@ -16454,7 +16372,7 @@
 			(uuid "a7ebe7f2-f6c4-4318-90a4-412e00886d78")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR022")
 					(unit 1)
@@ -16487,7 +16405,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 46.99 29.21 0)
 			(effects
 				(font
@@ -16642,7 +16560,7 @@
 			(uuid "d553f542-3e7f-4506-9fb0-b1940e2c8058")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U1")
 					(unit 3)
@@ -16861,7 +16779,7 @@
 			(uuid "424cfe46-bf20-4b5d-bd8f-1fb2579d7936")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U1")
 					(unit 6)
@@ -16943,7 +16861,7 @@
 			)
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "H3")
 					(unit 1)
@@ -17008,7 +16926,7 @@
 			(uuid "09d2c8bd-749b-4488-ad39-5b0ff5b18d67")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR014")
 					(unit 1)
@@ -17096,87 +17014,9 @@
 			(uuid "a307a6ba-81f4-4f53-8040-653e2d955555")
 		)
 		(instances
-			(project "tsal-new"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 57.15 129.54 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ebe07af9-cf9a-44b3-90f1-d81992f57970")
-		(property "Reference" "R25"
-			(at 58.42 129.032 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 58.42 130.937 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 58.928 129.54 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 57.15 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 57.15 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 57.15 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4ef71c08-5c72-4b9e-ad36-58e50ea8b074")
-		)
-		(pin "2"
-			(uuid "227dca48-419e-4f7f-8009-d6c48a63ce37")
-		)
-		(instances
 			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "R25")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -17326,7 +17166,7 @@
 			(uuid "1d401634-d20e-4722-8b22-23842bb9bf38")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "D4")
 					(unit 1)
@@ -17411,7 +17251,7 @@
 			(uuid "583cc89c-856a-4045-88fb-99de2937049f")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R12")
 					(unit 1)
@@ -17476,7 +17316,7 @@
 			(uuid "fac0bb9c-9161-4494-b568-958bae871ef3")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR044")
 					(unit 1)
@@ -17557,7 +17397,7 @@
 			)
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "H1")
 					(unit 1)
@@ -17622,7 +17462,7 @@
 			(uuid "b80f5c9e-9be6-4a0e-bfbb-be33544a6795")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR021")
 					(unit 1)
@@ -17687,7 +17527,7 @@
 			(uuid "10246065-b89d-48fe-b5de-e22ccc0698de")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR036")
 					(unit 1)
@@ -17840,7 +17680,7 @@
 			(uuid "f7b37428-7c96-474b-8034-8de25ec9a1a1")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "R5")
 					(unit 1)
@@ -17928,7 +17768,7 @@
 			(uuid "881a0fc0-7f53-41ee-b9aa-eefd2ea3899d")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "C2")
 					(unit 1)
@@ -18106,7 +17946,7 @@
 			(uuid "77313d9f-bc7e-4ad8-a602-a80ef0a5affc")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "Q9")
 					(unit 1)
@@ -18229,7 +18069,7 @@
 			(uuid "dfbf7b0c-37d6-48cf-bb36-a9e9bcd3583b")
 		)
 		(instances
-			(project "tsal-new"
+			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "U2")
 					(unit 3)
