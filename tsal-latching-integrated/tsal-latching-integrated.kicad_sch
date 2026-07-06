@@ -6,11 +6,11 @@
 	(paper "A3")
 	(title_block
 		(title "TSAL & Latching Integrated")
-		(date "2026-07-03")
-		(rev "1.1.0")
+		(date "2026-07-06")
+		(rev "1.1.1")
 		(company "Southampton University Formula Student Team")
 		(comment 1 "Stag 12")
-		(comment 2 "Oliver Taylor, Anthony Tan, Andrew Vas, Ethan Turnbull")
+		(comment 2 "Ethan Turnbull, Adam Eastman")
 		(comment 3 "Ray Wang")
 	)
 	(lib_symbols
@@ -3064,53 +3064,45 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SUFST:SiS413DNT"
-			(pin_names
-				(hide yes)
-			)
+		(symbol "Power_Management:BTS5012SDA"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
+			(property "Reference" "U"
+				(at -5.08 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "SiS413DNT"
-				(at 5.08 0 0)
+			(property "Value" "BTS5012SDA"
+				(at 8.89 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:Vishay_PowerPAK_1212-8_Single"
-				(at 5.08 -1.905 0)
+			(property "Footprint" "Package_TO_SOT_SMD:TO-252-4"
+				(at 0 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
-						(italic yes)
 					)
-					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
-				(at 0 0 90)
+			(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BTS5012SDA-DS-v01_01-en.pdf?fileId=db3a30431d8a6b3c011db95c6eba237d"
+				(at 0 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Description" "-18A Id, -30V Vds, P-Channel MOSFET, PowerPAK 1212-8 Single"
+			(property "Description" "Smart High-Side Power Switch, PROFET, Single, 24mOhm, 6.5A, 20V, TO252-5"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3119,7 +3111,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "P-Channel MOSFET"
+			(property "ki_keywords" "infineon power switch"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3128,7 +3120,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Vishay*PowerPAK*1212*Single*"
+			(property "ki_fp_filters" "TO*252*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3137,178 +3129,42 @@
 					(hide yes)
 				)
 			)
-			(symbol "SiS413DNT_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
+			(symbol "BTS5012SDA_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 -0.508) (xy 2.921 -0.381) (xy 3.683 -0.381) (xy 3.81 -0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
+						(type background)
 					)
 				)
 			)
-			(symbol "SiS413DNT_1_1"
-				(pin passive line
-					(at -5.08 0 0)
+			(symbol "BTS5012SDA_1_1"
+				(pin input line
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "G"
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "IS"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3323,17 +3179,17 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 2.54 5.08 270)
+				(pin power_in line
+					(at 0 7.62 270)
 					(length 2.54)
-					(name "D"
+					(name "Vbb"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3341,10 +3197,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 2.54 -5.08 90)
+				(pin power_out line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "S"
+					(name "OUT"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3360,10 +3216,325 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at 7.62 0 180)
 					(length 2.54)
 					(hide yes)
-					(name "S"
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Relay:G5Q-1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "K"
+				(at 11.43 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "G5Q-1"
+				(at 11.43 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Relay_THT:Relay_SPDT_Omron-G5Q-1"
+				(at 11.43 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.omron.com/ecb/products/pdf/en-g5q.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "Omron G5G relay, Miniature Single Pole, SPDT, 10A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Miniature Single Pole Relay"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Relay*SPDT*Omron*G5Q*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "G5Q-1_0_0"
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 2.54) (xy 6.985 3.175) (xy 7.62 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "G5Q-1_0_1"
+				(rectangle
+					(start -10.16 5.08)
+					(end 10.16 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -8.255 1.905)
+					(end -1.905 -1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -1.905) (xy -2.54 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy -5.08 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -5.08) (xy -5.08 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 0) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 5.08) (xy 2.54 2.54) (xy 3.175 3.175) (xy 2.54 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 3.175 3.81)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 5.08 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "G5Q-1_1_1"
+				(pin passive line
+					(at -5.08 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 90)
+					(length 2.54)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3379,10 +3550,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at 7.62 7.62 270)
 					(length 2.54)
-					(hide yes)
-					(name "S"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3979,7 +4149,7 @@
 	)
 	(text "Shutdown Relays"
 		(exclude_from_sim no)
-		(at 283.718 118.872 0)
+		(at 283.21 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4184,6 +4354,12 @@
 		(uuid "cd379e1e-ea12-4fc2-b576-9685139de590")
 	)
 	(junction
+		(at 368.3 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "08253467-f3a8-48a7-9303-f1881b123b2f")
+	)
+	(junction
 		(at 50.8 205.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4214,10 +4390,16 @@
 		(uuid "33fd75da-82f0-494c-8f4f-ca51d1e75933")
 	)
 	(junction
-		(at 353.06 157.48)
+		(at 323.85 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3cf81c8f-c009-4ec8-bf13-8e53d9406cab")
+		(uuid "34186420-f307-4d28-aa58-a32c8f858594")
+	)
+	(junction
+		(at 317.5 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e078658-d7f1-46ae-bb25-e238303f4675")
 	)
 	(junction
 		(at 311.15 27.94)
@@ -4238,10 +4420,10 @@
 		(uuid "4658d31c-3ab0-4b5f-984e-5055a5e81ca4")
 	)
 	(junction
-		(at 353.06 149.86)
+		(at 317.5 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "48f8c492-6dab-4695-8ffe-c3d653f1e80a")
+		(uuid "4e9a0acf-1caa-4ff4-8bc3-032eb7476ad5")
 	)
 	(junction
 		(at 78.74 210.82)
@@ -4280,6 +4462,12 @@
 		(uuid "5cc7acaf-e429-4bbc-9b99-f3a7eafc7f75")
 	)
 	(junction
+		(at 353.06 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5fc27f12-b1d3-485f-a8f7-661fa1385814")
+	)
+	(junction
 		(at 226.06 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4290,6 +4478,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "71b162b1-a3d9-41b6-801f-980423a65b62")
+	)
+	(junction
+		(at 332.74 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "74440020-dca5-4d76-b1ca-23289364ed59")
 	)
 	(junction
 		(at 322.58 27.94)
@@ -4304,10 +4498,10 @@
 		(uuid "78f72e72-78b6-4628-a16e-7758b3c818a1")
 	)
 	(junction
-		(at 339.09 149.86)
+		(at 353.06 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "80713c15-c71f-4ef4-82c4-4026a260f4f7")
+		(uuid "79f546ae-589d-4540-8474-188e7b7f2fca")
 	)
 	(junction
 		(at 69.85 34.29)
@@ -4346,16 +4540,16 @@
 		(uuid "9595325d-536b-4661-8f65-3890af31dea3")
 	)
 	(junction
+		(at 323.85 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "98343980-f328-4c75-9a0e-020dbc9f6b81")
+	)
+	(junction
 		(at 179.07 195.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9bc9a05e-3e57-4ac2-bc7f-ec43e88d593c")
-	)
-	(junction
-		(at 346.71 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9d69ed21-9f6f-45c4-97fb-ac0111532396")
 	)
 	(junction
 		(at 214.63 217.17)
@@ -4368,12 +4562,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a2e4c2d7-615f-4516-8882-806d3a9108dd")
-	)
-	(junction
-		(at 317.5 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ae366cce-05a8-4d97-a3f0-be0e3215c1d4")
 	)
 	(junction
 		(at 69.85 36.83)
@@ -4394,22 +4582,10 @@
 		(uuid "b05604a5-e55e-4b1d-afe0-15c0c47b0c07")
 	)
 	(junction
-		(at 297.18 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b1b83297-9792-4a17-bda5-252befcf1275")
-	)
-	(junction
 		(at 264.16 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b30afac6-ea66-4fe6-991e-1a72d26fe563")
-	)
-	(junction
-		(at 332.74 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b95ae718-5c01-494c-b47a-c22783d6ec43")
 	)
 	(junction
 		(at 273.05 207.01)
@@ -4430,16 +4606,10 @@
 		(uuid "c81544a7-6528-429c-a785-1fc8e6d98918")
 	)
 	(junction
-		(at 317.5 157.48)
+		(at 289.56 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ccf8deea-93dd-4441-b47a-715d209b4920")
-	)
-	(junction
-		(at 303.53 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ce2eb6e9-c437-4bef-83bf-53a572448d68")
+		(uuid "d3994e24-f7aa-43b8-b76c-73d067290be9")
 	)
 	(junction
 		(at 41.91 29.21)
@@ -4460,20 +4630,28 @@
 		(uuid "ee08024f-531c-4a86-8206-78621445260a")
 	)
 	(junction
-		(at 311.15 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f2016446-612b-45e9-a1d9-1cf640a21660")
-	)
-	(junction
 		(at 34.29 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f39170a9-5533-4b5c-8de5-a758ccc3237f")
 	)
+	(junction
+		(at 298.45 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ffc28ecf-b02d-4731-8acd-8ad53e1e7716")
+	)
 	(no_connect
 		(at 43.18 165.1)
 		(uuid "2d24fa29-d553-4702-a0a5-fc61bd0296ce")
+	)
+	(no_connect
+		(at 334.01 106.68)
+		(uuid "5b708366-50f4-4a23-ac76-9a582f5e1739")
+	)
+	(no_connect
+		(at 299.72 106.68)
+		(uuid "b7c64cdb-f684-4ab4-b89e-91caab6698d6")
 	)
 	(bus_entry
 		(at 270.51 191.77)
@@ -4565,6 +4743,16 @@
 		)
 		(uuid "f715c5aa-bf8c-47ed-991d-89c5ef339d76")
 	)
+	(wire
+		(pts
+			(xy 332.74 113.03) (xy 332.74 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0007c108-ca2c-4f48-a291-48f567ea126f")
+	)
 	(polyline
 		(pts
 			(xy 379.73 41.91) (xy 405.13 41.91)
@@ -4577,13 +4765,13 @@
 	)
 	(wire
 		(pts
-			(xy 297.18 149.86) (xy 303.53 149.86)
+			(xy 349.25 114.3) (xy 353.06 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "025d1a0a-8242-43f0-ab94-6e9ff64d80b8")
+		(uuid "04f38490-13ab-4f3c-850e-0928f0f79b4f")
 	)
 	(wire
 		(pts
@@ -4617,6 +4805,16 @@
 	)
 	(wire
 		(pts
+			(xy 337.82 121.92) (xy 332.74 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a0bbc63-0b56-4246-8483-54147f924847")
+	)
+	(wire
+		(pts
 			(xy 49.53 29.21) (xy 55.88 29.21)
 		)
 		(stroke
@@ -4624,6 +4822,26 @@
 			(type default)
 		)
 		(uuid "0a2e6732-13a2-4cc0-98ec-52cd995314c2")
+	)
+	(wire
+		(pts
+			(xy 334.01 138.43) (xy 330.2 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bd36789-5f16-437b-9b67-6f051fb66106")
+	)
+	(wire
+		(pts
+			(xy 294.64 143.51) (xy 299.72 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d48dc86-ecd6-4ca6-b700-0b4b24ea6283")
 	)
 	(wire
 		(pts
@@ -4657,13 +4875,13 @@
 	)
 	(wire
 		(pts
-			(xy 303.53 149.86) (xy 303.53 144.78)
+			(xy 323.85 140.97) (xy 323.85 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "132f8eb5-42fd-4ef1-a5e6-5aab77b18b1a")
+		(uuid "11a3bb65-1f1a-41f9-949a-ef2ea487fec8")
 	)
 	(bus
 		(pts
@@ -4747,6 +4965,16 @@
 	)
 	(wire
 		(pts
+			(xy 330.2 143.51) (xy 334.01 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b07bedb-f735-461e-ad35-6a910ffffe11")
+	)
+	(wire
+		(pts
 			(xy 179.07 208.28) (xy 181.61 208.28)
 		)
 		(stroke
@@ -4754,16 +4982,6 @@
 			(type default)
 		)
 		(uuid "1b394970-1302-46f0-a6a7-a0ff6b0e59d8")
-	)
-	(wire
-		(pts
-			(xy 346.71 147.32) (xy 346.71 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c046a64-26d3-404e-a4f9-c6b3bfdaea47")
 	)
 	(wire
 		(pts
@@ -4845,16 +5063,6 @@
 		)
 		(uuid "1f6183b7-7721-45cd-9ff3-9214808f0d66")
 	)
-	(wire
-		(pts
-			(xy 317.5 149.86) (xy 317.5 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f7e09ac-6ae8-4990-8748-b561aeb73746")
-	)
 	(polyline
 		(pts
 			(xy 391.16 219.075) (xy 392.43 219.075)
@@ -4927,6 +5135,16 @@
 	)
 	(wire
 		(pts
+			(xy 323.85 132.08) (xy 323.85 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22c2affd-3140-4e37-a7ef-700545db897f")
+	)
+	(wire
+		(pts
 			(xy 264.16 99.06) (xy 264.16 104.14)
 		)
 		(stroke
@@ -4934,6 +5152,16 @@
 			(type default)
 		)
 		(uuid "24655199-b91b-4b3e-911a-321bfb57dd93")
+	)
+	(wire
+		(pts
+			(xy 298.45 113.03) (xy 298.45 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24b9c073-488b-4112-aefa-6790b2b8929c")
 	)
 	(wire
 		(pts
@@ -4967,6 +5195,16 @@
 	)
 	(wire
 		(pts
+			(xy 317.5 128.27) (xy 317.5 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2573e6b3-b803-4dee-ad59-8dcf1ae9c94d")
+	)
+	(wire
+		(pts
 			(xy 162.56 234.95) (xy 209.55 234.95)
 		)
 		(stroke
@@ -4974,16 +5212,6 @@
 			(type default)
 		)
 		(uuid "25e2d4a1-ba35-4fa3-8b67-50ace8fd2b2e")
-	)
-	(wire
-		(pts
-			(xy 311.15 147.32) (xy 311.15 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26c7c312-7806-4540-a25e-b3b1cea086f9")
 	)
 	(polyline
 		(pts
@@ -4994,26 +5222,6 @@
 			(type default)
 		)
 		(uuid "26ef4b0f-cf8e-4bd0-86ab-50202014dfbb")
-	)
-	(wire
-		(pts
-			(xy 292.1 121.92) (xy 292.1 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "291a92ab-4dc2-4209-838d-c0a63bdd4998")
-	)
-	(wire
-		(pts
-			(xy 332.74 137.16) (xy 334.01 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "295e6e4b-e091-4bb1-ac89-269e36286b3f")
 	)
 	(wire
 		(pts
@@ -5077,6 +5285,16 @@
 	)
 	(wire
 		(pts
+			(xy 314.96 114.3) (xy 317.5 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d1e8bdf-d1bc-4e64-93c2-a929186467e5")
+	)
+	(wire
+		(pts
 			(xy 214.63 224.79) (xy 214.63 227.33)
 		)
 		(stroke
@@ -5107,6 +5325,16 @@
 	)
 	(wire
 		(pts
+			(xy 294.64 138.43) (xy 294.64 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3002da68-a424-4995-88cb-9d19cbf372ac")
+	)
+	(wire
+		(pts
 			(xy 226.06 208.28) (xy 224.79 208.28)
 		)
 		(stroke
@@ -5114,6 +5342,16 @@
 			(type default)
 		)
 		(uuid "30739179-92f2-44f6-8938-f52e4a56c9c5")
+	)
+	(wire
+		(pts
+			(xy 341.63 132.08) (xy 341.63 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30d882c2-7536-46af-93db-bdd85e3af5c7")
 	)
 	(wire
 		(pts
@@ -5135,6 +5373,26 @@
 		)
 		(uuid "31a99d97-4267-4755-8bf5-6604a61768e7")
 	)
+	(wire
+		(pts
+			(xy 353.06 114.3) (xy 353.06 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32021923-9430-4c84-9889-ec3c8f8185e2")
+	)
+	(wire
+		(pts
+			(xy 323.85 132.08) (xy 341.63 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33a6987b-b7e0-4f7d-b46c-aeac2c9057d1")
+	)
 	(polyline
 		(pts
 			(xy 201.93 208.28) (xy 203.2 200.66)
@@ -5154,16 +5412,6 @@
 			(type default)
 		)
 		(uuid "35d87c16-6f15-4cfa-9569-46947df5ea62")
-	)
-	(wire
-		(pts
-			(xy 311.15 137.16) (xy 311.15 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "367d166f-da62-4653-a0d9-dbd15d8c142b")
 	)
 	(wire
 		(pts
@@ -5194,6 +5442,16 @@
 			(type default)
 		)
 		(uuid "398dbe68-bae0-4e03-90d5-bb038f6a93e0")
+	)
+	(wire
+		(pts
+			(xy 294.64 153.67) (xy 294.64 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a429ce8-3342-4fa9-9f03-cdefdf2a8362")
 	)
 	(wire
 		(pts
@@ -5257,16 +5515,6 @@
 	)
 	(wire
 		(pts
-			(xy 332.74 147.32) (xy 332.74 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3dbbf624-ddbb-4ede-bb35-e747d428a352")
-	)
-	(wire
-		(pts
 			(xy 217.17 242.57) (xy 217.17 243.84)
 		)
 		(stroke
@@ -5315,6 +5563,16 @@
 		)
 		(uuid "41f3b00d-3418-40d8-a3e5-355d72b5b422")
 	)
+	(wire
+		(pts
+			(xy 323.85 104.14) (xy 323.85 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "421dc4cc-ba24-45bb-8869-d3234090e1b9")
+	)
 	(polyline
 		(pts
 			(xy 133.35 121.92) (xy 140.97 118.11)
@@ -5334,16 +5592,6 @@
 			(type default)
 		)
 		(uuid "433a149d-34ba-41e2-bebc-447e17f04af2")
-	)
-	(wire
-		(pts
-			(xy 311.15 149.86) (xy 317.5 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43453582-6f86-42b4-a467-2bbf3bd38aa7")
 	)
 	(wire
 		(pts
@@ -5387,13 +5635,23 @@
 	)
 	(wire
 		(pts
-			(xy 317.5 149.86) (xy 317.5 157.48)
+			(xy 353.06 121.92) (xy 353.06 128.27)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4618a10c-f84e-449c-9b79-654013011ec5")
+		(uuid "454604ad-bad6-4e0e-b5d7-a3ad312ccb84")
+	)
+	(wire
+		(pts
+			(xy 323.85 101.6) (xy 334.01 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4572899c-cc3e-4317-bde6-40c516803e77")
 	)
 	(wire
 		(pts
@@ -5447,16 +5705,6 @@
 	)
 	(wire
 		(pts
-			(xy 346.71 137.16) (xy 347.98 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4878fd7c-9c0e-4287-aa67-ac35257cff20")
-	)
-	(wire
-		(pts
 			(xy 364.49 195.58) (xy 364.49 237.49)
 		)
 		(stroke
@@ -5474,16 +5722,6 @@
 			(type default)
 		)
 		(uuid "4928920e-8d2c-4707-ada5-b11f3896c3f4")
-	)
-	(wire
-		(pts
-			(xy 339.09 149.86) (xy 339.09 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b7c056b-a0cf-4938-947c-fe98a7521b0e")
 	)
 	(wire
 		(pts
@@ -5557,13 +5795,13 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 157.48) (xy 353.06 165.1)
+			(xy 332.74 121.92) (xy 332.74 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "508908e5-2154-4e75-82af-6454b94df67e")
+		(uuid "4f17b796-869c-454a-b431-dc479176f743")
 	)
 	(wire
 		(pts
@@ -5587,13 +5825,13 @@
 	)
 	(wire
 		(pts
-			(xy 317.5 157.48) (xy 317.5 165.1)
+			(xy 368.3 88.9) (xy 368.3 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "536a945c-d4e3-4b82-b1ee-ecad32ab0409")
+		(uuid "55ab74e2-a369-4cb8-8100-fed5e2cc8c4e")
 	)
 	(wire
 		(pts
@@ -5667,6 +5905,16 @@
 	)
 	(wire
 		(pts
+			(xy 330.2 128.27) (xy 353.06 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5beebc98-8955-45a2-847f-dd052ce77de6")
+	)
+	(wire
+		(pts
 			(xy 43.18 105.41) (xy 44.45 105.41)
 		)
 		(stroke
@@ -5707,23 +5955,13 @@
 	)
 	(wire
 		(pts
-			(xy 292.1 137.16) (xy 297.18 137.16)
+			(xy 349.25 104.14) (xy 368.3 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "600500fc-a408-4cfd-a508-b5bbfadf1e67")
-	)
-	(wire
-		(pts
-			(xy 332.74 149.86) (xy 339.09 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "606293e1-a648-4ec4-9443-92405045185d")
+		(uuid "6013f99f-2462-444d-b88b-1bd7dccd6ff6")
 	)
 	(wire
 		(pts
@@ -5734,16 +5972,6 @@
 			(type default)
 		)
 		(uuid "609fe774-18d3-4a02-b149-46251568d9cf")
-	)
-	(wire
-		(pts
-			(xy 339.09 149.86) (xy 339.09 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6110fa85-ebee-4c67-aa2b-3a1c56b57ccb")
 	)
 	(wire
 		(pts
@@ -5814,6 +6042,16 @@
 			(type default)
 		)
 		(uuid "695e13c5-f4f8-480d-9339-8ac8246df4a9")
+	)
+	(wire
+		(pts
+			(xy 314.96 140.97) (xy 323.85 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6963aeb8-d295-4e1f-aa5e-bfbf13d367f1")
 	)
 	(wire
 		(pts
@@ -6017,16 +6255,6 @@
 	)
 	(wire
 		(pts
-			(xy 317.5 157.48) (xy 303.53 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "77590386-35f9-4727-bd05-6f43247f5348")
-	)
-	(wire
-		(pts
 			(xy 264.16 104.14) (xy 264.16 106.68)
 		)
 		(stroke
@@ -6127,13 +6355,23 @@
 	)
 	(polyline
 		(pts
-			(xy 379.73 119.38) (xy 379.73 189.23)
+			(xy 378.46 82.55) (xy 378.46 189.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "810b16c9-ea21-4b81-a3a4-636d04d2fbf6")
+	)
+	(wire
+		(pts
+			(xy 317.5 121.92) (xy 317.5 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81785dbd-d495-470c-8c0b-9f40d80ddbcb")
 	)
 	(wire
 		(pts
@@ -6154,6 +6392,16 @@
 			(type default)
 		)
 		(uuid "8340b948-2c46-4981-9350-ec88afaab5de")
+	)
+	(wire
+		(pts
+			(xy 330.2 153.67) (xy 330.2 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "834b1127-2807-43ff-8184-b9d531a6eaab")
 	)
 	(polyline
 		(pts
@@ -6194,16 +6442,6 @@
 			(type default)
 		)
 		(uuid "8541c3e3-4c3b-4571-bbda-7aba5828acf4")
-	)
-	(wire
-		(pts
-			(xy 297.18 139.7) (xy 297.18 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8547c762-dd7f-417c-b63c-fec215af899f")
 	)
 	(wire
 		(pts
@@ -6377,7 +6615,7 @@
 	)
 	(polyline
 		(pts
-			(xy 283.21 119.38) (xy 379.73 119.38)
+			(xy 281.94 82.55) (xy 378.46 82.55)
 		)
 		(stroke
 			(width 0)
@@ -6417,23 +6655,13 @@
 	)
 	(wire
 		(pts
-			(xy 358.14 137.16) (xy 363.22 137.16)
+			(xy 298.45 121.92) (xy 298.45 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8f774004-9356-455d-9a43-7f15e3d032c6")
-	)
-	(wire
-		(pts
-			(xy 363.22 121.92) (xy 363.22 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "918bd478-8f0e-4eaf-8938-392df3aa14e2")
+		(uuid "8f10c0c5-949a-41fd-a4c0-8fdd6c4eca5d")
 	)
 	(wire
 		(pts
@@ -6467,16 +6695,6 @@
 	)
 	(wire
 		(pts
-			(xy 339.09 157.48) (xy 353.06 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "939ed4df-ac94-412c-9777-7202cbdd1609")
-	)
-	(wire
-		(pts
 			(xy 162.56 208.28) (xy 167.64 208.28)
 		)
 		(stroke
@@ -6484,6 +6702,16 @@
 			(type default)
 		)
 		(uuid "95b0313c-7eaa-4e61-84d4-8bb05fe5b407")
+	)
+	(wire
+		(pts
+			(xy 314.96 104.14) (xy 323.85 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99325426-9de0-4a6b-987f-4d1a3604911b")
 	)
 	(wire
 		(pts
@@ -6527,6 +6755,16 @@
 	)
 	(wire
 		(pts
+			(xy 289.56 101.6) (xy 299.72 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1267e38-7ffd-490e-8502-87396972cec3")
+	)
+	(wire
+		(pts
 			(xy 372.11 223.52) (xy 372.11 224.79)
 		)
 		(stroke
@@ -6547,6 +6785,16 @@
 	)
 	(wire
 		(pts
+			(xy 303.53 121.92) (xy 298.45 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1fe0b97-8fe4-49ec-9b81-4417a163d0d1")
+	)
+	(wire
+		(pts
 			(xy 356.87 209.55) (xy 356.87 212.09)
 		)
 		(stroke
@@ -6564,6 +6812,16 @@
 			(type default)
 		)
 		(uuid "a422c4fc-e11f-4c47-8c83-193b968f3b92")
+	)
+	(wire
+		(pts
+			(xy 330.2 146.05) (xy 330.2 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a468bcde-3121-4f79-91a1-ceb2d0bfdd1a")
 	)
 	(wire
 		(pts
@@ -6597,6 +6855,16 @@
 	)
 	(wire
 		(pts
+			(xy 345.44 121.92) (xy 353.06 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5345431-5e5e-4d38-ab65-610fb7aca026")
+	)
+	(wire
+		(pts
 			(xy 50.8 205.74) (xy 54.61 205.74)
 		)
 		(stroke
@@ -6607,6 +6875,16 @@
 	)
 	(wire
 		(pts
+			(xy 317.5 114.3) (xy 317.5 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7b84c83-7879-4bd7-b718-8eb76ce590bf")
+	)
+	(wire
+		(pts
 			(xy 62.23 210.82) (xy 78.74 210.82)
 		)
 		(stroke
@@ -6614,6 +6892,16 @@
 			(type default)
 		)
 		(uuid "a7ef986e-d37c-411b-ab23-bcb284cc3f17")
+	)
+	(wire
+		(pts
+			(xy 289.56 87.63) (xy 289.56 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8f5b320-d054-431c-b30e-1613519de8b0")
 	)
 	(polyline
 		(pts
@@ -6707,16 +6995,6 @@
 	)
 	(wire
 		(pts
-			(xy 297.18 137.16) (xy 298.45 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1313903-0e3a-4b0c-b320-959ec1ea9674")
-	)
-	(wire
-		(pts
 			(xy 41.91 31.75) (xy 41.91 29.21)
 		)
 		(stroke
@@ -6775,6 +7053,26 @@
 		)
 		(uuid "b29c44cf-fad1-4400-878c-f94f40fabcfe")
 	)
+	(wire
+		(pts
+			(xy 332.74 114.3) (xy 334.01 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b35ec742-c606-476a-ae74-ea629f298553")
+	)
+	(wire
+		(pts
+			(xy 349.25 140.97) (xy 368.3 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b440e14d-18f5-444b-97b4-8811fa07b737")
+	)
 	(polyline
 		(pts
 			(xy 396.24 218.821) (xy 396.621 219.329)
@@ -6784,6 +7082,16 @@
 			(type solid)
 		)
 		(uuid "b569c7d3-e2a1-4eb8-98df-faa415a7deec")
+	)
+	(wire
+		(pts
+			(xy 299.72 138.43) (xy 294.64 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6616077-e021-467b-a949-23ece16594a9")
 	)
 	(wire
 		(pts
@@ -6805,25 +7113,25 @@
 		)
 		(uuid "b97362cb-464a-4f56-b088-2055fb6b8668")
 	)
-	(wire
-		(pts
-			(xy 353.06 149.86) (xy 353.06 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9b02f37-8b5a-49ef-ab78-08d462874aa7")
-	)
 	(polyline
 		(pts
-			(xy 283.21 119.38) (xy 283.21 189.23)
+			(xy 281.94 82.55) (xy 281.94 189.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b9cc8da0-57ff-4524-b139-7132b6f4baba")
+	)
+	(wire
+		(pts
+			(xy 368.3 140.97) (xy 368.3 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba3959da-face-45e1-965f-141a6b88b533")
 	)
 	(wire
 		(pts
@@ -6844,16 +7152,6 @@
 			(type default)
 		)
 		(uuid "bb1014b2-951d-4e99-9a27-94f1a0e97778")
-	)
-	(wire
-		(pts
-			(xy 346.71 149.86) (xy 353.06 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bbe2f223-fb40-47a3-b324-35670e07d0d6")
 	)
 	(wire
 		(pts
@@ -6937,16 +7235,6 @@
 	)
 	(wire
 		(pts
-			(xy 308.61 137.16) (xy 311.15 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfb898d7-faf8-4ccd-ace5-25533a91b2e2")
-	)
-	(wire
-		(pts
 			(xy 43.18 172.72) (xy 44.45 172.72)
 		)
 		(stroke
@@ -7007,26 +7295,6 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 149.86) (xy 353.06 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c63edb28-4a68-495a-94ab-4392d2b3490b")
-	)
-	(wire
-		(pts
-			(xy 344.17 137.16) (xy 346.71 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8a2c107-73b8-48c5-ae34-30b1c9fb3b49")
-	)
-	(wire
-		(pts
 			(xy 219.71 194.31) (xy 270.51 194.31)
 		)
 		(stroke
@@ -7074,16 +7342,6 @@
 			(type default)
 		)
 		(uuid "cccf2a2f-e455-4aef-ac0e-ec8fb3e8a454")
-	)
-	(wire
-		(pts
-			(xy 322.58 137.16) (xy 332.74 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd188606-13a8-4da2-a8ed-1f99619bb357")
 	)
 	(polyline
 		(pts
@@ -7195,6 +7453,16 @@
 		)
 		(uuid "d3c16d30-008f-4629-a873-6363ae3868a3")
 	)
+	(wire
+		(pts
+			(xy 294.64 146.05) (xy 294.64 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d48c88c9-5cc0-4e4d-b2c9-0ad3a05d606b")
+	)
 	(polyline
 		(pts
 			(xy 379.73 16.51) (xy 405.13 16.51)
@@ -7227,13 +7495,13 @@
 	)
 	(wire
 		(pts
-			(xy 297.18 147.32) (xy 297.18 149.86)
+			(xy 307.34 133.35) (xy 307.34 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d81fdd69-7bc8-4dea-9382-078781bd0d10")
+		(uuid "d9919598-dfce-4030-9ba2-8c42c4264e1f")
 	)
 	(bus
 		(pts
@@ -7244,16 +7512,6 @@
 			(type default)
 		)
 		(uuid "dadc2233-0077-4ada-b156-6c857876393b")
-	)
-	(wire
-		(pts
-			(xy 311.15 137.16) (xy 312.42 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db9cdb13-8e89-4ff4-bf29-4d6a46a49326")
 	)
 	(wire
 		(pts
@@ -7297,13 +7555,13 @@
 	)
 	(wire
 		(pts
-			(xy 332.74 139.7) (xy 332.74 137.16)
+			(xy 289.56 101.6) (xy 289.56 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e032bd40-2d28-476a-bf0d-2754efdb1584")
+		(uuid "dfb184d1-c9d8-43bb-8872-363e1817eaf4")
 	)
 	(wire
 		(pts
@@ -7354,6 +7612,16 @@
 			(type default)
 		)
 		(uuid "e3a7350b-b6bb-42b2-8e2c-fe60f4166998")
+	)
+	(wire
+		(pts
+			(xy 294.64 128.27) (xy 317.5 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3ea2cd9-feef-47f7-8028-b5f509233ff5")
 	)
 	(polyline
 		(pts
@@ -7447,7 +7715,7 @@
 	)
 	(polyline
 		(pts
-			(xy 379.73 189.23) (xy 283.21 189.23)
+			(xy 378.46 189.23) (xy 281.94 189.23)
 		)
 		(stroke
 			(width 0)
@@ -7517,6 +7785,16 @@
 	)
 	(wire
 		(pts
+			(xy 353.06 128.27) (xy 353.06 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee17850b-6279-4449-832e-8a6b86c13fb0")
+	)
+	(wire
+		(pts
 			(xy 48.26 220.98) (xy 48.26 223.52)
 		)
 		(stroke
@@ -7557,6 +7835,16 @@
 	)
 	(wire
 		(pts
+			(xy 307.34 132.08) (xy 289.56 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f11ffad0-5490-46b1-9016-999a11f3568d")
+	)
+	(wire
+		(pts
 			(xy 57.15 97.79) (xy 67.31 97.79)
 		)
 		(stroke
@@ -7564,6 +7852,16 @@
 			(type default)
 		)
 		(uuid "f1b34273-f407-40b8-ae48-4bd7363e0fea")
+	)
+	(wire
+		(pts
+			(xy 311.15 121.92) (xy 317.5 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2ad96e1-5db3-42ce-bec0-18fd43e282a5")
 	)
 	(polyline
 		(pts
@@ -7587,6 +7885,16 @@
 	)
 	(wire
 		(pts
+			(xy 298.45 114.3) (xy 299.72 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f420aff2-8d80-4534-8ce8-6d99d5cd3a25")
+	)
+	(wire
+		(pts
 			(xy 353.06 175.26) (xy 353.06 177.8)
 		)
 		(stroke
@@ -7594,16 +7902,6 @@
 			(type default)
 		)
 		(uuid "f4368d0b-fa1d-4c78-911f-cb8e8666d954")
-	)
-	(wire
-		(pts
-			(xy 303.53 149.86) (xy 303.53 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f43f5ba7-f261-48d9-b3d3-fd0646f14195")
 	)
 	(polyline
 		(pts
@@ -7657,16 +7955,6 @@
 	)
 	(wire
 		(pts
-			(xy 346.71 137.16) (xy 346.71 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa65cc68-36cd-427c-84d9-c55577f9771f")
-	)
-	(wire
-		(pts
 			(xy 372.11 209.55) (xy 372.11 212.09)
 		)
 		(stroke
@@ -7674,6 +7962,16 @@
 			(type default)
 		)
 		(uuid "fb1761c7-3ecf-4e1d-b3a9-028d84e9cfce")
+	)
+	(wire
+		(pts
+			(xy 330.2 138.43) (xy 330.2 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb8fdfdc-cec4-4125-bbaf-245454621609")
 	)
 	(polyline
 		(pts
@@ -7874,16 +8172,6 @@
 			(justify right bottom)
 		)
 		(uuid "291f5d82-fa98-40e5-8adc-b22f266b02e9")
-	)
-	(label "SHUTDOWN_OUT"
-		(at 363.22 121.92 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "293477f7-90ec-46f0-9e5a-18adc7ff3adc")
 	)
 	(label "IMD_OK"
 		(at 30.48 210.82 0)
@@ -8145,6 +8433,16 @@
 		)
 		(uuid "a7091de0-f928-476f-bd5a-61526ad8c609")
 	)
+	(label "SHUTDOWN_IN"
+		(at 289.56 87.63 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "aee4b011-0cd2-4de9-a29e-42cea369f09b")
+	)
 	(label "Reset Button -"
 		(at 322.58 44.45 0)
 		(effects
@@ -8245,6 +8543,16 @@
 		)
 		(uuid "cf9cfefb-2a1c-4102-b8c0-345c85c76a6c")
 	)
+	(label "SHUTDOWN_OUT"
+		(at 368.3 88.9 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d46fc8c6-208f-4cf6-a05d-af8fbb4ba4a3")
+	)
 	(label "BMS_OK_LATCHED"
 		(at 309.88 170.18 180)
 		(effects
@@ -8294,16 +8602,6 @@
 			(justify left bottom)
 		)
 		(uuid "f6bb071e-57a1-4ea4-b406-f3ff95ffc5aa")
-	)
-	(label "SHUTDOWN_IN"
-		(at 292.1 121.92 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f9046763-fe6b-49e1-ac76-74d06e22a42f")
 	)
 	(label "POR"
 		(at 358.14 27.94 0)
@@ -8570,6 +8868,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Relay:G5Q-1")
+		(at 307.34 109.22 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "03302188-48d1-4ed8-b8af-80e109a3cb71")
+		(property "Reference" "K1"
+			(at 307.34 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "G5Q-1"
+			(at 307.34 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_SPDT_Omron-G5Q-1"
+			(at 308.61 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.omron.com/ecb/products/pdf/en-g5q.pdf"
+			(at 307.34 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Omron G5G relay, Miniature Single Pole, SPDT, 10A"
+			(at 307.34 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "406be6a1-4a6a-44b2-9d3b-85aad1cae2f0")
+		)
+		(pin "4"
+			(uuid "4a07e0eb-5f5c-46a4-8309-3d7f962b38ed")
+		)
+		(pin "3"
+			(uuid "37ef5c4c-3294-4584-ab86-ca6bd75c1b54")
+		)
+		(pin "5"
+			(uuid "a205224b-7032-4a9b-8777-b5532adeb197")
+		)
+		(pin "2"
+			(uuid "f54b66be-11c3-49f3-882f-e5e47d2f8a82")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "K1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 356.87 245.11 0)
 		(unit 1)
@@ -8662,7 +9039,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 201.93 39.37 0)
 			(effects
 				(font
@@ -8815,7 +9192,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 231.14 110.998 90)
 			(effects
 				(font
@@ -9025,7 +9402,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 326.39 227.33 0)
 			(effects
 				(font
@@ -9145,93 +9522,6 @@
 			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR043")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 332.74 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "17c13549-d59c-4ca6-91b2-a5aec3bb705a")
-		(property "Reference" "R22"
-			(at 330.835 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 330.835 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 330.962 143.51 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 332.74 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 332.74 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 332.74 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" ""
-			(at 332.74 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a5b60b98-4b09-4c84-bb46-558e76473462")
-		)
-		(pin "1"
-			(uuid "63a47bba-18a3-41b1-83c4-cb12f975fe7e")
-		)
-		(instances
-			(project "tsal-latching-integrated"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -9506,7 +9796,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 312.1152 38.1 0)
 			(effects
 				(font
@@ -9561,6 +9851,94 @@
 			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:BAT54W")
+		(at 341.63 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1edf4f03-b665-4131-a335-83950d7a28af")
+		(property "Reference" "D10"
+			(at 341.63 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT54W"
+			(at 341.63 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+			(at 341.63 126.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf"
+			(at 341.63 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 341.63 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" "771-BAT54W-T/R"
+			(at 341.63 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 341.63 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d81a55c9-2f1a-49a5-9808-00731d3d37ba")
+		)
+		(pin "2"
+			(uuid "c658da43-aa40-4119-9247-6d6790f5def4")
+		)
+		(pin "3"
+			(uuid "a018b7bf-b645-47d4-a159-b89f9c895c90")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -9658,7 +10036,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 257.048 99.06 90)
 			(effects
 				(font
@@ -9856,6 +10234,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Power_Management:BTS5012SDA")
+		(at 307.34 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2d3b3302-3fca-4511-a584-64abf1c65e38")
+		(property "Reference" "U4"
+			(at 307.34 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BTS5012SDA"
+			(at 307.34 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-252-4"
+			(at 307.34 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BTS5012SDA-DS-v01_01-en.pdf?fileId=db3a30431d8a6b3c011db95c6eba237d"
+			(at 307.34 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Smart High-Side Power Switch, PROFET, Single, 24mOhm, 6.5A, 20V, TO252-5"
+			(at 307.34 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9338f088-82a1-483f-9b98-82eace28dd4a")
+		)
+		(pin "4"
+			(uuid "ffee7ea8-59e8-4f87-aa27-e4a1e70e2f5a")
+		)
+		(pin "5"
+			(uuid "72ca91c6-5355-4eb6-a4bb-ea8c9e279daa")
+		)
+		(pin "3"
+			(uuid "59e8c0cd-8e57-4fd6-a2a9-640e87022c29")
+		)
+		(pin "1"
+			(uuid "3ccb0841-1348-4c99-acd9-01d730d23544")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:BAT54W")
 		(at 171.45 195.58 0)
 		(unit 1)
@@ -9972,7 +10427,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 46.482 217.17 90)
 			(effects
 				(font
@@ -10033,87 +10488,79 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 311.15 143.51 0)
+		(lib_id "Relay:G5Q-1")
+		(at 341.63 109.22 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
-		(uuid "32e9c31b-7422-4da1-bdf3-44041b266d9f")
-		(property "Reference" "R17"
-			(at 309.245 142.24 0)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "320aeee2-5634-450a-9b69-3586adb80570")
+		(property "Reference" "K2"
+			(at 341.63 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "10k"
-			(at 309.245 144.78 0)
+		(property "Value" "G5Q-1"
+			(at 341.63 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 309.372 143.51 90)
+		(property "Footprint" "Relay_THT:Relay_SPDT_Omron-G5Q-1"
+			(at 342.9 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.omron.com/ecb/products/pdf/en-g5q.pdf"
+			(at 341.63 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Omron G5G relay, Miniature Single Pole, SPDT, 10A"
+			(at 341.63 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Datasheet" "~"
-			(at 311.15 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 311.15 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 311.15 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" ""
-			(at 311.15 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "135fcb67-4f30-4293-9030-0a36998df803")
 		)
 		(pin "1"
-			(uuid "9fec6f08-0042-45b3-8571-3c9122960ea6")
+			(uuid "954a7c2d-bff9-475f-85a4-8b1cd8fde5e4")
+		)
+		(pin "4"
+			(uuid "6cb219e6-22b6-45c2-80f3-b6f4d0a115ed")
+		)
+		(pin "3"
+			(uuid "2cb8cc60-ed21-493e-ac35-ab51386ce23e")
+		)
+		(pin "5"
+			(uuid "7081a497-efa0-4415-b708-2d7174afedc5")
+		)
+		(pin "2"
+			(uuid "b18d8ae3-478a-43aa-a6a9-a42a384689bd")
 		)
 		(instances
 			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "R17")
+					(reference "K2")
 					(unit 1)
 				)
 			)
@@ -10185,105 +10632,6 @@
 		)
 	)
 	(symbol
-		(lib_id "SUFST:SiS413DNT")
-		(at 339.09 139.7 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3495ad07-37fb-49da-954e-e74cd3e87af8")
-		(property "Reference" "Q6"
-			(at 339.09 130.175 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SiS413DNT"
-			(at 339.09 132.715 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:Vishay_PowerPAK_1212-8_Single"
-			(at 337.185 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 339.09 139.7 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 339.09 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" "78-SIS413DN-T1-GE3 "
-			(at 339.09 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 339.09 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f77498ea-362b-4249-8f11-57988c7fa10d")
-		)
-		(pin "3"
-			(uuid "f8d1c3ce-3ba0-4675-b6b7-eaaa6daa50aa")
-		)
-		(pin "5"
-			(uuid "7da5825b-606e-4b66-b369-c8347c3b22d1")
-		)
-		(pin "1"
-			(uuid "9fbee9d9-8281-4ac8-bfb5-751a0cdde72c")
-		)
-		(pin "4"
-			(uuid "c610aa2f-c2e5-48d8-91b9-69e5262f4f8b")
-		)
-		(instances
-			(project "tsal-latching-integrated"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "Q6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 322.58 34.29 0)
 		(mirror y)
@@ -10309,7 +10657,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 324.358 34.29 90)
 			(effects
 				(font
@@ -10621,93 +10969,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 297.18 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "40275811-bf8e-4873-8d4f-10edcb4114f8")
-		(property "Reference" "R14"
-			(at 295.275 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 295.275 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 295.402 143.51 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 297.18 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 297.18 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 297.18 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" ""
-			(at 297.18 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "ad328f76-1638-4933-8dd0-fae369695baa")
-		)
-		(pin "1"
-			(uuid "cab6ad82-e8cc-466e-b0fc-8631bee59244")
-		)
-		(instances
-			(project "tsal-latching-integrated"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "R14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
 		(at 170.18 33.02 0)
 		(unit 1)
@@ -10800,7 +11061,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 324.612 237.49 90)
 			(effects
 				(font
@@ -11093,6 +11354,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+12V")
+		(at 298.45 113.03 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4d1d1661-6b0a-434c-8cf7-8a2738943b73")
+		(property "Reference" "#PWR050"
+			(at 298.45 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 294.64 111.125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 298.45 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 298.45 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 298.45 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "435765ff-f6d8-4d9a-9b95-4df44b6250b2")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Q_NMOS_GSD")
 		(at 261.62 93.98 0)
 		(unit 1)
@@ -11331,204 +11658,6 @@
 		)
 	)
 	(symbol
-		(lib_id "SUFST:SiS413DNT")
-		(at 303.53 139.7 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "56de4029-6d7a-46e9-b17a-2019c78c2f73")
-		(property "Reference" "Q3"
-			(at 303.53 130.175 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SiS413DNT"
-			(at 303.53 132.715 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:Vishay_PowerPAK_1212-8_Single"
-			(at 301.625 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 303.53 139.7 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 303.53 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" "78-SIS413DN-T1-GE3 "
-			(at 303.53 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 303.53 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "deeed6a9-e505-4013-b1a2-070c56fb9ee5")
-		)
-		(pin "3"
-			(uuid "d848c5c6-561b-45e4-9cea-4d91d771e34a")
-		)
-		(pin "5"
-			(uuid "0ef18415-f78c-4f94-971e-4be0fb1af07d")
-		)
-		(pin "1"
-			(uuid "41862f84-5284-427f-8e0a-82d3a9fbbfe4")
-		)
-		(pin "4"
-			(uuid "deaf3bb7-9752-439f-ac76-3b77e888fe03")
-		)
-		(instances
-			(project "tsal-latching-integrated"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SUFST:SiS413DNT")
-		(at 353.06 139.7 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5bcddef1-9e54-4fea-83eb-73aef5cc405a")
-		(property "Reference" "Q7"
-			(at 353.06 130.175 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SiS413DNT"
-			(at 353.06 132.715 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:Vishay_PowerPAK_1212-8_Single"
-			(at 351.155 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 353.06 139.7 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 353.06 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" "78-SIS413DN-T1-GE3 "
-			(at 353.06 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 353.06 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b5932783-c695-46aa-a241-631dcc4848a4")
-		)
-		(pin "3"
-			(uuid "b15d7075-fb9c-48f6-b402-2c586bc93989")
-		)
-		(pin "5"
-			(uuid "20fc31a0-8ffc-407d-baf2-34233d0162bf")
-		)
-		(pin "1"
-			(uuid "e5be2735-80e2-4788-a07d-19f8e069ddf2")
-		)
-		(pin "4"
-			(uuid "48c9469d-2c99-424e-89c4-25221cf5f70f")
-		)
-		(instances
-			(project "tsal-latching-integrated"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "Q7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 50.8 199.39 0)
 		(mirror y)
@@ -11556,7 +11685,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 52.578 199.39 90)
 			(effects
 				(font
@@ -11644,7 +11773,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 58.42 203.962 90)
 			(effects
 				(font
@@ -11732,7 +11861,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 309.372 237.49 90)
 			(effects
 				(font
@@ -11819,7 +11948,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 111.76 99.822 90)
 			(effects
 				(font
@@ -11895,7 +12024,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 302.26 26.162 90)
 			(effects
 				(font
@@ -11983,7 +12112,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 356.87 214.63 0)
 			(effects
 				(font
@@ -12135,7 +12264,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 122.8852 113.03 0)
 			(effects
 				(font
@@ -12188,6 +12317,85 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 294.64 149.86 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "605e0b72-fe66-4148-a267-43e610746d4e")
+		(property "Reference" "R23"
+			(at 293.37 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 293.37 150.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 292.862 149.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 294.64 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 294.64 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 294.64 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fcd83d75-710e-4c6b-8578-be20d0b4f275")
+		)
+		(pin "2"
+			(uuid "47dd7635-587f-464d-9c98-7bf4630d245b")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "R23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 48.26 199.39 0)
 		(mirror y)
 		(unit 1)
@@ -12214,7 +12422,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 50.038 199.39 90)
 			(effects
 				(font
@@ -12457,7 +12665,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 356.87 227.33 0)
 			(effects
 				(font
@@ -12577,6 +12785,136 @@
 			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 330.2 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "68977b37-a7ff-4f16-a9e4-25b0590df80a")
+		(property "Reference" "#PWR052"
+			(at 330.2 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 330.2 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.2 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.2 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 330.2 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "002f8e36-d313-4f4d-9872-7356c7f82c7f")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "#PWR052")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 294.64 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6ca94c28-856c-4b76-98b6-904e6fc0820c")
+		(property "Reference" "#PWR0102"
+			(at 294.64 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 294.64 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 294.64 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 294.64 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 294.64 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "04ebf428-0072-4360-9499-b226e5be7ca8")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -12902,6 +13240,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Power_Management:BTS5012SDA")
+		(at 341.63 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79501568-4008-44ba-9d2e-aa531b43905a")
+		(property "Reference" "U5"
+			(at 341.63 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BTS5012SDA"
+			(at 341.63 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-252-4"
+			(at 341.63 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BTS5012SDA-DS-v01_01-en.pdf?fileId=db3a30431d8a6b3c011db95c6eba237d"
+			(at 341.63 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Smart High-Side Power Switch, PROFET, Single, 24mOhm, 6.5A, 20V, TO252-5"
+			(at 341.63 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f4671b61-858a-4e47-9bfa-1ff41a10d3d2")
+		)
+		(pin "4"
+			(uuid "b7fbddd2-f005-4add-9223-b5602b93c7ad")
+		)
+		(pin "5"
+			(uuid "084fe50f-e0a6-4279-9cda-718540481b33")
+		)
+		(pin "3"
+			(uuid "2ab3c9a1-81da-4d80-9f9b-37b6b1a7c6fe")
+		)
+		(pin "1"
+			(uuid "5ce3a544-af8b-441a-b929-4bc17f5d2b08")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 356.87 209.55 0)
 		(unit 1)
@@ -13091,6 +13506,94 @@
 			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:BAT54W")
+		(at 307.34 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "85f21d12-a1fe-43d7-bfa6-a06ee38340f2")
+		(property "Reference" "D9"
+			(at 307.34 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT54W"
+			(at 307.34 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+			(at 307.34 126.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf"
+			(at 307.34 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 307.34 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" "771-BAT54W-T/R"
+			(at 307.34 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 307.34 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c40ac51c-80e5-4596-becc-59f3a4b3e780")
+		)
+		(pin "2"
+			(uuid "77ee22ea-60ab-4e31-8a7e-a7db117ca990")
+		)
+		(pin "3"
+			(uuid "f421513b-6fc4-4340-93ea-e1da7a9d78fe")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -13350,6 +13853,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+12V")
+		(at 332.74 113.03 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "915d8120-8b52-406b-ab60-e02a2b96373b")
+		(property "Reference" "#PWR0101"
+			(at 332.74 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 328.93 111.125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 332.74 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 332.74 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 332.74 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6b22e5e8-c944-438c-aa61-fa1dd3276f9e")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 144.78 109.22 180)
 		(unit 1)
@@ -13376,7 +13945,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 146.558 109.22 90)
 			(effects
 				(font
@@ -13454,7 +14023,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 102.108 109.22 90)
 			(effects
 				(font
@@ -13727,7 +14296,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 236.22 39.37 0)
 			(effects
 				(font
@@ -13879,7 +14448,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 231.14 103.632 90)
 			(effects
 				(font
@@ -14088,7 +14657,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 294.132 237.49 90)
 			(effects
 				(font
@@ -14150,6 +14719,85 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 330.2 149.86 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ee2c4ed-e2c1-4c2f-a597-647947243437")
+		(property "Reference" "R25"
+			(at 328.93 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 328.93 150.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 328.422 149.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 330.2 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 330.2 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 330.2 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ee877b94-5674-436c-b74f-adf638b0ce61")
+		)
+		(pin "2"
+			(uuid "8c26eafc-6946-481e-a27f-ce8d9c836778")
+		)
+		(instances
+			(project "tsal-latching-integrated"
+				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
+					(reference "R25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 255.27 124.46 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14175,7 +14823,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 257.048 124.46 90)
 			(effects
 				(font
@@ -14498,7 +15146,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 88.9 214.63 0)
 			(effects
 				(font
@@ -15454,7 +16102,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 58.42 209.042 90)
 			(effects
 				(font
@@ -15645,105 +16293,6 @@
 		)
 	)
 	(symbol
-		(lib_id "SUFST:SiS413DNT")
-		(at 317.5 139.7 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c977df83-886f-4fa3-b716-d1165d3179ca")
-		(property "Reference" "Q4"
-			(at 317.5 130.175 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SiS413DNT"
-			(at 317.5 132.715 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:Vishay_PowerPAK_1212-8_Single"
-			(at 315.595 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 317.5 139.7 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 317.5 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" "78-SIS413DN-T1-GE3 "
-			(at 317.5 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 317.5 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "092d28ba-7076-4370-923b-73a32049aa58")
-		)
-		(pin "3"
-			(uuid "e22b40eb-295d-47e4-95da-2978f4fb7a2c")
-		)
-		(pin "5"
-			(uuid "88ed174f-c381-4317-ae88-9a9066c7a768")
-		)
-		(pin "1"
-			(uuid "6204e913-9e3f-45f9-afa9-888b15827ed7")
-		)
-		(pin "4"
-			(uuid "1b720dbb-8cdc-49bd-8f35-6c99acb8d867")
-		)
-		(instances
-			(project "tsal-latching-integrated"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
 		(at 149.86 27.94 0)
 		(unit 1)
@@ -15835,7 +16384,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 177.292 190.5 90)
 			(effects
 				(font
@@ -16080,7 +16629,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 372.11 227.33 0)
 			(effects
 				(font
@@ -16168,7 +16717,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 295.91 227.33 0)
 			(effects
 				(font
@@ -16223,93 +16772,6 @@
 			(project "tsal-latching-integrated"
 				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
 					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 346.71 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d09adbc3-9759-4808-9187-01bd190f7767")
-		(property "Reference" "R24"
-			(at 344.805 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 344.805 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 344.932 143.51 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 346.71 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 346.71 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 346.71 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" ""
-			(at 346.71 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f0709fb1-b4e2-402f-819e-b6eda1a7c52a")
-		)
-		(pin "1"
-			(uuid "b97fd574-17f4-4975-a9e7-ff83619421b1")
-		)
-		(instances
-			(project "tsal-latching-integrated"
-				(path "/50f6117a-e039-4744-a8aa-10bac8a7c3af"
-					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -16962,7 +17424,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 78.74 214.63 0)
 			(effects
 				(font
@@ -17114,7 +17576,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 311.15 227.33 0)
 			(effects
 				(font
@@ -17199,7 +17661,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 291.592 34.29 90)
 			(effects
 				(font
@@ -17628,7 +18090,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 58.42 206.502 90)
 			(effects
 				(font
@@ -17716,7 +18178,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 83.82 214.63 0)
 			(effects
 				(font
@@ -17804,7 +18266,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 372.11 214.63 0)
 			(effects
 				(font
