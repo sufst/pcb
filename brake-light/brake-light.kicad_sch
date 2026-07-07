@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "1457b27f-619e-4d54-b319-f9280e4b40ac")
 	(paper "A4")
 	(title_block
@@ -15,7 +15,9 @@
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -82,14 +84,14 @@
 			)
 			(symbol "Conn_01x02_1_1"
 				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(rectangle
@@ -104,14 +106,14 @@
 					)
 				)
 				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -3.81)
+					(start -1.27 -2.413)
+					(end 0 -2.667)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
 				(pin passive line
@@ -151,9 +153,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -272,10 +277,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Potentiometer_Trim"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -341,6 +349,17 @@
 				)
 			)
 			(symbol "R_Potentiometer_Trim_0_1"
+				(rectangle
+					(start 1.016 2.54)
+					(end -1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy 1.524 0.762) (xy 1.524 -0.762)
@@ -359,17 +378,6 @@
 					)
 					(stroke
 						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 1.016 2.54)
-					(end -1.016 -2.54)
-					(stroke
-						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -397,24 +405,6 @@
 					)
 				)
 				(pin passive line
-					(at 3.81 0 180)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 0 -3.81 90)
 					(length 1.27)
 					(name "3"
@@ -432,11 +422,34 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Diode:1N53xxB"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -504,10 +517,10 @@
 			(symbol "1N53xxB_0_1"
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -516,10 +529,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -577,11 +590,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "LED:IR204A"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -662,19 +680,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.381 3.175) (xy -0.127 3.175)
+						(xy -2.413 1.651) (xy -0.889 3.175) (xy -0.889 2.667) (xy -0.889 3.175) (xy -1.397 3.175)
 					)
 					(stroke
 						(width 0)
@@ -710,7 +716,19 @@
 				)
 				(polyline
 					(pts
-						(xy -2.413 1.651) (xy -0.889 3.175) (xy -0.889 2.667) (xy -0.889 3.175) (xy -1.397 3.175)
+						(xy 0 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.381 3.175) (xy -0.127 3.175)
 					)
 					(stroke
 						(width 0)
@@ -759,6 +777,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Mechanical:MountingHole"
 			(pin_names
@@ -841,10 +860,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Transistor_BJT:BCP56"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -917,6 +939,18 @@
 			(symbol "BCP56_0_1"
 				(polyline
 					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
 					)
 					(stroke
@@ -939,12 +973,11 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
 					(stroke
-						(width 0.508)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -961,17 +994,6 @@
 					)
 					(fill
 						(type outline)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
 					)
 				)
 			)
@@ -1013,6 +1035,25 @@
 					)
 				)
 				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
 					(at 2.54 -5.08 90)
 					(length 2.54)
 					(name "E"
@@ -1030,25 +1071,8 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54) hide
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -3141,7 +3165,6 @@
 	)
 	(label "LED+"
 		(at 147.955 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3152,7 +3175,6 @@
 	)
 	(label "LED-"
 		(at 40.64 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3163,7 +3185,6 @@
 	)
 	(label "LED+"
 		(at 45.72 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3179,7 +3200,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "079a79de-39d9-4791-8c1c-748dd61e11f4")
 		(property "Reference" "H4"
@@ -3219,6 +3240,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 44.45 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" ""
+			(at 44.45 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" ""
 			(at 44.45 172.085 0)
 			(effects
 				(font
@@ -3292,6 +3331,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 67.945 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "637-BCP56-16"
+			(at 67.945 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 67.945 84.455 0)
 			(effects
 				(font
@@ -3376,6 +3433,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 158.115 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 158.115 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2bafbe97-51aa-4df5-9992-8a6fe86c7f2f")
 		)
@@ -3444,6 +3519,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 226.06 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 226.06 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 226.06 66.675 0)
 			(effects
 				(font
@@ -3528,6 +3621,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RT0805FRE0768RL "
+			(at 109.22 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 109.22 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "102134b0-994c-4851-a268-305e7f3acbe7")
 		)
@@ -3596,6 +3707,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 94.615 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 94.615 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 94.615 55.88 0)
 			(effects
 				(font
@@ -3680,6 +3809,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RT0805FRE0768RL "
+			(at 240.665 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 240.665 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "781d37c5-928d-44ab-8560-b79d5bd8a17c")
 		)
@@ -3755,6 +3902,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 138.43 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 138.43 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ae92ac7f-0c08-4ba9-8145-059f2ee051a8")
 		)
@@ -3822,6 +3987,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 211.455 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 211.455 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 211.455 59.055 0)
 			(effects
 				(font
@@ -3914,6 +4097,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 70.485 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 70.485 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "39a231b6-f69e-47c7-8eb4-932d1ea9c142")
 		)
@@ -3983,6 +4184,24 @@
 		)
 		(property "Description" ""
 			(at 121.92 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "821-MMSZ4684RHG "
+			(at 121.92 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 121.92 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4066,6 +4285,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 120.015 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 120.015 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "441b3a3b-1bdf-4051-904e-5cdf3e783976")
 		)
@@ -4133,6 +4370,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 172.72 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 172.72 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 172.72 67.31 0)
 			(effects
 				(font
@@ -4217,6 +4472,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RT0805FRE0768RL "
+			(at 172.72 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 172.72 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "155c6da2-d7f8-4d5d-a22d-945d571cfa8e")
 		)
@@ -4285,6 +4558,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 123.825 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 123.825 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 123.825 55.88 0)
 			(effects
 				(font
@@ -4369,6 +4660,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 55.88 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 55.88 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6c114e84-4e34-452c-ab4a-6f6916049d12")
 		)
@@ -4437,6 +4746,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 193.04 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 193.04 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 193.04 55.88 0)
 			(effects
 				(font
@@ -4521,6 +4848,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 154.305 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 154.305 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1b02de85-ff98-42f1-9f52-4d2ebb7277dc")
 		)
@@ -4589,6 +4934,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 222.25 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 222.25 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 222.25 55.88 0)
 			(effects
 				(font
@@ -4672,6 +5035,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 109.22 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 109.22 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d9cacc82-5562-44df-a004-df7e0bac7fee")
 		)
@@ -4747,6 +5128,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 109.22 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 109.22 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5b66246a-e03d-402e-86a7-4bbadb9b5335")
 		)
@@ -4775,7 +5174,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "4f1afef5-9413-4352-a2a4-4e7a7f4d7b29")
 		(property "Reference" "H2"
@@ -4815,6 +5214,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 44.45 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" ""
+			(at 44.45 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" ""
 			(at 44.45 161.29 0)
 			(effects
 				(font
@@ -4893,6 +5310,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 196.85 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 196.85 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "da506fa4-00a1-421f-ab37-577f789ee5be")
 		)
@@ -4960,6 +5395,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 240.665 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 240.665 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 240.665 50.165 0)
 			(effects
 				(font
@@ -5052,6 +5505,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 172.72 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 172.72 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "35c452fb-143d-4a70-bdd2-9d2b9d09bd7c")
 		)
@@ -5127,6 +5598,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 240.665 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 240.665 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bae6acfd-76bf-4a34-8ea8-e8e811854acf")
 		)
@@ -5155,7 +5644,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "6a1cfaba-ea86-45cc-8c2c-1d58eaa3b79d")
 		(property "Reference" "RV2"
 			(at 186.69 105.41 90)
@@ -5195,6 +5684,24 @@
 		)
 		(property "Description" ""
 			(at 184.785 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" ""
+			(at 184.785 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" ""
+			(at 184.785 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5281,6 +5788,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 52.07 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 52.07 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a10ff0cc-3e04-4707-b027-c2a3f23bfd6d")
 		)
@@ -5349,6 +5874,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 226.06 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 226.06 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 226.06 55.88 0)
 			(effects
 				(font
@@ -5433,6 +5976,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "821-MMSZ4684RHG "
+			(at 92.71 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 92.71 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f9b83b7a-981b-4117-b803-4619a7348114")
 		)
@@ -5461,7 +6022,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "773585f1-b196-4682-bb64-0e0463162414")
 		(property "Reference" "H3"
@@ -5501,6 +6062,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 44.45 167.005 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" ""
+			(at 44.45 167.005 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" ""
 			(at 44.45 167.005 0)
 			(effects
 				(font
@@ -5574,6 +6153,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 238.125 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "637-BCP56-16"
+			(at 238.125 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 238.125 84.455 0)
 			(effects
 				(font
@@ -5658,6 +6255,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 94.615 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 94.615 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "22ded5a2-ac9c-4546-9092-9553d5bd1c00")
 		)
@@ -5734,6 +6349,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 52.07 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 52.07 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a07207ca-373d-49ad-bfcf-7556ca629bcb")
 		)
@@ -5801,6 +6434,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 70.485 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 70.485 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 70.485 67.31 0)
 			(effects
 				(font
@@ -5888,6 +6539,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "637-BCP56-16"
+			(at 106.68 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 106.68 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0ec38ce2-c0fe-41fa-98a7-946e7870d6c6")
 		)
@@ -5955,6 +6624,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 70.485 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 70.485 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 70.485 49.53 0)
 			(effects
 				(font
@@ -6039,6 +6726,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 120.015 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 120.015 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "803e3fde-d384-4815-a33a-b94f4f316ac0")
 		)
@@ -6107,6 +6812,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 90.805 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 90.805 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 90.805 66.675 0)
 			(effects
 				(font
@@ -6191,6 +6914,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 90.805 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 90.805 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8919d5ad-db37-4a73-929f-cc0e441f299f")
 		)
@@ -6259,6 +7000,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 193.04 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 193.04 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 193.04 66.675 0)
 			(effects
 				(font
@@ -6342,6 +7101,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 211.455 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 211.455 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3051440e-dfb0-4173-8530-07cf78ad3754")
 		)
@@ -6409,6 +7186,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 211.455 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 211.455 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 211.455 50.165 0)
 			(effects
 				(font
@@ -6496,6 +7291,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "637-BCP56-16"
+			(at 170.18 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 170.18 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9d97a928-58ad-4631-b49d-1f995ba7761a")
 		)
@@ -6565,6 +7378,24 @@
 		)
 		(property "Description" ""
 			(at 194.945 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "821-MMSZ4684RHG "
+			(at 194.945 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 194.945 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6648,6 +7479,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RT0805FRE0768RL "
+			(at 70.485 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 70.485 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "65b3d658-fb21-43ed-963c-eba6a2eede6c")
 		)
@@ -6714,6 +7563,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 35.56 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" ""
+			(at 35.56 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "INV"
 			(at 35.56 40.64 0)
 			(effects
 				(font
@@ -6798,6 +7665,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "821-MMSZ4684RHG "
+			(at 156.21 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 156.21 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9b75104b-8ae2-4c0e-9f8d-c85610854103")
 		)
@@ -6866,6 +7751,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 138.43 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RT0805FRE0768RL "
+			(at 138.43 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 138.43 99.06 0)
 			(effects
 				(font
@@ -6943,6 +7846,24 @@
 		)
 		(property "Description" ""
 			(at 53.975 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "821-MMSZ4684RHG "
+			(at 53.975 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 53.975 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7029,6 +7950,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "637-BCP56-16"
+			(at 208.915 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 208.915 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "970b1d5f-7377-4b7b-8f37-c570f1ed98e7")
 		)
@@ -7097,6 +8036,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 123.825 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 123.825 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 123.825 66.675 0)
 			(effects
 				(font
@@ -7181,6 +8138,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RT0805FRE0768RL "
+			(at 211.455 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 211.455 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "26c5f153-6433-48ca-9953-cbceae06853e")
 		)
@@ -7257,6 +8232,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 196.85 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 196.85 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "afe7f4ac-ac16-4644-be03-328434c07ebf")
 		)
@@ -7324,6 +8317,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 138.43 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 138.43 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 138.43 50.165 0)
 			(effects
 				(font
@@ -7411,6 +8422,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "637-BCP56-16"
+			(at 135.89 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 135.89 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0cafe5be-6d3d-4881-8a63-3fccf70a7184")
 		)
@@ -7478,6 +8507,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 138.43 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 138.43 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 138.43 67.945 0)
 			(effects
 				(font
@@ -7562,6 +8609,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 222.25 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 222.25 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "63b36a21-8419-4592-ad30-dd8d11fc1fde")
 		)
@@ -7630,6 +8695,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 55.88 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 55.88 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 55.88 55.88 0)
 			(effects
 				(font
@@ -7714,6 +8797,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "821-MMSZ4684RHG "
+			(at 224.155 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 224.155 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "869954cc-e40a-4a84-9d18-bfa85f19b4a8")
 		)
@@ -7789,6 +8890,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 109.22 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 109.22 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "96d4e515-6c6b-4a29-b6f4-207214784ae0")
 		)
@@ -7856,6 +8975,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 172.72 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 172.72 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 172.72 49.53 0)
 			(effects
 				(font
@@ -7940,6 +9077,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 158.115 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 158.115 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3a83ad8d-aa46-405e-8c16-a3fb1b8e0b96")
 		)
@@ -7968,7 +9123,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fc0fc735-acc5-4d18-8249-b6fc5a9ab6ad")
 		(property "Reference" "H1"
@@ -8008,6 +9163,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 44.45 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" ""
+			(at 44.45 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" ""
 			(at 44.45 156.21 0)
 			(effects
 				(font
@@ -8078,6 +9251,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 154.305 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser PN" "603-RC0805FR-132K7L "
+			(at 154.305 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
 			(at 154.305 66.675 0)
 			(effects
 				(font
@@ -8161,6 +9352,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser PN" "941-XQEEPR00901"
+			(at 240.665 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Status" "ORD"
+			(at 240.665 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1223218c-9972-4e65-8714-119d13fdaaea")
 		)
@@ -8187,4 +9396,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
