@@ -2690,6 +2690,19 @@
 		)
 		(uuid "3699328a-8b55-437d-9a9c-e56f8dcfa2cf")
 	)
+	(text "Debug LEDs ON\nwhen error present"
+		(exclude_from_sim no)
+		(at 103.886 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "60616937-2d2c-456a-934b-1cb911db2f0c")
+	)
 	(text "11.5V"
 		(exclude_from_sim no)
 		(at 65.405 25.4 0)
@@ -2734,12 +2747,14 @@
 		)
 		(uuid "de6cc68c-09f9-473b-9648-32c6b3b2690f")
 	)
-	(text "Pulls down to gnd\nif an SCS reads an\nimplausible value."
+	(text "Comparators pull\ndown to gnd if an\nSCS reads an\nimplausible value."
 		(exclude_from_sim no)
-		(at 74.041 76.962 0)
+		(at 85.598 35.052 0)
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
 			)
 			(justify left bottom)
 		)
@@ -2950,7 +2965,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.885 106.68) (xy 90.805 106.68)
+			(xy 95.885 106.68) (xy 95.25 106.68)
 		)
 		(stroke
 			(width 0)
@@ -3090,7 +3105,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 106.68) (xy 75.565 106.68)
+			(xy 74.93 106.68) (xy 80.01 106.68)
 		)
 		(stroke
 			(width 0)
@@ -3210,7 +3225,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 50.8) (xy 95.885 50.8)
+			(xy 94.615 50.8) (xy 95.885 50.8)
 		)
 		(stroke
 			(width 0)
@@ -3387,6 +3402,16 @@
 			(type default)
 		)
 		(uuid "f50beca6-c8cf-425e-a130-1d3e20ca7f17")
+	)
+	(wire
+		(pts
+			(xy 79.375 50.8) (xy 74.93 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7172221-c9e4-4115-b4d5-887b9e2e7fd5")
 	)
 	(hierarchical_label "PRESSURE_SENSE"
 		(shape input)
@@ -4853,7 +4878,7 @@
 	)
 	(symbol
 		(lib_id "4xxx:40106")
-		(at 83.185 106.68 0)
+		(at 87.63 106.68 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4861,7 +4886,7 @@
 		(dnp no)
 		(uuid "6321fe98-ebea-433e-b6de-2aa80368a31c")
 		(property "Reference" "U3"
-			(at 83.185 100.33 0)
+			(at 87.63 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4869,7 +4894,7 @@
 			)
 		)
 		(property "Value" "40106"
-			(at 83.185 102.235 0)
+			(at 87.63 102.235 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4877,7 +4902,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 83.185 106.68 0)
+			(at 87.63 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4886,7 +4911,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
-			(at 83.185 106.68 0)
+			(at 87.63 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4895,7 +4920,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 83.185 106.68 0)
+			(at 87.63 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4904,7 +4929,7 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 83.185 106.68 0)
+			(at 87.63 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4913,7 +4938,7 @@
 			)
 		)
 		(property "Order Code" "771-HEF40106BTD-T"
-			(at 83.185 106.68 0)
+			(at 87.63 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4922,7 +4947,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 83.185 106.68 0)
+			(at 87.63 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4931,7 +4956,7 @@
 			)
 		)
 		(property "To Order" "INV"
-			(at 83.185 106.68 0)
+			(at 87.63 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5228,7 +5253,7 @@
 	)
 	(symbol
 		(lib_id "4xxx:40106")
-		(at 82.55 50.8 0)
+		(at 86.995 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5236,7 +5261,7 @@
 		(dnp no)
 		(uuid "7dfa40de-a2dd-4381-a0c2-f8d24202bbd1")
 		(property "Reference" "U3"
-			(at 82.55 44.45 0)
+			(at 86.995 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5244,7 +5269,7 @@
 			)
 		)
 		(property "Value" "40106"
-			(at 82.55 46.355 0)
+			(at 86.995 46.355 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5252,7 +5277,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 82.55 50.8 0)
+			(at 86.995 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5261,7 +5286,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
-			(at 82.55 50.8 0)
+			(at 86.995 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5270,7 +5295,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 82.55 50.8 0)
+			(at 86.995 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5279,7 +5304,7 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 82.55 50.8 0)
+			(at 86.995 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5288,7 +5313,7 @@
 			)
 		)
 		(property "Order Code" "771-HEF40106BTD-T"
-			(at 82.55 50.8 0)
+			(at 86.995 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5297,7 +5322,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 82.55 50.8 0)
+			(at 86.995 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5306,7 +5331,7 @@
 			)
 		)
 		(property "To Order" "INV"
-			(at 82.55 50.8 0)
+			(at 86.995 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5321,40 +5346,40 @@
 			(uuid "0be8c63f-eb4e-48c1-934b-d7a9b1753689")
 		)
 		(pin "3"
-			(uuid "9d3beeb0-9941-4605-b721-856d6a19cceb")
+			(uuid "9d3beeb0-9941-4605-b721-856d6a19ccec")
 		)
 		(pin "4"
-			(uuid "e7bc1be4-7e08-4f34-8562-a57ea84d43b2")
+			(uuid "e7bc1be4-7e08-4f34-8562-a57ea84d43b3")
 		)
 		(pin "5"
-			(uuid "5f413d3b-8141-4bce-aa3a-9ad2ce6eacdc")
+			(uuid "5f413d3b-8141-4bce-aa3a-9ad2ce6eacdd")
 		)
 		(pin "6"
-			(uuid "14e9da00-18b8-47cf-8053-5f246e57cb3e")
+			(uuid "14e9da00-18b8-47cf-8053-5f246e57cb3f")
 		)
 		(pin "8"
-			(uuid "449f8917-0bc2-4fe7-ae8a-8356e3063631")
+			(uuid "449f8917-0bc2-4fe7-ae8a-8356e3063632")
 		)
 		(pin "9"
-			(uuid "a929360d-ecea-4902-83e5-1a6f305c7e2f")
+			(uuid "a929360d-ecea-4902-83e5-1a6f305c7e30")
 		)
 		(pin "10"
-			(uuid "14e3cbe9-ff3f-44f0-b2ce-127d1cd9d359")
+			(uuid "14e3cbe9-ff3f-44f0-b2ce-127d1cd9d35a")
 		)
 		(pin "11"
-			(uuid "f465ffe7-e943-417f-8321-3d2c13411cdb")
+			(uuid "f465ffe7-e943-417f-8321-3d2c13411cdc")
 		)
 		(pin "12"
-			(uuid "f26a58af-45ee-421e-a4a0-7e759fa7b1be")
+			(uuid "f26a58af-45ee-421e-a4a0-7e759fa7b1bf")
 		)
 		(pin "13"
-			(uuid "e1c5019c-4411-425c-93b1-8382f35fe80d")
+			(uuid "e1c5019c-4411-425c-93b1-8382f35fe80e")
 		)
 		(pin "14"
-			(uuid "940bf900-2ccc-4266-a74e-690cb0e5d7a9")
+			(uuid "940bf900-2ccc-4266-a74e-690cb0e5d7aa")
 		)
 		(pin "7"
-			(uuid "51e142ce-9535-4d5c-9e0b-7f5cf56c27ae")
+			(uuid "51e142ce-9535-4d5c-9e0b-7f5cf56c27af")
 		)
 		(instances
 			(project "BSPD"
