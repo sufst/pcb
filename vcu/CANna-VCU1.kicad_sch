@@ -4337,28 +4337,6 @@
 		)
 		(uuid "8a953479-d84e-427f-b7ec-5663ad12a4f8")
 	)
-	(text "TRACT_DASH_LED"
-		(exclude_from_sim no)
-		(at 53.848 215.138 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8b071876-0cb9-4c6a-b5d2-89f64c79d00f")
-	)
-	(text "AMS_DASH_LED"
-		(exclude_from_sim no)
-		(at 71.628 215.138 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9b9d1083-af90-4322-b6a3-8a2a256ce898")
-	)
 	(text "WHEELSPEED_FR"
 		(exclude_from_sim no)
 		(at 53.8416 202.057 0)
@@ -4380,17 +4358,6 @@
 			(justify left)
 		)
 		(uuid "9febcb0e-68c7-44b4-ac65-9fde5c3580a3")
-	)
-	(text "AMS_FAULT_LATCH"
-		(exclude_from_sim no)
-		(at 54.61 266.065 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a1c0bb95-72e5-4a96-83a2-6d476829127e")
 	)
 	(text "SAGL"
 		(exclude_from_sim no)
@@ -4435,17 +4402,6 @@
 			(justify left)
 		)
 		(uuid "b6fff8f5-eb86-4539-952c-dd0aa11d7917")
-	)
-	(text "IMD_DASH_LED"
-		(exclude_from_sim no)
-		(at 53.975 217.805 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "be00753e-2fe3-4457-a21b-42a59a517df9")
 	)
 	(text "DIFFSPEED_RL"
 		(exclude_from_sim no)
@@ -4523,17 +4479,6 @@
 			(justify left bottom)
 		)
 		(uuid "d377e372-e36d-449d-9874-e57dd4681559")
-	)
-	(text "IMD_FAULT_LATCH"
-		(exclude_from_sim no)
-		(at 54.61 271.145 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d410a0ac-f337-42f2-b910-755b743c245f")
 	)
 	(text "TRACT_ONOFF"
 		(exclude_from_sim no)
@@ -6195,7 +6140,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 222.885) (xy 53.975 222.885)
+			(xy 35.56 222.885) (xy 53.34 222.885)
 		)
 		(stroke
 			(width 0)
@@ -18680,7 +18625,7 @@
 		)
 		(uuid "14656de8-da0e-4203-9ace-fd9108573196")
 	)
-	(label "LATCH_2"
+	(label "IMD_FAULT"
 		(at 53.34 215.265 180)
 		(effects
 			(font
@@ -18788,7 +18733,7 @@
 		)
 		(uuid "2f12d510-0563-44d7-9965-adf24a6489cf")
 	)
-	(label "LATCH_2"
+	(label "IMD_FAULT"
 		(at 381 33.02 180)
 		(effects
 			(font
@@ -19237,7 +19182,7 @@
 		)
 		(uuid "9a401b5a-32d7-4eaa-9482-74180535b6ed")
 	)
-	(label "LATCH_1"
+	(label "AMS_FAULT"
 		(at 381 30.48 180)
 		(effects
 			(font
@@ -19291,7 +19236,7 @@
 		)
 		(uuid "9b8e8eaf-3bf7-4069-9f17-f227f6772978")
 	)
-	(label "LATCH_1"
+	(label "AMS_FAULT"
 		(at 53.975 266.065 180)
 		(effects
 			(font
@@ -19665,6 +19610,16 @@
 			(justify right bottom)
 		)
 		(uuid "e87d6023-7121-4ffe-ba54-5fc6ab0ed8fd")
+	)
+	(label "RTDS-"
+		(at 53.34 222.885 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eb5b2639-5327-4161-b6bd-eb3a5402f386")
 	)
 	(label "CAN2+"
 		(at 104.775 179.705 180)
@@ -21242,71 +21197,6 @@
 			(project "CANna-VCU1"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 53.975 222.885 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "729e3192-c872-4108-8c46-209f5c78578d")
-		(property "Reference" "#PWR02"
-			(at 53.975 229.235 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 57.912 224.409 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.975 222.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.975 222.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 53.975 222.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "958b7254-4736-4d87-94c7-1184ba00567e")
-		)
-		(instances
-			(project "CANna-VCU1"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
-					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -23446,16 +23336,6 @@
 				(justify left)
 			)
 		)
-		(pin "R2DS-" input
-			(at 360.68 25.4 0)
-			(uuid "10e22ea4-23bb-4359-9914-4e6954ab97ae")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "HSDI_2" input
 			(at 360.68 102.87 0)
 			(uuid "9144e44b-198c-43ce-bb0b-2c0315e8b67a")
@@ -23479,16 +23359,6 @@
 		(pin "HSDI_1" input
 			(at 360.68 100.33 0)
 			(uuid "df2d177a-c2f4-474c-a11d-69240aabab0c")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "R2DS+" input
-			(at 360.68 22.86 0)
-			(uuid "d1cab914-a6c3-45ff-a34e-3350f4749542")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23596,9 +23466,9 @@
 				(justify left)
 			)
 		)
-		(pin "HS_LATCH_2" output
+		(pin "IMD_FAULT" output
 			(at 360.68 33.02 0)
-			(uuid "66e965b3-cd75-4de4-a093-3fdb60c89d88")
+			(uuid "40a6fea5-9822-4e8b-8f8f-af9a1a91caff")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23606,9 +23476,29 @@
 				(justify right)
 			)
 		)
-		(pin "HS_LATCH_1" output
+		(pin "AMS_FAULT" output
 			(at 360.68 30.48 0)
-			(uuid "81eb722c-834e-4c5d-8e98-a7ec249311ee")
+			(uuid "f48ad581-6393-4dde-9e98-d4dc754aaa0b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R2DS+" output
+			(at 360.68 22.86 0)
+			(uuid "5c2b12b2-6cec-4ad6-90b5-1132825e89a3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R2DS-" output
+			(at 360.68 25.4 0)
+			(uuid "389bc980-5d74-456a-ab97-d02b5a3b6045")
 			(effects
 				(font
 					(size 1.27 1.27)
